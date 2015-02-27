@@ -1,0 +1,18 @@
+Please create a basic html5 site with following structure:
+1. Main Page - page about company (name, logo, short description, address, contacts etc)
+2. Products Page - page with list of 3-5 products (with thumbnail image and detailed features) produced by your company 
+3. Feedback Page - page with feedback form (fields: name, e-mail or phone, feedback text, submit button to "/feedback" url)
+Use html only, no css, no javascript.
+
+You can do this task for well-known company (Apple, Amazon, E-bay etc) as well as for some fictitious company. 
+
+Please don't forget to use semantic tags, modernizer and verify html using http://validator.w3.org/ 
+Using microformat to increase page semantic would be a great plus.
+
+Useful links:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms
+http://modernizr.com/
+http://microformats.org/
+https://github.com/hail2u/html-best-practices
