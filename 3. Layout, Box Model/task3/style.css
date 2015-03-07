@@ -1,0 +1,40 @@
+﻿body {
+}
+
+nav, footer {
+    background: #33798a;
+}
+
+    nav ul {
+        text-align: center;
+    }
+
+.nav-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+    .nav-ul li {
+        padding: 10px;
+        margin: 0 10px;
+        font-size: 16px;
+        display: inline-block;
+    }
+
+        .nav-ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+.left, .right {
+    display: inline-block;
+    width: 100%;
+    margin-right: -100%;
+    vertical-align: middle;
+}
+
+.right {
+    text-align: right;
+}
