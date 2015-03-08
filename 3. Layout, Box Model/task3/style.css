@@ -2,12 +2,8 @@
 }
 
 nav, footer {
-    background: #33798a;
+    background: #354e4f;
 }
-
-    nav ul {
-        text-align: center;
-    }
 
 .nav-ul {
     padding: 0;
@@ -18,9 +14,9 @@ nav, footer {
 
     .nav-ul li {
         padding: 10px;
-        margin: 0 10px;
         font-size: 16px;
         display: inline-block;
+        border-right: 1px ridge grey;
     }
 
         .nav-ul li a {
@@ -28,13 +24,43 @@ nav, footer {
             color: white;
         }
 
-.left, .right {
+.first, .second {
     display: inline-block;
     width: 100%;
     margin-right: -100%;
     vertical-align: middle;
+    color: white;
+    font-size: 18px;
 }
 
-.right {
+nav .second {
+    text-align: center;
+}
+
+.first {
+    margin-left: 30px;
+}
+
+footer .second {
     text-align: right;
+}
+
+footer .nav-ul li {
+    padding:0 10px;
+    border-right: 3px solid grey;
+}
+
+    footer .nav-ul li a {
+        color:grey;
+    }
+
+
+    footer .nav-ul li:last-child {
+        padding: 10px;
+        margin-right: 90px;
+        border-right: none;
+    }
+
+.img {
+    vertical-align: middle;
 }
