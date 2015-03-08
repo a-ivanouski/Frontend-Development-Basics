@@ -46,12 +46,12 @@ footer .second {
 }
 
 footer .nav-ul li {
-    padding:0 10px;
+    padding: 0 10px;
     border-right: 3px solid grey;
 }
 
     footer .nav-ul li a {
-        color:grey;
+        color: grey;
     }
 
 
@@ -63,4 +63,37 @@ footer .nav-ul li {
 
 .img {
     vertical-align: middle;
+}
+
+
+.last-activity-section {
+    padding: 30px 30px 0 30px;
+    background-color: #dcdce6;
+    border-bottom: 1px solid grey;
+}
+
+    .last-activity-section ul {
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+    }
+
+        .last-activity-section ul li {
+            padding: 20px 20px 20px 20px;
+            background-color: white;
+            display: inline-block;
+        }
+
+            .last-activity-section ul li.helper {
+                width: 100%;
+                visibility: hidden;
+            }
+
+    .last-activity-section div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+.last-activity {
+    color: grey;
 }
