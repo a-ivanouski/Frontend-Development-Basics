@@ -1,28 +1,31 @@
-﻿body {
+﻿body a {
+    text-decoration: none;
+}
+
+a, button, input {
+    position: relative;
+    z-index: 1;
 }
 
 nav, footer {
     background: #354e4f;
 }
 
-.nav-ul {
+.list-elements {
     padding: 0;
     margin: 0;
     list-style: none;
     font-size: 0;
 }
 
-    .nav-ul li {
+    .list-elements li {
         padding: 10px;
         font-size: 16px;
         display: inline-block;
         border-right: 1px ridge grey;
     }
 
-        .nav-ul li a {
-            text-decoration: none;
-            color: white;
-        }
+
 
 .first, .second {
     display: inline-block;
@@ -33,8 +36,12 @@ nav, footer {
     font-size: 18px;
 }
 
-nav .second {
+.second {
     text-align: center;
+}
+
+nav a {
+    color: white;
 }
 
 .first {
@@ -45,17 +52,17 @@ footer .second {
     text-align: right;
 }
 
-footer .nav-ul li {
+footer .list-elements li {
     padding: 0 10px;
     border-right: 3px solid grey;
 }
 
-    footer .nav-ul li a {
+    footer .list-elements li a {
         color: grey;
     }
 
 
-    footer .nav-ul li:last-child {
+    footer .list-elements li:last-child {
         padding: 10px;
         margin-right: 90px;
         border-right: none;
@@ -65,35 +72,86 @@ footer .nav-ul li {
     vertical-align: middle;
 }
 
-
-.last-activity-section {
+.section {
     padding: 30px 30px 0 30px;
-    background-color: #dcdce6;
-    border-bottom: 1px solid grey;
 }
 
-    .last-activity-section ul {
+.last-activity {
+    padding-bottom: 0;
+    background-color: rgb(235,235,235);
+}
+
+    .last-activity ul {
         margin: 0;
         padding: 0;
         text-align: justify;
     }
 
-        .last-activity-section ul li {
+        .last-activity ul li {
             padding: 20px 20px 20px 20px;
             background-color: white;
             display: inline-block;
         }
 
-            .last-activity-section ul li.helper {
+            .last-activity ul li.helper {
                 width: 100%;
                 visibility: hidden;
+                padding-bottom: 0;
             }
 
-    .last-activity-section div {
+    .last-activity div {
         display: inline-block;
         vertical-align: middle;
     }
 
-.last-activity {
+.time {
     color: grey;
 }
+
+.other {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    background-color: rgb(247,247,247);
+    height: 40px;
+    display: block;
+}
+
+    .other a {
+        color: black;
+    }
+
+    .other li {
+        border: 0;
+        padding-right: 30px;
+    }
+
+
+.search {
+    float: right;
+    height: 100%;
+}
+
+    .search input {
+        border: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .search button {
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+.btn {
+    border: 0;
+    background-color: rgb(108, 119, 131);
+}
+
+.news {
+    padding: 8px 8px;
+}
+
