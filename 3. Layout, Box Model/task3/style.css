@@ -81,25 +81,25 @@ footer .list-elements li {
     background-color: rgb(235,235,235);
 }
 
-    .last-activity ul {
+    .myul {
         margin: 0;
         padding: 0;
         text-align: justify;
     }
 
-        .last-activity ul li {
+        .myul li {
             padding: 20px 20px 20px 20px;
             background-color: white;
             display: inline-block;
         }
 
-            .last-activity ul li.helper {
+           .myul li.helper {
                 width: 100%;
                 visibility: hidden;
                 padding-bottom: 0;
             }
 
-    .last-activity div {
+    .myul div {
         display: inline-block;
         vertical-align: middle;
     }
@@ -135,23 +135,45 @@ footer .list-elements li {
 
     .search input {
         border: 0;
+        border-left: 1px grey solid;
         padding: 0;
+        padding-left: 10px;
         height: 100%;
     }
 
     .search button {
         height: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
     }
 
 
 .btn {
     border: 0;
     background-color: rgb(108, 119, 131);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.news {
+.btn-n {
     padding: 8px 8px;
 }
 
+
+.news {
+    display: inline-block;
+}
+
+.photos {
+    border: 1px grey solid;
+}
+
+.display-photo {
+}
+
+.other-photos {
+    width: 550px;
+}
+
+ .other-photos .myul li{
+     padding: 0 0 0 0;
+     
+ }
