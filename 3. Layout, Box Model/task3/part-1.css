@@ -1,0 +1,20 @@
+﻿.patr-1 {
+    display: table-cell;
+  
+
+}
+ 
+.stuff {
+    position: relative;
+    display: table-cell;
+    border: 2px black solid;
+   
+}
+
+.posts {
+    position: relative;
+    display: table-cell;
+
+     border: 2px black solid;
+
+}
