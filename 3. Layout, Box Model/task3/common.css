@@ -1,0 +1,46 @@
+﻿.content {
+    position:relative;
+    border:2px solid black;
+}
+
+.img-full-length {
+    width:100%;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.buttons {
+    clear: both;
+}
+
+
+.left-float {
+    float: left;
+    border: 2px black solid;
+}
+
+.right-float {
+    float: right;
+    border: 2px black solid;
+}
+
+.left-absolute-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 2px black solid;
+}
+
+.right-absolute-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 2px black solid;
+}
+
+.middle-around-float {
+    margin-left:37.5%;
+}

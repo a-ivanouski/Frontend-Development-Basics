@@ -1,0 +1,6 @@
+﻿.part-5 {
+    clear:both;
+}
+    .part-5 ul li {
+        display:inline-block;
+    }

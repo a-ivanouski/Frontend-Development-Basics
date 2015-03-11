@@ -3,11 +3,16 @@
 }
 
 .stuff {
+    position: relative;
     float: left;
+    height: 450px;
     border: 2px black solid;
-    width: 60%;
-    height: 400px;
+    width: 65%;
 }
+
+    .stuff .content {
+        height: 400px;
+    }
 
 .photos ul li {
     display: inline-block;
@@ -15,35 +20,27 @@
 
 .photos {
     float: left;
+    height: 100%;
     display: inline-block;
     border: 2px black solid;
 }
 
 .most-popular-news {
     float: right;
+    height: 100%;
     display: inline-block;
     border: 2px black solid;
 }
 
 
 .posts {
+    position: relative;
+    height: 450px;
     float: right;
-    width: 20%;
-    height: 400px;
+    width: 25%;
     border: 2px black solid;
 }
 
-
-.buttons {
-    clear: both;
-}
-
-.left-button {
-    border: 2px black solid;
-    float: left;
-}
-
-.right-button {
-    border: 2px black solid;
-    float: right;
-}
+    .posts .content {
+        height: 400px;
+    }

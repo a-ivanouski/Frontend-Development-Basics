@@ -1,0 +1,18 @@
+﻿.part-3 {
+    clear: both;
+}
+
+
+.fashion {
+    position: relative;
+    border: 2px solid black;
+    width: 65%;
+    height: 300px;
+}
+
+.video {
+    position: relative;
+    border: 2px solid black;
+    width: 25%;
+    height: 300px;
+}
