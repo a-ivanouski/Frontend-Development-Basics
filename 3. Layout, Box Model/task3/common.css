@@ -1,10 +1,18 @@
-﻿.content {
-    position:relative;
-    border:2px solid black;
+﻿body li {
+    list-style-type: none;
 }
 
-.img-full-length {
-    width:100%;
+.content {
+    position: relative;
+   
+}
+
+.img-full-width {
+    width: 100%;
+}
+
+.img-full-height {
+    height: 100%;
 }
 
 .bottom {
@@ -42,5 +50,38 @@
 }
 
 .middle-around-float {
-    margin-left:37.5%;
+    margin-left: 37.5%;
+}
+
+
+.dinamic-horizontal-list {
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+    .dinamic-horizontal-list li {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+    }
+
+        .dinamic-horizontal-list li.helper {
+            width: 100%;
+            height: 0;
+            visibility: hidden;
+            padding: 0;
+        }
+
+
+.btn {
+    border: 0;
+    background-color: rgb(108, 119, 131);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn-n {
+    padding: 8px 8px;
 }
