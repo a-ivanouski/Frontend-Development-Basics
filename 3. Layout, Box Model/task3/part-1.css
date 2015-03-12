@@ -76,7 +76,29 @@
     border-bottom: 2px lightgrey solid;
 }
 
-    .posts .content {
-        height: 400px;
-        border: 2px solid black;
+    .posts ul {
+        margin: 0;
+        padding: 0;
     }
+
+        .posts ul li {
+            
+            border: 1px solid lightgrey;
+        }
+ 
+
+.prev-next {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: lightgrey;
+}
+    .prev-next div {
+        margin-left: 75%;
+    }
+
+.posts .content {
+    height: 400px;
+    border: 2px solid black;
+}
