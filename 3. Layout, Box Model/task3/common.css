@@ -4,14 +4,13 @@
 
 .content {
     position: relative;
-   
 }
 
-.img-full-width {
+.full-width {
     width: 100%;
 }
 
-.img-full-height {
+.full-height {
     height: 100%;
 }
 
@@ -26,28 +25,14 @@
     display: table;
 }
 
-    .buttons div {
-        display: table-cell;
-         
-    }
-
-.q {
-    width: 30%;
-     height: 100%;
-    background-color: lawngreen;
+.white-color {
+    color: white;
 }
 
-.w {
-    height: 100%;
-    width: 30%;
-  background-color: rgb(108, 119, 131);
-}
 
-.e {
+.full-sizes {
     height: 100%;
-    width: 40%;
-   background-color: rgb(108, 119, 131);
-    
+    width: 100%;
 }
 
 .left-float {
@@ -81,6 +66,7 @@
 .grey-text {
     color: grey;
 }
+
 .dinamic-horizontal-list {
     padding: 0;
     margin: 0;
@@ -100,13 +86,16 @@
             visibility: hidden;
             padding: 0;
         }
-.content-vertical-list {
+
+.vertica-element-list {
     display: inline-block;
+    vertical-align: middle;
+}
+
+.margin-vertical-element-list {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
-
-    
 }
 
 .btn {
