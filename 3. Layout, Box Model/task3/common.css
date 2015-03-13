@@ -2,6 +2,11 @@
     list-style-type: none;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .content {
     position: relative;
 }
@@ -87,6 +92,20 @@
             padding: 0;
         }
 
+.vertical-list {
+    margin: 0;
+    padding: 30px 10px 30px 10px;
+}
+
+    .vertical-list li {
+        padding: 10px 10px 10px 10px;
+        margin-bottom: 15px;
+    }
+
+        .vertical-list li:last-child {
+            margin-bottom: 0;
+        }
+
 .vertica-element-list {
     display: inline-block;
     vertical-align: middle;
@@ -107,4 +126,15 @@
 
 .btn-n {
     padding: 8px 8px;
+}
+
+
+.left-block {
+    width: 42.3%;
+    height: 80%;
+}
+
+.right-block {
+    width: 42.3%;
+    height: 80%;
 }
