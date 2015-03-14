@@ -7,6 +7,29 @@ ul {
     padding: 0;
 }
 
+
+.big-box{
+    position: relative;
+    border-bottom: 2px lightgrey solid;
+    width: 65%;
+}
+.left-box{
+    position: relative;
+    width: 27.5%;
+
+}
+
+.middle-around-float {
+    position: relative;
+    width: 27.5%;
+    margin-left: 37.5%;
+}
+
+.right-box{
+    position: relative;
+    width: 25%;
+}
+
 .content {
     position: relative;
 }
@@ -64,9 +87,7 @@ ul {
     border: 2px black solid;
 }
 
-.middle-around-float {
-    margin-left: 37.5%;
-}
+
 
 .grey-text {
     color: grey;
@@ -120,8 +141,6 @@ ul {
 .btn {
     border: 0;
     background-color: rgb(108, 119, 131);
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .btn-n {

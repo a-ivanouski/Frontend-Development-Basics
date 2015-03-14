@@ -4,9 +4,7 @@
 
 
 .game {
-    position: relative;
     border: 2px solid black;
-    width: 27.5%;
     height: 300px;
 }
 
@@ -15,10 +13,8 @@
     }
 
 .sport {
-    position: relative;
     border: 2px solid black;
     height: 300px;
-    width: 27.5%;
 }
 
     .sport ul li {
@@ -26,8 +22,12 @@
     }
 
 .technology {
-    position: relative;
     border: 2px solid black;
-    width: 25%;
     height: 300px;
 }
+
+.technology li{
+    margin-bottom: 20px; 
+}
+
+ 

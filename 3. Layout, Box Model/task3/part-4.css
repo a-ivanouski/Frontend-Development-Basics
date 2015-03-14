@@ -3,9 +3,7 @@
 }
 
 .some-news {
-    position: relative;
     border: 2px solid black;
-    width: 27.5%;
     height: 300px;
 }
 
@@ -18,9 +16,7 @@
 
 
 .some-vidio {
-    position: relative;
     border: 2px solid black;
-    width: 25%;
     height: 300px;
 }
 

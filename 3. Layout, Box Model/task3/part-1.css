@@ -3,11 +3,8 @@
 }
 
 .stuff {
-    position: relative;
-    float: left;
     height: 450px;
     border-bottom: 2px lightgrey solid;
-    width: 65%;
 }
 
 .content {
@@ -69,10 +66,7 @@
     }
 
 .posts {
-    position: relative;
     height: 450px;
-    float: right;
-    width: 25%;
     border-bottom: 2px lightgrey solid;
 }
 
