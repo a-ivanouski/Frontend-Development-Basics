@@ -3,23 +3,27 @@
 }
 
 .some-news {
-    border: 2px solid black;
     height: 300px;
 }
 
 .some-list {
     position: relative;
-    border: 2px solid black;
     width: 27.5%;
     height: 300px;
 }
-
+    .some-list li:first-child > div {
+        margin-top:0;
+    }
 
 .some-vidio {
-    border: 2px solid black;
     height: 300px;
 }
 
-    .some-vidio ul li {
-        display:inline-block;
+    .some-vidio ul {
+        margin-top:10px;
     }
+
+        .some-vidio ul li {
+            height: 80px;
+            width: 80px;
+        }

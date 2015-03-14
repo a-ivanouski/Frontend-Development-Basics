@@ -70,6 +70,10 @@
     border-bottom: 2px lightgrey solid;
 }
 
+    .posts li {
+        border-bottom: 1px solid lightgray;
+    }
+
 .popular-btn {
     width: 30%;
     height: 100%;
@@ -105,11 +109,11 @@
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: lightgrey;
+    border-bottom: 1px solid lightgray;
 }
 
     .prev-next div {
-        margin-left: 75%;
+        margin-left: 85%;
     }
 
 .posts .content {

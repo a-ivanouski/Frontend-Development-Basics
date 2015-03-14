@@ -10,7 +10,6 @@ ul {
 
 .big-box{
     position: relative;
-    border-bottom: 2px lightgrey solid;
     width: 65%;
 }
 .left-box{
@@ -65,26 +64,26 @@ ul {
 
 .left-float {
     float: left;
-    border: 2px black solid;
+    
 }
 
 .right-float {
     float: right;
-    border: 2px black solid;
+   
 }
 
 .left-absolute-bottom {
     position: absolute;
     left: 0;
     bottom: 0;
-    border: 2px black solid;
+   
 }
 
 .right-absolute-bottom {
     position: absolute;
     right: 0;
     bottom: 0;
-    border: 2px black solid;
+   
 }
 
 
@@ -101,9 +100,8 @@ ul {
 
     .dinamic-horizontal-list li {
         display: inline-block;
-        width: 50px;
-        height: 50px;
-        border: 2px solid black;
+        
+        
     }
 
         .dinamic-horizontal-list li.helper {
@@ -135,11 +133,10 @@ ul {
 .margin-vertical-element-list {
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 20px;
+   
 }
 
 .btn {
-    border: 0;
     background-color: rgb(108, 119, 131);
 }
 
@@ -150,10 +147,20 @@ ul {
 
 .left-block {
     width: 42.3%;
-    height: 80%;
+    height: 90%;
 }
 
 .right-block {
     width: 42.3%;
-    height: 80%;
+    height: 90%;
+}
+
+
+
+
+
+
+
+.border {
+    border:2px solid black;
 }
