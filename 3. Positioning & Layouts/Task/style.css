@@ -1,0 +1,764 @@
+﻿/*Common css*/
+html
+{
+    box-sizing: border-box;
+}
+*, *:before, *:after
+{
+    box-sizing: inherit;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+body
+{
+    background: url("http://placehold.it/3000x3000") no-repeat top center fixed;
+    font: bold 12px arial, verdana;
+}
+
+.page, button, label, .most-popular-news header, .news-bar header p {
+    background-color: #465345;
+    color: white;
+}
+
+.page
+{
+    width: 1150px;
+    margin: 40px auto;
+}
+
+a
+{
+    text-decoration: none;
+    color: #537450;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: right;
+}
+
+img
+{
+    display:block;
+}
+
+.nav-btn 
+{
+    background-color: #E5E5E5;
+    color: #465345;
+    padding: 5px 10px;
+    cursor:pointer;
+    display: inline-block;
+}
+
+.nav-btn-left 
+{
+    border-right: 1px solid #465345;
+}
+
+.nav-btn-right 
+{
+    border-left: 1px solid #465345;
+}
+
+.search-input {
+    padding:15px;
+    border-left: 1px solid #bbb9b9;
+}
+
+.btn 
+{
+    cursor: pointer;
+}
+
+.hot-stuff header, .recent-posts header, .all-news-gallery header, .news-category header, .bottom-block header
+{
+    border-bottom: 1px solid #E5E5E5;
+    width: 100%;
+}
+
+.hot-stuff header h2, .recent-posts header h2, .all-news-gallery header h2, .news-category header h2, .bottom-block header h2
+{
+    background-color: #E5E5E5;
+    color: #465345;
+    padding: 3px 5px;
+    font-size: small;
+}
+
+time 
+{
+    color: #AAAAAA;
+}
+
+.news-shortcut 
+{
+    margin-top: 5px;
+    color: #AAAAAA;
+    display: block;
+    line-height: 1.5em;
+}
+
+.stars-container
+{
+    padding: 20px 0px 10px;
+    border-bottom: 1px solid #E5E5E5;
+    width: 100%;
+}
+
+.follow-tweeter-link
+{
+    width: 100%;
+}
+
+.follow-tweeter-link a
+{
+    color: blue;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+/*Header css*/
+.header
+{
+    background-color: #465345;
+}
+
+.logo
+{
+    padding: 0px 100px 0px 50px;
+    background-color: #465345;
+}
+
+
+.logo h1
+{
+    margin: 10px 0px;
+}
+
+.header-nav
+{
+    background-color: #465345;
+    width: 800px;
+}
+
+.header-nav ul li a
+{
+    display: block;
+    color: white;
+    padding: 20px 10px;
+    border-right: 1px solid #537450;
+}
+/*Top images css*/
+.top-images
+{
+    background-color: #E5E5E5;
+    width: 1150px;
+    padding: 0px 30px;
+}
+
+.top-images ul li
+{
+    background-color: white;
+    padding: 10px;
+    margin: 20px 16px;
+    width: 22%;
+}
+
+.top-images ul li img
+{
+    padding-right: 10px;
+}
+
+.top-images ul li time
+{
+    margin-top: 5px;
+    display: block;
+}
+
+/* Footer css*/
+.footer
+{
+    width: 1150px;
+    padding: 20px 50px;
+    background-color: #465345;
+    margin-bottom: 40px;
+}
+
+.copy-right 
+{
+    color: #AAAAAA;
+}
+
+.footer ul li 
+{
+    display: inline-block;
+}
+
+.footer ul li a 
+{
+    display: block;
+    color: #666666;
+    border-right: 1px solid #666666;
+    padding: 0px 10px 0px 5px;
+}
+
+.footer ul li:last-child a {
+    border: none;
+}
+
+/*Breaking news CSS*/
+.breaking-news 
+{
+    background-color: #faf7f7;
+    padding: 0px 50px;
+    width: 1150px;
+    color: #465345;
+    border-top: 1px solid #bbb9b9;
+    border-bottom: 1px solid #bbb9b9;
+}
+
+.breaking-news label 
+{
+    padding: 10px;
+    margin: 5px 40px 5px 0px;
+}
+
+.inline-news 
+{
+    padding: 10px;
+    margin: 5px 0px;
+}
+
+.inline-news p 
+{
+    padding: 0px 20px;
+    display: inline-block;
+}
+
+.inline-news p i
+{
+    padding: 0px 10px;
+}
+/* Top news css */
+.top-news 
+{
+    width: 1150px;
+    padding: 50px 50px 0px;
+    background-color: white;
+}
+
+/* Carousel news css */
+.carousel-news 
+{
+    width: 402px;
+    border: 1px solid #faf7f7;
+}
+
+.preview-image-news
+{
+    margin: 10.5px;
+    border: 2px solid #faf7f7;
+    cursor: pointer;
+}
+
+.image-news 
+{
+    position: relative;
+}
+
+.image-news-caption 
+{
+    background-color: #465345;
+    position: absolute;
+    top: 213px;
+    padding: 10px;
+    min-width: 400px;
+    opacity: 0.7;
+}
+
+.preview-news-container li .selected
+{
+    border: 2px solid #465345;
+}
+
+.preview-news-container 
+{
+    padding: 0px 10px;
+}
+
+/* Most popular news */
+.most-popular-news
+{
+    background-color: #faf7f7;
+    color: #465345;
+    margin-left: 20px;
+    width: 220px;
+}
+
+.most-popular-news header 
+{
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.most-popular-news div 
+{
+    background-color: white;
+    margin: 15px 10px;
+}
+
+.most-popular-news div p
+{
+    padding: 12px 10px;
+}
+
+/* News bar css */
+.news-bar
+{
+    background-color: #faf7f7;
+    color: #465345;
+    margin-left: 30px;
+    width: 378px;
+}
+
+.news-bar > div 
+{
+    width: 378px;
+}
+
+.news-bar header p
+{
+    padding: 18.5px 31px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.news-bar header .selected
+{
+    background-color: limegreen;
+}
+
+.news-bar ul li
+{
+    background-color: white;
+    width: 378px;
+    border: 1px solid #faf7f7;
+}
+
+.news-bar ul li img
+{
+    padding: 10px;
+}
+
+.news-bar ul li p
+{
+    padding: 10px 10px 0px;
+}
+
+.news-bar ul li p.news-shortcut 
+{
+    padding:0px 10px;
+}
+
+.news-bar .nav-container 
+{
+    margin: 7px;
+}
+
+/* Categorized news css*/
+.categorized-news 
+{
+    width: 1150px;
+    padding: 30px 50px 0px;
+    background-color: white;
+    color: #465345;
+}
+
+/* Hot Stuff css*/
+.hot-stuff 
+{
+    padding-bottom: 20px;
+    width: 640px;
+    position: relative;
+}
+
+.hot-stuff div > figure
+{
+    margin: 20px 0px 20px 20px;
+    width: 145px;
+}
+
+.hot-stuff ul li:first-child div > figure, .all-news-gallery ul li:first-child div > figure
+{
+    margin-left: 0px;
+}
+
+.hot-stuff figcaption, .all-news-gallery figcaption
+{
+    font-size: 0.85em;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.hot-stuff figcaption img, .all-news-gallery figcaption img
+{
+    padding-right: 2px;
+}
+
+.hot-stuff figcaption p, .all-news-gallery figcaption p
+{
+    padding: 3px 0px 5px;
+}
+
+.hot-stuff figcaption time, .all-news-gallery figcaption time
+{
+    display: inline-block;
+}
+
+.hot-stuff .nav-container
+{
+    position: absolute;
+    left: 589px;
+    width: 51px;
+    top: -4px;
+}
+
+/* Recent posts css */
+.recent-posts
+{
+    width: 378px;
+    margin-left: 32px;
+    background-color: white;
+    color: #465345;
+}
+
+.recent-posts ul 
+{
+    padding: 20px 0px;
+}
+
+.recent-posts ul li
+{
+    padding: 10px 0px;
+    border-bottom: 1px solid #E5E5E5;
+    width: 100%;
+}
+
+.recent-posts ul li:first-child
+{
+    padding-top: 0px;
+}
+
+.recent-posts ul li:last-child
+{
+    border-bottom: none;
+}
+
+.recent-posts ul img
+{
+    padding-right: 10px;
+}
+
+.recent-posts ul li time
+{
+    padding: 5px 0px;
+    display: block;
+}
+
+/*All News Gallery css*/
+.all-news-gallery 
+{
+    padding-bottom: 20px;
+    width: 1050px;
+    position: relative;
+}
+
+.all-news-gallery .nav-container
+{
+    position: absolute;
+    left: 999px;
+    width: 51px;
+    top: -4px;
+}
+
+.all-news-gallery div > figure
+{
+    margin: 20px 0px 20px 36px;
+    width: 145px;
+}
+
+/* News Category css*/
+.news-category 
+{
+    width: 312px;
+    background-color: white;
+    color: #465345;
+    padding-bottom: 30px;
+    margin-left: 15px;
+}
+
+.large-news-preview figure
+{
+    margin-top: 20px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.large-news-preview figure figcaption
+{
+    padding: 10px 0px;
+}
+
+.news-category  li
+{
+    width: 100%;
+}
+
+.small-news-preview 
+{
+    padding: 10px 0px;
+}
+
+.small-news-preview time 
+{
+    padding-top: 11px;
+}
+
+.small-news-preview figure img 
+{
+    padding-right: 5px;
+}
+
+.small-news-preview figcaption 
+{
+    width: 312px;
+}
+
+.small-news-preview figure 
+{
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 10px;
+}
+
+.small-news-preview .news-shortcut 
+{
+    line-height: 1.1em;
+}
+
+
+.left-news-category
+{
+    margin-left: 0px;
+}
+
+.right-news-category 
+{
+    margin-left: 33px;
+    width: 378px;
+}
+
+.right-news-category figcaption 
+{
+    width: 378px;
+}
+
+.right-news-category .small-news-preview .news-shortcut
+{
+    margin-bottom: 14px;
+}
+
+.right-news-category ul li:last-child figure
+{
+    border-bottom: none;
+}
+
+
+.inline-news-category
+{
+    width: 639px;
+    margin-left: 0px;
+}
+
+.inline-news-category  li
+{
+    width: 48.8%;
+}
+
+.inline-news-category .small-news-preview
+{
+    padding: 0px 0px 10px 15px;
+}
+
+.inline-news-category .top-small-news-preview
+{
+    padding-top: 20px;
+}
+
+.inline-news-category .large-news-preview figure
+{
+    border-bottom: none;
+}
+
+.small-video-news-preview img
+{
+    padding-right: 6px;
+}
+
+.small-video-news-preview figure img:last-child
+{
+    padding-right: 0px;
+}
+
+.video-news-preview figure
+{
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+/*Bottom blocks css*/
+.bottom-blocks
+{
+    width: 1150px;
+    padding: 30px 50px 50px;
+    background-color: #faf7f7;
+    color: #465345;
+}
+
+.bottom-block
+{
+    width: 250px;
+}
+
+.bottom-block header
+{
+    border-bottom: none;
+
+    padding-bottom: 10px;
+}
+
+.bottom-block header h2
+{
+    background-color: white;
+}
+
+.bottom-block time
+{
+    margin-bottom: 8px;
+    display: block;
+}
+
+.bottom-block li
+{
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.bottom-block figure
+{
+    padding-right: 10px;
+
+}
+
+.tweet
+{
+    width: 80%;
+    color: #AAAAAA;
+    line-height: 1.5em;
+}
+
+.tweet a
+{
+    color: blue;
+}
+
+.tag-cloud li
+{
+    display: inline-block;
+    width: auto;
+    padding: 0px;
+}
+
+.tag-cloud li a
+{
+    background-color: white;
+    color: #465345;
+    padding: 6px 7px;
+    margin: 0px 5px 5px 0px;
+    display: inline-block;
+}
+
+.social-media li
+{
+    width: 33.3%;
+    display: inline-block;
+    border-left: 1px solid #E5E5E5;
+}
+
+.social-media li:last-child
+{
+    border-right: 1px solid #E5E5E5;
+}
+
+.social-media li figure img
+{
+    padding: 0px 20px;
+}
+
+.social-media li figure p
+{
+    text-align: center;
+    padding-top: 7px;
+}
+
+
+.social-media li figure
+{
+    text-align: center;
+    padding: 0px;
+}
+
+.bottom-block
+{
+    margin-left: 16.6px;
+}
+
+.bottom-blocks .bottom-block:first-child
+{
+    margin: 0px;
+}
+
+.about-bottom-block
+{
+    margin: 30px 0px 0px 16.6px;
+    width: 49%;
+}
+
+.about-bottom-block img
+{
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 1px solid #E5E5E5;
+}
+
+.about-bottom-block figcaption
+{
+    padding-top: 20px;
+}
+
+.about-bottom-block
+{
+    color: #AAAAAA;
+}
