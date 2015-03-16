@@ -23,6 +23,7 @@
 
 .cont {
     width: 45%;
+    margin-left: 40px;
 }
 
 .tag-cloud {
@@ -47,7 +48,6 @@
     margin-top: 20px;
     padding: 10px 10px 10px 10px;
 }
-
 
 .img-logo {
     width: 30%;

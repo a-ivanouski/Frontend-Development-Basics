@@ -4,8 +4,9 @@
 
 
 .fashion {
-    
+    position: relative;
     height: 600px;
+    border-bottom: 1px solid lightgrey;
 }
 
     .fashion ul li {
@@ -18,6 +19,7 @@
     }
 
 .video {
-   
+    position: relative;
     height: 600px;
+    border-bottom: 1px solid lightgrey;
 }

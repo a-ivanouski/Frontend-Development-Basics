@@ -4,8 +4,9 @@
 
 
 .game {
-    
+    position: relative;
     height: 300px;
+    border-bottom: 1px solid lightgrey;
 }
 
     .game ul li {
@@ -13,8 +14,9 @@
     }
 
 .sport {
-   
+    position: relative;
     height: 300px;
+    border-bottom: 1px solid lightgrey;
 }
 
     .sport ul li {
@@ -22,12 +24,11 @@
     }
 
 .technology {
- 
+    position: relative;
     height: 300px;
+    border-bottom: 1px solid lightgrey;
 }
 
-.technology li{
-    margin-bottom: 20px; 
-}
-
- 
+    .technology li {
+        margin-bottom: 20px;
+    }

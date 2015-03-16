@@ -3,6 +3,7 @@
 }
 
 .stuff {
+    position: relative;
     height: 450px;
     border-bottom: 2px lightgrey solid;
 }
@@ -66,6 +67,7 @@
     }
 
 .posts {
+    position: relative;
     height: 450px;
     border-bottom: 2px lightgrey solid;
 }

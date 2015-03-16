@@ -3,6 +3,7 @@
 }
 
 .some-news {
+    position: relative;
     height: 300px;
 }
 
@@ -16,6 +17,7 @@
     }
 
 .some-vidio {
+    position: relative;
     height: 300px;
 }
 

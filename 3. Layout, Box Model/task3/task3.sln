@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		figures.css = figures.css
 		HTMLPage1.html = HTMLPage1.html
 		index.html = index.html
+		index2.html = index2.html
 		part-1.css = part-1.css
 		part-2.css = part-2.css
 		part-3.css = part-3.css
