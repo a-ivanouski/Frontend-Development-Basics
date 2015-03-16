@@ -1,3 +1,64 @@
 ﻿.part-6 {
-    clear:both;
+    clear: both;
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 40px;
+}
+
+
+.latest-news {
+    width: 20%;
+}
+
+    .latest-news ul {
+        margin-top: 20px;
+    }
+
+    .latest-news li {
+        margin-bottom: 20px;
+    }
+
+.latest-tweets {
+    width: 20%;
+}
+
+.cont {
+    width: 45%;
+}
+
+.tag-cloud {
+    width: 30%;
+}
+
+.tag-buttons {
+    margin-top: 20px;
+}
+
+.social-media {
+    width: 50%;
+}
+
+.social-media-element {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+
+.img-logo {
+    width: 30%;
+    height: 100px;
+    border-right: 1px solid grey;
+    padding-right: 10px;
+}
+
+.description-logo {
+    padding-left: 10px;
+    width: 65%;
+    height: 100px;
+
 }

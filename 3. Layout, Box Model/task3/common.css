@@ -8,14 +8,14 @@ ul {
 }
 
 
-.big-box{
+.big-box {
     position: relative;
     width: 65%;
 }
-.left-box{
+
+.left-box {
     position: relative;
     width: 27.5%;
-
 }
 
 .middle-around-float {
@@ -24,7 +24,7 @@ ul {
     margin-left: 37.5%;
 }
 
-.right-box{
+.right-box {
     position: relative;
     width: 25%;
 }
@@ -64,26 +64,22 @@ ul {
 
 .left-float {
     float: left;
-    
 }
 
 .right-float {
     float: right;
-   
 }
 
 .left-absolute-bottom {
     position: absolute;
     left: 0;
     bottom: 0;
-   
 }
 
 .right-absolute-bottom {
     position: absolute;
     right: 0;
     bottom: 0;
-   
 }
 
 
@@ -100,8 +96,6 @@ ul {
 
     .dinamic-horizontal-list li {
         display: inline-block;
-        
-        
     }
 
         .dinamic-horizontal-list li.helper {
@@ -133,7 +127,6 @@ ul {
 .margin-vertical-element-list {
     margin-top: 20px;
     margin-bottom: 20px;
-   
 }
 
 .btn {
@@ -144,6 +137,9 @@ ul {
     padding: 8px 8px;
 }
 
+.white {
+    background-color: white;
+}
 
 .left-block {
     width: 42.3%;
@@ -156,11 +152,14 @@ ul {
 }
 
 
-
+.logo-img {
+    height: 100%;
+    width: 30%;
+}
 
 
 
 
 .border {
-    border:2px solid black;
+    border: 2px solid black;
 }
