@@ -5,7 +5,6 @@
 .stuff {
     position: relative;
     height: 450px;
-    
 }
 
 .content {
@@ -24,18 +23,41 @@
     border: 2px lightgrey solid;
 }
 
-    .photos .full-width {
-        height: 70%;
-    }
+
 
     .photos .dinamic-horizontal-list {
         margin: 30px 10px 10px 10px;
     }
 
         .photos .dinamic-horizontal-list li {
-            border: 3px solid black;
+            height: 50px;
+            border: 4px solid gray;
         }
 
+            .photos .dinamic-horizontal-list li:first-child {
+                border: 4px solid #354e4f;
+            }
+
+.main-photo {
+    position: relative;
+    height: 70%;
+}
+
+    .main-photo .full-width {
+        height: 100%;
+    }
+
+.description-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(82,94,100,0.1);
+}
+.description {
+    padding-left: 30px;
+    padding-top: 10px;
+}
 
 .most-popular-news {
     float: right;
@@ -69,7 +91,6 @@
 .posts {
     position: relative;
     height: 450px;
-    
 }
 
     .posts li {
