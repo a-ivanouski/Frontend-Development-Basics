@@ -6,6 +6,7 @@
 
 
 .latest-news {
+    padding-left: 30px;
     width: 20%;
 }
 
@@ -23,7 +24,7 @@
 
 .cont {
     width: 45%;
-    margin-left: 40px;
+    margin-left: 140px;
 }
 
 .tag-cloud {
@@ -35,7 +36,7 @@
 }
 
 .social-media {
-    width: 50%;
+    width: 60%;
 }
 
 .social-media-element {
@@ -43,10 +44,13 @@
     width: 100px;
     height: 100px;
     border-left: 1px solid grey;
-    border-right: 1px solid grey;
     text-align: center;
     margin-top: 20px;
     padding: 10px 10px 10px 10px;
+}
+
+.last-social-media-element {
+    border-right: 1px solid grey;
 }
 
 .img-logo {
@@ -60,5 +64,11 @@
     padding-left: 10px;
     width: 65%;
     height: 100px;
+}
 
+.all-news {
+    background-color: rgb(241,241,241);
+    height: 380px;
+    padding-top: 30px;
+    width: 100%;
 }

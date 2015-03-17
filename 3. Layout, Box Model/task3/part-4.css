@@ -9,7 +9,6 @@
 
 .some-list {
     position: relative;
-    width: 27.5%;
     height: 300px;
 }
     .some-list li:first-child > div {

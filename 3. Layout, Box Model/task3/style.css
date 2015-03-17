@@ -2,9 +2,13 @@
     text-decoration: none;
 }
 
-body button {
-    border:0;
+body {
+    margin-left: 5%;
 }
+
+    body button {
+        border: 0;
+    }
 
 a, button, input {
     position: relative;
@@ -12,44 +16,17 @@ a, button, input {
 }
 
 nav, footer {
+    clear: both;
     background: #354e4f;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
-.elements-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: 0;
-}
-
-    .elements-list li {
-        padding: 10px;
-        font-size: 16px;
-        display: inline-block;
-        border-right: 1px ridge grey;
-    }
-
-.first, .second {
+.list li {
     display: inline-block;
-    width: 100%;
-    margin-right: -100%;
     vertical-align: middle;
-    color: white;
-    font-size: 18px;
-}
-
-.second {
-    text-align: center;
 }
 
 nav a {
     color: white;
-}
-
-footer .second {
-    text-align: right;
 }
 
 footer .elements-list li {
@@ -68,42 +45,33 @@ footer .elements-list li {
         border-right: none;
     }
 
+
+nav .elements-list li {
+    height: 100%;
+    padding: 0 10px;
+    border-right: 1px solid grey;
+}
+
+    nav .elements-list li:last-child {
+        padding: 10px;
+        margin-right: 90px;
+        border-right: none;
+    }
+
 .img {
     vertical-align: middle;
 }
 
-.section {
-    padding: 30px 30px 0 30px;
-}
-
 .last-activity {
+    margin-left: 0;
     width: 100%;
     padding-bottom: 0;
     background-color: rgb(235,235,235);
 }
 
-.dinamic-list {
-    margin: 0;
-    padding: 0;
-    text-align: justify;
-}
-
-    .dinamic-list li {
-        padding: 20px 20px 20px 20px;
-        background-color: white;
-        display: inline-block;
-    }
-
-        .dinamic-list li.helper {
-            width: 100%;
-            height: 0;
-            visibility: hidden;
-            padding-bottom: 0;
-        }
-
-    .dinamic-list div {
-        display: inline-block;
-        vertical-align: middle;
+    .last-activity ul {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
 .time {
@@ -111,6 +79,7 @@ footer .elements-list li {
 }
 
 .other-search {
+    margin-left: 0;
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: 1px solid grey;
@@ -145,8 +114,3 @@ footer .elements-list li {
     .search button {
         height: 100%;
     }
-
-
-
-
-
