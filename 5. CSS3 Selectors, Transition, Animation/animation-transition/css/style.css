@@ -219,4 +219,5 @@ input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3),
 input.sp-selector-4:checked ~ .sp-content .sp-slider > li:nth-child(4),
 input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
     opacity: 1;
+    transition: opacity 0.8s 0.4s ease-in ;
 }
