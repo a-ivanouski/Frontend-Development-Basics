@@ -26,12 +26,9 @@
             padding: 10px 10px 10px 0;
         }
 
-        input[type="checkbox"] {
+        input[type="checkbox"]:checked ~ label {
+            color: red;
         }
-
-            input[type="checkbox"]:checked ~ label {
-                color: red;
-            }
 
         a {
             display: inline-block;
