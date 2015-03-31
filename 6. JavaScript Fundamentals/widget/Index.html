@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="imageprocessor.js" type="text/javascript"></script>
+</head>
+<body>
+    <img class="imgproc" src="http://placehold.it/3500x3500&text=first+image!" width="500" height="500"/>
+    <img class="imgproc" src="http://placehold.it/3500x3500&text=second+image!" width="500" height="500"/>
+    <img class="imgproc" src="http://placehold.it/3500x3500&text=third+image!" width="500" height="500"/>
+    <img class="imgproc" src="failed.jpg" width="500" height="500"/>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(".imgproc").imageprocessor();
+</script>
