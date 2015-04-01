@@ -9,13 +9,20 @@
 
         this._showSpinner(this.element);
 
-        this.element.on("load", function () {
-            self._hideSpinner(self.element);
-        });
-
         this.element.on("error", function () {
             self.element.attr("src", self.options.defaultSrc);
         });
+
+        var setIntervalId;
+
+        var monitorImageState = function(){
+            if (self._isLoadingComplete()) {
+                self._hideSpinner(self.element);
+                clearInterval(setIntervalId);
+            }
+        }
+
+        setIntervalId = setInterval(monitorImageState, 100);
     },
 
     _showSpinner: function (element) {
@@ -31,4 +38,8 @@
             "background-image": "none"
         });
     },
+
+    _isLoadingComplete: function () {
+        return this.element.complete;
+    }
 });
