@@ -6,8 +6,6 @@
     <title>task 1</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" type="text/javascript"></script>
-
-    <script src="script.js"></script>
 </head>
 <body>
     <style>
@@ -26,7 +24,20 @@
     <img class="img" src="http://placehold.it/1000000000x100000000000">
 
     <script>
-        $('.img').load();
+        function loadImage(index,element) {
+            var img = new Image();
+            img.onload = function () {
+                console.log('correct');
+                element.src = img.src;
+            }
+            img.onerror = function () {
+                console.log('error');
+                element.src = 'error.jpg';
+            }
+            img.src = element.src;
+            element.src = 'spiner.gif'
+        }
+        $('img').each(loadImage);
     </script>
 </body>
 </html>

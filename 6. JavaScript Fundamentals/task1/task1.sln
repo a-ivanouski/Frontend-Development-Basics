@@ -6,7 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{856588F2-70FD-487D-A72B-E9ADCE8C7E52}"
 	ProjectSection(SolutionItems) = preProject
 		index.html = index.html
-		script.js = script.js
 	EndProjectSection
 EndProject
 Global
