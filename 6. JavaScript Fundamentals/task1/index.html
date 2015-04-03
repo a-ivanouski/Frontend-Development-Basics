@@ -24,20 +24,32 @@
     <img class="img" src="http://placehold.it/1000000000x100000000000">
 
     <script>
-        function loadImage(index,element) {
-            var img = new Image();
-            img.onload = function () {
-                console.log('correct');
-                element.src = img.src;
+        $.widget('image.load', {
+            options: {
+                spinner: 'spiner.gif',
+                errorImg: 'error.jpg'
+            },
+
+            _create: function () {
+                var img = this.element[0],
+                    src = this.element[0].src,
+                    defaultSrc = this.options.errorImg;
+
+                $(img).attr('src', this.options.spinner);
+
+                var fakeImg = new Image();
+                fakeImg.onload = function () {
+                    $(img).attr('src', src);
+                }
+
+                fakeImg.onerror = function () {
+                    $(img).attr('src', defaultSrc);
+                }
+
+                $(fakeImg).attr('src', src);
             }
-            img.onerror = function () {
-                console.log('error');
-                element.src = 'error.jpg';
-            }
-            img.src = element.src;
-            element.src = 'spiner.gif'
-        }
-        $('img').each(loadImage);
+        });
+        $('img').load();
     </script>
 </body>
 </html>
