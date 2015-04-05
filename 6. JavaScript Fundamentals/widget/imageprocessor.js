@@ -9,20 +9,22 @@
 
         this._showSpinner(this.element);
 
-        this.element.on("error", function () {
-            self.element.attr("src", self.options.defaultSrc);
+        var img = new Image();
+        $(img).css("width", "500px");
+        $(img).css("height", "500px");
+
+        $(img).on("load", function(e){ 
+            self._hideSpinner(self.element);
+            self.element.replaceWith(img);
         });
 
-        var setIntervalId;
+        $(img).on("error", function () {
+            img.src = self.options.defaultSrc;
+        });
 
-        var monitorImageState = function(){
-            if (self._isLoadingComplete()) {
-                self._hideSpinner(self.element);
-                clearInterval(setIntervalId);
-            }
-        }
-
-        setIntervalId = setInterval(monitorImageState, 100);
+        img.src = this.element.context.src;
+        
+        this.element.removeAttr("src");      
     },
 
     _showSpinner: function (element) {
@@ -38,8 +40,4 @@
             "background-image": "none"
         });
     },
-
-    _isLoadingComplete: function () {
-        return this.element.complete;
-    }
 });
