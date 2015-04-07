@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Homework: Javascript Intermediate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+    <body>
+        <main>
+			<header>
+				<h1>Homework: Javascript Intermediate</h1>
+			</header>
+			
+			<section>
+			   <h1>Task #1</h1>
+			   <p>
+					Create "native" repeat() method of String object. Function receives integer, which defines how many times string should be repeated. Function returns repeated string number of types specified as parameter.
+			   </p>
+			   <p>
+				  Sample: <br/>
+				  console.log('string1'.repeat(3));
+			   </p>
+			   <p>
+				  Result: <br/>
+				  <strong>"string1string1string1"</strong>
+			   </p>			   
+			</section>
+
+			<section>
+			   <h1>Task #2</h1>
+			   <p>
+				  The code below writes Aurelio De Rosa and John Doe to the console.
+				  
+				<pre style='color:#000000;background:#ffffff;'><html><body style='color:#000000; background:#ffffff; '>
+				<span style='color:#800000; font-weight:bold; '>var</span> fullname <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>'John Doe'</span><span style='color:#800080; '>;</span> 
+				<span style='color:#800000; font-weight:bold; '>var</span> obj <span style='color:#808030; '>=</span> <span style='color:#800080; '>{</span>
+				   fullname <span style='color:#800080; '>:</span> <span style='color:#0000e6; '>'Colin Ihrig'</span><span style='color:#808030; '>,</span> prop <span style='color:#800080; '>:</span> <span style='color:#800080; '>{</span>
+					  fullname <span style='color:#800080; '>:</span> <span style='color:#0000e6; '>'Aurelio De Rosa'</span><span style='color:#808030; '>,</span> 
+					  getFullname <span style='color:#800080; '>:</span> <span style='color:#800000; font-weight:bold; '>function</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+						 <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#800000; font-weight:bold; '>this</span><span style='color:#808030; '>.</span>fullname<span style='color:#800080; '>;</span> 
+						 <span style='color:#800080; '>}</span>
+					  <span style='color:#800080; '>}</span>
+				   <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span> 
+				console<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>log</span><span style='color:#808030; '>(</span>obj<span style='color:#808030; '>.</span>prop<span style='color:#808030; '>.</span>getFullname<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span> 
+				<span style='color:#800000; font-weight:bold; '>var</span> <span style='color:#800000; font-weight:bold; '>test</span> <span style='color:#808030; '>=</span> obj<span style='color:#808030; '>.</span>prop<span style='color:#808030; '>.</span>getFullname<span style='color:#800080; '>;</span> 
+				console<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>log</span><span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>test</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+				</pre>
+			   </p>
+			   
+			   <p>Change the code above so it to print "Aurelio De Rosa" twice.</p>
+			</section>  			
+ 			<section>
+			   <h1>Task #3</h1>
+			   <p>
+					In your source code you've noticed that you have a function
+			   </p>
+			   <p>
+					<pre style='color:#000000;background:#ffffff;'><html><body style='color:#000000; background:#ffffff; '>
+					<span style='color:#800000; font-weight:bold; '>function</span> process<span style='color:#808030; '>(</span>a<span style='color:#808030; '>,</span> b<span style='color:#808030; '>,</span> c<span style='color:#808030; '>,</span> d<span style='color:#808030; '>,</span> e<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span> 
+						<span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#008c00; '>10000</span><span style='color:#808030; '>*</span>a<span style='color:#808030; '>+</span><span style='color:#008c00; '>1000</span><span style='color:#808030; '>*</span>b<span style='color:#808030; '>+</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>*</span>c<span style='color:#808030; '>+</span><span style='color:#008c00; '>10</span><span style='color:#808030; '>*</span>d<span style='color:#808030; '>+</span>e<span style='color:#800080; '>;</span> 
+					<span style='color:#800080; '>}</span>
+					</pre>
+			   </p>
+			   <p>
+					which is called 10 times where a,b,c,d params are the same and only e param differs. <br/>
+
+					Create a universal schonfinkelize(...) function, which will receive any function as a first param, and a list of args which are the same during multiple function calls and will return a function with only one param which is used.<br/><br/>
+
+					(Search for currying/schonfinkelisation)
+			   </p>
+			   	<p>
+					Sample:
+					
+					<pre style='color:#000000;background:#ffffff;'><html><body style='color:#000000; background:#ffffff; '>
+					<span style='color:#800000; font-weight:bold; '>function</span> process<span style='color:#808030; '>(</span>a<span style='color:#808030; '>,</span> b<span style='color:#808030; '>,</span> c<span style='color:#808030; '>,</span> d<span style='color:#808030; '>,</span> e<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span> 
+						<span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#008c00; '>10000</span><span style='color:#808030; '>*</span>a<span style='color:#808030; '>+</span><span style='color:#008c00; '>1000</span><span style='color:#808030; '>*</span>b<span style='color:#808030; '>+</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>*</span>c<span style='color:#808030; '>+</span><span style='color:#008c00; '>10</span><span style='color:#808030; '>*</span>d<span style='color:#808030; '>+</span>e<span style='color:#800080; '>;</span> 
+					<span style='color:#800080; '>}</span>
+					</pre>					
+			   </p>
+			   <p>
+				  In our sample:
+				  
+				  <pre style='color:#000000;background:#ffffff;'><html><body style='color:#000000; background:#ffffff; '>
+					<span style='color:#800000; font-weight:bold; '>var</span> newProcess <span style='color:#808030; '>=</span> schonfinkelize<span style='color:#808030; '>(</span>process<span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>4</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+					newProcess<span style='color:#808030; '>(</span><span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span> <span style='color:#696969; '>// 12345</span>
+
+					Other possible usages<span style='color:#800080; '>:</span>
+					schonfinkelize<span style='color:#808030; '>(</span>process<span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>4</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>  <span style='color:#696969; '>// 12345</span>
+					schonfinkelize<span style='color:#808030; '>(</span>process<span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>)</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>3</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>4</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>  <span style='color:#696969; '>// 12345</span>
+					schonfinkelize<span style='color:#808030; '>(</span>process<span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#808030; '>)</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>4</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>  <span style='color:#696969; '>// 12345</span>
+					schonfinkelize<span style='color:#808030; '>(</span>process<span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>4</span><span style='color:#808030; '>)</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>  <span style='color:#696969; '>// 12345</span>
+				</pre>
+			   </p>
+			</section>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<section>
+			   <h1>Task #4</h1>
+			   <p>
+					Create a widget that will provide next 3 loggers:
+			   </p>
+			   
+			   <ol>
+					<li> Function which will create actionLogger object.
+					That object will contain methods such as:</li>
+					<ul>
+						<li>showLog() - displays in cosole all actions being logged</li>
+						<li>addRecord(record) - adds specific text log record added by user code</li>
+						<li>clear log() - clears logs</li>
+					</ul> 
+
+					<li>Function which will create mouseEventLogger object.
+					That object will contain methods such as:</li>
+			   
+					<ul>
+						<li>showLog() - displays in cosole all actions being logged</li>
+						<li>addRecord(record) - adds specific text log record added by user code</li>
+						<li>clear log() - clears logs</li>
+						<li>logMouseClick(clickEvent) - method will be triggered in click event handlers and contain mouse pointer coords and other click specific info</li>
+					</ul>
+
+					<li>Function which will create keyboardEventLogger object.
+					That object will contain methods such as:</li>			
+					<ul>
+						<li>showLog() - displays in cosole all actions being logged</li>
+						<li>addRecord(record) - adds specific text log record added by user code</li>
+						<li>clear log() - clears logs</li>
+						<li>logButtonPressed(buttonPressedEvent) - method will be triggered after keyboard button is pressed and will contain all specific info about the event.</li>
+					</ul> 			   
+				</ol>
+			<p>
+					Think about:
+			</p>
+			   
+		   <ul>
+				<li>"Private" and "public" methods</li>
+				<li>Common functionality</li>
+				<li>oop principles</li>
+			</ul>
+			</section>			
+			
+			
+			
+			
+			
+			
+		</main>
+	</body>
+</html>
