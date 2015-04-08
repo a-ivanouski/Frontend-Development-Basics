@@ -1,7 +1,7 @@
 //Task 1
 String.prototype.repeat = function (count) {
     var _thisStr = Array.prototype.slice.call(this, 0).join('');
-    var i, result='';
+    var i, result = '';
     for (i = 0; i < count; i++) {
         result = result.concat(_thisStr)
     }
@@ -10,7 +10,7 @@ String.prototype.repeat = function (count) {
 }
 console.log("string1".repeat(3));
 //Task 2
- 
+
 var fullname = 'John Doe';
 var obj = {
     fullname: 'Colin Ihrig', prop: {
@@ -33,7 +33,7 @@ function schonfinkelize() {
 
     function inner() {
         var _arg = Array.prototype.slice.call(arguments, 0);
-        return schonfinkelize.apply(this,arg.concat(_arg));
+        return schonfinkelize.apply(this, arg.concat(_arg));
     }
 
     inner.valueOf = function () {
@@ -51,8 +51,46 @@ console.log(schonfinkelize(process, 1, 2, 3, 4)(5));
 
 //Task 4
 
+function actionLogger() {
+    var log = '';
 
+    actionLogger.prototype.addRecord = function (value) {
+        log += value + '\n';
+    }
 
+    actionLogger.prototype.showLog = function () {
+        return log;
+    }
 
+    actionLogger.prototype.clearLog = function () {
+        log = '';
+    }
+}
 
+var mouseEventLogger = new actionLogger();
 
+mouseEventLogger.logMouseClick = function (clickEvent) {
+    this.addRecord(clickEvent);
+}
+
+mouseEventLogger.logMouseClick("click1");
+mouseEventLogger.logMouseClick("click2");
+mouseEventLogger.clearLog();
+mouseEventLogger.logMouseClick("click3");
+mouseEventLogger.logMouseClick("click4");
+
+console.log(mouseEventLogger.showLog());
+
+var keyboardEventLogger = new actionLogger();
+
+keyboardEventLogger.logButtonPressed = function (buttonPressedEvent) {
+    this.addRecord(buttonPressedEvent);
+}
+
+keyboardEventLogger.logButtonPressed("button1");
+keyboardEventLogger.logButtonPressed("button2");
+keyboardEventLogger.clearLog();
+keyboardEventLogger.logButtonPressed("button3");
+keyboardEventLogger.logButtonPressed("button4");
+
+console.log(keyboardEventLogger.showLog());
