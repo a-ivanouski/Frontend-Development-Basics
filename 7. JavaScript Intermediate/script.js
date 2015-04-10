@@ -28,22 +28,25 @@ function process(a, b, c, d, e) {
     return 10000 * a + 1000 * b + 100 * c + 10 * d + e;
 }
 function schonfinkelize() {
-    var func = arguments[0];
-    var arg = Array.prototype.slice.call(arguments, 1);
+    var arg = Array.prototype.slice.call(arguments, 0);
 
     function inner() {
         var _arg = Array.prototype.slice.call(arguments, 0);
-        if (func instanceof Function)
-            return func.apply(this, arg.concat(_arg));
+        return schonfinkelize.apply(this, arg.concat(_arg));
     }
 
+    inner.valueOf = function () {
+        if (arg[0] instanceof Function)
+            return arg[0].apply(this, arg.slice(1));
+    }
     return inner;
 }
 
-console.log(schonfinkelize(process, 1)(2, 3, 4, 5));
-console.log(schonfinkelize(process, 1, 2)(3, 4, 5));
-console.log(schonfinkelize(process, 1, 2, 3)(4, 5));
-console.log(schonfinkelize(process, 1, 2, 3, 4)(5));
+console.log(schonfinkelize(process)(1)(2)(3)(4)(5) + '');
+console.log(schonfinkelize(process, 1)(2, 3, 4, 5) + '');
+console.log(schonfinkelize(process, 1, 2)(3, 4, 5) + '');
+console.log(schonfinkelize(process, 1, 2, 3)(4, 5) + '');
+console.log(schonfinkelize(process, 1, 2, 3, 4)(5) + '');
 
 
 //Task 4
