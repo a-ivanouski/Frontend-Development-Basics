@@ -1,9 +1,8 @@
 //Task 1
 String.prototype.repeat = function (count) {
-    var _thisStr = Array.prototype.slice.call(this, 0).join('');
     var i, result = '';
     for (i = 0; i < count; i++) {
-        result = result.concat(_thisStr)
+        result = result.concat(this)
     }
 
     return result;
@@ -29,17 +28,15 @@ function process(a, b, c, d, e) {
     return 10000 * a + 1000 * b + 100 * c + 10 * d + e;
 }
 function schonfinkelize() {
-    var arg = Array.prototype.slice.call(arguments, 0);
+    var func = arguments[0];
+    var arg = Array.prototype.slice.call(arguments, 1);
 
     function inner() {
         var _arg = Array.prototype.slice.call(arguments, 0);
-        return schonfinkelize.apply(this, arg.concat(_arg));
+        if (func instanceof Function)
+            return func.apply(this, arg.concat(_arg));
     }
 
-    inner.valueOf = function () {
-        if (arg[0] instanceof Function)
-            return arg[0].apply(this, arg.slice(1));
-    }
     return inner;
 }
 
@@ -51,46 +48,58 @@ console.log(schonfinkelize(process, 1, 2, 3, 4)(5));
 
 //Task 4
 
-function actionLogger() {
-    var log = '';
+function loggerWidget() {
+    function actionLogger() {
+        var log = '';
 
-    actionLogger.prototype.addRecord = function (value) {
-        log += value + '\n';
+        actionLogger.prototype.addRecord = function (value) {
+            log += value + '\n';
+        }
+
+        actionLogger.prototype.showLog = function () {
+            return log;
+        }
+
+        actionLogger.prototype.clearLog = function () {
+            log = '';
+        }
     }
 
-    actionLogger.prototype.showLog = function () {
-        return log;
+    var mouseEventLogger = new actionLogger();
+
+    mouseEventLogger.logMouseClick = function (clickEvent) {
+        this.addRecord(clickEvent);
     }
 
-    actionLogger.prototype.clearLog = function () {
-        log = '';
+    var keyboardEventLogger = new actionLogger();
+
+    keyboardEventLogger.logButtonPressed = function (buttonPressedEvent) {
+        this.addRecord(buttonPressedEvent);
     }
+
+    return {
+        mouseEventLogger: mouseEventLogger,
+        keyboardEventLogger: keyboardEventLogger
+    }
+
 }
 
-var mouseEventLogger = new actionLogger();
+var mouseEventLogger = loggerWidget().mouseEventLogger;
 
-mouseEventLogger.logMouseClick = function (clickEvent) {
-    this.addRecord(clickEvent);
-}
-
-mouseEventLogger.logMouseClick("click1");
-mouseEventLogger.logMouseClick("click2");
+mouseEventLogger.addRecord("click1");
+mouseEventLogger.addRecord("click2");
 mouseEventLogger.clearLog();
-mouseEventLogger.logMouseClick("click3");
-mouseEventLogger.logMouseClick("click4");
+mouseEventLogger.addRecord("click3");
+mouseEventLogger.addRecord("click4");
 
-console.log(mouseEventLogger.showLog());
+console.log(mouseEventLogger.showLog())
 
-var keyboardEventLogger = new actionLogger();
+var keyboardEventLogger = loggerWidget().keyboardEventLogger;
 
-keyboardEventLogger.logButtonPressed = function (buttonPressedEvent) {
-    this.addRecord(buttonPressedEvent);
-}
-
-keyboardEventLogger.logButtonPressed("button1");
-keyboardEventLogger.logButtonPressed("button2");
+keyboardEventLogger.addRecord("button1");
+keyboardEventLogger.addRecord("button2");
 keyboardEventLogger.clearLog();
-keyboardEventLogger.logButtonPressed("button3");
-keyboardEventLogger.logButtonPressed("button4");
+keyboardEventLogger.addRecord("button3");
+keyboardEventLogger.addRecord("button4");
 
-console.log(keyboardEventLogger.showLog());
+console.log(keyboardEventLogger.showLog())
