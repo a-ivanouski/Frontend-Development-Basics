@@ -2,10 +2,8 @@
     return 10000 * a + 1000 * b + 100 * c + 10 * d + e;
 }
 
-function schonfinkelize()
+function schonfinkelize(f)
 {
-    var f = arguments[0];
-
     if (typeof (f) != 'function')
         return;
 
