@@ -2,6 +2,6 @@
 
 Make your page responsive. Make it to support 3 base screen resolutions like on the mockups below:
 
-https://dl.dropboxusercontent.com/u/36019468/ResponsiveWebDesignHomework/S-mockup.PNG
-https://dl.dropboxusercontent.com/u/36019468/ResponsiveWebDesignHomework/M-mockup.PNG
-https://dl.dropboxusercontent.com/u/36019468/ResponsiveWebDesignHomework/XL-mockup.PNG
+https://dl.dropboxusercontent.com/u/36019468/ResponsiveWebDesignHomework/S-mockup.jpg
+https://dl.dropboxusercontent.com/u/36019468/ResponsiveWebDesignHomework/M-mockup.jpg
+https://dl.dropboxusercontent.com/u/36019468/ResponsiveWebDesignHomework/XL-mockup.jpg
