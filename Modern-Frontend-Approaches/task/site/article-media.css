@@ -1,27 +1,57 @@
-﻿.most-popular-news {
-    width: 60%;
-    float: left;
+﻿
+.menu-popular-news {
+    overflow: hidden;
 }
 
 @media (max-width: 1200px) {
+    .most-popular-news {
+        width: 60%;
+        float: left;
+        height: 600px;
+    }
+
     .photos {
         width: 100%;
+        height: 50%;
     }
 
     .menu-popular-news {
         width: 100%;
+        height: 50%;
+    }
+
+    .recents-posts {
+        position: relative;
+        bottom: 100px;
+    }
+
+    .technology-news, .video-galery {
+        position: relative;
+        bottom: 100px;
+    }
+
+    article .fasion-news {
+        height: 400px;
     }
 }
 
 @media (min-width: 1200px) {
+    .most-popular-news {
+        width: 60%;
+        float: left;
+        height: 500px;
+    }
+
     .photos {
         width: 42%;
         float: left;
+        height: 100%;
     }
 
     .menu-popular-news {
         width: 42%;
         float: right;
+        height: 100%;
     }
 }
 
@@ -38,17 +68,38 @@
 
 .popular-recent-coments {
     width: 30%;
-    float:right;
+    float: right;
+    height: 500px;
 }
 
 .hot-stuff {
     width: 60%;
+    height: 500px;
+}
+
+.game-news {
+    height: 500px;
+}
+
+.sport-news {
+    height: 500px;
+}
+
+.technology-news {
+    height: 500px;
+}
+
+.fasion-news {
+    height: 500px;
+}
+
+.video-galery {
+    height: 500px;
 }
 
 .recents-posts {
     width: 30%;
-    margin-left: 9%;
-    height: 470px;
+    height: 500px;
     float: right;
 }
 
@@ -105,40 +156,24 @@
 
     .fasion-news {
         width: 100%;
-        float:right;
+        float: right;
     }
 
-    .fasion-news-main {
-        
+    .fasion-news-main, .comments-on-news, .video-galery, .most-popular-news, .popular-recent-coments, .recents-posts, .hot-stuff {
         width: 100%;
     }
 
-    .comments-on-news {
-       
-        width: 100%;
-    }
-
-    .video-galery {
-        width: 100%;
-    }
-
-
-    .most-popular-news {
-        width:100%;
-    }
-
-    .popular-recent-coments {
-        width: 100%;
-    }
     .recents-posts {
-        width:100%;
+        bottom: 0;
     }
 
-    .hot-stuff {
-        width:100%;
+    .technology-news, .video-galery {
+        bottom: 0;
+    }
+   article .fasion-news {
+        height:500px;
     }
 }
-
 
 .video-galery .photos {
     width: 100%;
