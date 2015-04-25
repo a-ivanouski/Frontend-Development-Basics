@@ -5,7 +5,7 @@
     .dinamic-list > .element {
         display: inline-block;
     }
-    
+
     .dinamic-list::after {
         content: "";
         display: inline-block;
@@ -13,3 +13,27 @@
         height: 0;
         padding: 0;
     }
+
+
+@media (max-width: 1325px) {
+    .head-element {
+        width: 500px;
+        margin-bottom: 10px;
+    }
+
+        .head-element .some-people-words {
+            position: relative;
+            bottom: 30px;
+        }
+
+  .hot-stuff  .people-element {
+        width:250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .head-element .some-people-words {
+        width: 100%;
+        bottom: 15px;
+    }
+}

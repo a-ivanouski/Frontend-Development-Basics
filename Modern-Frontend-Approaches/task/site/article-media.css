@@ -1,0 +1,162 @@
+﻿.most-popular-news {
+    width: 60%;
+    float: left;
+}
+
+@media (max-width: 1200px) {
+    .photos {
+        width: 100%;
+    }
+
+    .menu-popular-news {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .photos {
+        width: 42%;
+        float: left;
+    }
+
+    .menu-popular-news {
+        width: 42%;
+        float: right;
+    }
+}
+
+.menu-popular-news .head {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu-popular-news .some-desription {
+    padding: 30px;
+    text-align: center;
+}
+
+.popular-recent-coments {
+    width: 30%;
+    float:right;
+}
+
+.hot-stuff {
+    width: 60%;
+}
+
+.recents-posts {
+    width: 30%;
+    margin-left: 9%;
+    height: 470px;
+    float: right;
+}
+
+@media (min-width: 670px) {
+
+    .game-news {
+        width: 25%;
+    }
+
+    .sport-news {
+        width: 25%;
+        margin-left: 10%;
+    }
+
+    .technology-news {
+        width: 30%;
+        float: right;
+    }
+
+    .fasion-news {
+        width: 60%;
+    }
+
+    .fasion-news-main {
+        float: left;
+        width: 42.8%;
+    }
+
+    .comments-on-news {
+        float: right;
+        width: 42.8%;
+    }
+
+    .video-galery {
+        width: 30%;
+        float: right;
+    }
+}
+
+@media (max-width: 918px) {
+     .game-news {
+        width: 30%;
+        float:right;
+    }
+
+     .sport-news {
+        width: 60%;
+        margin-left: 0;
+        float:left;
+    }
+}
+
+
+
+
+
+@media (max-width: 670px) {
+    .game-news {
+        width: 100%;
+    }
+
+    .sport-news {
+        width: 100%;
+        float: right;
+    }
+
+    .technology-news {
+        width: 100%;
+        float: left;
+    }
+
+    .fasion-news {
+        width: 100%;
+        float:right;
+    }
+
+    .fasion-news-main {
+        
+        width: 100%;
+    }
+
+    .comments-on-news {
+       
+        width: 100%;
+    }
+
+    .video-galery {
+        width: 100%;
+    }
+
+
+    .most-popular-news {
+        width:100%;
+    }
+
+    .popular-recent-coments {
+        width: 100%;
+    }
+    .recents-posts {
+        width:100%;
+    }
+
+    .hot-stuff {
+        width:100%;
+    }
+}
+
+
+.video-galery .photos {
+    width: 100%;
+}
