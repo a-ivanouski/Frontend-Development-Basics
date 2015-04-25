@@ -25,10 +25,6 @@
             position: relative;
             bottom: 30px;
         }
-
-  .hot-stuff  .people-element {
-        width:250px;
-    }
 }
 
 @media (max-width: 500px) {

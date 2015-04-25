@@ -88,23 +88,6 @@
     }
 }
 
-@media (max-width: 918px) {
-     .game-news {
-        width: 30%;
-        float:right;
-    }
-
-     .sport-news {
-        width: 60%;
-        margin-left: 0;
-        float:left;
-    }
-}
-
-
-
-
-
 @media (max-width: 670px) {
     .game-news {
         width: 100%;
