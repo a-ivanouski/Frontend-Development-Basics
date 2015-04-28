@@ -1,4 +1,15 @@
-﻿.dinamic-list {
+﻿button {
+    margin:0;
+    padding:0;
+    border:0;
+}
+p {
+    margin-bottom:13px;
+    margin-top:13px;
+
+}
+
+.dinamic-list {
     text-align: justify;
 }
 

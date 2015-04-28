@@ -31,7 +31,12 @@
     }
 
     article .fasion-news {
-        height: 400px;
+        height: 480px;
+    }
+
+    .buttos-help .help-margin {
+        margin-left: 50%;
+        width: 50%;
     }
 }
 
@@ -53,64 +58,323 @@
         float: right;
         height: 100%;
     }
+
+
+    .buttos-help .help-margin {
+        margin-left: 70%;
+        width: 40%;
+    }
 }
 
 .menu-popular-news .head {
-     padding-top:20px;
-   padding-bottom:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     margin-bottom: 30px;
-    background-color:rgb(61,76,84);
-    color:white;
-    font-size:22px;
-    
+    background-color: rgb(61,76,84);
+    color: white;
+    font-size: 22px;
 }
 
 .menu-popular-news {
-    background-color:rgb(242,242,242);
+    background-color: rgb(242,242,242);
 }
 
 
-.menu-popular-news .some-desription {
-   padding-top:20px;
-   padding-bottom:20px;
-    text-align: center;
-    background-color:white;
-    width:80%;
-    margin-left:10%;
-    margin-bottom:10%;
+    .menu-popular-news .some-desription {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        background-color: white;
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 5%;
+    }
 
+.select-buttons {
+    width: 101%;
+    margin-bottom: 70px;
 }
+
+    .select-buttons button {
+        position: relative;
+        float: left;
+        width: 33.33%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(61,76,84);
+        border: none;
+        margin: 0;
+        color: white;
+    }
+
+        .select-buttons button:first-child {
+            background-color: rgb(129,183,82);
+        }
 
 .popular-recent-coments {
     width: 30%;
     float: right;
     height: 500px;
+    border: 3px solid rgb(237,237,237);
 }
+
+    .popular-recent-coments .some-people-comment {
+        margin-top: -1px;
+        border-bottom: 3px solid rgb(237,237,237);
+    }
+
+    .popular-recent-coments .people-img {
+        display: inline-block;
+    }
+
+    .popular-recent-coments .some-people-words {
+        display: inline-block;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .popular-recent-coments .some-people-comment {
+        width: 93%;
+        padding-left: 7%;
+        padding-top: 10px;
+        height: 109px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+.buttos-help {
+    background-color: rgb(248,248,248);
+    padding: 13px;
+    text-align: left;
+}
+
+    .buttos-help button {
+        padding: 10px;
+        border: 2px solid darkgray;
+    }
+
+        .buttos-help button:last-child {
+            position: relative;
+            right: 4px;
+        }
 
 .hot-stuff {
     width: 60%;
     height: 500px;
 }
 
+.hear-capter {
+    width: 100%;
+    border-bottom: 2px solid rgb(237,237,237);
+}
+
+.hot-stuff .hear-capter {
+    margin-bottom: 150px;
+}
+
+.hot-stuff .some-people-block {
+    width: 180px;
+}
+
+.hot-stuff .description {
+    padding-bottom: 3px;
+    padding-top: 3px;
+    border-bottom: 2px solid rgb(237,237,237);
+}
+
+.description p {
+    display: inline-block;
+    padding-left: 10px;
+    width: 70%;
+}
+
+.hear-capter button {
+    padding: 10px;
+}
+
+.hear-capter .help-margin {
+    display: inline-block;
+    float: right;
+}
+
+    .hear-capter .help-margin button {
+        padding: 8px;
+        border: 2px solid gray;
+    }
+
+        .hear-capter .help-margin button:first-child {
+            position: relative;
+            left: 4px;
+        }
+
+
+.description button {
+    position: relative;
+    bottom: 5px;
+    padding: 10px 5px 10px 5px;
+}
+
+.recents-posts .hear-capter {
+    margin-bottom: 60px;
+}
+
+.recents-posts .some-people-comment {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(237,237,237);
+}
+
+    .recents-posts .some-people-comment:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+.recents-posts .some-people-words {
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    width: 30%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.recents-posts .people-img {
+    display: inline-block;
+}
+
+.news-photo {
+    width: 100%;
+}
+
+    .news-photo img {
+        width: 100%;
+    }
+
+@media (max-width:1350px) {
+    .game-news p, .technology-news p, .sport-news p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .game-news .some-people-words, .sport-news .some-people-words, .technology-news .some-people-words {
+        display: block;
+    }
+
+    article .game-news, article .sport-news, article .technology-news {
+        height: 740px;
+    }
+}
+
+@media (min-width:1350px) {
+    article .game-news .some-people-words, article .sport-news .some-people-words, article .technology-news .some-people-words {
+        position: relative;
+        bottom: 14px;
+    }
+}
+
+
 .game-news {
     height: 500px;
 }
+
+    .game-news .hear-capter {
+        margin-bottom: 40px;
+    }
 
 .sport-news {
     height: 500px;
 }
 
+    .sport-news .hear-capter {
+        margin-bottom: 40px;
+    }
+
 .technology-news {
     height: 500px;
 }
 
-.fasion-news {
-    height: 500px;
+    .technology-news .hear-capter {
+        margin-bottom: 40px;
+    }
+
+
+
+.fasion-news-main {
+    height: 85%;
+}
+
+    .fasion-news-main .news-photo {
+        height: 200px;
+    }
+
+        .fasion-news-main .news-photo img {
+            width: 100%;
+            height: 100%;
+        }
+
+.fasion-news .hear-capter {
+    margin-bottom: 20px;
+}
+
+@media (max-width:900px) {
+
+    article .fasion-news-main {
+        height: 30%;
+    }
+
+    article .fasion-news {
+        width: 100%;
+        height: 820px;
+    }
+
+    article .comments-on-news, article .fasion-news-main {
+        width: 100%;
+    }
+
+    article .comments-on-news {
+        position: relative;
+        top: 25px;
+    }
 }
 
 .video-galery {
     height: 500px;
+    width: 30%;
+    float: right;
+}
+
+
+@media (max-width:1000px) {
+
+    .video-galery {
+        width: 100%;
+    }
+}
+
+
+.fasion-news .some-people-words {
+    width: 50%;
+}
+
+
+
+.video-galery .photos {
+    border: none;
+}
+
+.video-galery .other-photos {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.video-galery .hear-capter {
+    margin-bottom: 20px;
 }
 
 .recents-posts {
@@ -148,11 +412,6 @@
         float: right;
         width: 42.8%;
     }
-
-    .video-galery {
-        width: 30%;
-        float: right;
-    }
 }
 
 @media (max-width: 670px) {
@@ -185,9 +444,6 @@
 
     .technology-news, .video-galery {
         bottom: 0;
-    }
-   article .fasion-news {
-        height:500px;
     }
 }
 

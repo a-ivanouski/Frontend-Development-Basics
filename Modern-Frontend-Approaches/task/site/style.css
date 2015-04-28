@@ -11,6 +11,9 @@
     height:3em;
     line-height:3em;
     margin-bottom:5px;  /*ccccccc*/
+    border-bottom:1px solid darkgray;
+    border-top:1px solid darkgray;
+
 }
     .searching p {
         display:inline-block;
@@ -32,7 +35,7 @@
 }
     .search button {
         margin:0;
-        padding:1em;
+        padding:13px;
         border:none;
         background-color:rgb(61,76,84);
         
@@ -41,7 +44,7 @@
         position:relative;
         left:4px;
         margin:0;
-        padding:1em;
+        padding:14px;
         border:none;
         
     }
