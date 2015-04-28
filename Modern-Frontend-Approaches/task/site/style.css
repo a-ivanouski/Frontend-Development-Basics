@@ -1,17 +1,99 @@
-﻿
-
-
-.border {
+﻿.border {
     border: 1px solid black;
 }
 
-header > ul {
-    text-align: center;
+.words-footer {
+    color: gray;
 }
 
-    header > ul > li {
-        display: inline-block;
+.searching {
+    background-color:rgb(247,247,247);
+    height:3em;
+    line-height:3em;
+    margin-bottom:5px;  /*ccccccc*/
+}
+    .searching p {
+        display:inline-block;
+        margin:0;
+        white-space: nowrap;
+        
     }
+.searching > button {
+     margin:0;
+     padding:3px;
+       border:none;
+     margin-left:3.3%;
+    background-color:rgb(108,119,131)
+}
+.search {
+    display:inline-block;
+    margin-right:3.3%;
+    
+}
+    .search button {
+        margin:0;
+        padding:1em;
+        border:none;
+        background-color:rgb(61,76,84);
+        
+    }
+    .search input {
+        position:relative;
+        left:4px;
+        margin:0;
+        padding:1em;
+        border:none;
+        
+    }
+
+
+@media (max-width:1200px) {
+    
+    .search,
+    .searching p {
+        width:100%;
+         margin-left:3.3%;
+    }
+
+    .searching {
+        height:9em;
+        line-height:3em;
+        padding-bottom:5px;
+    }
+
+}
+
+header {
+    background-color: rgb(61,76,84);
+    color: white;
+}
+
+    header > ul {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        line-height: 3em;
+        height: 3em;
+    }
+
+        header > ul > li {
+            display: inline-block;
+            border-right: 1px solid gray;
+            padding-right: 5px;
+        }
+
+            header > ul > li:first-child {
+                float: left;
+                margin-left: 23px;
+                border: none;
+            }
+
+            header > ul > li:last-child {
+                border: none;
+            }
+
+
+
 
 article {
     margin-left: 3.3%;
@@ -19,15 +101,47 @@ article {
 }
 
 .def-margin {
-    margin-left: 3.3%;
-    width: 93.3%;
+    padding-left: 3.3%;
+    padding-right: 3.3%;
+ 
 }
 
-
-.some-people > div {
-    display: inline-block;
+.some-people {
+    background-color: rgb(235,235,235);
 }
 
+    .some-people > .some-people-comment {
+        display: inline-block;
+        height: 100%;
+        background-color: white;
+        margin-top: 14px;
+    }
+
+        
+
+@media (max-width:1355px) {
+    .some-people > .some-people-comment:first-child {
+        margin-left: 0;
+    }
+
+    .some-people > .some-people-comment:last-child {
+        margin-right: 0;
+    }
+    .some-people {
+              
+          padding-left: 3.3%;
+    padding-right: 3.3%;
+
+    }
+}
+
+.some-people .some-people-words {
+    width: 60%;
+}
+
+.some-people .people-img {
+    display: inline;
+}
 
 .some-people-words {
     display: inline-block;
@@ -39,6 +153,4 @@ article {
 
 .some-people-comment {
     width: 300px;
-    height: 100px;
 }
-

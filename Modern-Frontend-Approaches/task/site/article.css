@@ -3,13 +3,20 @@
     /*height:500px;*/
     margin-bottom: 30px;
 }
- 
+
+.photos {
+    border:3px solid rgb(237,237,237);
+}
+
 .photo > img{
     margin-top:20px;
     height:60px;
     width:60px;
 }
-
+.other-photos {
+    width:93.3%;
+    margin-left:3.3%;
+}
 .other-photos .photo {
     display: inline-block;
 }

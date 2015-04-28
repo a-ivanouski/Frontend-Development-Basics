@@ -14,22 +14,47 @@
         padding: 0;
     }
 
+.some-people .people-img {
+    position: relative;
+    top: 10px;
+    padding-left: 10px;
+}
 
 @media (max-width: 1325px) {
     .head-element {
         width: 500px;
-        margin-bottom: 10px;
     }
 
         .head-element .some-people-words {
             position: relative;
-            bottom: 30px;
+            bottom: 10px;
         }
 }
+
+@media (min-width: 1325px) {
+    .head-element .some-people-words {
+        position: relative;
+        bottom: 10px;
+    }
+}
+
+@media (max-width:1100px) {
+    .head-element {
+        width: 100%;
+    }
+
+    .some-people .some-people-words {
+        width: 80%;
+    }
+}
+
 
 @media (max-width: 500px) {
     .head-element .some-people-words {
         width: 100%;
-        bottom: 15px;
+        top:10px;
+        margin-left:10px;
+        margin-right:10px;
+
     }
 }

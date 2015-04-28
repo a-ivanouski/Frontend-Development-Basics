@@ -56,14 +56,30 @@
 }
 
 .menu-popular-news .head {
-    padding: 20px;
+     padding-top:20px;
+   padding-bottom:20px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    background-color:rgb(61,76,84);
+    color:white;
+    font-size:22px;
+    
 }
 
+.menu-popular-news {
+    background-color:rgb(242,242,242);
+}
+
+
 .menu-popular-news .some-desription {
-    padding: 30px;
+   padding-top:20px;
+   padding-bottom:20px;
     text-align: center;
+    background-color:white;
+    width:80%;
+    margin-left:10%;
+    margin-bottom:10%;
+
 }
 
 .popular-recent-coments {
