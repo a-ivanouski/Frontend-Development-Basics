@@ -450,3 +450,154 @@
 .video-galery .photos {
     width: 100%;
 }
+
+.social-news {
+    background-color: rgb(241,241,241);
+    padding: 30px;
+    position: relative;
+    width: 103.3%;
+    right: 3.3%;
+}
+    .social-news button {
+        background-color:white;
+    }
+    .social-news > div > button {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+.latest-news .some-people-comment {
+    width: 300px;
+}
+
+
+    .latest-news .some-people-comment .some-people-words {
+        position: relative;
+        display: inline-block;
+        bottom: 16px;
+        width: 60%;
+    }
+
+
+.latest-tweets {
+    position: relative;
+    bottom: 76px;
+}
+
+    .latest-tweets .some-people-comment {
+        width: 300px;
+    }
+
+        .latest-tweets .some-people-comment .some-people-words {
+            position: relative;
+            bottom: 20px;
+            width: 60%;
+        }
+
+.other {
+    width: 700px;
+    position: relative;
+    bottom: 144px;
+    text-align: justify;
+}
+
+
+.tag-cloud {
+    display: inline-block;
+    width: 40%;
+}
+
+    .tag-cloud button {
+        padding: 6px;
+    }
+
+.social-media {
+    position: relative;
+    bottom: 40px;
+    display: inline-block;
+    text-align: left;
+}
+
+    .social-media ul {
+        padding: 0;
+    }
+
+        .social-media ul li {
+            display: inline-block;
+            text-align: center;
+        }
+
+.logo-and-about {
+    display: inline-block;
+    width: 100%;
+}
+
+    .logo-and-about .logo-img {
+        display: inline-block;
+    }
+
+    .logo-and-about p {
+        display: inline-block;
+        width: 50%;
+    }
+
+.logo-img {
+    border-right: 1px solid gray;
+    padding-right: 5px;
+}
+
+.social-media ul li button {
+    padding: 10px;
+}
+
+    .social-media ul li:nth-child(1) button {
+       background-color:orange;
+    }
+
+    .social-media ul li:nth-child(2) button {
+        background-color:rgb(126,210,242);
+    }
+
+    .social-media ul li:nth-child(3) button {
+        background-color:rgb(59,91,157);
+    }
+
+@media (max-width:1400px) {
+    article .other {
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width:707px) {
+    article .latest-tweets {
+        bottom: 7px;
+        width: 100%;
+    }
+
+    article .logo-and-about p {
+        width: 40%;
+    }
+}
+
+footer {
+    position: relative;
+    bottom: 29px;
+    background-color: rgb(35,50,63);
+    clear: both;
+    padding-left: 3.3%;
+    padding-right: 3.3%;
+    overflow: hidden;
+    height: 55px;
+    color: lightgray;
+}
+
+    footer ul li {
+        display: inline-block;
+        border-right: 3px solid lightgray;
+        padding-right: 3px;
+    }
+
+        footer ul li:last-child {
+            border-right: none;
+        }
