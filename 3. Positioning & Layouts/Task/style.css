@@ -14,17 +14,17 @@ html
 body
 {
     background: url("http://placehold.it/3000x3000") no-repeat top center fixed;
-    font: bold 12px arial, verdana;
 }
 
 .page, button, label, .most-popular-news header, .news-bar header p {
     background-color: #465345;
     color: white;
+	font: bold 12px arial, verdana;
 }
 
 .page
 {
-    width: 1150px;
+    width: 90%;
     margin: 40px auto;
 }
 
@@ -63,6 +63,17 @@ img
     display: inline-block;
 }
 
+.hd-btn{
+	padding: 10px 15px;
+    margin: 10px;
+    background-color: black;
+}
+
+.hd-btn{
+    display: none;
+}
+
+
 .nav-btn-left 
 {
     border-right: 1px solid #465345;
@@ -74,8 +85,23 @@ img
 }
 
 .search-input {
-    padding:15px;
+    padding:15px 5%;
     border-left: 1px solid #bbb9b9;
+}
+
+.search
+{
+	width: 20%;
+}
+
+.search input
+{
+	width: 80%;
+}
+
+.search button
+{
+	width: 20%;
 }
 
 .btn 
@@ -134,24 +160,18 @@ time
 .header
 {
     background-color: #465345;
+	width: 100%;
 }
 
 .logo
 {
-    padding: 0px 100px 0px 50px;
+    padding: 0px 3.85% 0px 2%;
     background-color: #465345;
-}
-
-
-.logo h1
-{
-    margin: 10px 0px;
 }
 
 .header-nav
 {
     background-color: #465345;
-    width: 800px;
 }
 
 .header-nav ul li a
@@ -165,21 +185,34 @@ time
 .top-images
 {
     background-color: #E5E5E5;
-    width: 1150px;
-    padding: 0px 30px;
+    width: 100%;
+    padding: 0px 1.98%;
 }
 
 .top-images ul li
 {
     background-color: white;
-    padding: 10px;
-    margin: 20px 16px;
+    padding: 10px 0.92%;
+    margin: 20px 1.47%;
     width: 22%;
+}
+
+.top-images ul li p
+{
+    display: inline-block;
+	width: 61%;
+}
+
+.top-images ul li figure
+{
+	width: 37%;
+	display: inline-block;
 }
 
 .top-images ul li img
 {
-    padding-right: 10px;
+    width: 100%;
+    padding-right: 12.5%;
 }
 
 .top-images ul li time
@@ -191,7 +224,7 @@ time
 /* Footer css*/
 .footer
 {
-    width: 1150px;
+    width: 100%;
     padding: 20px 50px;
     background-color: #465345;
     margin-bottom: 40px;
@@ -223,8 +256,8 @@ time
 .breaking-news 
 {
     background-color: #faf7f7;
-    padding: 0px 50px;
-    width: 1150px;
+    padding: 0px 4.347826086956522%;
+    width: 100%;
     color: #465345;
     border-top: 1px solid #bbb9b9;
     border-bottom: 1px solid #bbb9b9;
@@ -232,14 +265,17 @@ time
 
 .breaking-news label 
 {
-    padding: 10px;
-    margin: 5px 40px 5px 0px;
+    padding: 10px 0.9523809523809524%;
+    margin: 5px 3.80952380952381% 5px 0px;
 }
 
 .inline-news 
 {
-    padding: 10px;
+    padding: 10px 0.634%;
     margin: 5px 0px;
+	width: 58%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .inline-news p 
@@ -255,37 +291,49 @@ time
 /* Top news css */
 .top-news 
 {
-    width: 1150px;
-    padding: 50px 50px 0px;
+    width: 100%;
+    padding: 50px 4.347826086956522% 0px;
     background-color: white;
 }
 
 /* Carousel news css */
 .carousel-news 
 {
-    width: 402px;
+    width: 38.28571428571429%;
     border: 1px solid #faf7f7;
 }
 
 .preview-image-news
 {
-    margin: 10.5px;
+    margin: 10.5px 14.2%;
     border: 2px solid #faf7f7;
     cursor: pointer;
+	width: 71.6%;
+}
+
+.preview-image-news img
+{
+    width: 100%;
 }
 
 .image-news 
 {
     position: relative;
+	width: 100%
+}
+
+.image-news  img
+{
+	width: 100%;
 }
 
 .image-news-caption 
 {
     background-color: #465345;
     position: absolute;
-    top: 213px;
+    bottom: 0px;
     padding: 10px;
-    min-width: 400px;
+    min-width: 100%;
     opacity: 0.7;
 }
 
@@ -296,7 +344,13 @@ time
 
 .preview-news-container 
 {
-    padding: 0px 10px;
+    padding: 0px 1.92%;
+	width: 100%;
+}
+
+.preview-news-container li
+{
+	width: 25%;
 }
 
 /* Most popular news */
@@ -304,8 +358,8 @@ time
 {
     background-color: #faf7f7;
     color: #465345;
-    margin-left: 20px;
-    width: 220px;
+    margin-left: 1.904761904761905%;
+    width: 20.95238095238095%;
 }
 
 .most-popular-news header 
@@ -330,20 +384,22 @@ time
 {
     background-color: #faf7f7;
     color: #465345;
-    margin-left: 30px;
-    width: 378px;
+    margin-left: 2.857142857142857%;
+    width: 36%;
 }
 
 .news-bar > div 
 {
-    width: 378px;
+    width: 100%;
 }
 
 .news-bar header p
 {
-    padding: 18.5px 31px;
+    padding: 18.5px 8.2%;
     text-align: center;
     cursor: pointer;
+	width: 33.3333333333%;
+	white-space: nowrap;
 }
 
 .news-bar header .selected
@@ -354,13 +410,13 @@ time
 .news-bar ul li
 {
     background-color: white;
-    width: 378px;
+    width: 100%;
     border: 1px solid #faf7f7;
 }
 
 .news-bar ul li img
 {
-    padding: 10px;
+    padding: 10px 2.65%;
 }
 
 .news-bar ul li p
@@ -381,8 +437,8 @@ time
 /* Categorized news css*/
 .categorized-news 
 {
-    width: 1150px;
-    padding: 30px 50px 0px;
+    width: 100%;
+    padding: 30px 4.347826086956522% 0px;
     background-color: white;
     color: #465345;
 }
@@ -391,17 +447,38 @@ time
 .hot-stuff 
 {
     padding-bottom: 20px;
-    width: 640px;
+    width: 60.95238095238095%;
     position: relative;
+	white-space: nowrap;
+    overflow: hidden
+}
+
+.hot-stuff  ul
+{
+    width: 100%;
+	white-space: nowrap;
+    overflow: hidden
+}
+
+.hot-stuff li
+{
+    margin: 20px 0px 20px 3.125%;
+    width: 22.65625%;
+	display: inline-block;
+	min-width: 150px;
 }
 
 .hot-stuff div > figure
 {
-    margin: 20px 0px 20px 20px;
-    width: 145px;
+    width: 100%;
 }
 
-.hot-stuff ul li:first-child div > figure, .all-news-gallery ul li:first-child div > figure
+.hot-stuff div > figure > img
+{
+    width: 100%;
+}
+
+.hot-stuff ul li:first-child , .all-news-gallery ul li:first-child 
 {
     margin-left: 0px;
 }
@@ -422,6 +499,7 @@ time
 .hot-stuff figcaption p, .all-news-gallery figcaption p
 {
     padding: 3px 0px 5px;
+	white-space: normal;
 }
 
 .hot-stuff figcaption time, .all-news-gallery figcaption time
@@ -429,21 +507,22 @@ time
     display: inline-block;
 }
 
-.hot-stuff .nav-container
+.hot-stuff .nav-container, .all-news-gallery .nav-container
 {
     position: absolute;
-    left: 589px;
-    width: 51px;
-    top: -4px;
+    left: 90%;
+    width: 10%;
+    top: -3px;
 }
 
 /* Recent posts css */
 .recent-posts
 {
-    width: 378px;
-    margin-left: 32px;
+    width: 36%;
+    margin-left: 2.857142857142857%;
     background-color: white;
     color: #465345;
+	margin-bottom: 30px;
 }
 
 .recent-posts ul 
@@ -483,32 +562,45 @@ time
 .all-news-gallery 
 {
     padding-bottom: 20px;
-    width: 1050px;
+    width: 100%;
     position: relative;
+	white-space: nowrap;
+    overflow: hidden;
 }
 
-.all-news-gallery .nav-container
+.all-news-gallery  ul
 {
-    position: absolute;
-    left: 999px;
-    width: 51px;
-    top: -4px;
+    width: 100%;
+	white-space: nowrap;
+    overflow: hidden;
+}
+
+.all-news-gallery li 
+{
+    margin: 20px 0px 20px 3.41%;
+    width: 13.80952380952381%;
+    display: inline-block;
+	min-width: 150px;
 }
 
 .all-news-gallery div > figure
 {
-    margin: 20px 0px 20px 36px;
-    width: 145px;
+    width: 100%;
+}
+
+.all-news-gallery div > figure > img
+{
+    width: 100%;
 }
 
 /* News Category css*/
 .news-category 
 {
-    width: 312px;
+    width: 29.71428571428571%;
     background-color: white;
     color: #465345;
     padding-bottom: 30px;
-    margin-left: 15px;
+    margin-left: 1.43%;
 }
 
 .large-news-preview figure
@@ -522,7 +614,7 @@ time
     padding: 10px 0px;
 }
 
-.news-category  li
+.news-category  li, .news-category  li figure, .news-category  li:first-child figure img, .news-category  li div, .news-category  li figure iframe
 {
     width: 100%;
 }
@@ -530,6 +622,7 @@ time
 .small-news-preview 
 {
     padding: 10px 0px;
+	width: 100%;
 }
 
 .small-news-preview time 
@@ -544,13 +637,14 @@ time
 
 .small-news-preview figcaption 
 {
-    width: 312px;
+    width: 100%;
 }
 
 .small-news-preview figure 
 {
     border-bottom: 1px solid #E5E5E5;
     padding-bottom: 10px;
+	width:100%;
 }
 
 .small-news-preview .news-shortcut 
@@ -566,13 +660,13 @@ time
 
 .right-news-category 
 {
-    margin-left: 33px;
-    width: 378px;
+    margin-left: 2.857142857142857%;
+    width: 36%;
 }
 
 .right-news-category figcaption 
 {
-    width: 378px;
+    width: 100%;
 }
 
 .right-news-category .small-news-preview .news-shortcut
@@ -588,18 +682,18 @@ time
 
 .inline-news-category
 {
-    width: 639px;
+    width: 60.85714285714286%;
     margin-left: 0px;
 }
 
 .inline-news-category  li
 {
-    width: 48.8%;
+    width: 50%;
 }
 
 .inline-news-category .small-news-preview
 {
-    padding: 0px 0px 10px 15px;
+    padding: 0px 0px 10px 4.7%;
 }
 
 .inline-news-category .top-small-news-preview
@@ -614,12 +708,13 @@ time
 
 .small-video-news-preview img
 {
-    padding-right: 6px;
+    margin-right: 1.59%;
+	width: 23.81%;
 }
 
 .small-video-news-preview figure img:last-child
 {
-    padding-right: 0px;
+    margin-right: 0px;
 }
 
 .video-news-preview figure
@@ -631,15 +726,15 @@ time
 /*Bottom blocks css*/
 .bottom-blocks
 {
-    width: 1150px;
-    padding: 30px 50px 50px;
+    width: 100%;
+    padding: 30px 4.347826086956522% 50px;
     background-color: #faf7f7;
     color: #465345;
 }
 
 .bottom-block
 {
-    width: 250px;
+    width: 23.80952380952381%;
 }
 
 .bottom-block header
@@ -666,15 +761,21 @@ time
     width: 100%;
 }
 
-.bottom-block figure
+.bottom-block-left figure
 {
-    padding-right: 10px;
+    padding-right: 4%;
+    width: 32%;
+}
 
+
+.bottom-block-left img
+{
+    width: 100%;
 }
 
 .tweet
 {
-    width: 80%;
+    width: 79%;
     color: #AAAAAA;
     line-height: 1.5em;
 }
@@ -714,7 +815,8 @@ time
 
 .social-media li figure img
 {
-    padding: 0px 20px;
+    padding: 0px 25%;
+	width: 100%;
 }
 
 .social-media li figure p
@@ -732,7 +834,7 @@ time
 
 .bottom-block
 {
-    margin-left: 16.6px;
+    margin-left: 1.58%;
 }
 
 .bottom-blocks .bottom-block:first-child
@@ -742,7 +844,7 @@ time
 
 .about-bottom-block
 {
-    margin: 30px 0px 0px 16.6px;
+    margin: 30px 0px 0px 1.58%;
     width: 49%;
 }
 
@@ -761,4 +863,298 @@ time
 .about-bottom-block
 {
     color: #AAAAAA;
+}
+
+@media (max-width: 1000px) and (min-width: 601px) {
+    .header-nav{
+	    display: none;
+	}
+	
+	.hd-btn{
+        display: block;
+	}
+	
+	.top-images ul li figure
+	{
+	     width: 70%;
+	}
+	
+	.top-images ul li p
+	{
+	    width: 100%;
+	}
+	
+	.breaking-news label 
+        {
+        margin-right: 0;
+    }
+	
+	.breaking-news 
+        {
+        padding: 0px;
+    }
+	
+	.top-carousel-with-popular
+	{
+	    float: left;
+		width: 69%;
+	}
+	
+	.carousel-news
+	{
+	    width: 100%;
+	}
+	
+	.most-popular-news
+	{
+	    width: 100%;
+		margin-left: 0;
+	}
+	
+	.top-news
+	{
+	    padding: 20px 1% 0;
+	}
+	
+	.news-bar
+	{
+	    width: 30%;
+		margin-left: 1%;
+	}
+	
+	.news-bar header p
+	{
+	    width: 100%;
+		text-align: left;
+	}
+	
+	.news-bar ul li img
+	{
+	    padding-bottom: 0px;
+	}
+	
+	.hot-stuff .nav-container, .all-news-gallery .nav-container {
+        left: 70%;
+        width: 30%;
+        top: -2px;
+    }
+	
+	.bottom-block
+	{
+	    width: 100%;
+		margin-bottom: 20px;
+		margin-left: 0;
+	}
+	
+	
+	.bottom-block-left img
+	{
+	    width: initial;
+	}
+	
+	.bottom-block-left figure {
+        padding-right: 1%;
+        width: initial;
+    }
+	
+	.tweet
+	{
+	     float: left;
+		 margin-left: 10px;
+	}
+	
+	.social-media
+	{
+	    width: 100%;
+	}
+	
+	.social-media li figure img {
+        padding: 0px 35%;
+    }
+	
+	.about-bottom-block
+	{
+	    width: 100%;
+	}
+	
+	.categorized-news
+	{
+	    padding: 30px 1% 0px;
+	}
+}
+
+@media (max-width: 600px) and (min-width: 300px) {
+    .header-nav{
+	    display: none;
+	}
+	
+	.hd-btn{
+        display: block;
+	}
+	
+	.top-images
+	{
+	    width: 100%;
+		padding: 0 15%;
+	}
+	
+	.top-images ul li {
+        padding: 10px 5%;
+        margin: 20px 0;
+        width: 100%;
+    }
+	
+	.top-images ul li figure {
+        width: 100%;
+    }
+	
+	.top-images ul li img {
+        width: 100%;
+        padding-right: 0;
+    }
+	
+	.top-images ul li p {
+        width: 100%;
+    }
+	
+	.hd-btn{
+	    margin: 10px 9px 10px 5px;
+	}
+	
+	.inline-news {
+	    width: 100%;
+	}
+	
+	.search
+	{
+	    width: 100%;
+		padding-bottom: 10px;
+	}
+	
+	.carousel-news
+	{
+	    width: 100%;
+	}
+	
+	.most-popular-news
+	{
+	    width: 100%;
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+	
+	.news-bar {
+        margin-left: 0;
+        width: 100%;
+    }
+	
+	.news-bar header p {
+		text-align: initial;
+		width: 100%;
+    }
+	
+	.news-bar ul li img {
+		width: 100%;
+	}
+	
+	.hot-stuff .nav-container, .all-news-gallery .nav-container {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 18px;
+		top: initial;
+    }
+	
+	.hot-stuff{
+	    width: 100%;
+	}
+	
+	.nav-btn {
+        float: left;
+    }
+	
+    .nav-btn-right {
+        border-left: none;
+        float: right;
+    }
+	
+	.recent-posts {
+		width: 100%;
+		margin-left: 0;
+    }
+	
+	.recent-posts ul img {
+		padding-right: 0;
+		width: 100%;
+	}
+	
+	.news-category {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.small-news-preview figure img {
+		padding-right: 5px;
+	    width: 100%;
+	}
+	
+	.large-news-preview figure time{
+	    float: left;
+	}
+	
+	.inline-news-category li {
+        width: 100%;
+    }
+	
+	.inline-news-category .small-news-preview {
+        padding: 0px 0px 10px 0;
+    }
+	
+	.bottom-block
+	{
+	    width: 100%;
+		margin-bottom: 20px;
+		margin-left: 0;
+	}
+	
+	.bottom-block-left figure {
+		padding-right: 0;
+		width: 100%;
+	}
+	
+	.about-bottom-block {
+		margin: 30px 0px 0px 1.58%;
+		width: 100%;
+	}
+	
+	.about-bottom-block figcaption {
+        padding-top: 20px;
+		width: 100%;
+		float: left;
+    }
+	
+	.about-bottom-block img {
+        border-right: none;
+    }
+	
+	.footer {
+		padding: 20px 20px;
+	}
+
+	.footer nav, .footer nav ul {
+		width: 100%;
+		float: left;
+	}
+	
+	.social-media li {
+		width: 100%;
+		display: inline-block;
+		border-left: 1px solid #E5E5E5;
+		border-right: 1px solid #E5E5E5;
+	}
+	
+	.social-media li figure img {
+		padding: 0px 40%;
+		width: 100%;
+	}
 }

@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+	<meta name=viewport content="width=device-width, initial-scale=1">
     <title>Homе</title>
     <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
@@ -11,9 +12,9 @@
     <div class="page">
         <header class="header left">
             <div class="logo left">
-                <img src="http://placehold.it/200x54" alt=""/>
+                <img src="http://placehold.it/200x55" alt=""/>
             </div>
-            <nav class="header-nav left">
+            <nav class="header-nav right">
                 <ul>
                     <li class="left">
                         <a href="void()">
@@ -57,36 +58,33 @@
                     </li>
                 </ul>
             </nav>
-        </header>
+            <div class="hd-btn btn right"><i class="fa fa-bars"></i></div>
+		</header>
         <div class="top-images left">
             <ul>
                 <li class="left">
                     <figure class="left">
                         <img src="http://placehold.it/70x50" alt=""/>
                     </figure>
-                    <p><a href="void()">Donec consectetuer ligula vulputate...</a></p>
-                    <time datetime="2014-11-15">5 months ago</time>
+                    <p><a href="void()">Donec consectetuer ligula vulputate...</a><time datetime="2014-11-15">5 months ago</time></p>
                 </li>
                 <li class="left">
                     <figure class="left">
                         <img src="http://placehold.it/70x50" alt=""/>
                     </figure>
-                    <p><a href="void()">Nam hibh arcu tristique eget pretiu...</a></p>
-                    <time datetime="2014-11-15">5 months ago</time>
+                    <p><a href="void()">Nam hibh arcu tristique eget pretiu...</a><time datetime="2014-11-15">5 months ago</time></p>  
                 </li>
                 <li class="left">
                     <figure class="left">
                         <img src="http://placehold.it/70x50" alt=""/>
                     </figure>
-                    <p><a href="void()">Aliquam quam lectus pulvinar urna I...</a></p>
-                    <time datetime="2014-10-15">6 months ago</time>
+                    <p><a href="void()">Aliquam quam lectus pulvinar urna I...</a><time datetime="2014-10-15">6 months ago</time></p>
                 </li>
                 <li class="left">
                     <figure class="left">
                         <img src="http://placehold.it/70x50" alt=""/>
                     </figure>
-                    <p><a href="void()">Phasellus scelerisque massa molesti...</a></p>
-                    <time datetime="2014-10-15">6 months ago</time>
+                    <p><a href="void()">Phasellus scelerisque massa molesti...</a><time datetime="2014-10-15">6 months ago</time></p>
                 </li>
             </ul>
         </div>
@@ -102,7 +100,8 @@
             </form>
         </div>
         <div class="top-news left">
-            <div class="carousel-news left">
+            <div class="top-carousel-with-popular">
+			<div class="carousel-news left">
                 <figure class="image-news">
                     <img src="http://placehold.it/400x270" />
                     <figcaption class="image-news-caption">
@@ -174,7 +173,8 @@
                     </li>
                 </ul>
             </article>
-            <div class="news-bar left">
+            </div>
+			<div class="news-bar left">
                 <header>
                     <p class="left selected">
                         <i class="fa fa-heart"></i> Popular
@@ -235,8 +235,8 @@
                 </ul>
                 <div class="left">
                     <div class="right nav-container">
-                        <button class="nav-btn nav-btn-right right"><i class="fa fa-caret-right"></i></button> 
-                        <button class="nav-btn right"><i class="fa fa-caret-left"></i></button>  
+                        <div class="nav-btn nav-btn-right right"><i class="fa fa-caret-right"></i></div> 
+                        <div class="nav-btn right"><i class="fa fa-caret-left"></i></div>  
                     </div>
                 </div>
             </div>
@@ -352,8 +352,8 @@
                 </ul>
                 <div>
                     <div class="nav-container">
-                        <button class="nav-btn nav-btn-right right"><i class="fa fa-caret-right"></i></button> 
-                        <button class="nav-btn right"><i class="fa fa-caret-left"></i></button>  
+                        <div class="nav-btn nav-btn-right right"><i class="fa fa-caret-right"></i></div> 
+                        <div class="nav-btn right"><i class="fa fa-caret-left"></i></div>  
                     </div>
                 </div>
             </section>
@@ -426,129 +426,130 @@
                     </li>   
                 </ul>
             </section>
-            <section class="news-category left left-news-category">
-                <header class="left">
-                    <h2 class="left">
-                        Game News
-                    </h2>
-                </header>
-                <ul>
-                    <li>
-                        <div class="large-news-preview left">
-                            <figure class="left">
-                                <img src="http://placehold.it/312x150"/>
-                                <figcaption class="left">
-                                    <p class="left">
-                                        <a href="void()">Integer vitae libero ac risus egest...</a>
-                                    </p>
-                                    <time class="right" datetime="2013-07-11">July 11, 2013</time>
-                                    <p class="left news-shortcut">
-                                        Fusce aliquet ipsum vitae scelerisque. Nullam ultricies adipiscing erat, quis bibendum enim congue porttitor. E... 
-                                    </p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </li>
-                    <li class="left">
-                        <div class="small-news-preview left">
-                            <figure class="left">
-                                <img class="left" src="http://placehold.it/90x60"/>
-                                <figcaption>
-                                    <p>
-                                        <a href="void()">
-                                            Morbi est lectus non rutrum com...
-                                        </a>
-                                    </p>
-                                    <p class="news-shortcut">
-                                        Fusce aliquet non ipsum vitae scelerisqu...
-                                    </p>
-                                    <time datetime="2013-07-11">July 11, 2013</time>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </li>
-                    <li class="left">
-                        <div class="small-news-preview left">
-                            <figure class="left">
-                                <img class="left" src="http://placehold.it/90x60"/>
-                                <figcaption>
-                                    <p>
-                                        <a href="void()">
-                                            Donce consectetuer ligula vulputate...
-                                        </a>
-                                    </p>
-                                    <p class="news-shortcut">
-                                        Nam nibh arcu, tristique eget pretium se...
-                                    </p>
-                                    <time datetime="2013-07-11">July 11, 2013</time>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <section class="news-category left">
-                <header class="left">
-                    <h2 class="left">
-                        Sport News
-                    </h2>
-                </header>
-                <ul>
-                    <li>
-                        <div class="large-news-preview left">
-                            <figure class="left">
-                                <img src="http://placehold.it/312x150"/>
-                                <figcaption class="left">
-                                    <p class="left">
-                                        <a href="void()">Quisquе sodalеs vivvеrra ornarе vita...</a>
-                                    </p>
-                                    <time class="right" datetime="2013-07-02">July 2, 2013</time>
-                                    <p class="left news-shortcut">
-                                        Quisque sodales viverra ornare. Aenean posuere lacus sed facilisis gravida. Morbi auctor consectetur mauris a ultri...
-                                    </p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </li>
-                    <li class="left">
-                        <div class="small-news-preview left">
-                            <figure class="left">
-                                <img class="left" src="http://placehold.it/90x60"/>
-                                <figcaption>
-                                    <p>
-                                        <a href="void()">
-                                           Nam nibh arcu tristique eget pretiu...
-                                        </a>
-                                    </p>
-                                    <p class="news-shortcut">
-                                        Nam nibh arcu, tristique eget pretium se...
-                                    </p>
-                                    <time datetime="2013-07-02">July 2, 2013</time>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </li>
-                    <li class="left">
-                        <div class="small-news-preview left">
-                            <figure class="left">
-                                <img class="left" src="http://placehold.it/90x60"/>
-                                <figcaption>
-                                    <p>
-                                        <a href="void()">
-                                            Vestibulum auctor dapibus neque...
-                                        </a>
-                                    </p>
-                                    <p class="news-shortcut">
-                                        Fusce aliquet non ipsum vitae scelerisqu...
-                                    </p>
-                                    <time datetime="2013-06-14">June 14, 2013</time>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <section class="news-category left right-news-category">
+            <div class="left">
+				<section class="news-category left left-news-category">
+					<header class="left">
+						<h2 class="left">
+							Game News
+						</h2>
+					</header>
+					<ul>
+						<li>
+							<div class="large-news-preview left">
+								<figure class="left">
+									<img src="http://placehold.it/312x150"/>
+									<figcaption class="left">
+										<p class="left">
+											<a href="void()">Integer vitae libero ac risus egest...</a>
+										</p>
+										<time class="right" datetime="2013-07-11">July 11, 2013</time>
+										<p class="left news-shortcut">
+											Fusce aliquet ipsum vitae scelerisque. Nullam ultricies adipiscing erat, quis bibendum enim congue porttitor. E... 
+										</p>
+									</figcaption>
+								</figure>
+							</div>
+						</li>
+						<li class="left">
+							<div class="small-news-preview left">
+								<figure class="left">
+									<img class="left" src="http://placehold.it/90x60"/>
+									<figcaption>
+										<p>
+											<a href="void()">
+												Morbi est lectus non rutrum com...
+											</a>
+										</p>
+										<p class="news-shortcut">
+											Fusce aliquet non ipsum vitae scelerisqu...
+										</p>
+										<time datetime="2013-07-11">July 11, 2013</time>
+									</figcaption>
+								</figure>
+							</div>
+						</li>
+						<li class="left">
+							<div class="small-news-preview left">
+								<figure class="left">
+									<img class="left" src="http://placehold.it/90x60"/>
+									<figcaption>
+										<p>
+											<a href="void()">
+												Donce consectetuer ligula vulputate...
+											</a>
+										</p>
+										<p class="news-shortcut">
+											Nam nibh arcu, tristique eget pretium se...
+										</p>
+										<time datetime="2013-07-11">July 11, 2013</time>
+									</figcaption>
+								</figure>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="news-category left">
+					<header class="left">
+						<h2 class="left">
+							Sport News
+						</h2>
+					</header>
+					<ul>
+						<li>
+							<div class="large-news-preview left">
+								<figure class="left">
+									<img src="http://placehold.it/312x150"/>
+									<figcaption class="left">
+										<p class="left">
+											<a href="void()">Quisquе sodalеs vivvеrra ornarе vita...</a>
+										</p>
+										<time class="right" datetime="2013-07-02">July 2, 2013</time>
+										<p class="left news-shortcut">
+											Quisque sodales viverra ornare. Aenean posuere lacus sed facilisis gravida. Morbi auctor consectetur mauris a ultri...
+										</p>
+									</figcaption>
+								</figure>
+							</div>
+						</li>
+						<li class="left">
+							<div class="small-news-preview left">
+								<figure class="left">
+									<img class="left" src="http://placehold.it/90x60"/>
+									<figcaption>
+										<p>
+											<a href="void()">
+											   Nam nibh arcu tristique eget pretiu...
+											</a>
+										</p>
+										<p class="news-shortcut">
+											Nam nibh arcu, tristique eget pretium se...
+										</p>
+										<time datetime="2013-07-02">July 2, 2013</time>
+									</figcaption>
+								</figure>
+							</div>
+						</li>
+						<li class="left">
+							<div class="small-news-preview left">
+								<figure class="left">
+									<img class="left" src="http://placehold.it/90x60"/>
+									<figcaption>
+										<p>
+											<a href="void()">
+												Vestibulum auctor dapibus neque...
+											</a>
+										</p>
+										<p class="news-shortcut">
+											Fusce aliquet non ipsum vitae scelerisqu...
+										</p>
+										<time datetime="2013-06-14">June 14, 2013</time>
+									</figcaption>
+								</figure>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="news-category left right-news-category">
                 <header class="left">
                     <h2 class="left">
                         Technology News
@@ -609,7 +610,8 @@
                     </li>
                 </ul>
             </section>
-            <section class="news-category left inline-news-category">
+			</div>
+			<section class="news-category left inline-news-category">
                 <header class="left">
                     <h2 class="left">
                         Fashion News
@@ -668,7 +670,7 @@
                             </figure>
                         </div>
                     </li>
-                    <li class="left">
+                    <li class="right">
                         <div class="small-news-preview left">
                             <figure class="left">
                                 <img class="left" src="http://placehold.it/90x60"/>
@@ -874,14 +876,14 @@
                 </ul>
                 <div>
                     <div class="nav-container">
-                        <button class="nav-btn nav-btn-right right"><i class="fa fa-caret-right"></i></button> 
-                        <button class="nav-btn right"><i class="fa fa-caret-left"></i></button>  
+                        <div class="nav-btn nav-btn-right right"><i class="fa fa-caret-right"></i></div> 
+                        <div class="nav-btn right"><i class="fa fa-caret-left"></i></div>  
                     </div>
                 </div>
             </section>
         </div>
         <div class="bottom-blocks left">
-            <section class="bottom-block left">
+            <section class="bottom-block bottom-block-left left">
                 <header class="left">
                     <h2 class="left">
                         Latests News
@@ -941,14 +943,14 @@
                 <ul>
                     <li class="left">
                         <figure class="left">
-                            <img src="http://placehold.it/40x40" alt=""/>
-                        </figure>
-                        <div class="left tweet">
+                            <img class="left" src="http://placehold.it/40x40" alt=""/>
+							<figcaption class="right tweet">
                             <p>
                                 "RT <a href="void()">@SayersM</a> "Envato is here <a href="void()">#YOW13!</a> http://t.co/Fqari113BIN" <a href="void()">#lanyardlife</a>"
                             </p>
                             <time datetime="2013-08-12">4 hours ago</time>
-                        </div>
+                        </figcaption>
+                        </figure>
                     </li>
                     <li class="left">
                         <figure class="left">
