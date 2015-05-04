@@ -1,0 +1,35 @@
+﻿.fasion-news .hear-capter {
+    margin-bottom: 20px;
+}
+
+.fasion-news {
+    width: 60%;
+}
+
+    .fasion-news .some-people-words {
+        width: 50%;
+    }
+
+
+.fasion-news-main {
+    height: 85%;
+}
+
+.fasion-news-main {
+    float: left;
+    width: 42.8%;
+}
+
+    .fasion-news-main .news-photo {
+        height: 200px;
+    }
+
+        .fasion-news-main .news-photo img {
+            width: 100%;
+            height: 100%;
+        }
+
+.comments-on-news {
+    float: right;
+    width: 42.8%;
+}

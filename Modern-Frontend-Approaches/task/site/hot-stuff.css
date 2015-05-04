@@ -1,0 +1,22 @@
+﻿.hot-stuff {
+    width: 60%;
+    height: 500px;
+}
+
+.hot-stuff {
+    overflow: hidden;
+}
+
+    .hot-stuff .hear-capter {
+        margin-bottom: 150px;
+    }
+
+    .hot-stuff .some-people-block {
+        width: 180px;
+    }
+
+    .hot-stuff .description {
+        padding-bottom: 3px;
+        padding-top: 3px;
+        border-bottom: 2px solid rgb(237,237,237);
+    }

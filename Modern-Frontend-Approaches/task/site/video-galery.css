@@ -1,0 +1,31 @@
+﻿.video-galery {
+    height: 500px;
+    width: 30%;
+    float: right;
+}
+
+
+    .video-galery .photos {
+        border: none;
+    }
+
+    .video-galery .other-photos {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .video-galery .hear-capter {
+        margin-bottom: 20px;
+    }
+
+    .video-galery .photos {
+        width: 100%;
+    }
+
+@media (max-width:1000px) {
+
+    .video-galery {
+        width: 100%;
+    }
+}

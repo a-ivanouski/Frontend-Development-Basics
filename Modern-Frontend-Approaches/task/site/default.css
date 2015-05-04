@@ -1,12 +1,12 @@
 ﻿button {
-    margin:0;
-    padding:0;
-    border:0;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
-p {
-    margin-bottom:13px;
-    margin-top:13px;
 
+p {
+    margin-bottom: 13px;
+    margin-top: 13px;
 }
 
 .dinamic-list {
@@ -31,41 +31,8 @@ p {
     padding-left: 10px;
 }
 
-@media (max-width: 1325px) {
-    .head-element {
-        width: 500px;
-    }
 
-        .head-element .some-people-words {
-            position: relative;
-            bottom: 10px;
-        }
-}
-
-@media (min-width: 1325px) {
-    .head-element .some-people-words {
-        position: relative;
-        bottom: 10px;
-    }
-}
-
-@media (max-width:1100px) {
-    .head-element {
-        width: 100%;
-    }
-
-    .some-people .some-people-words {
-        width: 80%;
-    }
-}
-
-
-@media (max-width: 500px) {
-    .head-element .some-people-words {
-        width: 100%;
-        top:10px;
-        margin-left:10px;
-        margin-right:10px;
-
-    }
+.head-element .some-people-words {
+    position: relative;
+    bottom: 10px;
 }

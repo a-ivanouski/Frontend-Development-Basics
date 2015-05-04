@@ -1,0 +1,45 @@
+﻿.recents-posts .hear-capter {
+    margin-bottom: 60px;
+}
+
+.recents-posts .some-people-comment {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(237,237,237);
+}
+
+    .recents-posts .some-people-comment:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+.recents-posts .some-people-words {
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    width: 30%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.recents-posts .people-img {
+    display: inline-block;
+}
+
+.recents-posts {
+    width: 30%;
+    height: 500px;
+    float: right;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .recents-posts {
+        position: relative;
+        bottom: 100px;
+    }
+}

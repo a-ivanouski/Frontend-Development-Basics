@@ -1,0 +1,21 @@
+﻿footer {
+    position: relative;
+    bottom: 29px;
+    background-color: rgb(35,50,63);
+    clear: both;
+    padding-left: 3.3%;
+    padding-right: 3.3%;
+    overflow: hidden;
+    height: 55px;
+    color: lightgray;
+}
+
+    footer ul li {
+        display: inline-block;
+        border-right: 3px solid lightgray;
+        padding-right: 3px;
+    }
+
+        footer ul li:last-child {
+            border-right: none;
+        }

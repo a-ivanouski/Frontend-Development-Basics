@@ -1,0 +1,46 @@
+﻿
+.most-popular-news {
+    width: 60%;
+    float: left;
+    height: 600px;
+}
+
+.most-popular-news {
+    width: 60%;
+    float: left;
+    height: 500px;
+}
+
+.menu-popular-news {
+    width: 42%;
+    float: right;
+    height: 100%;
+}
+
+.menu-popular-news {
+    overflow: hidden;
+}
+
+    .menu-popular-news .head {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+        background-color: rgb(61,76,84);
+        color: white;
+        font-size: 22px;
+    }
+
+.menu-popular-news {
+    background-color: rgb(242,242,242);
+}
+
+    .menu-popular-news .some-desription {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        background-color: white;
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 5%;
+    }

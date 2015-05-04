@@ -1,0 +1,16 @@
+﻿.all-news-galery {
+    width: 100%;
+    overflow: hidden;
+}
+
+    .all-news-galery .hear-capter {
+        margin-bottom: 20px;
+    }
+
+    .all-news-galery .description {
+        border-bottom: 2px solid rgb(237,237,237);
+    }
+
+    .all-news-galery .data-stars {
+        border-bottom: 2px solid rgb(237,237,237);
+    }

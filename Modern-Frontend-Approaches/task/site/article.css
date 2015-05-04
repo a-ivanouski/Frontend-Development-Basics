@@ -1,25 +1,26 @@
 ﻿article section {
     float: left;
-    /*height:500px;*/
     margin-bottom: 30px;
 }
 
 .photos {
-    border:3px solid rgb(237,237,237);
+    border: 3px solid rgb(237,237,237);
 }
 
-.photo > img{
-    margin-top:20px;
-    height:60px;
-    width:60px;
+.photo > img {
+    margin-top: 20px;
+    height: 60px;
+    width: 60px;
 }
+
 .other-photos {
-    width:93.3%;
-    margin-left:3.3%;
+    width: 93.3%;
+    margin-left: 3.3%;
 }
-.other-photos .photo {
-    display: inline-block;
-}
+
+    .other-photos .photo {
+        display: inline-block;
+    }
 
 .some-people-block {
     width: 180px;
@@ -38,23 +39,3 @@
         width: 100%;
         height: 100%;
     }
-
-.all-news-galery {
-    width: 100%;
-    overflow: hidden;
-}
-    .all-news-galery .hear-capter {
-        margin-bottom:20px;
-    }
-
-    .all-news-galery .description {
-        border-bottom: 2px solid rgb(237,237,237);
-    }
-    .all-news-galery .data-stars {
-        border-bottom: 2px solid rgb(237,237,237);
-    }
-
-
-.hot-stuff {
-    overflow: hidden;
-}

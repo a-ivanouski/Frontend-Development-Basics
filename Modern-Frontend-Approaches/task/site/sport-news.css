@@ -1,0 +1,12 @@
+﻿.sport-news {
+    height: 500px;
+}
+
+.sport-news {
+    width: 25%;
+    margin-left: 10%;
+}
+
+    .sport-news .hear-capter {
+        margin-bottom: 40px;
+    }

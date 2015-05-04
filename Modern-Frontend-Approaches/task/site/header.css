@@ -1,0 +1,29 @@
+﻿
+header {
+    background-color: rgb(61,76,84);
+    color: white;
+}
+
+    header > ul {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        line-height: 3em;
+        height: 3em;
+    }
+
+        header > ul > li {
+            display: inline-block;
+            border-right: 1px solid gray;
+            padding-right: 5px;
+        }
+
+            header > ul > li:first-child {
+                float: left;
+                margin-left: 23px;
+                border: none;
+            }
+
+            header > ul > li:last-child {
+                border: none;
+            }
