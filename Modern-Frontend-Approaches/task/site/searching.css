@@ -5,6 +5,12 @@
     margin-bottom: 5px; /*ccccccc*/
     border-bottom: 1px solid darkgray;
     border-top: 1px solid darkgray;
+    padding-left: 3.3%;
+
+
+    overflow:hidden;
+    text-overflow:ellipsis;
+     
 }
 
     .searching p {
@@ -17,7 +23,6 @@
         margin: 0;
         padding: 3px;
         border: none;
-        margin-left: 3.3%;
         background-color: rgb(108,119,131);
     }
 
@@ -41,3 +46,10 @@
         padding: 14px;
         border: none;
     }
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .searching {
+        height: 6em;
+    }
+}

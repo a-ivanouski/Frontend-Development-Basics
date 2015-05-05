@@ -3,3 +3,9 @@
     top: 10px;
     padding-left: 10px;
 }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .some-people .some-people-comment {
+        width:400px;
+    }
+}
