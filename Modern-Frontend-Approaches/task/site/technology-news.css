@@ -1,12 +1,19 @@
-﻿.technology-news {
-    height: 500px;
-}
-
+﻿
 .technology-news {
     width: 30%;
     float: right;
+    height: 500px;
 }
 
     .technology-news .hear-capter {
         margin-bottom: 40px;
     }
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    .technology-news {
+        position: relative;
+        bottom: 225px;
+    }
+}

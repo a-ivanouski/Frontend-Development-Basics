@@ -10,14 +10,10 @@
         width: 50%;
     }
 
-
-.fasion-news-main {
-    height: 85%;
-}
-
 .fasion-news-main {
     float: left;
     width: 42.8%;
+      height: 85%;
 }
 
     .fasion-news-main .news-photo {
@@ -32,4 +28,18 @@
 .comments-on-news {
     float: right;
     width: 42.8%;
+}
+
+.fasion-news .some-people-comment {
+    border-bottom:1px solid lightgray;
+    height:150px;
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    .fasion-news {
+        position: relative;
+        bottom: 100px;
+    }
 }
