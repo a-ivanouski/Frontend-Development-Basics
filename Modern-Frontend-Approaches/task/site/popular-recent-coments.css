@@ -1,15 +1,9 @@
-﻿
-.popular-recent-coments {
+﻿.popular-recent-coments {
     width: 30%;
     float: right;
     height: 500px;
     border: 3px solid rgb(237,237,237);
 }
-
-    .popular-recent-coments .some-people-comment {
-        margin-top: -1px;
-        border-bottom: 3px solid rgb(237,237,237);
-    }
 
     .popular-recent-coments .people-img {
         display: inline-block;
@@ -29,4 +23,39 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        margin-top: -1px;
+        border-bottom: 3px solid rgb(237,237,237);
     }
+
+
+    .popular-recent-coments .select-buttons {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+.select-buttons button {
+    position: relative;
+    float: left;
+    width: 33.33%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(61,76,84);
+    border: none;
+    margin: 0;
+    color: white;
+}
+
+    .select-buttons button:first-child {
+        background-color: rgb(129,183,82);
+    }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .popular-recent-coments {
+        height: 606px;
+    }
+
+    .select-buttons button {
+        width: 100%;
+    }
+
+}
