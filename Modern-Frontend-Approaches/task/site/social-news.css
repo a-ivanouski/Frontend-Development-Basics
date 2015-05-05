@@ -6,14 +6,21 @@
     right: 3.3%;
 }
 
-    .social-news button {
-        background-color: white;
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .social-news .element.element {
+        display: block;
     }
+}
 
-    .social-news > div > button {
-        padding: 10px;
-        margin-bottom: 20px;
-    }
+
+.social-news button {
+    background-color: white;
+}
+
+.social-news > div > button {
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
 
 
@@ -30,10 +37,18 @@
     }
 
 
+
+
+
 .latest-tweets {
     position: relative;
     bottom: 76px;
+   
 }
+
+    .latest-tweets a {
+        color:blue;
+    }
 
     .latest-tweets .some-people-comment {
         width: 300px;
@@ -45,7 +60,41 @@
             width: 60%;
         }
 
+.pos-fix {
+    position: relative;bottom: 111px;
+}
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .latest-tweets {
+        bottom: 0;
+    }
+ 
+
+    .latest-tweets .some-people-comment {
+        width: 700px;
+    }
+
+        .latest-tweets .people-img {
+            display:inline-block;
+            bottom:0;
+        }
+
+        .latest-tweets .some-people-words {
+            display:inline-block;
+            bottom:0;
+        }
+
+
+        .latest-tweets .pos-fix {
+            bottom:0;
+        }
+
+
+    .pos-fix + .some-people-words {
+        position:relative;
+        top:5px;
+    }
+}
 
 
 .other {
@@ -55,6 +104,11 @@
     text-align: justify;
 }
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .other {
+        bottom: 0;
+    }
+}
 
 .tag-cloud {
     display: inline-block;
@@ -65,9 +119,15 @@
         padding: 6px;
     }
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .tag-cloud {
+        padding-top: 10px;
+        width: 100%;
+    }
+}
+
 .social-media {
     position: relative;
-    bottom: 40px;
     display: inline-block;
     text-align: left;
 }
@@ -80,6 +140,24 @@
             display: inline-block;
             text-align: center;
         }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .social-media {
+        padding-top: 10px;
+        width: 100%;
+        bottom: 0;
+    }
+
+        .social-media ul li {
+            height: 200px;
+            width: 220px;
+        }
+
+        .social-media.social-media li button {
+            padding: 50px;
+            font-size: 40px;
+        }
+}
 
 .logo-and-about {
     display: inline-block;

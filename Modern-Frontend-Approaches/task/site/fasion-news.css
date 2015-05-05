@@ -13,7 +13,7 @@
 .fasion-news-main {
     float: left;
     width: 42.8%;
-      height: 85%;
+    height: 85%;
 }
 
     .fasion-news-main .news-photo {
@@ -31,10 +31,9 @@
 }
 
 .fasion-news .some-people-comment {
-    border-bottom:1px solid lightgray;
-    height:150px;
+    border-bottom: 1px solid lightgray;
+    height: 150px;
 }
-
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 

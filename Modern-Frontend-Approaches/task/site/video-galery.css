@@ -4,9 +4,10 @@
     float: right;
 }
 
-
     .video-galery .photos {
         border: none;
+        width: 100%;
+        height: 100%;
     }
 
     .video-galery .other-photos {
@@ -18,17 +19,6 @@
     .video-galery .hear-capter {
         margin-bottom: 20px;
     }
-
-    .video-galery .photos {
-        width: 100%;
-    }
-
-@media (max-width:1000px) {
-
-    .video-galery {
-        width: 100%;
-    }
-}
 
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
