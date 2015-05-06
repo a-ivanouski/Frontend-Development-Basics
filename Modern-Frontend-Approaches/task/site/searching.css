@@ -53,3 +53,10 @@
         height: 6em;
     }
 }
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .searching {
+        height: 10em;
+    }
+}

@@ -58,3 +58,27 @@
         width: 100%;
     }
 }
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .popular-recent-coments {
+        width: 100%;
+        height: 1200px;
+    }
+
+        .popular-recent-coments .people-img img {
+            height: 220px;
+        }
+
+        .popular-recent-coments .some-people-comment {
+            height: 254px;
+        }
+
+        .popular-recent-coments .some-people-words {
+            bottom: 50px;
+        }
+
+    .select-buttons button {
+        width: 100%;
+    }
+}

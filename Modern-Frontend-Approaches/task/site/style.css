@@ -17,33 +17,10 @@ article {
  
 }
 
-.some-people {
-    background-color: rgb(235,235,235);
-}
 
-    .some-people > .some-people-comment {
-        display: inline-block;
-        height: 100%;
-        background-color: white;
-        margin-top: 14px;
-    }
-
-.some-people .some-people-words {
-    width: 60%;
-}
-
-.some-people .people-img {
-    display: inline;
-}
-
-.some-people-words {
-    display: inline-block;
-}
 
 .people-img {
     display: inline-block;
 }
 
-.some-people-comment {
-    width: 300px;
-}
+
