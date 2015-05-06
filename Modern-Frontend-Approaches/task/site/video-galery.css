@@ -28,3 +28,16 @@
         bottom: 225px;
     }
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+
+    .video-galery {
+        height: 1400px;
+        width: 100%;
+          
+    }
+        .video-galery .photo img{
+            height:170px;
+            width:170px;
+        }
+}

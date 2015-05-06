@@ -19,10 +19,9 @@
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
     .game-news {
-        height: 2795px;
+        height: 2825px;
         width: 100%;
     }
-
 
         .game-news .some-people-comment {
             text-align: center;

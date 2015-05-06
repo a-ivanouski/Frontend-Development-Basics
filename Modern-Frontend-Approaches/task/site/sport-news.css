@@ -16,3 +16,32 @@
         bottom: 100px;
     }
 }
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .sport-news {
+        height: 2910px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+      .sport-news .some-people-comment {
+            text-align: center;
+            width: 100%;
+        }
+
+             .sport-news .some-people-comment img {
+                height: 640px;
+            }
+
+         .sport-news .some-people-words {
+            bottom: 0;
+            width: 90%;
+        }
+
+         .sport-news .news-photo img {
+            height: 800px;
+        }
+}

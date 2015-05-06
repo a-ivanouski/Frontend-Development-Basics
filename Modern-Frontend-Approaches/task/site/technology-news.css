@@ -17,3 +17,29 @@
         bottom: 225px;
     }
 }
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .technology-news {
+        width: 100%;
+        height: 2900px;
+    }
+
+        .technology-news .some-people-comment {
+            text-align: center;
+            width: 100%;
+        }
+
+            .technology-news .some-people-comment img {
+                height: 640px;
+            }
+
+        .technology-news .some-people-words {
+            bottom: 0;
+            width: 90%;
+        }
+
+        .technology-news .news-photo img {
+            height: 800px;
+        }
+}

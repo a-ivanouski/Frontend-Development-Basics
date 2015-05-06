@@ -15,11 +15,49 @@
         border-bottom: 2px solid rgb(237,237,237);
     }
 
+    .all-news-galery .list-all-news-galery-news {
+        width: 1500px;
+    }
+
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
     .all-news-galery {
         position: relative;
         bottom: 50px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .all-news-galery .list-all-news-galery-news {
+        width: 4700px;
+        padding-bottom:100px;
+    }
+
+    .all-news-galery .some-people-block {
+        width: 700px;
+    }
+
+        .all-news-galery .some-people-block img {
+            width: 640px;
+        }
+
+
+    .all-news-galery .hear-capter.hear-capter .help-margin button:first-child {
+        position: relative;
+        top: 990px;
+        left: -740px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: none;
+    }
+
+    .all-news-galery .hear-capter.hear-capter .help-margin button:last-child {
+        position: relative;
+        top: 990px;
+        left: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: none;
     }
 }
