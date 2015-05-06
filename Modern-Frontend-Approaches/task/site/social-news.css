@@ -37,17 +37,35 @@
     }
 
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .latest-news {
+        width: 100%;
+    }
+
+        .latest-news .some-people-comment {
+            width: 100%;
+            text-align: center;
+        }
+
+        .latest-news .some-people-words {
+            text-align: left;
+        }
+
+        .latest-news .some-people-comment img {
+            height: 640px;
+        }
+}
+
 
 
 
 .latest-tweets {
     position: relative;
     bottom: 76px;
-   
 }
 
     .latest-tweets a {
-        color:blue;
+        color: blue;
     }
 
     .latest-tweets .some-people-comment {
@@ -61,41 +79,58 @@
         }
 
 .pos-fix {
-    position: relative;bottom: 111px;
+    position: relative;
+    bottom: 111px;
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     .latest-tweets {
         bottom: 0;
     }
- 
 
-    .latest-tweets .some-people-comment {
-        width: 700px;
-    }
+
+        .latest-tweets .some-people-comment {
+            width: 700px;
+        }
 
         .latest-tweets .people-img {
-            display:inline-block;
-            bottom:0;
+            display: inline-block;
+            bottom: 0;
         }
 
         .latest-tweets .some-people-words {
-            display:inline-block;
-            bottom:0;
+            display: inline-block;
+            bottom: 0;
         }
 
 
         .latest-tweets .pos-fix {
-            bottom:0;
+            bottom: 0;
         }
 
 
     .pos-fix + .some-people-words {
-        position:relative;
-        top:5px;
+        position: relative;
+        top: 5px;
     }
 }
 
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .latest-tweets {
+        bottom: 0;
+        height: 1100px;
+    }
+
+        .latest-tweets .some-people-comment {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .latest-tweets img {
+            height: 100px;
+        }
+}
 
 .other {
     width: 700px;
@@ -110,13 +145,21 @@
     }
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .other {
+        width: 100%;
+    }
+}
+
+
+
 .tag-cloud {
     display: inline-block;
     width: 40%;
 }
 
     .tag-cloud button {
-        padding: 6px;
+        margin: 6px;
     }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
@@ -125,6 +168,14 @@
         width: 100%;
     }
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .tag-cloud {
+        width: 100%;
+        padding-bottom: 100px;
+    }
+}
+
 
 .social-media {
     position: relative;
@@ -141,6 +192,22 @@
             text-align: center;
         }
 
+            .social-media ul li button {
+                padding: 10px;
+            }
+
+            .social-media ul li:nth-child(1) button {
+                background-color: orange;
+            }
+
+            .social-media ul li:nth-child(2) button {
+                background-color: rgb(126,210,242);
+            }
+
+            .social-media ul li:nth-child(3) button {
+                background-color: rgb(59,91,157);
+            }
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     .social-media {
         padding-top: 10px;
@@ -156,6 +223,25 @@
         .social-media.social-media li button {
             padding: 50px;
             font-size: 40px;
+        }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .social-media {
+        width: 100%;
+    }
+
+        .social-media ul {
+            width: 100%;
+        }
+
+        .social-media li {
+            width: 100%;
+        }
+
+        .social-media.social-media li button {
+            padding: 150px;
+            font-size: 100px;
         }
 }
 
@@ -178,18 +264,18 @@
     padding-right: 5px;
 }
 
-.social-media ul li button {
-    padding: 10px;
-}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .logo-img {
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid gray;
+        padding-bottom: 5px;
+    }
 
-.social-media ul li:nth-child(1) button {
-    background-color: orange;
-}
-
-.social-media ul li:nth-child(2) button {
-    background-color: rgb(126,210,242);
-}
-
-.social-media ul li:nth-child(3) button {
-    background-color: rgb(59,91,157);
+        .logo-img img {
+            width: 100%;
+        }
+    .logo-and-about p {
+        width:100%;
+    }
 }
