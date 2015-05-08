@@ -18,6 +18,10 @@ header {
             padding-right: 5px;
         }
 
+            header > ul > li .logo {
+                display: inline;
+            }
+
             header > ul > li:first-child {
                 float: left;
                 margin-left: 23px;
@@ -28,4 +32,52 @@ header {
                 border: none;
             }
 
- 
+    header input[type="checkbox"], header label {
+        display: none;
+    }
+
+.logo {
+    display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .logo {
+        display: inline;
+    }
+
+    header label {
+        position: relative;
+        top: 10px;
+        font-size: 100px;
+        display: inline-block;
+        position: relative;
+        left: 80%;
+        z-index: 1;
+        background-color: black;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+    }
+
+    header ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: 50px;
+        transition: height 1s linear;
+    }
+
+        header ul li {
+            float: none;
+            height: 100px;
+            width: 100%;
+        }
+
+            header ul li:first-child {
+                display: none;
+            }
+
+    header input[type=checkbox]:checked ~ ul {
+        height: 600px;
+    }
+}
