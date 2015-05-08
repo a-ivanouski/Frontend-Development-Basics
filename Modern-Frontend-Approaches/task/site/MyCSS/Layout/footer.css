@@ -1,4 +1,4 @@
-﻿footer {
+footer {
     position: relative;
     bottom: 29px;
     background-color: rgb(35,50,63);
@@ -19,6 +19,13 @@
         footer ul li:last-child {
             border-right: none;
         }
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+   footer {
+      width: 96%;
+   }
+}
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
     footer {
