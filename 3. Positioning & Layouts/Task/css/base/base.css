@@ -1,0 +1,164 @@
+﻿body
+{
+    background: url("http://placehold.it/3000x3000") no-repeat top center fixed;
+}
+
+.page,
+button,
+label,
+.most-popular-news header,
+.news-bar header p 
+{
+    background-color: #465345;
+    color: white;
+	font: bold 12px arial, verdana;
+}
+
+a
+{
+    text-decoration: none;
+    color: #537450;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+.nav-btn 
+{
+    background-color: #E5E5E5;
+    color: #465345;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.hd-btn 
+{
+	padding: 10px 15px;
+    margin: 10px;
+    background-color: black;
+}
+
+.hd-btn 
+{
+    display: none;
+}
+
+.nav-btn-left 
+{
+    border-right: 1px solid #465345;
+}
+
+.nav-btn-right 
+{
+    border-left: 1px solid #465345;
+}
+
+.search-input {
+    padding:15px 5%;
+    border-left: 1px solid #bbb9b9;
+}
+
+.btn 
+{
+    cursor: pointer;
+}
+
+.hot-stuff header h2,
+.recent-posts header h2,
+.all-news-gallery header h2,
+.news-category header h2,
+.bottom-block header h2
+{
+    background-color: #E5E5E5;
+    color: #465345;
+    padding: 3px 5px;
+    font-size: small;
+}
+
+time 
+{
+    color: #AAAAAA;
+}
+
+.news-shortcut 
+{
+    margin-top: 5px;
+    color: #AAAAAA;
+    display: block;
+    line-height: 1.5em;
+}
+
+.follow-tweeter-link a
+{
+    color: blue;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.tweet
+{
+    width: 79%;
+    color: #AAAAAA;
+    line-height: 1.5em;
+}
+
+.tweet a
+{
+    color: blue;
+}
+
+.tag-cloud li
+{
+    display: inline-block;
+    width: auto;
+    padding: 0px;
+}
+
+.tag-cloud li a
+{
+    background-color: white;
+    color: #465345;
+    padding: 6px 7px;
+    margin: 0px 5px 5px 0px;
+    display: inline-block;
+}
+
+.social-media
+{
+    width: 100%;
+}
+
+.social-media li
+{
+    width: 33.3%;
+    display: inline-block;
+    border-left: 1px solid #E5E5E5;
+}
+
+.social-media li:last-child
+{
+    border-right: 1px solid #E5E5E5;
+}
+
+.social-media li figure img
+{
+    padding: 0px 25%;
+	width: 100%;
+}
+
+.social-media li figure p
+{
+    text-align: center;
+    padding-top: 7px;
+}
+
+
+.social-media li figure
+{
+    text-align: center;
+    padding: 0px;
+}

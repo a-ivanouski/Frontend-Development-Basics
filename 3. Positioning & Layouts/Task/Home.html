@@ -6,15 +6,19 @@
 	<meta name=viewport content="width=device-width, initial-scale=1">
     <title>Homе</title>
     <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.css" type="text/css" />
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/base/base.css" type="text/css" />
+    <link rel="stylesheet" href="css/layout/Layout.css" type="text/css" />
+    <link rel="stylesheet" href="css/module/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/state/S.css" media="(max-width: 600px) and (min-width: 300px)" type="text/css" />
+    <link rel="stylesheet" href="css/state/M.css" media="(max-width: 1000px) and (min-width: 601px)" type="text/css" />
 </head>
 <body> 
     <div class="page">
         <header class="header left">
-            <div class="logo left">
+            <div class="header__logo left">
                 <img src="http://placehold.it/200x55" alt=""/>
             </div>
-            <nav class="header-nav right">
+            <nav class="header__nav right">
                 <ul>
                     <li class="left">
                         <a href="void()">
@@ -63,34 +67,34 @@
         <div class="top-images left">
             <ul>
                 <li class="left">
-                    <figure class="left">
+                    <figure class="top-images__preview left">
                         <img src="http://placehold.it/70x50" alt=""/>
                     </figure>
-                    <p><a href="void()">Donec consectetuer ligula vulputate...</a><time datetime="2014-11-15">5 months ago</time></p>
+                    <p class="top-images__text"><a href="void()">Donec consectetuer ligula vulputate...</a><time datetime="2014-11-15">5 months ago</time></p>
                 </li>
                 <li class="left">
-                    <figure class="left">
+                    <figure class="top-images__preview left">
                         <img src="http://placehold.it/70x50" alt=""/>
                     </figure>
-                    <p><a href="void()">Nam hibh arcu tristique eget pretiu...</a><time datetime="2014-11-15">5 months ago</time></p>  
+                    <p class="top-images__text"><a href="void()">Nam hibh arcu tristique eget pretiu...</a><time datetime="2014-11-15">5 months ago</time></p>  
                 </li>
                 <li class="left">
-                    <figure class="left">
+                    <figure class="top-images__preview left">
                         <img src="http://placehold.it/70x50" alt=""/>
                     </figure>
-                    <p><a href="void()">Aliquam quam lectus pulvinar urna I...</a><time datetime="2014-10-15">6 months ago</time></p>
+                    <p class="top-images__text"><a href="void()">Aliquam quam lectus pulvinar urna I...</a><time datetime="2014-10-15">6 months ago</time></p>
                 </li>
                 <li class="left">
-                    <figure class="left">
+                    <figure class="top-images__preview left">
                         <img src="http://placehold.it/70x50" alt=""/>
                     </figure>
-                    <p><a href="void()">Phasellus scelerisque massa molesti...</a><time datetime="2014-10-15">6 months ago</time></p>
+                    <p class="top-images__text"><a href="void()">Phasellus scelerisque massa molesti...</a><time datetime="2014-10-15">6 months ago</time></p>
                 </li>
             </ul>
         </div>
         <div class="breaking-news left">
-            <label class="left">Breaking News</label>
-            <div class="inline-news left">
+            <label class="breaking-news__label left">Breaking News</label>
+            <div class="breaking-news__inline-news left">
                 <p>Porta lorem ipsum... <i class="fa fa-angle-double-right fa-1"></i> Lorem ipsum dolor sit amet, consectetur adipiscing... </p>
                 <p>Lectus non rutrum</p>
             </div>
@@ -104,7 +108,7 @@
 			<div class="carousel-news left">
                 <figure class="image-news">
                     <img src="http://placehold.it/400x270" />
-                    <figcaption class="image-news-caption">
+                    <figcaption class="image-news__caption">
                         <p>
                             Morbi est est lectus non rutrum commodo felis quis tortor...
                         </p>
@@ -115,57 +119,57 @@
                 </figure>
                 <ul class="preview-news-container left">
                     <li class="left">
-                        <figure class="preview-image-news left selected">
+                        <figure class="preview-news-container__preview-image-news left preview-news-container__preview-image-news__selected">
                             <img src="http://placehold.it/70x50"  alt=""/>
                         </figure>
                     </li>
                     <li class="left">
-                        <figure class="preview-image-news left">
+                        <figure class="preview-news-container__preview-image-news left">
                             <img src="http://placehold.it/70x50" alt=""/>
                         </figure>
                     </li>
                     <li class="left">
-                        <figure class="preview-image-news left">
+                        <figure class="preview-news-container__preview-image-news left">
                             <img src="http://placehold.it/70x50" alt=""/>
                         </figure>
                     </li>
                     <li class="left">
-                        <figure class="preview-image-news left">
+                        <figure class="preview-news-container__preview-image-news left">
                             <img src="http://placehold.it/70x50" alt=""/>
                         </figure>
                     </li>
                 </ul>
             </div>
             <article class="most-popular-news left">
-                <header>
+                <header class="most-popular-news__header">
                     <h2>
                         Most Popular News
                     </h2>
                 </header>
                 <ul>
                     <li>
-                        <div>
+                        <div class="most-popular-news__news-item">
                             <p>
                                 <a href="void()">Lectus non rutrum pulvinar urna leo dignissim lore...</a>
                             </p>
                         </div>
                     </li>
                     <li>
-                        <div>
+                        <div class="most-popular-news__news-item">
                             <p>
                                 <a href="void()">Donec consectetuer ligula vulputate sem tristique...</a>
                             </p>
                         </div>
                     </li>
                     <li>
-                        <div>
+                        <div class="most-popular-news__news-item">
                             <p>
                                 <a href="void()">Quisque sodales viverra ornare vitae libero ac ris...</a>
                             </p>
                         </div>
                     </li>
                     <li>
-                        <div>
+                        <div class="most-popular-news__news-item">
                             <p>
                                 <a href="void()">Nam nibh arcu tristique eget pretium vitae libero...</a>
                             </p>
@@ -176,18 +180,18 @@
             </div>
 			<div class="news-bar left">
                 <header>
-                    <p class="left selected">
+                    <p class="news-bar__header-item news-bar__header-item__selected left">
                         <i class="fa fa-heart"></i> Popular
                     </p>
-                    <p class="left">
+                    <p class="news-bar__header-item left">
                         <i class="fa fa-clock-o"></i> Recent
                     </p>
-                    <p class="left">
+                    <p class="news-bar__header-item left">
                         <i class="fa fa-comment-o"></i> Comments
                     </p>
                 </header>
                 <ul class="left">
-                    <li class="left">
+                    <li class="news-bar__news-item left">
                         <figure>
                             <img class="left" src="http://placehold.it/90x60"/>
                             <figcaption>
@@ -196,13 +200,13 @@
                                         Lectus non rutrum pulvinar urna...
                                     </a>
                                 </p>
-                                <p class="news-shortcut">
+                                <p class="news-item__news-shortcut">
                                     Nam nibh arcu, tristique eget pretium sed, porta id quam. Praesent dig...
                                 </p>
                             </figcaption>
                         </figure>
                     </li>
-                    <li class="left">
+                    <li class="news-bar__news-item left">
                         <figure>
                             <img class="left" src="http://placehold.it/90x60"/>
                             <figcaption>
@@ -211,13 +215,13 @@
                                         Donec conec consectetuer ligula vulpu...
                                     </a>
                                 </p>
-                                <p class="news-shortcut">
+                                <p class="news-item__news-shortcut">
                                     Nam nibh arcu, tristique eget pretium sed, porta id quam. Praesent dig...
                                 </p>
                             </figcaption>
                         </figure>
                     </li>
-                    <li class="left">
+                    <li class="news-bar__news-item left">
                         <figure>
                             <img class="left" src="http://placehold.it/90x60"/>
                             <figcaption>
@@ -226,15 +230,15 @@
                                         Nam nibh arcu tristique eget pr...
                                     </a>
                                 </p>
-                                <p class="news-shortcut">
+                                <p class="news-item__news-shortcut">
                                     Nam nibh arcu, tristique eget pretium sed, porta id quam. Praesent dig...
                                 </p>
                             </figcaption>
                         </figure>
                     </li>   
                 </ul>
-                <div class="left">
-                    <div class="right nav-container">
+                <div class="news-bar__footer left">
+                    <div class="right news-bar__nav-container">
                         <div class="nav-btn nav-btn-right right"><i class="fa fa-caret-right"></i></div> 
                         <div class="nav-btn right"><i class="fa fa-caret-left"></i></div>  
                     </div>
@@ -249,11 +253,11 @@
                     </h2>
                 </header>
                 <ul>
-                    <li>
+                    <li class="hot-stuff__news-item hot-stuff__news-item__left">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Donec Consectetuer ligula vulputate...</a>
@@ -274,11 +278,11 @@
                             </figure>
                         </div>
                     </li>
-                    <li>
+                    <li class="hot-stuff__news-item">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Nam nibh arcu tristique eget pretiu...</a>
@@ -299,11 +303,11 @@
                             </figure>
                         </div>
                     </li>
-                    <li>
+                    <li class="hot-stuff__news-item">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Aliquam quam lectus pulvinar urna I...</a>
@@ -324,11 +328,11 @@
                             </figure>
                         </div>
                     </li>
-                    <li>
+                    <li class="hot-stuff__news-item">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Phasellus scelerisque massa molesti...</a>
@@ -351,7 +355,7 @@
                     </li>
                 </ul>
                 <div>
-                    <div class="nav-container">
+                    <div class="hot-stuff__nav-container">
                         <div class="nav-btn nav-btn-right right"><i class="fa fa-caret-right"></i></div> 
                         <div class="nav-btn right"><i class="fa fa-caret-left"></i></div>  
                     </div>
@@ -364,7 +368,7 @@
                     </h2>
                 </header>
                 <ul class="left">
-                    <li class="left">
+                    <li class="recent-posts__post-item recent-posts__post-item__top left">
                         <figure>
                             <img class="left" src="http://placehold.it/90x60"/>
                             <figcaption>
@@ -384,7 +388,7 @@
                             </figcaption>
                         </figure>    
                     </li>
-                    <li class="left">
+                    <li class="recent-posts__post-item left">
                         <figure>
                             <img class="left" src="http://placehold.it/90x60"/>
                             <figcaption>
@@ -404,7 +408,7 @@
                             </figcaption>
                         </figure>  
                     </li>
-                    <li class="left">
+                    <li class="recent-posts__post-item recent-posts__post-item__last left">
                         <figure>
                             <img class="left" src="http://placehold.it/90x60"/>
                             <figcaption>
@@ -435,7 +439,7 @@
 					</header>
 					<ul>
 						<li>
-							<div class="large-news-preview left">
+							<div class="news-category__large-news-preview left">
 								<figure class="left">
 									<img src="http://placehold.it/312x150"/>
 									<figcaption class="left">
@@ -451,7 +455,7 @@
 							</div>
 						</li>
 						<li class="left">
-							<div class="small-news-preview left">
+							<div class="news-category__small-news-preview left">
 								<figure class="left">
 									<img class="left" src="http://placehold.it/90x60"/>
 									<figcaption>
@@ -469,7 +473,7 @@
 							</div>
 						</li>
 						<li class="left">
-							<div class="small-news-preview left">
+							<div class="news-category__small-news-preview news-category__small-news-preview__last left">
 								<figure class="left">
 									<img class="left" src="http://placehold.it/90x60"/>
 									<figcaption>
@@ -496,7 +500,7 @@
 					</header>
 					<ul>
 						<li>
-							<div class="large-news-preview left">
+							<div class="news-category__large-news-preview left">
 								<figure class="left">
 									<img src="http://placehold.it/312x150"/>
 									<figcaption class="left">
@@ -512,7 +516,7 @@
 							</div>
 						</li>
 						<li class="left">
-							<div class="small-news-preview left">
+							<div class="news-category__small-news-preview left">
 								<figure class="left">
 									<img class="left" src="http://placehold.it/90x60"/>
 									<figcaption>
@@ -530,7 +534,7 @@
 							</div>
 						</li>
 						<li class="left">
-							<div class="small-news-preview left">
+							<div class="news-category__small-news-preview left">
 								<figure class="left">
 									<img class="left" src="http://placehold.it/90x60"/>
 									<figcaption>
@@ -557,7 +561,7 @@
                 </header>
                 <ul>
                     <li>
-                        <div class="large-news-preview left">
+                        <div class="news-category__large-news-preview left">
                             <figure class="left">
                                 <img src="http://placehold.it/378x150"/>
                                 <figcaption class="left">
@@ -573,7 +577,7 @@
                         </div>
                     </li>
                     <li class="left">
-                        <div class="small-news-preview">
+                        <div class="news-category__small-news-preview">
                             <figure class="left">
                                 <img class="left" src="http://placehold.it/90x60"/>
                                 <figcaption>
@@ -591,7 +595,7 @@
                         </div>
                     </li>
                     <li class="left">
-                        <div class="small-news-preview left">
+                        <div class="news-category__small-news-preview left">
                             <figure class="left">
                                 <img class="left" src="http://placehold.it/90x60"/>
                                 <figcaption>
@@ -619,7 +623,7 @@
                 </header>
                 <ul>
                     <li>
-                        <div class="large-news-preview left">
+                        <div class="news-category__large-news-preview left">
                             <figure class="left">
                                 <img src="http://placehold.it/312x150"/>
                                 <figcaption class="left">
@@ -635,7 +639,7 @@
                         </div>
                     </li>
                     <li class="left">
-                        <div class="small-news-preview left top-small-news-preview">
+                        <div class="news-category__small-news-preview left news-category__small-news-preview__top">
                             <figure class="left">
                                 <img class="left" src="http://placehold.it/90x60"/>
                                 <figcaption>
@@ -653,7 +657,7 @@
                         </div>
                     </li>
                     <li class="left">
-                        <div class="small-news-preview left">
+                        <div class="news-category__small-news-preview left">
                             <figure class="left">
                                 <img class="left" src="http://placehold.it/90x60"/>
                                 <figcaption>
@@ -671,7 +675,7 @@
                         </div>
                     </li>
                     <li class="right">
-                        <div class="small-news-preview left">
+                        <div class="news-category__small-news-preview left">
                             <figure class="left">
                                 <img class="left" src="http://placehold.it/90x60"/>
                                 <figcaption>
@@ -698,14 +702,14 @@
                 </header>
                 <ul>
                     <li>
-                        <div class="large-news-preview left video-news-preview">
+                        <div class="news-category__large-news-preview left news-category__video-news-preview">
                             <figure class="left">
                                 <iframe width="378" height="200" src="https://www.youtube.com/embed/bZy8Nmf6f_Q" allowfullscreen></iframe>
                             </figure>
                         </div>
                     </li>
                     <li class="left">
-                        <div class="small-video-news-preview">
+                        <div class="news-category__small-video-news-preview">
                             <figure class="left">
                                 <img class="left" src="http://placehold.it/90x40" alt=""/>
                                 <img class="left" src="http://placehold.it/90x40" alt=""/>
@@ -723,11 +727,11 @@
                     </h2>
                 </header>
                 <ul>
-                    <li>
+                    <li class="all-news-gallery__news-item all-news-gallery__news-item__left">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Fusce pellentesque suscipit nibh ma...</a>
@@ -748,11 +752,11 @@
                             </figure>
                         </div>
                     </li>
-                    <li>
+                    <li class="all-news-gallery__news-item">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Praesent placerat risus quis pellen...</a>
@@ -773,11 +777,11 @@
                             </figure>
                         </div>
                     </li>
-                    <li>
+                    <li class="all-news-gallery__news-item">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Integer malesuada commodo nulla lig...</a>
@@ -798,11 +802,11 @@
                             </figure>
                         </div>
                     </li>
-                    <li>
+                    <li class="all-news-gallery__news-item">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Vestibulum volutpat tortor lobero s...</a>
@@ -823,11 +827,11 @@
                             </figure>
                         </div>
                     </li>
-                    <li>
+                    <li class="all-news-gallery__news-item">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Fusce accumsan mollis eros amet int...</a>
@@ -848,11 +852,11 @@
                             </figure>
                         </div>
                     </li>
-                    <li>
+                    <li class="all-news-gallery__news-item">
                         <div class="left">
-                            <figure class="left">
+                            <figure class="news-item__preview left">
                                 <img src="http://placehold.it/145x120" alt=""/>
-                                <figcaption>
+                                <figcaption class="news-item__text">
                                     <img class="left" src="http://placehold.it/30x30" alt=""/>
                                     <p>
                                         <a href="void()">Quisque fermentum penatibus et magn...</a>
@@ -883,13 +887,13 @@
             </section>
         </div>
         <div class="bottom-blocks left">
-            <section class="bottom-block bottom-block-left left">
-                <header class="left">
+            <section class="bottom-block bottom-block-left bottom-block-first left">
+                <header class="bottom-block__header left">
                     <h2 class="left">
                         Latests News
                     </h2>
                 </header>
-                <ul>
+                <ul class="bottom-block__content">
                     <li class="left">
                         <figure class="left">
                             <img src="http://placehold.it/70x50" alt=""/>
@@ -935,12 +939,12 @@
                 </ul>
             </section>
             <section class="bottom-block left">
-                <header class="left">
+                <header class="bottom-block__header left">
                     <h2 class="left">
                         Latests Tweets
                     </h2>
                 </header>
-                <ul>
+                <ul class="bottom-block__content">
                     <li class="left">
                         <figure class="left">
                             <img class="left" src="http://placehold.it/40x40" alt=""/>
@@ -971,7 +975,7 @@
                 </div>
             </section>
             <section class="bottom-block left">
-                <header class="left">
+                <header class="bottom-block__header left">
                     <h2 class="left">
                         Tag Cloud
                     </h2>
@@ -1007,7 +1011,7 @@
                 </ul>
             </section>
             <section class="bottom-block left">
-                <header class="left">
+                <header class="bottom-block__header left">
                     <h2 class="left">
                         Social media
                     </h2>
@@ -1059,8 +1063,8 @@
             </div>
         </div>
         <footer class="footer left">
-            <div class="copy-right left">All Right Reserved by minimalthemes</div>
-            <nav>
+            <div class="footer__copy-right left">All Right Reserved by minimalthemes</div>
+            <nav class="footer__nav">
                 <ul class="right">
                     <li>
                         <a href="void()">

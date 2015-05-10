@@ -1,0 +1,203 @@
+﻿.header__nav 
+{
+    display: none;
+}
+	
+.hd-btn 
+{
+    display: block;
+}
+	
+.top-images	
+{
+    width: 100%;
+	padding: 0 15%;
+}
+	
+.top-images ul li 
+{
+    padding: 10px 5%;
+    margin: 20px 0;
+    width: 100%;
+}
+	
+.top-images__preview 
+{
+    width: 100%;
+}
+	
+.top-images__preview img 
+{
+    width: 100%;
+    padding-right: 0;
+}
+	
+.top-images__text 
+{
+    width: 100%;
+}
+	
+.hd-btn 
+{
+    margin: 10px 9px 10px 5px;
+}
+	
+.breaking-news__inline-news 
+{
+    width: 100%;
+}
+	
+.search	
+{
+    width: 100%;
+	padding-bottom: 10px;
+}
+	
+.carousel-news	
+{
+    width: 100%;
+}
+	
+.most-popular-news	
+{
+    width: 100%;
+	margin-left: 0;
+	margin-bottom: 20px;
+}
+	
+.news-bar 
+{
+    margin-left: 0;
+    width: 100%;
+}
+	
+.news-bar__header-item p 
+{
+	text-align: initial;
+	width: 100%;
+}
+	
+.news-bar__news_item img 
+{
+	width: 100%;
+}
+	
+.hot-stuff__nav-container, .all-news-gallery__nav-container 
+{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 18px;
+	top: initial;
+}
+	
+.hot-stuff 
+{
+    width: 100%;
+}
+	
+.nav-btn 
+{
+    float: left;
+}
+	
+.nav-btn-right 
+{
+    border-left: none;
+    float: right;
+}
+	
+.recent-posts 
+{
+	width: 100%;
+	margin-left: 0;
+}
+	
+.recent-posts ul img 
+{
+	padding-right: 0;
+	width: 100%;
+}
+	
+.news-category 
+{
+	width: 100%;
+	margin-left: 0;
+}
+	
+.news-category__small-news-preview figure img 
+{
+	padding-right: 5px;
+    width: 100%;
+}
+	
+.news-category__large-news-preview figure time
+{
+    float: left;
+}
+	
+.inline-news-category li 
+{
+    width: 100%;
+}
+	
+.inline-news-category__small-news-preview 
+{
+    padding: 0px 0px 10px 0;
+}
+	
+.bottom-block
+{
+    width: 100%;
+	margin-bottom: 20px;
+	margin-left: 0;
+}
+	
+.bottom-block-left figure 
+{
+	padding-right: 0;
+	width: 100%;
+}
+	
+.about-bottom-block 
+{
+	margin: 30px 0px 0px 1.58%;
+	width: 100%;
+}
+	
+.about-bottom-block figcaption 
+{
+    padding-top: 20px;
+	width: 100%;
+	float: left;
+}
+	
+.about-bottom-block img 
+{
+    border-right: none;
+}
+	
+.footer 
+{
+	padding: 20px 20px;
+}
+
+.footer__nav, .footer__nav ul 
+{
+	width: 100%;
+	float: left;
+}
+	
+.social-media li 
+{
+	width: 100%;
+	display: inline-block;
+	border-left: 1px solid #E5E5E5;
+	border-right: 1px solid #E5E5E5;
+}
+	
+.social-media li figure img 
+{
+	padding: 0px 40%;
+	width: 100%;
+}

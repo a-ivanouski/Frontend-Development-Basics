@@ -1,0 +1,117 @@
+﻿.header__nav
+{
+    display: none;
+}
+	
+.hd-btn
+{
+    display: block;
+}
+	
+.top-images__preview
+{
+    width: 70%;
+}
+	
+.top-images__text
+{
+    width: 100%;
+}
+	
+.breaking-news__label 
+{
+    margin-right: 0;
+}
+	
+.breaking-news 
+{
+    padding: 0px;
+}
+	
+.top-carousel-with-popular
+{
+    float: left;
+	width: 69%;
+}
+	
+.carousel-news
+{
+    width: 100%;
+}
+	
+.most-popular-news
+{
+    width: 100%;
+	margin-left: 0;
+}
+	
+.top-news
+{
+    padding: 20px 1% 0;
+}
+	
+.news-bar
+{
+    width: 30%;
+	margin-left: 1%;
+}
+	
+.news-bar__header-item
+{
+    width: 100%;
+	text-align: left;
+}
+	
+.news-bar__news-item img
+{
+    padding-bottom: 0px;
+}
+	
+.hot-stuff__nav-container, .all-news-gallery__nav-container {
+    left: 70%;
+    width: 30%;
+    top: -2px;
+}
+	
+.bottom-block
+{
+    width: 100%;
+	margin-bottom: 20px;
+	margin-left: 0;
+}
+	
+	
+.bottom-block-left img
+{
+    width: initial;
+}
+	
+.bottom-block-left figure {
+    padding-right: 1%;
+    width: initial;
+}
+	
+.tweet
+{
+     float: left;
+	 margin-left: 10px;
+}
+	
+.social-media
+{
+    width: 100%;
+}
+	
+.social-media li figure img {
+    padding: 0px 35%;
+}
+	
+.about-bottom-block
+{
+    width: 100%;
+}
+	
+.categorized-news
+{
+    padding: 30px 1% 0px;
+}
