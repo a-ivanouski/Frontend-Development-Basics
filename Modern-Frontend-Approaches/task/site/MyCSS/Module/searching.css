@@ -6,20 +6,18 @@
     border-bottom: 1px solid darkgray;
     border-top: 1px solid darkgray;
     padding-left: 3.3%;
-
-
     overflow:hidden;
     text-overflow:ellipsis;
      
 }
 
-    .searching p {
+    .searching_info-titles {
         display: inline-block;
         margin: 0;
         white-space: nowrap;
     }
 
-    .searching > button {
+    .searching_button {
         margin: 0;
         padding: 3px;
         border: none;
@@ -27,19 +25,19 @@
     }
 
 
-.search {
+.searching_search {
     display: inline-block;
     margin-right: 3.3%;
 }
 
-    .search button {
+    .searching_search_button {
         margin: 0;
         padding: 13px;
         border: none;
         background-color: rgb(61,76,84);
     }
 
-    .search input {
+    .searching_search_input {
         position: relative;
         left: 4px;
         margin: 0;
