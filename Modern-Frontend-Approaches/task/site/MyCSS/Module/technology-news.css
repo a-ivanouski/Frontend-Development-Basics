@@ -5,9 +5,9 @@
     height: 500px;
 }
 
-    .technology-news .hear-capter {
-        margin-bottom: 40px;
-    }
+.technology-news_hear-capter {
+    margin-bottom: 40px;
+}
 
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
@@ -25,21 +25,21 @@
         height: 2900px;
     }
 
-        .technology-news .some-people-comment {
-            text-align: center;
-            width: 100%;
+    .technology-news_some-people-comment {
+        text-align: center;
+        width: 100%;
+    }
+
+        .technology-news_some-people-comment img {
+            height: 640px;
         }
 
-            .technology-news .some-people-comment img {
-                height: 640px;
-            }
+    .technology-news_some-people-words {
+        bottom: 0;
+        width: 90%;
+    }
 
-        .technology-news .some-people-words {
-            bottom: 0;
-            width: 90%;
-        }
-
-        .technology-news .news-photo img {
-            height: 800px;
-        }
+    .technology-news .news-photo img {
+        height: 800px;
+    }
 }
