@@ -33,7 +33,7 @@
         width: 600px;
     }
 
-    .hot-stuff_hear-capter .help-margin button:first-child {
+    .hot-stuff_hear-capter .help-margin.help-margin button:first-child {
         position: relative;
         top: 760px;
         left: -740px;
@@ -42,7 +42,7 @@
         border: none;
     }
 
-    .hot-stuff_hear-capter .help-margin button:last-child {
+    .hot-stuff_hear-capter .help-margin.help-margin button:last-child {
         position: relative;
         top: 760px;
         left: 0;

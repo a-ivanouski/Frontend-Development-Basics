@@ -1,20 +1,20 @@
-﻿.recents-posts .hear-capter {
+﻿.recents-posts_hear-capter {
     margin-bottom: 60px;
 }
 
-.recents-posts .some-people-comment {
+.recents-posts_some-people-comment {
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
     border-bottom: 2px solid rgb(237,237,237);
 }
 
-    .recents-posts .some-people-comment:last-child {
+    .recents-posts_some-people-comment:last-child {
         border-bottom: none;
         padding-bottom: 0;
     }
 
-.recents-posts .some-people-words {
+.recents-posts_some-people-words {
     display: inline-block;
     position: relative;
     bottom: 10px;
@@ -24,18 +24,11 @@
     overflow: hidden;
 }
 
-.recents-posts .people-img {
-    display: inline-block;
-}
-
 .recents-posts {
     width: 30%;
     height: 500px;
     float: right;
 }
-
-
-
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     .recents-posts {
@@ -43,11 +36,10 @@
         bottom: 225px;
     }
 
-        .recents-posts .some-people-words {
-            width: 60%;
-        }
+    .recents-posts_some-people-words {
+        width: 60%;
+    }
 }
-
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
     .recents-posts {
@@ -55,16 +47,16 @@
         height: 2885px;
     }
 
-        .recents-posts .some-people-comment {
-            text-align: center;
+    .recents-posts_some-people-comment {
+        text-align: center;
+    }
+
+        .recents-posts_some-people-comment img {
+            height: 640px;
         }
 
-            .recents-posts .some-people-comment img {
-                height: 640px;
-            }
-
-        .recents-posts .some-people-words {
-            bottom: 0;
-            width: 90%;
-        }
+    .recents-posts_some-people-words {
+        bottom: 0;
+        width: 90%;
+    }
 }
