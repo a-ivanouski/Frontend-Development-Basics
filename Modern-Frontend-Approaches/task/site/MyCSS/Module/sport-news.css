@@ -4,16 +4,19 @@
     margin-left: 10%;
 }
 
-    .sport-news .hear-capter {
-        margin-bottom: 40px;
-    }
-
+.sport-news_hear-capter {
+    margin-bottom: 40px;
+}
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
     .sport-news {
         position: relative;
         bottom: 100px;
+    }
+
+    .sport-news_some-people-comment {
+        width: 300px;
     }
 }
 
@@ -27,21 +30,21 @@
     }
 
 
-      .sport-news .some-people-comment {
-            text-align: center;
-            width: 100%;
+    .sport-news_some-people-comment {
+        text-align: center;
+        width: 100%;
+    }
+
+        .sport-news_some-people-comment img {
+            height: 640px;
         }
 
-             .sport-news .some-people-comment img {
-                height: 640px;
-            }
+    .sport-news_some-people-comment_some-people-words {
+        bottom: 0;
+        width: 90%;
+    }
 
-         .sport-news .some-people-words {
-            bottom: 0;
-            width: 90%;
-        }
-
-         .sport-news .news-photo img {
-            height: 800px;
-        }
+    .sport-news_news-photo img {
+        height: 800px;
+    }
 }
