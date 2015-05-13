@@ -1,36 +1,36 @@
-.fasion-news .hear-capter {
-    margin-bottom: 20px;
-}
-
 .fasion-news {
     width: 60%;
 }
 
-    .fasion-news .some-people-words {
-        width: 50%;
-    }
+.fasion-news_hear-capter {
+    margin-bottom: 20px;
+}
 
-.fasion-news-main {
+.fasion-news_comments-on-news_some-people-words {
+    width: 50%;
+}
+
+.fasion-news_fasion-news-main {
     float: left;
     width: 42.8%;
     height: 85%;
 }
 
-    .fasion-news-main .news-photo {
-        height: 200px;
+.fasion-news_fasion-news-main_news-photo {
+    height: 200px;
+}
+
+    .fasion-news_fasion-news-main_news-photo img {
+        width: 100%;
+        height: 100%;
     }
 
-        .fasion-news-main .news-photo img {
-            width: 100%;
-            height: 100%;
-        }
-
-.comments-on-news {
+.fasion-news_comments-on-news {
     float: right;
     width: 42.8%;
 }
 
-.fasion-news .some-people-comment {
+.fasion-news_comments-on-news_some-people-comment {
     border-bottom: 1px solid lightgray;
     height: 150px;
 }
@@ -52,32 +52,32 @@
         float: none;
     }
 
-    .fasion-news-main {
+    .fasion-news_fasion-news-main {
         width: 100%;
         height: auto;
         float: none;
     }
 
-        .fasion-news-main .news-photo {
-            height: 640px;
-        }
+    .fasion-news_fasion-news-main_news-photo {
+        height: 640px;
+    }
 
-    .comments-on-news {
+    .fasion-news_comments-on-news {
         width: 100%;
     }
 
-    .fasion-news .some-people-comment {
+    .fasion-news_comments-on-news_some-people-comment {
         text-align: center;
         width: 100%;
         height: 1000px;
     }
-    
-        .fasion-news .some-people-comment img {
-            padding-top:40px;
+
+        .fasion-news_comments-on-news_some-people-comment img {
+            padding-top: 40px;
             height: 650px;
         }
 
-    .fasion-news .some-people-words {
+    .fasion-news_comments-on-news_some-people-words {
         bottom: 0;
         width: 90%;
     }
