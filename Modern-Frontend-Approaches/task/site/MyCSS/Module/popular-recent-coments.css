@@ -28,12 +28,12 @@
     }
 
 
-    .popular-recent-coments .select-buttons {
-        width: 100%;
-        margin-bottom: 70px;
-    }
+.popular-recent-coments_select-buttons {
+    width: 100%;
+    margin-bottom: 70px;
+}
 
-.select-buttons button {
+.popular-recent-coments_select-buttons_button {
     position: relative;
     float: left;
     width: 33.33%;
@@ -45,7 +45,7 @@
     color: white;
 }
 
-    .select-buttons button:first-child {
+    .popular-recent-coments_select-buttons_button:first-child {
         background-color: rgb(129,183,82);
     }
 
@@ -54,7 +54,7 @@
         height: 606px;
     }
 
-    .select-buttons button {
+    .popular-recent-coments_select-buttons_button {
         width: 100%;
     }
 }
@@ -78,7 +78,7 @@
             bottom: 50px;
         }
 
-    .select-buttons button {
+    .popular-recent-coments_select-buttons_button {
         width: 100%;
     }
 }
