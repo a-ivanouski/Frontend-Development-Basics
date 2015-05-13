@@ -13,15 +13,11 @@ article .game-news .some-people-words, article .sport-news .some-people-words, a
     bottom: 14px;
 }
 
-
-
 .photo > img {
     margin-top: 20px;
     height: 60px;
     width: 60px;
 }
-
-
 
 .main-photo {
     width: 100%;
@@ -41,8 +37,6 @@ article .game-news .some-people-words, article .sport-news .some-people-words, a
         width: 100%;
     }
 
-
-
 .other-photos {
     width: 93.3%;
     margin-left: 3.3%;
@@ -52,20 +46,13 @@ article .game-news .some-people-words, article .sport-news .some-people-words, a
         display: inline-block;
     }
 
-
-
 .people-img {
     display: inline-block;
 }
 
-
-
-
 .some-people-block {
     width: 180px;
 }
-
-
 
 .description {
     width: 100%;
@@ -83,13 +70,9 @@ article .game-news .some-people-words, article .sport-news .some-people-words, a
     padding: 10px 5px 10px 5px;
 }
 
-
-
 .words-footer {
     color: gray;
 }
-
-
 
 .buttos-help .help-margin {
     margin-left: 70%;
@@ -112,14 +95,10 @@ article .game-news .some-people-words, article .sport-news .some-people-words, a
             right: 4px;
         }
 
-
-
 .hear-capter {
     width: 100%;
     border-bottom: 2px solid rgb(237,237,237);
 }
-
-
 
 .hear-capter button {
     padding: 10px;
@@ -139,8 +118,6 @@ article .game-news .some-people-words, article .sport-news .some-people-words, a
             position: relative;
             left: 4px;
         }
-
-
 
 .def-margin {
     padding-left: 3.3%;
