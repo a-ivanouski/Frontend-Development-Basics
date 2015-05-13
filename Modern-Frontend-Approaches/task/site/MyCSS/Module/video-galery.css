@@ -35,7 +35,7 @@
         width: 100%;
     }
 
-    .video-galery_photos_other-photos_photo img {
+    .video-galery_photos_other-photos_photo.video-galery_photos_other-photos_photo img {
         height: 170px;
         width: 170px;
     }

@@ -3,22 +3,21 @@
     overflow: hidden;
 }
 
-    .all-news-galery .hear-capter {
-        margin-bottom: 20px;
-    }
+.all-news-galery_hear-capter {
+    margin-bottom: 20px;
+}
 
-    .all-news-galery .description {
-        border-bottom: 2px solid rgb(237,237,237);
-    }
+.all-news-galery_some-people-block_description {
+    border-bottom: 2px solid rgb(237,237,237);
+}
 
-    .all-news-galery .data-stars {
-        border-bottom: 2px solid rgb(237,237,237);
-    }
+.all-news-galery_some-people-block_data-stars {
+    border-bottom: 2px solid rgb(237,237,237);
+}
 
-    .all-news-galery .list-all-news-galery-news {
-        width: 1500px;
-    }
-
+.all-news-galery_list-all-news-galery-news {
+    width: 1500px;
+}
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
@@ -29,16 +28,16 @@
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-    .all-news-galery .list-all-news-galery-news {
+    .all-news-galery_list-all-news-galery-news {
         width: 4700px;
-        padding-bottom:100px;
+        padding-bottom: 100px;
     }
 
-    .all-news-galery .some-people-block {
+    .all-news-galery_some-people-block {
         width: 700px;
     }
 
-        .all-news-galery .some-people-block img {
+        .all-news-galery_some-people-block img {
             width: 640px;
         }
 
