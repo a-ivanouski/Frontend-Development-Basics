@@ -120,14 +120,14 @@
         height: 1100px;
     }
 
-        .social-news_latest-tweets_some-people-comment {
-            width: 100%;
-            margin-bottom: 30px;
-        }
+    .social-news_latest-tweets_some-people-comment {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
-        .social-news_latest-tweets img {
-            height: 100px;
-        }
+    .social-news_latest-tweets img {
+        height: 100px;
+    }
 }
 
 .other {
