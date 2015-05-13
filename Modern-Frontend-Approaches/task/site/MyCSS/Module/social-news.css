@@ -24,59 +24,59 @@
 
 
 
-.latest-news .some-people-comment {
+.social-news_latest-news_some-people-comment {
     width: 300px;
 }
 
 
-    .latest-news .some-people-comment .some-people-words {
-        position: relative;
-        display: inline-block;
-        bottom: 16px;
-        width: 60%;
-    }
+.social-news_latest-news_some-people-comment_some-people-words {
+    position: relative;
+    display: inline-block;
+    bottom: 16px;
+    width: 60%;
+}
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-    .latest-news {
+    .social-news_latest-news {
         width: 100%;
     }
 
-        .latest-news .some-people-comment {
-            width: 100%;
-            text-align: center;
-        }
+    .social-news_latest-news_some-people-comment {
+        width: 100%;
+        text-align: center;
+    }
 
-        .latest-news .some-people-words {
-            text-align: left;
-        }
+    .social-news_latest-news_some-people-comment_some-people-words {
+        text-align: left;
+    }
 
-        .latest-news .some-people-comment img {
-            height: 640px;
-        }
+    .social-news_latest-news_some-people-comment img {
+        height: 640px;
+    }
 }
 
 
 
 
-.latest-tweets {
+.social-news_latest-tweets {
     position: relative;
     bottom: 76px;
 }
 
-    .latest-tweets a {
+    .social-news_latest-tweets a {
         color: blue;
     }
 
-    .latest-tweets .some-people-comment {
-        width: 300px;
-    }
+.social-news_latest-tweets_some-people-comment {
+    width: 300px;
+}
 
-        .latest-tweets .some-people-comment .some-people-words {
-            position: relative;
-            bottom: 20px;
-            width: 60%;
-        }
+.social-news_latest-tweets_some-people-comment_some-people-words {
+    position: relative;
+    bottom: 20px;
+    width: 60%;
+}
 
 .pos-fix {
     position: relative;
@@ -84,29 +84,27 @@
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .latest-tweets {
+    .social-news_latest-tweets {
         bottom: 0;
     }
 
+    .social-news_latest-tweets_some-people-comment {
+        width: 700px;
+    }
 
-        .latest-tweets .some-people-comment {
-            width: 700px;
-        }
+    .social-news_latest-tweets .people-img {
+        display: inline-block;
+        bottom: 0;
+    }
 
-        .latest-tweets .people-img {
-            display: inline-block;
-            bottom: 0;
-        }
+    .social-news_latest-tweets_some-people-words {
+        display: inline-block;
+        bottom: 0;
+    }
 
-        .latest-tweets .some-people-words {
-            display: inline-block;
-            bottom: 0;
-        }
-
-
-        .latest-tweets .pos-fix {
-            bottom: 0;
-        }
+    .social-news_latest-tweets .pos-fix {
+        bottom: 0;
+    }
 
 
     .pos-fix + .some-people-words {
@@ -117,17 +115,17 @@
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-    .latest-tweets {
+    .social-news_latest-tweets {
         bottom: 0;
         height: 1100px;
     }
 
-        .latest-tweets .some-people-comment {
+        .social-news_latest-tweets_some-people-comment {
             width: 100%;
             margin-bottom: 30px;
         }
 
-        .latest-tweets img {
+        .social-news_latest-tweets img {
             height: 100px;
         }
 }
@@ -275,7 +273,8 @@
         .logo-img img {
             width: 100%;
         }
+
     .logo-and-about p {
-        width:100%;
+        width: 100%;
     }
 }
