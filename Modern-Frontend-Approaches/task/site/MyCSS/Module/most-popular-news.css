@@ -4,14 +4,14 @@
     height: 500px;
 }
 
-    .most-popular-news .menu-popular-news {
-        width: 42%;
-        float: right;
-        height: 100%;
-        background-color: rgb(242,242,242);
-    }
+.most-popular-news_menu-popular-news {
+    width: 42%;
+    float: right;
+    height: 100%;
+    background-color: rgb(242,242,242);
+}
 
-.menu-popular-news .head {
+.most-popular-news_menu-popular-news_head {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
@@ -21,7 +21,7 @@
     font-size: 22px;
 }
 
-.menu-popular-news .some-desription {
+.most-popular-news_menu-popular-news_some-desription {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
@@ -31,24 +31,46 @@
     margin-bottom: 5%;
 }
 
-
-.most-popular-news .photos {
+.most-popular-news_photos {
     width: 42%;
     float: left;
     height: 100%;
     border: 3px solid rgb(237,237,237);
 }
 
+.most-popular-news_photos_main-photo {
+    width: 100%;
+    height: 70%;
+}
 
+    .most-popular-news_photos_main-photo img {
+        width: 100%;
+        height: 100%;
+    }
+
+.most-popular-news_photos_other-photos {
+    width: 93.3%;
+    margin-left: 3.3%;
+}
+
+.most-popular-news_photos_other-photos_photo {
+    display: inline-block;
+}
+
+    .most-popular-news_photos_other-photos_photo img {
+        margin-top: 20px;
+        height: 60px;
+        width: 60px;
+    }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .most-popular-news .photos {
+    .most-popular-news_photos {
         width: 100%;
         height: 45%;
         margin-bottom: 5%;
     }
 
-    .most-popular-news .menu-popular-news {
+    .most-popular-news_menu-popular-news {
         width: 100%;
         height: 50%;
     }
@@ -59,13 +81,13 @@
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-    .most-popular-news .photos {
+    .most-popular-news_photos {
         width: 100%;
         height: 45%;
         margin-bottom: 5%;
     }
 
-    .most-popular-news .menu-popular-news {
+    .most-popular-news_menu-popular-news {
         width: 100%;
         height: 50%;
     }
@@ -74,12 +96,12 @@
         width: 100%;
         height: 1790px;
     }
-    
-    .menu-popular-news .head {
+
+    .most-popular-news_menu-popular-news_head {
         font-size: 50px;
     }
 
-    .photo.photo > img {
+    .most-popular-news_photos_other-photos_photo img {
         margin-top: 70px;
         height: 120px;
         width: 120px;
