@@ -2,12 +2,15 @@
 header {
     background-color: rgb(61,76,84);
     color: white;
+    text-align: center;
+    width: 100%;
 }
 
     header > ul {
-        width: 100%;
+        display: inline-block;
         text-align: center;
         margin: 0;
+        padding: 0;
         line-height: 3em;
         height: 3em;
     }
@@ -18,111 +21,100 @@ header {
             padding-right: 5px;
         }
 
-            header > ul > li .logo {
-                display: inline;
-            }
-
-            header > ul > li:first-child {
-                float: left;
-                margin-left: 23px;
-                border: none;
-            }
-
-            header > ul > li:last-child {
-                border: none;
-            }
-
-    header input[type="checkbox"], header label {
+    .show-menu, header label {
         display: none;
     }
 
 .logo {
-    display: none;
+    position: relative;
+    top: 16px;
+    float: left;
+    padding-left: 3.3%;
 }
 
-
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-     .logo {
-        display: inline;
-    }
 
-    header label {
-        position: relative;
-        top: 10px;
-        font-size: 40px;
-        display: inline-block;
-        left: 80%;
-        z-index: 1;
-        background-color: black;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 10px;
-        height:auto;
-    }
-
-    header ul {
-        overflow:hidden;
-        position:relative;
-        top:35px;
-        display: block;
-        padding: 0;
-        margin: 0;
-        height:30px;
+    header {
+        overflow: hidden;
+        height: 48px;
         transition: height 1s linear;
     }
 
-        header ul li {
-            float: none;
-            height: 100px;
-            width: 100%;
+        header label {
+            position: relative;
+            float: right;
+            right: 3.3%;
+            top: 10px;
+            font-size: 20px;
+            display: inline-block;
+            z-index: 1;
+            background-color: black;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            height: auto;
         }
 
-            header ul li:first-child {
-                display: none;
+        header ul {
+            overflow: hidden;
+            position: relative;
+            top: 35px;
+            padding: 0;
+            margin: 0;
+            height: 400px;
+        }
+
+            header ul li {
+                text-align: center;
+                height: 100px;
+                width: 100%;
             }
 
-    header input[type=checkbox]:checked ~ ul {
+    .show-menu[type=checkbox]:checked ~ header {
         height: 400px;
     }
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-    .logo {
-        display: inline;
-    }
 
-    header label {
-        position: relative;
-        top: 10px;
-        font-size: 100px;
-        display: inline-block;
-        left: 80%;
-        z-index: 1;
-        background-color: black;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 10px;
-    }
 
-    header ul {
-        display: block;
-        padding: 0;
-        margin: 0;
-        height: 50px;
+    header {
+        overflow: hidden;
+        height: 96px;
         transition: height 1s linear;
     }
 
-        header ul li {
-            float: none;
-            height: 100px;
-            width: 100%;
+        header label {
+            position: relative;
+            float: right;
+            right: 3.3%;
+            top: 10px;
+            font-size: 50px;
+            display: inline-block;
+            z-index: 1;
+            background-color: black;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            height: auto;
         }
 
-            header ul li:first-child {
-                display: none;
+        header ul {
+            overflow: hidden;
+            position: relative;
+            top: 45px;
+            padding: 0;
+            margin: 0;
+            height: 650px;
+        }
+
+            header ul li {
+                text-align: center;
+                height: 100px;
+                width: 100%;
             }
 
-    header input[type=checkbox]:checked ~ ul {
-        height: 600px;
+    .show-menu[type=checkbox]:checked ~ header {
+        height: 650px;
     }
 }
