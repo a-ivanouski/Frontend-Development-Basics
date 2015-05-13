@@ -40,6 +40,52 @@ header {
     display: none;
 }
 
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+     .logo {
+        display: inline;
+    }
+
+    header label {
+        position: relative;
+        top: 10px;
+        font-size: 40px;
+        display: inline-block;
+        left: 80%;
+        z-index: 1;
+        background-color: black;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        height:auto;
+    }
+
+    header ul {
+        overflow:hidden;
+        position:relative;
+        top:35px;
+        display: block;
+        padding: 0;
+        margin: 0;
+        height:30px;
+        transition: height 1s linear;
+    }
+
+        header ul li {
+            float: none;
+            height: 100px;
+            width: 100%;
+        }
+
+            header ul li:first-child {
+                display: none;
+            }
+
+    header input[type=checkbox]:checked ~ ul {
+        height: 400px;
+    }
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
     .logo {
         display: inline;
@@ -50,7 +96,6 @@ header {
         top: 10px;
         font-size: 100px;
         display: inline-block;
-        position: relative;
         left: 80%;
         z-index: 1;
         background-color: black;
