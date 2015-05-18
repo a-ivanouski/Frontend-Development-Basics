@@ -1,0 +1,54 @@
+﻿.init-form
+{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.init-form__secret-input,
+.init-form__secret-input input,
+.init-form__init-link,
+.init-form__dropbox-link
+{
+    width: 100%;
+}
+
+.init-form__init-link,
+.init-form__dropbox-link 
+{
+    text-align: center;
+}
+
+.list 
+{
+    width: 400px;
+    list-style-type: none;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.list__item-file,
+.list__item-folder 
+{
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.list__item-file span,
+.list__item-folder span 
+{
+    display: inline-block;
+    width: 47%;
+}
+
+.list__item-file figure,
+.list__item-folder figure
+{
+    margin: 0px 10px 0px 0px;
+    display: inline-block;
+}
+
+.list__item-file img,
+.list__item-folder img
+{
+    width: 10px;
+}
