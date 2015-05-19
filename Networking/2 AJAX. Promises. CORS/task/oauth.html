@@ -4,151 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="angular.min.js"></script>
     <script src="cookie.min.js"></script>
+    <script src="DropboxOauth.js"></script>
 
-    <script>
-        var APP_KEY = '1jgu22rx35z8ys4';
-
-        function random_string() {
-            var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
-            var s = '';
-            for (var i = 0; i < 22; i++) {
-                s += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-            }
-            return s;
-        }
-
-        function get_redirect_uri() {
-            return window.location.href.substring(0, window.location.href.length - window.location.hash.length).replace(/\/$/, '');
-        }
-
-        function parseqs(text) {
-            var split = text.split('&');
-            var params = {};
-            for (var i = 0; i < split.length; i++) {
-                var kv = split[i].split('=', 2);
-                params[kv[0]] = kv[1];
-            }
-            return params;
-        }
-
-        if (window.location.hash) {
-            angular.module('my', [])
-                            .controller('contr', function ($scope, $http) {
-                                var params = parseqs(window.location.hash.substring(1));
-                                var csrf = cookie.get('csrf');
-                                cookie.remove('csrf');
-                                var access_token = parseqs(window.location.hash.substring(1)).access_token;
-
-                                $scope.InfoDropbox = {
-                                    name: '',
-                                    email: '',
-                                };
-
-                                $scope.CurrentFolder = {
-                                    path: '',
-                                    files: [],
-                                }
-
-                                var req = {
-                                    method: 'GET',
-                                    url: 'https://api.dropbox.com/1/account/info',
-                                    headers: {
-                                        Authorization: 'Bearer ' + access_token,
-                                    }
-                                }
-                                $http(req)
-                                    .success(function (data, status, headers, config) {
-                                        $scope.InfoDropbox.display_name = data.display_name;
-                                        $scope.InfoDropbox.email = data.email;
-                                    })
-                                    .error(function (data, status, headers, config) {
-                                        alert("error");
-                                    });
-
-                                function createFileType(path, isFolder) {
-                                    return {
-                                        path: path,
-                                        isFolder: isFolder,
-                                    }
-                                }
-
-                                $scope.getFolder = function (path) {
-                                    var reqFolder = {
-                                        method: 'GET',
-                                        url: 'https://api.dropbox.com/1/metadata/auto' + path,
-                                        headers: {
-                                            Authorization: 'Bearer ' + access_token,
-                                        }
-                                    }
-                                    $http(reqFolder)
-                                        .success(function (data, status, headers, config) {
-                                            $scope.CurrentFolder.path = data.path;
-                                            $scope.CurrentFolder.files = [];
-                                            for (var i = 0 ; i < data.contents.length; i++) {
-                                                var file = createFileType(data.contents[i].path, data.contents[i].is_dir);
-                                                $scope.CurrentFolder.files.push(file)
-                                            }
-                                            return true;
-                                        })
-                                        .error(function (data, status, headers, config) {
-                                            return false;
-                                        })
-                                }
-
-                                $scope.getFolder('/');
-
-                                $scope.GetContent = function (file) {
-                                    if (file.isFolder) {
-                                        $scope.CurrentFolder.path = 'load';
-                                        $scope.CurrentFolder.files = [];
-                                        $scope.getFolder(file.path);
-                                    }
-                                }
-
-                                $scope.getFile = function (path) {
-                                    var reqGetFile = {
-                                        method: 'GET',
-                                        url: 'https://api.dropbox.com/1/media/auto' + path,
-                                        headers: {
-                                            Authorization: 'Bearer ' + access_token,
-                                        }
-                                    }
-
-                                    $http(reqGetFile)
-                                        .success(function (data, status, headers, config) {
-                                            var a = document.createElement("a");
-                                            a.setAttribute('href', data.url);
-                                            a.click();
-                                        })
-                                        .error(function (data, status, headers, config) {
-                                            alert('error');
-                                        })
-                                }
-
-                                $scope.back = function () {
-                                    var path = $scope.CurrentFolder.path;
-                                    var newPath = '';
-                                    var i;
-                                    for (i = path.length; i > 0; i--)
-                                        if (path[i] === '/') {
-                                            break;
-                                        }
-                                    newPath = path.substring(0, i);
-                                    $scope.getFolder(newPath.length ? newPath : '/');
-                                }
-                            })
-        }
-        else {
-            var csrf = random_string();
-            cookie.set('csrf', csrf);
-            window.location = 'https://www.dropbox.com/1/oauth2/authorize?client_id='
-                + encodeURIComponent(APP_KEY)
-                + '&state=' + encodeURIComponent(csrf)
-                + '&response_type=token&redirect_uri=' + encodeURIComponent(get_redirect_uri());
-        }
-    </script>
+    <script src="angular.min.js"></script>
+    <script src="DropboxModule.js"></script>
 </head>
 <body ng-app="my">
     <div ng-controller="contr">
@@ -159,13 +19,13 @@
 
         <h2> {{CurrentFolder.path}}</h2><br />
 
-        <button ng-click="getFolder('/')">to root</button><br /><br />
+        <button ng-click="toRoot()">to root</button><br /><br />
 
         <button ng-click="back()">back</button><br /><br />
 
         <div ng-repeat="file in CurrentFolder.files">
             <label>{{file.path}}</label>
-            <button ng-hide="file.isFolder" ng-click="getFile(file.path)">Save</button>
+            <button ng-hide="file.isFolder" ng-click="downloadFile(file.path)">Save</button>
             <button ng-show="file.isFolder" ng-click="GetContent(file)">Open</button><br /><br /><br />
         </div>
 
