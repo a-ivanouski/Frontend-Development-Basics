@@ -1,0 +1,150 @@
+HTML
+	request
+		GET / HTTP/1.1
+		Host: www.baidu.com
+		Connection: keep-alive
+		Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+		User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+		Referer: http://baidu.com/
+		Accept-Encoding: gzip, deflate, sdch
+		Accept-Language: en-US,en;q=0.8
+		Cookie: BAIDUID=01F1962723B83C8BB7D0025EC1B5CFDF:FG=1; BIDUPSID=01F1962723B83C8BB7D0025EC1B5CFDF; BD_UPN=12314353
+
+	response
+		HTTP/1.1 200 OK
+		Date: Wed, 20 May 2015 11:06:09 GMT
+		Content-Type: text/html; charset=utf-8
+		Connection: Keep-Alive
+		Vary: Accept-Encoding
+		Cache-Control: private
+		Cxy_all: baidu+dd5eb590d9c6362907a61cc6a6de13d5
+		Expires: Wed, 20 May 2015 11:06:09 GMT
+		X-Powered-By: HPHP
+		Server: BWS/1.1
+		X-UA-Compatible: IE=Edge,chrome=1
+		BDPAGETYPE: 1
+		BDQID: 0xb47393d00000e04a
+		BDUSERID: 0
+		Set-Cookie: BDSVRTM=9; path=/
+		Set-Cookie: BD_HOME=0; path=/
+		Set-Cookie: H_PS_PSSID=13834_1423_13466_13245_13074_12826_10812_12868_14166_13691_10562_12723_14156_14172_13201_14244_11973_13936_14182_8498; path=/; domain=.baidu.com
+		Content-Length: 92504
+
+IMG
+	request
+		GET /img/bd_logo1.png HTTP/1.1
+		Host: www.baidu.com
+		Connection: keep-alive
+		Accept: image/webp,*/*;q=0.8
+		User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+		Referer: http://www.baidu.com/
+		Accept-Encoding: gzip, deflate, sdch
+		Accept-Language: en-US,en;q=0.8
+		Cookie: BAIDUID=3B49EC869C3B9033D8EEAF8A946BEBD6:FG=1; BIDUPSID=3B49EC869C3B9033D8EEAF8A946BEBD6; BDSVRTM=0; BD_HOME=0; ...
+
+	response
+		HTTP/1.1 200 OK
+		Date: Wed, 20 May 2015 11:12:55 GMT
+		Server: Apache
+		Last-Modified: Wed, 03 Sep 2014 10:00:27 GMT
+		ETag: "1ec5-502264e2ae4c0"
+		Accept-Ranges: bytes
+		Content-Length: 7877
+		Cache-Control: max-age=315360000
+		Expires: Sat, 17 May 2025 11:12:55 GMT
+		Connection: Keep-Alive
+		Content-Type: image/png
+
+JS
+	request
+		GET /r/www/cache/static/global/js/all_instant_search1_f12a1954.js HTTP/1.1
+		Host: s1.bdstatic.com
+		Connection: keep-alive
+		Accept: */*
+		User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+		Referer: http://www.baidu.com/
+		Accept-Encoding: gzip, deflate, sdch
+		Accept-Language: en-US,en;q=0.8
+
+	response
+		HTTP/1.1 200 OK
+		Date: Wed, 20 May 2015 11:15:02 GMT
+		Content-Type: application/javascript
+		Transfer-Encoding: chunked
+		Connection: keep-alive
+		ETag: "2e195-5167f40f4dc80"
+		Last-Modified: Wed, 20 May 2015 08:31:30 GMT
+		Expires: Sat, 17 May 2025 09:44:11 GMT
+		Age: 5451
+		Cache-Control: max-age=315360000
+		Accept-Ranges: bytes
+		Vary: Accept-Encoding,User-Agent
+		Content-Encoding: gzip
+		Ohc-Content-Crc: 1958708549
+		Server: ld02-sys-jorcol01.ld02.baidu.com
+		CDN-AGE: 1
+
+CSS
+	request
+		GET /static/widget/common/module_static_include/module_static_include_d162dcdd.css HTTP/1.1
+		Host: ns1.bdstatic.com
+		Connection: keep-alive
+		Accept: text/css,*/*;q=0.1
+		User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+		Referer: http://news.baidu.com/
+		Accept-Encoding: gzip, deflate, sdch
+		Accept-Language: en-US,en;q=0.8
+
+	response
+		HTTP/1.1 200 OK
+		Cache-Control: max-age=360000
+		Content-Encoding: gzip
+		Content-Type: text/css
+		Date: Wed, 20 May 2015 11:17:25 GMT
+		Last-Modified: Tue, 12 May 2015 03:06:20 GMT
+		P3p: CP=" OTI DSP COR IVA OUR IND COM "
+		Server: Apache
+		Set-Cookie: BAIDUID=0908B1E9B0016B3DD2272AA5079B5783:FG=1; expires=Thu, 19-May-16 11:17:25 GMT; max-age=31536000; path=/; domain=.baidu.com; version=1
+		Vary: Accept-Encoding
+		Transfer-Encoding: chunked
+
+HEADERS DESCRIPTION
+	request
+		1. GET /?gws_rd=ssl HTTP/1.1 - METHOD  URI  PROTOCOL
+		2. Host - The domain name of the server (for virtual hosting), and the TCP port number on which the server is listening.
+					 The port number may be omitted if the port is the standard port for the service requested
+		3. User-Agent - The user agent string of the user agent
+		4. Accept - Content-Types that are acceptable for the response
+		5. Accept-Language - List of acceptable human languages for response
+		6. Accept-Encoding - List of acceptable encodings
+		7. Cookie - An HTTP cookie previously sent by the server with Set-Cookie (below)
+		8. Connection - list of hop-by-hop request fields
+		9. Referer - This is the address of the previous web page from which a link to the currently requested page was followed
+
+	response
+		1. HTTP/1.1 200 OK - PROTOCOL  RESPONSE CODE  TEXT RESPONSE RESULT
+		2. Date - The date and time that the message was sent
+		3. Expires - Gives the date/time after which the response is considered stale
+		4. Cache-Control - Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain
+		5. X-Powered-By - Specifies the technology supporting the web application
+		6. Content-Type - The MIME type of this content
+		7. X-UA-Compatible - Recommends the preferred rendering engine to use to display the content
+		8. Set-Cookie - An HTTP cookie
+		9. Server - A name for the server
+		10. Content-Length - The length of the response body in octets 
+		11. Last-Modified - The last modified date for the requested object
+		12. Vary - Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server
+		13. Age - The age the object has been in a proxy cache in seconds
+		14. ETag - An identifier for a specific version of a resource
+		15. Accept-Ranges - What partial content range types this server supports
+		16. Transfer-Encoding - The form of encoding used to safely transfer the entity to the user
+		17. Content-Encoding - The type of encoding used on the data
+		18. P3p - This field is supposed to set P3P policy, in the form of P3P:CP="your_compact_policy"
+		19. BDPAGETYPE, BDQID, BDUSERID, Cxy_all, Ohc-Content-Crc, CDN-AGE - Uncommon HTTP server headers
+
+SUMMARY:
+	www.baidu.com use HTTP 1.1 protocol. cache html on client side. cache images, js and css on public servers.
+
+
+
+

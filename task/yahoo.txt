@@ -1,0 +1,141 @@
+HTML
+	request
+		GET / HTTP/1.1
+		Host: www.yahoo.com
+		Connection: keep-alive
+		Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+		User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+		Accept-Encoding: gzip, deflate, sdch
+		Accept-Language: en-US,en;q=0.8
+
+	response
+		HTTP/1.1 200 OK
+		Date: Wed, 20 May 2015 10:54:46 GMT
+		Set-Cookie: B=98708kdalopvm&b=3&s=bl; expires=Sat, 20-May-2017 10:54:46 GMT; path=/; domain=.yahoo.com
+		P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+		X-Frame-Options: DENY
+		Strict-Transport-Security: max-age=2592000
+		Set-Cookie: DNR=deleted; expires=Tue, 20-May-2014 10:54:45 GMT; path=/; domain=.www.yahoo.com
+		Set-Cookie: DNR=deleted; expires=Tue, 20-May-2014 10:54:45 GMT; path=/; domain=.www.yahoo.com
+		Set-Cookie: PH=deleted; expires=Tue, 20-May-2014 10:54:45 GMT; path=/; domain=.yahoo.com
+		Vary: Accept-Encoding
+		Content-Type: text/html; charset=utf-8
+		Age: 0
+		Via: http/1.1 usproxy3.fp.bf1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.ir2.yahoo.com (ApacheTrafficServer)
+		Server: ATS
+		Connection: keep-alive
+		Cache-Control: no-store, no-cache, private, max-age=0
+		Expires: -1
+		Content-Length: 362584
+
+IMG
+	request
+		GET /atoms/63/34/64/7d/6334647dea27523c075e111cc51438c6.gif HTTP/1.1
+		Host: content-ssl.yieldmanager.com
+		Connection: keep-alive
+		Accept: image/webp,*/*;q=0.8
+		User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+		Referer: https://s.yimg.com/rq/darla/2-8-8/html/r-sf.html
+		Accept-Encoding: gzip, deflate, sdch
+		Accept-Language: en-US,en;q=0.8
+
+	response
+		HTTP/1.1 200 OK
+		Server: Apache
+		ETag: "6334647dea27523c075e111cc51438c6:1383855078"
+		Last-Modified: Thu, 07 Nov 2013 20:11:18 GMT
+		Accept-Ranges: bytes
+		Content-Length: 9165
+		Content-Type: image/gif
+		Cache-Control: max-age=31536000
+		Date: Wed, 20 May 2015 10:54:58 GMT
+		Connection: keep-alive
+
+JS
+	request
+		GET /zz/combo?nn/lib/metro/g/uicontrib/rapid_2.9.11.js&nn/lib/metro/g/yui/oop_3.8.3.js&nn/lib/metro/g/yui/event-custom-base_3.8.3.js&nn/lib/metro/g/yui/event-base_3.8.3.js&nn/lib/metro/g/yui/io-base_3.8.3.js&nn/lib/metro/g/yui/json-parse_3.8.3.js&nn/lib/metro/g/yui/json-stringify_3.8.3.js&nn/lib/metro/g/yui/cookie_3.8.3.js&nn/lib/metro/g/yui/dom-core_3.8.3.js&nn/lib/metro/g/yui/dom-base_3.8.3.js&nn/lib/metro/g/yui/dom-style_3.8.3.js&nn/lib/metro/g/yui/dom-screen_3.8.3.js&nn/lib/metro/g/yui/selector-native_3.8.3.js&nn/lib/metro/g/yui/selector_3.8.3.js&nn/lib/metro/g/yui/node-core_3.8.3.js&nn/lib/metro/g/yui/node-base_3.8.3.js&nn/lib/metro/g/yui/event-delegate_3.8.3.js&nn/lib/metro/g/yui/node-event-delegate_3.8.3.js&nn/lib/metro/g/yui/pluginhost-base_3.8.3.js&nn/lib/metro/g/yui/pluginhost-config_3.8.3.js&nn/lib/metro/g/yui/node-pluginhost_3.8.3.js&nn/lib/metro/g/yui/node-screen_3.8.3.js&nn/lib/metro/g/yui/node-style_3.8.3.js&nn/lib/metro/g/yui/attribute-core_3.8.3.js&nn/lib/metro/g/yui/base-core_3.8.3.js&nn/lib/metro/g/yui/event-custom-complex_3.8.3.js&nn/lib/metro/g/yui/attribute-observable_3.8.3.js&nn/lib/metro/g/yui/attribute-extras_3.8.3.js&nn/lib/metro/g/yui/attribute-base_3.8.3.js&nn/lib/metro/g/yui/base-observable_3.8.3.js&nn/lib/metro/g/yui/base-base_3.8.3.js&nn/lib/metro/g/yui/jsonp_3.8.3.js&nn/lib/metro/g/yui/transition_3.8.4.js&nn/lib/metro/g/yui/event-synthetic_3.8.3.js&nn/lib/metro/g/yui/event-focus_3.8.3.js&nn/lib/metro/g/yui/base-build_3.8.3.js&nn/lib/metro/g/yui/loader-base_3.8.3.js&nn/lib/metro/g/yui/loader-yui3_3.8.3.js&nn/lib/metro/g/yui/node-deprecated_3.8.3.js&nn/lib/metro/g/yui/gallery-storage-lite_3.8.3.js&nn/lib/metro/g/yui/selector-css2_3.8.3.js&nn/lib/metro/g/yui/selector-css3_3.8.3.js&nn/lib/metro/g/yui/event-resize_3.8.3.js&nn/lib/metro/g/yui/plugin_3.8.3.js&nn/lib/metro/g/yui/node-scroll-info_3.8.3.js&nn/lib/metro/g/uicontrib/dali/module_platform_1.1.19.js&nn/lib/metro/g/uicontrib/dali/resourcemgr_1.1.18.js&nn/lib/metro/g/uicontrib/dali/dali_transport_1.1.36.js HTTP/1.1
+		Host: s.yimg.com
+		Connection: keep-alive
+		Accept: */*
+		User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+		Referer: https://www.yahoo.com/
+		Accept-Encoding: gzip, deflate, sdch
+		Accept-Language: en-US,en;q=0.8
+
+	response
+		HTTP/1.1 200 OK
+		Vary: Accept-Encoding
+		Cache-Control: max-age=315360000
+		Last-Modified: Tue, 28 Apr 2015 18:07:44 GMT
+		Content-Type: application/x-javascript
+		Content-Encoding: gzip
+		Date: Tue, 28 Apr 2015 18:07:44 GMT
+		Age: 1874827
+		Content-Length: 84080
+		Via: http/1.0 c4.ycs.bf1.yahoo.com (ApacheTrafficServer [cHs f ]), https/1.1 l4.ycs.loa.yahoo.com (ApacheTrafficServer [cHs f ])
+		Server: ATS
+		Connection: keep-alive
+
+CSS
+	request
+		GET /zz/combo?nn/lib/metro/g/yui/widget-base-css_3.8.1.css&nn/lib/metro/g/yui/widget-stack-css_3.8.1.css&nn/lib/metro/g/yui/overlay-css_3.8.1.css&nn/lib/metro/g/ui/base_0.0.11.css&nn/lib/metro/g/ui/helpers_0.0.9.css&nn/lib/metro/g/ui/typography_0.0.4.css&nn/lib/metro/g/theme/default/common_0.0.40.css&nn/lib/metro/g/theme/default/desktop_0.0.139.css&nn/lib/metro/g/theme/hr_blue_0.0.17.css&nn/lib/metro/g/uiplugins/modal_service_0.0.4.css&nn/lib/metro/g/uiplugins/iframeshim_service_0.0.13.css&nn/lib/metro/g/uiplugins/menu_service_0.1.15.css&nn/lib/metro/g/uiplugins/tablite_service_desktop_0.0.18.css&nn/lib/metro/g/uiplugins/tablist_service_0.1.16.css&nn/lib/metro/g/uiplugins/tablist_default_0.1.19.css&nn/lib/metro/g/uiplugins/tablist_service_vertical_0.0.3.css&nn/lib/metro/g/uicontrib/lw_style_css_0.0.2.css&nn/lib/metro/g/uiplugins/tooltip_service_1.0.15.css&nn/lib/metro/g/uiplugins/carousel_service_0.1.22.css HTTP/1.1
+		Host: s.yimg.com
+		Connection: keep-alive
+		Accept: text/css,*/*;q=0.1
+		User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+		Referer: https://www.yahoo.com/
+		Accept-Encoding: gzip, deflate, sdch
+		Accept-Language: en-US,en;q=0.8
+
+	response
+		HTTP/1.1 200 OK
+		Vary: Accept-Encoding
+		Cache-Control: max-age=315360000
+		Last-Modified: Thu, 30 Apr 2015 05:59:45 GMT
+		Content-Type: text/css
+		Content-Encoding: gzip
+		Date: Thu, 30 Apr 2015 05:59:45 GMT
+		Age: 1745704
+		Content-Length: 20440
+		Via: http/1.0 c1.ycs.bf1.yahoo.com (ApacheTrafficServer [cHs f ]), https/1.1 l1.ycs.loa.yahoo.com (ApacheTrafficServer [cMsSfW])
+		Server: ATS
+		Connection: keep-alive
+
+HEADERS DESCRIPTION
+	request
+		1. GET /?gws_rd=ssl HTTP/1.1 - METHOD  URI  PROTOCOL
+		2. Host - The domain name of the server (for virtual hosting), and the TCP port number on which the server is listening.
+					 The port number may be omitted if the port is the standard port for the service requested
+		3. User-Agent - The user agent string of the user agent
+		4. Accept - Content-Types that are acceptable for the response
+		5. Accept-Language - List of acceptable human languages for response
+		6. Accept-Encoding - List of acceptable encodings
+		7. Connection - list of hop-by-hop request fields
+		8. Referer - This is the address of the previous web page from which a link to the currently requested page was followed
+
+	response
+		1. HTTP/1.1 200 OK - PROTOCOL  RESPONSE CODE  TEXT RESPONSE RESULT
+		2. Date - The date and time that the message was sent
+		3. Expires - Gives the date/time after which the response is considered stale
+		4. Cache-Control - Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain
+		5. Content-Type - The MIME type of this content
+		6. Set-Cookie - An HTTP cookie
+		7. Server - A name for the server
+		8. X-Frame-Options - Clickjacking protection: deny - no rendering within a frame, sameorigin - no rendering if origin mismatch, allow-from - allow from specified location, 
+			          allowall - non-standard, allow from any location
+		9. Alternate-Protocol - Represents alternate protocol supported by server
+		10. Content-Length - The length of the response body in octets 
+		11. Last-Modified - The last modified date for the requested object
+		12. Vary - Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server
+		13. Age - The age the object has been in a proxy cache in seconds
+		14. P3P - This field is supposed to set P3P policy, in the form of P3P:CP="your_compact_policy"
+		15. Strict-Transport-Security - A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains
+		16. Via - Informs the client of proxies through which the response was sent
+		17. ETag - An identifier for a specific version of a resource
+		18. Accept-Ranges - What partial content range types this server supports
+		19. Content-Encoding - The type of encoding used on the data
+
+SUMMARY:
+	www.yahoo.com use HTTP 1.1 protocol. do not cache html. cache js, images and css on public servers.
+
+
