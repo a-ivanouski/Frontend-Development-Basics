@@ -32,7 +32,9 @@
 <script type="text/ecmascript">
     $(document).ready(function () {
         $('.init-form__init-link a').on('click', function () {
-            $('.list').dropboxfileslist();
+            $('.list').dropboxfileslist({
+			    key: $('.init-form__secret-input input').val() 
+			});
         });
         
         $('.init-form__dropbox-link').on('click', function () {

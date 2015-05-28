@@ -22,9 +22,7 @@ $.widget('ajaxAndPromises.dropboxfileslist', {
 
     _initFacade: function()
     {
-        var key = $('.init-form__secret-input input').val();
-
-        return ajaxAndPromises.dropboxapifacade(key);
+        return ajaxAndPromises.dropboxapifacade(this.options.key);
     },
 
     _renderList: function (data) {
