@@ -1,5 +1,6 @@
 angular.module('my', [])
     .controller('contr', ['$scope', '$http', 'dropbox-service', function ($scope, $http, dropboxService) {
+        $scope.token = '';
 
         $scope.InfoDropbox = {
             name: '',
@@ -21,14 +22,14 @@ angular.module('my', [])
             $scope.CurrentFolder.path = 'load';
             $scope.CurrentFolder.files = [];
             newPath = path.substring(0, i);
-            dropboxService.getFolderInfo(newPath.length ? newPath : '/')
+            dropboxService.getFolderInfo(newPath.length ? newPath : '/', $scope.token)
                 .then(saveInfoFolder);
         }
 
         $scope.toRoot = function () {
             $scope.CurrentFolder.path = 'load';
             $scope.CurrentFolder.files = [];
-            dropboxService.getFolderInfo('/')
+            dropboxService.getFolderInfo('/', $scope.token)
                 .then(saveInfoFolder);
         }
 
@@ -38,19 +39,27 @@ angular.module('my', [])
             if (file.isFolder) {
                 $scope.CurrentFolder.path = 'load';
                 $scope.CurrentFolder.files = [];
-                dropboxService.getFolderInfo(file.path)
+                dropboxService.getFolderInfo(file.path, $scope.token)
                     .then(saveInfoFolder);
             }
         }
 
-        dropboxService.getProfileInfo()
+        $scope.initial = function () {
+            dropboxService.getToken($scope.secret)
             .then(function (info) {
-                $scope.InfoDropbox.display_name = info.data.display_name;
-                $scope.InfoDropbox.email = info.data.email;
-            });
 
-        dropboxService.getFolderInfo('/')
-            .then(saveInfoFolder);
+                $scope.token = info.data.access_token;
+
+                dropboxService.getProfileInfo($scope.token)
+                    .then(function (info) {
+                        $scope.InfoDropbox.display_name = info.data.display_name;
+                        $scope.InfoDropbox.email = info.data.email;
+                    });
+
+                dropboxService.getFolderInfo('/', $scope.token)
+                   .then(saveInfoFolder);
+            })
+        }
 
         function saveInfoFolder(info) {
             $scope.CurrentFolder.path = info.data.path;
@@ -69,27 +78,42 @@ angular.module('my', [])
         }
     }])
     .factory('dropbox-service', function ($http) {
-        function parseqs(text) {
-            var split = text.split('&'), params = {};
-            for (var i = 0; i < split.length; i++) {
-                var kv = split[i].split('=', 2);
-                params[kv[0]] = kv[1];
-            }
-            return params;
-        }
 
-        var params = parseqs(window.location.hash.substring(1));
-        var csrf = cookie.get('csrf');
-        cookie.remove('csrf');
-        var access_token = parseqs(window.location.hash.substring(1)).access_token;
-
-        function sendRequest(method, baseUrl, path) {
+        function sendRequest(method, baseUrl, path, token) {
             var req = {
                 method: method,
                 url: path ? baseUrl + path : baseUrl + '/',
                 headers: {
-                    Authorization: 'Bearer ' + access_token,
+                    Authorization: 'Bearer ' + token,
                 }
+            }
+            return $http(req)
+                .error(function (data, status, headers, config) {
+                    alert("error");
+                });
+        }
+
+        function getProfileInfo(token) {
+            return sendRequest('GET', 'https://api.dropbox.com/1/account/info', '/', token);
+        }
+
+        function getFolderInfo(path, token) {
+            return sendRequest('GET', 'https://api.dropbox.com/1/metadata/auto', path, token);
+        }
+
+        function downloadFile(path, token) {
+            sendRequest('GET', 'https://api.dropbox.com/1/media/auto', path, token)
+                .success(function (data, status, headers, config) {
+                    var a = document.createElement("a");
+                    a.setAttribute('href', data.url);
+                    a.click();
+                })
+        }
+
+        function getToken(secret) {
+            var req = {
+                method: 'POST',
+                url: 'https://api.dropbox.com/1/' + 'oauth2/token?code=' + secret + '&grant_type=authorization_code&client_id=1jgu22rx35z8ys4&client_secret=yhewhb4kn7uo9gb',
             }
 
             return $http(req)
@@ -98,25 +122,8 @@ angular.module('my', [])
                 });
         }
 
-        function getProfileInfo() {
-            return sendRequest('GET', 'https://api.dropbox.com/1/account/info', '/');
-        }
-
-
-        function getFolderInfo(path) {
-            return sendRequest('GET', 'https://api.dropbox.com/1/metadata/auto', path);
-        }
-
-        function downloadFile(path) {
-            sendRequest('GET', 'https://api.dropbox.com/1/media/auto', path)
-                .success(function (data, status, headers, config) {
-                    var a = document.createElement("a");
-                    a.setAttribute('href', data.url);
-                    a.click();
-                })
-        }
-
         return {
+            getToken: getToken,
             getProfileInfo: getProfileInfo,
             getFolderInfo: getFolderInfo,
             downloadFile: downloadFile,

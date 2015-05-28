@@ -11,7 +11,13 @@
     <script src="DropboxModule.js"></script>
 </head>
 <body ng-app="my">
+    
+
     <div ng-controller="contr">
+        <button onclick="myFunction()">Click me</button> 
+        <input ng-model="secret" /><br />
+        <button ng-click="initial()">get content</button><br />
+
         <h1>
             {{InfoDropbox.display_name}}<br />
             {{InfoDropbox.email}}<br />
@@ -25,8 +31,8 @@
 
         <div ng-repeat="file in CurrentFolder.files">
             <label>{{file.path}}</label>
-            <button ng-hide="file.isFolder" ng-click="downloadFile(file.path)">Save</button>
-            <button ng-show="file.isFolder" ng-click="GetContent(file)">Open</button><br /><br /><br />
+            <button ng-hide="file.isFolder" ng-click="downloadFile(file.path,token)">Save</button>
+            <button ng-show="file.isFolder" ng-click="GetContent(file,token)">Open</button><br /><br /><br />
         </div>
 
 
