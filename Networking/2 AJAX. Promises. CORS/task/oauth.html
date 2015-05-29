@@ -4,37 +4,37 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="cookie.min.js"></script>
-    <script src="DropboxOauth.js"></script>
-
     <script src="angular.min.js"></script>
+    <script src="DropboxOauth.js"></script>
     <script src="DropboxModule.js"></script>
 </head>
 <body ng-app="my">
-    
-
     <div ng-controller="contr">
-        <button onclick="myFunction()">Click me</button> 
-        <input ng-model="secret" /><br />
-        <button ng-click="initial()">get content</button><br />
-
-        <h1>
-            {{InfoDropbox.display_name}}<br />
-            {{InfoDropbox.email}}<br />
-        </h1><br />
-
-        <h2> {{CurrentFolder.path}}</h2><br />
-
-        <button ng-click="toRoot()">to root</button><br /><br />
-
-        <button ng-click="back()">back</button><br /><br />
-
-        <div ng-repeat="file in CurrentFolder.files">
-            <label>{{file.path}}</label>
-            <button ng-hide="file.isFolder" ng-click="downloadFile(file.path,token)">Save</button>
-            <button ng-show="file.isFolder" ng-click="GetContent(file,token)">Open</button><br /><br /><br />
+        <div ng-hide="hideContent">
+            <button ng-click="authorize()">Authorize</button>
+            <input ng-model="secret" /><br />
+            <button ng-click="initial()">get content</button><br />
         </div>
 
+        <div ng-show="hideContent">
+            <h1>
+                {{InfoDropbox.display_name}}<br />
+                {{InfoDropbox.email}}<br />
+            </h1><br />
+
+            <h2> {{CurrentFolder.path}}</h2><br />
+
+            <button ng-click="toRoot()">to root</button><br /><br />
+
+            <button ng-click="back()">back</button><br /><br />
+
+            <div ng-repeat="file in CurrentFolder.files">
+                <label>{{file.path}}</label>
+
+                <button ng-hide="file.isFolder" ng-click="downloadFile(file.path,token)">Save</button>
+                <button ng-show="file.isFolder" ng-click="GetContent(file,token)">Open</button><br /><br /><br />
+            </div>
+        </div>
 
     </div>
 </body>

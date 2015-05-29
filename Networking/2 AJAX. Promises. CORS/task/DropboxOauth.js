@@ -1,27 +1,60 @@
- 
+'use strict';
 
-    var APP_KEY = '1jgu22rx35z8ys4';
-    function myFunction() {
-        window.open("https://www.dropbox.com/1/oauth2/authorize?response_type=code&client_id=" + APP_KEY, "_blank", "top=200, left=300, width=800, height=500");
-    }
-    //function random_string() {
-    //    var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
-    //    var s = '';
-    //    for (var i = 0; i < 22; i++) {
-    //        s += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-    //    }
-    //    return s;
-    //}
+angular.module('dropboxModule', [])
+    .factory('dropbox-service', function ($http) {
 
-    //function get_redirect_uri() {
-    //    return window.location.href.substring(0, window.location.href.length - window.location.hash.length).replace(/\/$/, '');
-    //}
+        function sendRequest(method, baseUrl, path, token) {
 
+            var headers = {
+                Authorization: 'Bearer ' + token,
+            }
 
-    //var csrf = random_string();
-    //cookie.set('csrf', csrf);
-    //window.location = 'https://www.dropbox.com/1/oauth2/authorize?client_id='
-    //    + encodeURIComponent(APP_KEY)
-    //    + '&state=' + encodeURIComponent(csrf)
-    //    + '&response_type=token&redirect_uri=' + encodeURIComponent(get_redirect_uri());
- 
+            var req = {
+                method: method,
+                url: path ? baseUrl + path : baseUrl,
+            }
+
+            if (token) {
+                req.headers = headers;
+            }
+
+            return $http(req)
+                .error(function (data, status, headers, config) {
+                    alert("error");
+                });
+        }
+
+        function getProfileInfo(token) {
+            return sendRequest('GET', 'https://api.dropbox.com/1/account/info', '/', token);
+        }
+
+        function getFolderInfo(path, token) {
+            return sendRequest('GET', 'https://api.dropbox.com/1/metadata/auto', path, token);
+        }
+
+        function downloadFile(path, token) {
+            sendRequest('GET', 'https://api.dropbox.com/1/media/auto', path, token)
+                .success(function (data, status, headers, config) {
+                    var a = document.createElement("a");
+                    a.setAttribute('href', data.url);
+                    a.click();
+                })
+        }
+
+        function getPromiseToken(secret, appKey, appSecret) {
+            var url = 'https://api.dropbox.com/1/' + 'oauth2/token?code=' + secret + '&grant_type=authorization_code&client_id=' + appKey + '&client_secret=' + appSecret;
+            return sendRequest('POST', url);
+        }
+
+        function getLinkForToken(appKey) {
+            return "https://www.dropbox.com/1/oauth2/authorize?response_type=code&client_id=" + appKey;
+        }
+
+        return {
+            getLinkForToken: getLinkForToken,
+            getPromiseToken: getPromiseToken,
+            getProfileInfo: getProfileInfo,
+            getFolderInfo: getFolderInfo,
+            downloadFile: downloadFile,
+        }
+    })

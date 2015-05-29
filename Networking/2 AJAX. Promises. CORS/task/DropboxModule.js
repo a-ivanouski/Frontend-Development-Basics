@@ -1,6 +1,10 @@
-angular.module('my', [])
+'use strict';
+
+angular.module('my', ['dropboxModule'])
     .controller('contr', ['$scope', '$http', 'dropbox-service', function ($scope, $http, dropboxService) {
         $scope.token = '';
+
+        $scope.hideContent = false;
 
         $scope.InfoDropbox = {
             name: '',
@@ -10,6 +14,10 @@ angular.module('my', [])
         $scope.CurrentFolder = {
             path: '',
             files: [],
+        }
+
+        $scope.authorize = function () {
+            window.open(dropboxService.getLinkForToken('1jgu22rx35z8ys4'), "_blank", "top=200, left=300, width=800, height=500");
         }
 
         $scope.back = function () {
@@ -45,10 +53,11 @@ angular.module('my', [])
         }
 
         $scope.initial = function () {
-            dropboxService.getToken($scope.secret)
+            dropboxService.getPromiseToken($scope.secret,'1jgu22rx35z8ys4','yhewhb4kn7uo9gb')
             .then(function (info) {
 
                 $scope.token = info.data.access_token;
+                $scope.hideContent = true;
 
                 dropboxService.getProfileInfo($scope.token)
                     .then(function (info) {
@@ -77,55 +86,4 @@ angular.module('my', [])
             }
         }
     }])
-    .factory('dropbox-service', function ($http) {
-
-        function sendRequest(method, baseUrl, path, token) {
-            var req = {
-                method: method,
-                url: path ? baseUrl + path : baseUrl + '/',
-                headers: {
-                    Authorization: 'Bearer ' + token,
-                }
-            }
-            return $http(req)
-                .error(function (data, status, headers, config) {
-                    alert("error");
-                });
-        }
-
-        function getProfileInfo(token) {
-            return sendRequest('GET', 'https://api.dropbox.com/1/account/info', '/', token);
-        }
-
-        function getFolderInfo(path, token) {
-            return sendRequest('GET', 'https://api.dropbox.com/1/metadata/auto', path, token);
-        }
-
-        function downloadFile(path, token) {
-            sendRequest('GET', 'https://api.dropbox.com/1/media/auto', path, token)
-                .success(function (data, status, headers, config) {
-                    var a = document.createElement("a");
-                    a.setAttribute('href', data.url);
-                    a.click();
-                })
-        }
-
-        function getToken(secret) {
-            var req = {
-                method: 'POST',
-                url: 'https://api.dropbox.com/1/' + 'oauth2/token?code=' + secret + '&grant_type=authorization_code&client_id=1jgu22rx35z8ys4&client_secret=yhewhb4kn7uo9gb',
-            }
-
-            return $http(req)
-                .error(function (data, status, headers, config) {
-                    alert("error");
-                });
-        }
-
-        return {
-            getToken: getToken,
-            getProfileInfo: getProfileInfo,
-            getFolderInfo: getFolderInfo,
-            downloadFile: downloadFile,
-        }
-    })
+    
