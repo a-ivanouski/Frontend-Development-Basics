@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CDP 3.4</title>
+</head>
+<body>
+
+    <p class="[/]"></p>
+    <p class="[/tasks/{task_id}]"></p>
+    <p class="[/tasks/{task_id}/check]"></p>
+    <p class="[/tasks/{task_id}/change/{status}]"></p>
+    <p class="[/tasks{?description}{?deadline}{?priority}{?category}]"></p>
+    <p class="[/tasks]"></p>
+    
+    <script>
+        function sentRequest(method, url, element, body) {
+            var result = '<h2>' + method + ' ' + url + '</h2>';
+
+            var Request = new XMLHttpRequest();
+
+            Request.open(method, url, element);
+
+            Request.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    result += 'Status:' + this.status + '</br>';
+                    result += 'Headers:' + this.getAllResponseHeaders() + '</br>';
+                    result += 'Body:' + this.responseText + '</br>';
+                    element.innerHTML = result;
+                }
+
+            };
+
+            Request.send(JSON.stringify(body ? body : {}));
+        }
+
+        sentRequest('GET', 'http://private-3953f-dima2.apiary-mock.com', document.getElementsByClassName('[/]')[0]);
+
+        sentRequest('GET', 'http://private-3953f-dima2.apiary-mock.com/tasks/1', document.getElementsByClassName('[/tasks/{task_id}]')[0]);
+
+        sentRequest('GET', 'http://private-3953f-dima2.apiary-mock.com/tasks/1/check', document.getElementsByClassName('[/tasks/{task_id}/check]')[0]);
+
+        sentRequest('POST', 'http://private-3953f-dima2.apiary-mock.com/tasks/1/change/1', document.getElementsByClassName('[/tasks/{task_id}/change/{status}]')[0]);
+
+        sentRequest('GET', 'http://private-3953f-dima2.apiary-mock.com/tasks?description=description&deadline=deadline&priority=priority&category=category', document.getElementsByClassName('[/tasks{?description}{?deadline}{?priority}{?category}]')[0]);
+
+        var body = {
+            'task': 'Three task',
+            'description': 'this is the three task',
+            'deadline': '2014-11-11T08:40:51.620Z',
+            'priority': 'High',
+            'category': 'for one developer',
+            'status': 'Uncompleted'
+        };
+
+        sentRequest('POST', 'http://private-3953f-dima2.apiary-mock.com/tasks', document.getElementsByClassName('[/tasks]')[0], body);
+
+    </script>
+
+</body>
+</html> 

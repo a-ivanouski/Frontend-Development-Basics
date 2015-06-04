@@ -1,57 +1,190 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://dima2.apiblueprint.org/
 
-# Polls API
+# REST API
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Implementation REST API here
 
-# Polls API Root [/]
+# TODO API Root [/]
 
-This resource does not have any attributes. Instead it offers the initial
-API affordances in the form of the links in the JSON body.
+This application can do these:
 
-It is recommend to follow the “url” link values,
-[Link](https://tools.ietf.org/html/rfc5988) or Location headers where
-applicable to retrieve resources. Instead of constructing your own URLs,
-to keep your client decoupled from implementation details.
+ 1) Add new tasks and categories
+ 
+ 2) Each task has Description, Deadline, Priority (Hi, Medium, Low), Category, Status (Normal, Completed, Overdue) 
+ 
+ 3) User can search for tasks using various filters (by Description, Deadline, Priority and Category)
+ 
+ 4) User can check task (make it Completed)
 
 ## Retrieve the Entry Point [GET]
 
 + Response 200 (application/json)
 
         {
-            "questions_url": "/questions"
+            "CenDO": "This application can do these:
+                        1) Add new tasks and categories
+                        2) Each task has Description, Deadline, Priority (Hi, Medium, Low), Category, Status (Normal, Completed, Overdue)
+                        3) User can search for tasks using various filters (by Description, Deadline, Priority and Category)
+                        4) User can check task (make it Completed)"
         }
 
- 
-# Get all products [/products]
+## Group Tasks
 
-## Retrieve the Entry Point [GET]
+Resources related to tasks in the API.
+
+## Tasks [/tasks/{task_id}]
+
+A Task object has these fields:
+
++ task (string)     - The task
++ description (string)
++ deadline (string) - A date when the task need to be finished.
++ priority (string) - Hi, Medium, Low
++ category (string) - for one developer, for 2 -5 developer, for 2 -5 developer
++ status (string)   - Uncompleted, Completed 
++ url (string)      - current url of the task
+
++ Parameters
+    + task_id: 1 (required, number) - ID of the Task in form of an integer
+
+### View a task details [GET]
 
 + Response 200 (application/json)
 
         {
+            "task":        "First task",
+            "description": "this is the first task",
+            "deadline":    "2014-11-11T08:40:51.620Z",
+            "priority":    "High",
+            "category":    "for one developer",
+            "status":      "Uncompleted",
+            "url":         "/tasks/1"
+        }
+
+## Check [/tasks/{task_id}/check]
+
+### Change status of a Task [GET]
+
+This action allows you check the status of the task.
+
++ Response 201
+
+    + Headers
+
+            Location: /task/1/check
+            
+    + Body
+
             [
                 {
-                    name:'1',
+                    "status":      "Uncompleted",
                     
-                },
-                {
-                name:'1',
-                    
-                },
-                {
-                    name:'1',
-                    
-                },
-                {
-                    name:'1',
-                    
-                },
-                {
-                    name:'1',
-                    
-                },
-            
+                }
             ]
+            
+## Change [/tasks/{task_id}/change/{status}]
+
++ Parameters
+    + task_id: 1 (required, number) - ID(integer) of the task
+    + status: 1 (required, number) - ID(integer, 0 - Uncompleted, 1 - Completed) the check status task
+    
+
+### Change status of a Task [POST]
+
+This action allows you to change the status of the task.
+
++ Response 201
+
+    + Headers
+
+            Location: /task/1/change/1
+            
+    + Body
+
+            [
+                {
+                    "description": "status has been changed",
+                    
+                }
+            ]
+            
+## Tasks Collection [/tasks{?description}{?deadline}{?priority}{?category}]
+
++ Parameters
+    
+    + description  (string)
+    + deadline (string) - An ISO8601 date when the task need to be finished.
+    + priority (string) - Hi, Medium, Low
+    + category (string) - for one developer, for 2 -5 developer, for 2 -5 developer
+
+### List All Tasks [GET]
+
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                {
+                    "task":        "First task",
+                    "description": "this is the first task",
+                    "deadline":    "2014-11-11T08:40:51.620Z",
+                    "priority":    "High",
+                    "category":    "for one developer",
+                    "status":      "Uncompleted",
+                    "url":         "/tasks/1"
+                },
+                {
+                    "task":        "Second task",
+                    "description": "this is the second task",
+                    "deadline":    "2014-11-11T08:40:51.620Z",
+                    "priority":    "High",
+                    "category":    "for one developer",
+                    "status":      "Uncompleted",
+                    "url":         "/tasks/2"
+                }
+            ]
+
+## Tasks Collection [/tasks]
+
+### Create a New Task [POST]
+
+You may create your own tasks using this action. It takes a JSON
+object containing a task and the following arguments in the
+form of choices.
+
++ task (string)     - The task
++ description  (string)
++ deadline (string) - A date when the task need to be finished.
++ priority (string) - Hi, Medium, Low
++ category (string) - for one developer, for 2 -5 developer, for 2 -5 developer
++ status (string)   - Uncompleted, Completed 
+
++ Request (application/json)
+
+        {
+            "task":        "Three task",
+            "description": "this is the three task",
+            "deadline":    "2014-11-11T08:40:51.620Z",
+            "priority":    "High",
+            "category":    "for one developer",
+            "status":      "Uncompleted"
         }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /tasks/3
+
+    + Body
+
+            {
+                "task":        "Three task",
+                "description": "this is the three task",
+                "deadline":    "2014-11-11T08:40:51.620Z",
+                "priority":    "High",
+                "category":    "for one developer",
+                "status":      "Uncompleted",
+                "url":         "/tasks/3"
+            }
