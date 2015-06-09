@@ -1,11 +1,11 @@
 FORMAT: 1A
 HOST: http://dima2.apiblueprint.org/
 
-# REST API
+#  REST API
 
 Implementation REST API here
 
-# TODO API Root [/]
+#  TODO API Root [/]
 
 This application can do these:
 
@@ -17,7 +17,7 @@ This application can do these:
  
  4) User can check task (make it Completed)
 
-## Retrieve the Entry Point [GET]
+## Retrieve the Entry Point [GET] 
 
 + Response 200 (application/json)
 
@@ -31,121 +31,9 @@ This application can do these:
 
 ## Group Tasks
 
-Resources related to tasks in the API.
+Operation on tasks
 
-## Tasks [/tasks/{task_id}]
-
-A Task object has these fields:
-
-+ task (string)     - The task
-+ description (string)
-+ deadline (string) - A date when the task need to be finished.
-+ priority (string) - Hi, Medium, Low
-+ category (string) - for one developer, for 2 -5 developer, for 2 -5 developer
-+ status (string)   - Uncompleted, Completed 
-+ url (string)      - current url of the task
-
-+ Parameters
-    + task_id: 1 (required, number) - ID of the Task in form of an integer
-
-### View a task details [GET]
-
-+ Response 200 (application/json)
-
-        {
-            "task":        "First task",
-            "description": "this is the first task",
-            "deadline":    "2014-11-11T08:40:51.620Z",
-            "priority":    "High",
-            "category":    "for one developer",
-            "status":      "Uncompleted",
-            "url":         "/tasks/1"
-        }
-
-## Check [/tasks/{task_id}/check]
-
-### Change status of a Task [GET]
-
-This action allows you check the status of the task.
-
-+ Response 201
-
-    + Headers
-
-            Location: /task/1/check
-            
-    + Body
-
-            [
-                {
-                    "status":      "Uncompleted",
-                    
-                }
-            ]
-            
-## Change [/tasks/{task_id}/change/{status}]
-
-+ Parameters
-    + task_id: 1 (required, number) - ID(integer) of the task
-    + status: 1 (required, number) - ID(integer, 0 - Uncompleted, 1 - Completed) the check status task
-    
-
-### Change status of a Task [POST]
-
-This action allows you to change the status of the task.
-
-+ Response 201
-
-    + Headers
-
-            Location: /task/1/change/1
-            
-    + Body
-
-            [
-                {
-                    "description": "status has been changed",
-                    
-                }
-            ]
-            
-## Tasks Collection [/tasks{?description}{?deadline}{?priority}{?category}]
-
-+ Parameters
-    
-    + description  (string)
-    + deadline (string) - An ISO8601 date when the task need to be finished.
-    + priority (string) - Hi, Medium, Low
-    + category (string) - for one developer, for 2 -5 developer, for 2 -5 developer
-
-### List All Tasks [GET]
-
-+ Response 200 (application/json)
-
-    + Body
-
-            [
-                {
-                    "task":        "First task",
-                    "description": "this is the first task",
-                    "deadline":    "2014-11-11T08:40:51.620Z",
-                    "priority":    "High",
-                    "category":    "for one developer",
-                    "status":      "Uncompleted",
-                    "url":         "/tasks/1"
-                },
-                {
-                    "task":        "Second task",
-                    "description": "this is the second task",
-                    "deadline":    "2014-11-11T08:40:51.620Z",
-                    "priority":    "High",
-                    "category":    "for one developer",
-                    "status":      "Uncompleted",
-                    "url":         "/tasks/2"
-                }
-            ]
-
-## Tasks Collection [/tasks]
+## Create Task [/task]
 
 ### Create a New Task [POST]
 
@@ -188,3 +76,278 @@ form of choices.
                 "status":      "Uncompleted",
                 "url":         "/tasks/3"
             }
+            
+## Update Task [/task/{task_id}/update]
+
+### Update Task [PUT]
+
+Update task
+
++ task (string)     - The task
++ description (string)
++ deadline (string) - A date when the task need to be finished.
++ priority (string) - Hi, Medium, Low
++ category (string) - for one developer, for 2 -5 developer, for 2 -5 developer
++ status (string)   - Uncompleted, Completed 
++ url (string)      - current url of the task
+
++ Parameters
+  + task_id: 1 (required, number) - ID of the Task in form of an integer
+
++ Request (application/json)
+
+        {
+            "task":        "First task update",
+            "description": "this is the first task update",
+            "deadline":    "2014-11-11T08:40:51.620Z update",
+            "priority":    "High update",
+            "category":    "for 2 -5 developer update",
+            "status":      "Uncompleted update",
+            "url":         "/tasks/1"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /tasks/1
+
+    + Body
+
+            {
+                "task":        "First task update",
+                "description": "this is the first task update",
+                "deadline":    "2014-11-11T08:40:51.620Z update",
+                "priority":    "High update",
+                "category":    "for 2 -5 developer update",
+                "status":      "Uncompleted update",
+                "url":         "/tasks/1"
+            }
+            
+## Delete Task [/task/{task_id}/delete]
+
+### Delete Task [DELETE]
+
+Delete task
+
++ task_id - ID of the Task in form of an integer
+
++ Parameters
+  + task_id: 1 (required, number) - ID of the Task in form of an integer
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /tasks/1
+
+    + Body
+
+            {
+                "status":   "First task deleted",
+                
+            }
+        
+
+## Get Task [/tasks/{task_id}]
+
+A Task object has these fields:
+
++ task (string)     - The task
++ description (string)
++ deadline (string) - A date when the task need to be finished.
++ priority (string) - Hi, Medium, Low
++ category (string) - for one developer, for 2 -5 developer, for 2 -5 developer
++ status (string)   - Uncompleted, Completed 
++ url (string)      - current url of the task
+
++ Parameters
+    + task_id: 1 (required, number) - ID of the Task in form of an integer
+
+### View a task details [GET]
+
++ Response 200 (application/json)
+
+        {
+            "task":        "First task",
+            "description": "this is the first task",
+            "deadline":    "2014-11-11T08:40:51.620Z",
+            "priority":    "High",
+            "category":    "for one developer",
+            "status":      "Uncompleted",
+            "url":         "/tasks/1"
+        }
+        
+## Status of a task [/tasks/{task_id}/check]
+
+### Get status of a Task [GET]
+
+This action allows you check the status of the task.
+
++ Response 201
+
+    + Headers
+
+            Location: /task/1/check
+            
+    + Body
+
+            [
+                {
+                    "status":      "Uncompleted",
+                    
+                }
+            ]
+
+## Get collection tasks  [/tasks]
+
+Get list of all tasks
+
+### List All Tasks [GET]
+
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                {
+                    "task":        "First task",
+                    "description": "this is the first task",
+                    "deadline":    "2014-11-11T08:40:51.620Z",
+                    "priority":    "High",
+                    "category":    "for one developer",
+                    "status":      "Uncompleted",
+                    "url":         "/tasks/1"
+                },
+                {
+                    "task":        "Second task",
+                    "description": "this is the second task",
+                    "deadline":    "2014-11-11T08:40:51.620Z",
+                    "priority":    "High",
+                    "category":    "for one developer",
+                    "status":      "Uncompleted",
+                    "url":         "/tasks/2"
+                }
+            ]
+            
+## Update Category of group tasks  [/task/{id_categorie}/update]
+
+### Update Category of group tasks [PUT]
+
+This action allow update of categorie group tasks
+
++ Parameters
+  + id_categorie: 1 (required, number) - ID of the categorie in form of an integer
+
++ Request (application/json)
+
+        {
+            "newCategory": "for 2 -5 developer update",
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "status": "categorie of tasks was updated",
+            }
+            
+## Group Categories
+
+Operation on categories
+
+## Get Categorie [/categorie/{id_categorie}]
+
+A Task object has these fields:
+
++ name (string)     - The categore
++ description (string)
+ 
+
++ Parameters
+ + id_categorie: 1 (required, number) - ID of the categorie in form of an integer
+
+### View a task details [GET]
+
++ Response 200 (application/json)
+
+        {
+            "name":         "for one developer",
+            "description":  "This category is for one developer",
+            "id_categorie": "1"
+        }
+
+## Create Categorie [/categorie]
+
+### Create a New Categorie [POST]
+
+Create categorie
+
++ name (string)         - the name categorie
++ description  (string)
++ id_categorie (string) - id categorie.
+ 
+
++ Request (application/json)
+
+        {
+            "name":         "for 2 -5 developer",
+            "description":  "This category of task that is performed 2 - 5 developers",
+            "id_categorie": "2"
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "name":         "for 2 -5 developer",
+                "description":  "This category of task that is performed 2 - 5 developers",
+                "id_categorie": "2"
+            }
+
+## Update Categorie [/Categorie/{id_categorie}/update]
+
+### Update Task [PUT]
+
+Update Categorie
+
++ Parameters
+ + id_categorie: 2 (required, number) - ID of the Categorie in form of an integer
+
++ Request (application/json)
+
+        {
+                "name":         "for 2 -5 developer update",
+                "description":  "This category of task that is performed 2 - 5 developers update",
+                "id_categorie": "2"
+        }
+
++ Response 201 (application/json)
+ 
+    + Body
+
+            {
+                "name":         "for 2 -5 developer update",
+                "description":  "This category of task that is performed 2 - 5 developers update",
+                "id_categorie": "2"
+            }
+                 
+## Delete Categorie [/Categorie/{id_categorie}/delete]
+
+### Delete Categorie [DELETE]
+
+Delete Categorie
+
++ Parameters
+ + id_categorie: 1 (required, number) - ID of the Categorie in form of an integer
+
++ Response 200 (application/json)
+ 
+    + Body
+
+            {
+                "status":   "category with id 1 removed",
+            }     
+            
