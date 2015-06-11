@@ -1,0 +1,6 @@
+C:\Users\Anton_Tsymuk@epam.com\Documents\Visual Studio 2012\Projects\RestApp\RestApp\bin\RestApp.dll
+C:\Users\Anton_Tsymuk@epam.com\Documents\Visual Studio 2012\Projects\RestApp\RestApp\bin\RestApp.pdb
+C:\Users\Anton_Tsymuk@epam.com\Documents\Visual Studio 2012\Projects\RestApp\RestApp\bin\Newtonsoft.Json.dll
+C:\Users\Anton_Tsymuk@epam.com\Documents\Visual Studio 2012\Projects\RestApp\RestApp\bin\Newtonsoft.Json.xml
+C:\Users\Anton_Tsymuk@epam.com\Documents\Visual Studio 2012\Projects\RestApp\RestApp\obj\Debug\RestApp.dll
+C:\Users\Anton_Tsymuk@epam.com\Documents\Visual Studio 2012\Projects\RestApp\RestApp\obj\Debug\RestApp.pdb
