@@ -19,7 +19,7 @@ namespace RestApp.DataContext
             get{
                 if (data == null)
                 {
-                    if(!File.Exists(connectionString))
+                    if (!File.Exists(connectionString))
                         using (File.Create(connectionString)) { }
 
                     var s = Path.GetFullPath(connectionString);
@@ -41,8 +41,8 @@ namespace RestApp.DataContext
         }
 
         private string RepositoryPath {
-            get { 
-                var path = ConfigurationManager.AppSettings["RepositoriesPath"];
+            get {
+                var path = HttpContext.Current.Server.MapPath(ConfigurationManager.AppSettings["RepositoriesPath"]);
 
                 if (!Directory.Exists(path))
                     Directory.CreateDirectory(path);

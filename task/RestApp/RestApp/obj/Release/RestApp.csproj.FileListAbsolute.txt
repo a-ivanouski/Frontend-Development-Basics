@@ -1,0 +1,7 @@
+D:\RestApp\RestApp\RestApp\bin\RestApp.dll
+D:\RestApp\RestApp\RestApp\bin\RestApp.pdb
+D:\RestApp\RestApp\RestApp\bin\Newtonsoft.Json.dll
+D:\RestApp\RestApp\RestApp\bin\Newtonsoft.Json.xml
+D:\RestApp\RestApp\RestApp\obj\Release\RestApp.dll
+D:\RestApp\RestApp\RestApp\obj\Release\RestApp.pdb
+D:\RestApp\RestApp\RestApp\obj\Release\RestApp.csprojResolveAssemblyReference.cache

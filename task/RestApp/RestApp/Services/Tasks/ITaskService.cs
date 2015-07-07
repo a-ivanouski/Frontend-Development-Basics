@@ -11,10 +11,10 @@ using System.Text;
 namespace RestApp.Services.Tasks
 {
     [ServiceContract]
-    public interface ITaskService : IReadResource<Task>, ICreateResource<Task>, IUpdateResource<Task>, IDeleteResource, ISearchResource<Task>
+    public interface ITaskService : IReadResource<Task>, ICreateResource<Task>, IUpdateResource<Task>, IDeleteResource, ISearchResource<Task>, IBulkUpdateResources<Task>
     {
         [OperationContract]
-        [WebInvoke(UriTemplate = "Check/{id}", Method = "POST", RequestFormat = WebMessageFormat.Json)]
+        [WebInvoke(UriTemplate = "Check/{id}", Method = "PUT", RequestFormat = WebMessageFormat.Json)]
         void CheckTask(string id);
     }
 }

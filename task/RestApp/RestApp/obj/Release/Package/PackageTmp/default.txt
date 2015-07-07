@@ -1,0 +1,5 @@
+[{"Action":"Retrieve all tasks","HttpMethod":"GET","Url":"http:\/\/localhost:51055\/Services\/Tasks\/TaskService.svc\/"},
+{"Action":"Create task","HttpMethod":"POST","Url":"http:\/\/localhost:51055\/Services\/Tasks\/TaskService.svc\/items\/"},
+{"Action":"Bulk update tasks","HttpMethod":"PUT","Url":"http:\/\/localhost:51055\/Services\/Tasks\/TaskService.svc\/items\/"},
+{"Action":"Retrieve all categories","HttpMethod":"GET","Url":"http:\/\/localhost:51055\/Services\/Categories\/CategoryService.svc\/"},
+{"Action":"Create category","HttpMethod":"POST","Url":"http:\/\/localhost:51055\/Services\/Categories\/CategoryService.svc\/items\/"}]

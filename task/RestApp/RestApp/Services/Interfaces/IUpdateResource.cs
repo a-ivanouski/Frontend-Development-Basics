@@ -8,7 +8,7 @@ namespace RestApp.Services.Interfaces
     public interface IUpdateResource<T>
     {
         [OperationContract]
-        [WebInvoke(UriTemplate = "", Method = "POST", RequestFormat = WebMessageFormat.Json)]
-        void Update(T item);
+        [WebInvoke(UriTemplate = "{id}", Method = "PUT", RequestFormat = WebMessageFormat.Json)]
+        void Update(string id, T item);
     }
 }

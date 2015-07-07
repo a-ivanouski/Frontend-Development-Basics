@@ -8,7 +8,7 @@ namespace RestApp.Services.Interfaces
     public interface ICreateResource<T>
     {
         [OperationContract]
-        [WebInvoke(UriTemplate = "", Method = "PUT", RequestFormat = WebMessageFormat.Json)]
+        [WebInvoke(UriTemplate = "/items/", Method = "POST", RequestFormat = WebMessageFormat.Json)]
         void Create(T item);
     }
 }

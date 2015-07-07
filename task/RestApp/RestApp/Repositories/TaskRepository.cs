@@ -73,6 +73,11 @@ namespace RestApp.Repositories
 
             var jObject = JArray.FromObject(dataContext.Data);
 
+            return ApplyFilters(filters, jObject);
+        }
+
+        private static List<Task> ApplyFilters(IEnumerable<KeyValuePair<string, string>> filters, JArray jObject)
+        {
             return jObject.Where(x =>
             {
                 foreach (var filter in filters)
@@ -90,8 +95,8 @@ namespace RestApp.Repositories
                 }
 
                 return false;
-            }).Select(i => 
-                    JsonConvert.DeserializeObject <Task>(i.ToString())
+            }).Select(i =>
+                    JsonConvert.DeserializeObject<Task>(i.ToString())
                 ).ToList();
         }
 

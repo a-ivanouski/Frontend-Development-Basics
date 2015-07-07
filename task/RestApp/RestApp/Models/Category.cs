@@ -7,7 +7,7 @@ using System.Web;
 namespace RestApp.Models
 {
     [DataContract]
-    public class Category
+    public class Category : RestModel
     {
         [DataMember]
         public string Id { get; set; }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using RestApp.Extensions;
 
 namespace RestApp.Services.Tasks
 {
@@ -33,6 +34,13 @@ namespace RestApp.Services.Tasks
 
         public Task Read(string id)
         {
+            var item = taskRepository.Read(id);
+
+            var serviceUrl = GetServiceUrl();
+
+            item.AddBaseActions(serviceUrl.Substring(0, serviceUrl.LastIndexOf('/') + 1), item.Id);
+            item.AddSpecificAction(serviceUrl.Substring(0, serviceUrl.LastIndexOf('/') + 1), "Check/", item.Id, "PUT", "Check");
+
             return taskRepository.Read(id);
         }
 
@@ -44,10 +52,12 @@ namespace RestApp.Services.Tasks
             taskRepository.Create(task);
         }
 
-        public void Update(Task task)
+        public void Update(string id, Task task)
         {
             if (categoryRepository.Read(task.Category.Id) == null)
                 throw new Exception(string.Format("The category {0} does not exist", task.Category.Name));
+
+            task.Id = id;
 
             taskRepository.Update(task);
         }
@@ -59,7 +69,39 @@ namespace RestApp.Services.Tasks
 
         public List<Task> Search(string searchParams = null)
         {
-            return taskRepository.ReadAll(searchParams);
+            var items = taskRepository.ReadAll(searchParams);
+
+            var serviceUrl = GetServiceUrl();
+
+            foreach (var item in items)
+            {
+                item.AddBaseActions(serviceUrl, item.Id);
+
+                item.AddSpecificAction(serviceUrl, "Check/", item.Id, "PUT", "Check");
+            }
+
+            return items;
+        }
+
+        public void BulkUpdate(List<Task> tasks)
+        {
+            foreach (var task in tasks)
+            {
+                if (categoryRepository.Read(task.Category.Id) == null)
+                    throw new Exception(string.Format("The category {0} does not exist", task.Category.Name));
+
+                taskRepository.Update(task);
+            }
+        }
+
+        private static string GetServiceUrl()
+        {
+            var serviceUrl = OperationContext.Current.RequestContext.RequestMessage.Headers.To.AbsoluteUri;
+
+            if (serviceUrl.Contains('?'))
+                serviceUrl = serviceUrl.Substring(0, serviceUrl.LastIndexOf('?'));
+
+            return serviceUrl;
         }
     }
 }

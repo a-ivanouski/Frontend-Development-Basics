@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using RestApp.Extensions;
 
 namespace RestApp.Services.Categories
 {
@@ -24,7 +25,13 @@ namespace RestApp.Services.Categories
 
         public Category Read(string id)
         {
-            return categoryRepository.Read(id);
+            var item = categoryRepository.Read(id);
+
+            var serviceUrl = GetServiceUrl();
+
+            item.AddBaseActions(serviceUrl.Substring(0, serviceUrl.LastIndexOf('/') + 1), item.Id);
+
+            return item;
         }
 
         public void Create(Category category)
@@ -32,8 +39,10 @@ namespace RestApp.Services.Categories
             categoryRepository.Create(category);
         }
 
-        public void Update(Category category)
+        public void Update(string id, Category category)
         {
+            category.Id = id;
+
             categoryRepository.Update(category);
 
             foreach (var task in new List<Task>(taskRepository.ReadAll().Where(t => t.Category.Id.Equals(category.Id))))
@@ -56,7 +65,24 @@ namespace RestApp.Services.Categories
 
         public List<Category> Search(string searchParams)
         {
+            var items = categoryRepository.ReadAll();
+
+            foreach (var item in items)
+            {
+                item.AddBaseActions(GetServiceUrl(), item.Id);
+            }
+
             return categoryRepository.ReadAll();
+        }
+
+        private static string GetServiceUrl()
+        {
+            var serviceUrl = OperationContext.Current.RequestContext.RequestMessage.Headers.To.AbsoluteUri;
+
+            if (serviceUrl.Contains('?'))
+                serviceUrl = serviceUrl.Substring(0, serviceUrl.LastIndexOf('?'));
+
+            return serviceUrl;
         }
     }
 }

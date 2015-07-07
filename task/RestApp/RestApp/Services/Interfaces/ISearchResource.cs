@@ -9,7 +9,7 @@ namespace RestApp.Services.Interfaces
     public interface ISearchResource<T>
     {
         [OperationContract]
-        [WebGet(UriTemplate = "search?searchParams={searchParams}", ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "?searchParams={searchParams}", ResponseFormat = WebMessageFormat.Json)]
         List<T> Search(string searchParams = null);
     }
 }

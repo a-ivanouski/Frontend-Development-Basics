@@ -1,0 +1,963 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0033)http://docs.restapi27.apiary.io/# -->
+<html class="js jsDomReady"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>RestApi · Apiary</title>
+  <meta charset="utf-8">
+
+  <meta name="google-site-verification" content="2xk1RgCJ7lGo7pJ826cos7moPjcExpih-yXTxfTJ7KU">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="description" content="A place where APIs are kept.">
+  <meta name="author" content="Apiary">
+
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  
+  <link rel="shortcut icon" href="https://apiary.a.ssl.fastly.net/assets/aa8fc5808796304b0bd19c126f30f1d8.ico">
+  <link rel="apple-touch-icon-precomposed" href="https://apiary.a.ssl.fastly.net/assets/16cb9301e5cd0912853e806125ed7f5d.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://apiary.a.ssl.fastly.net/assets/88b45e069ad376bdd2619f476d707273.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://apiary.a.ssl.fastly.net/assets/166416e5d92f4c451aad958f272353f2.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://apiary.a.ssl.fastly.net/assets/54504235b83a48b20f8c21554f79872c.png">
+
+  <!-- Legacy Bootstrap -->
+  <script type="text/javascript" async="" src="./RestApi · Apiary_files/saved_resource"></script><script>
+    if (!window.config) {
+      window.config = {};
+    }
+
+    window.jsLoginUrl    = "";
+        window.trafficSecret = "";
+    window.runExampleIframeUrl = "/___APIARY_INTERNAL___/docs/run-button";
+    window.tryItUrl    = "";
+    window.mockserverUrl    = "";
+    window.loginUri      = "";
+    window.baseDomain    = "";
+
+        window.config.baseAjaxUrl = "http://docs.restapi27.apiary.io/";
+    window.previewHelpers = window.previewHelpers || {};
+
+    
+    window.previewHelpers.apiUrl = window.previewHelpers.mockserverUrl = "";
+
+      </script>
+  <!-- /Legacy Bootstrap -->
+
+  <!-- Bootstrap -->
+  <script>
+    if (!window.Apiary) {
+      window.Apiary = {};
+    }
+
+    window.Apiary.PAGE = "";
+    window.Apiary.APPLICATION_DATA = {"apiName":"RestApi","apiSubdomain":"restapi27","networkInitialCache":"{\"https://jsapi.apiary.io/user\":{\"body\":{\"_id\":\"55784713b59ecd0300fba816\",\"features\":{},\"email\":\"ubico@mail.ru\",\"createdAt\":1433945875104,\"avatar\":{\"url\":\"https://avatars.githubusercontent.com/u/11298742?v=3&d=https%3A%2F%2Fapiary.a.ssl.fastly.net%2Fassets%2F8f601fa59d98081bc58a08564539a436.png\"},\"name\":\"AntonTsymuk \",\"availableApis\":[{\"owner\":{\"_id\":\"55784713b59ecd0300fba816\",\"name\":\"\"},\"private\":false,\"subdomain\":\"antontsymuk\",\"name\":\"Polls API\"},{\"owner\":{\"_id\":\"55784713b59ecd0300fba816\",\"name\":\"\"},\"private\":false,\"subdomain\":\"restapi27\",\"name\":\"RestApi\"}],\"teams\":[],\"gitHub\":{\"username\":\"AntonTsymuk\"},\"intercom\":{\"user_id\":\"55784713b59ecd0300fba816\",\"user_hash\":\"155ec61902e22c060c837ea1a18749f076ae2fece9865e0f1ad6f67dae4bf8c2\",\"email\":\"ubico@mail.ru\",\"name\":\"AntonTsymuk \",\"created_at\":1433945875,\"custom_data\":{\"github\":\"AntonTsymuk\",\"blueprint_size\":11418,\"subdomain\":\"antontsymuk, restapi27\",\"count_github_associated_apis\":0}}},\"rawBody\":\"\",\"headers\":{},\"statusCode\":200},\"https://jsapi.apiary.io/apis/restapi27\":{\"statusCode\":200,\"body\":{\"name\":\"RestApi\",\"subdomain\":\"restapi27\",\"lastUpdated\":\"2015-06-26T09:38:13.394Z\",\"owner\":{\"_id\":\"55784713b59ecd0300fba816\",\"name\":\"AntonTsymuk \"},\"user\":{\"trafficSecret\":\"8bfa5\",\"isAnonymous\":false},\"urls\":{\"mock\":\"http://private-8bfa5-restapi27.apiary-mock.com/\",\"production\":\"http://simplerestapplication.azurewebsites.net/\",\"proxy\":\"http://private-8bfa5-restapi27.apiary-proxy.com/\"},\"preferences\":{\"privateTraffic\":true,\"documentation\":{}},\"permissions\":{\"viewApi\":true,\"editApi\":true,\"accessApiSettings\":true,\"inviteViewer\":true,\"inviteEditor\":true,\"viewTests\":false,\"viewApiBlueprint\":false},\"editors\":[],\"blueprint\":\"\",\"description\":\"\\u003Cp\\u003ERestApi is a Rest API allowing consumers to manage tasks. \\nIt consists of two main parts - category api and task api.\\u003C/p\\u003E\",\"toc\":{\"introduction\":[]},\"resourceGroups\":[{\"name\":\"Category Api\",\"description\":\"\",\"resources\":[{\"name\":\"Retrieve/delete the category\",\"description\":\"\\u003Cp\\u003EThis resource have one param which represents category id. To create and update category object pass through request body.\\u003C/p\\u003E\\n\\n\\u003Cp\\u003EA Category object has the following attributes:\\u003C/p\\u003E\\n\\n\\u003Cul\\u003E\\n\\u003Cli\\u003E\\u003Cp\\u003EId\\u003C/p\\u003E\\u003C/li\\u003E\\n\\u003Cli\\u003E\\u003Cp\\u003EName\\u003C/p\\u003E\\u003C/li\\u003E\\n\\u003C/ul\\u003E\",\"model\":{},\"headers\":{},\"parameters\":[{\"key\":\"category_id\",\"values\":[],\"example\":\"6F9619FF\",\"default\":\"\",\"required\":true,\"type\":\"\",\"description\":\"\\u003Cp\\u003E8B86-D011-B42D-00CF4FC964FF (required, GUID) -\\nID of the category in form of an guid.\\u003C/p\\u003E\\n\"}],\"uriTemplate\":\"/Services/Categories/CategoryService.svc/{category_id}\",\"actions\":[{\"name\":\"Retrieve the category\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"GET\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"name\":\"\"}],\"responses\":[{\"body\":\"{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Name\\\":\\\"CategoryName\\\"\\n}\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"status\":\"200\"}]}]},{\"name\":\"Delete the category\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"DELETE\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"name\":\"\"}],\"responses\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"status\":\"200\"}]}]},{\"name\":\"Create the Category\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"POST\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"{\\n    \\\"Name\\\":\\\"CategoryName\\\"\\n}\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"name\":\"\"}],\"responses\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"status\":\"200\"}]}]},{\"name\":\"Update the Category\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"PUT\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"{\\n    \\\"Name\\\":\\\"CategoryName\\\"\\n}\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"name\":\"\"}],\"responses\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"status\":\"200\"}]}]}],\"urls\":{\"mock\":\"http://private-8bfa5-restapi27.apiary-mock.com/Services/Categories/CategoryService.svc/{category_id}\",\"production\":\"http://simplerestapplication.azurewebsites.net/Services/Categories/CategoryService.svc/{category_id}\",\"proxy\":\"http://private-8bfa5-restapi27.apiary-proxy.com/Services/Categories/CategoryService.svc/{category_id}\"}},{\"name\":\"Retrieve all Categories\",\"description\":\"\\u003Cp\\u003EThis resource does not have any params in url.\\u003C/p\\u003E\",\"model\":{},\"headers\":{},\"uriTemplate\":\"/Services/Categories/CategoryService.svc/\",\"actions\":[{\"name\":\"Retrieve all categories\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"GET\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"name\":\"\"}],\"responses\":[{\"body\":\"[{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Name\\\":\\\"CategoryName\\\"\\n},\\n{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Name\\\":\\\"CategoryName\\\"\\n},\\n{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Name\\\":\\\"CategoryName\\\"\\n}]\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"status\":\"200\"}]}]}],\"urls\":{\"mock\":\"http://private-8bfa5-restapi27.apiary-mock.com/Services/Categories/CategoryService.svc/\",\"production\":\"http://simplerestapplication.azurewebsites.net/Services/Categories/CategoryService.svc/\",\"proxy\":\"http://private-8bfa5-restapi27.apiary-proxy.com/Services/Categories/CategoryService.svc/\"}}]},{\"name\":\"Task Api\",\"description\":\"\",\"resources\":[{\"name\":\"Retrieve/delete the task\",\"description\":\"\\u003Cp\\u003EThis resource have one param which represents task id. To create and update task object pass through request body.\\u003C/p\\u003E\\n\\n\\u003Cp\\u003EA task object has the following attributes:\\u003C/p\\u003E\\n\\n\\u003Cul\\u003E\\n\\u003Cli\\u003E\\u003Cp\\u003EId\\u003C/p\\u003E\\u003C/li\\u003E\\n\\u003Cli\\u003E\\u003Cp\\u003EDescription\\u003C/p\\u003E\\u003C/li\\u003E\\n\\u003Cli\\u003E\\u003Cp\\u003EDeadline\\u003C/p\\u003E\\u003C/li\\u003E\\n\\u003Cli\\u003E\\u003Cp\\u003EPriority - integer param which represents task Priority(1 - Hi; 2 - Medium; 3 - Low)\\u003C/p\\u003E\\u003C/li\\u003E\\n\\u003Cli\\u003E\\u003Cp\\u003EStatus - integer param which represents task Status(1 - Normal; 2 - Completed; 3 - Overdue)\\u003C/p\\u003E\\u003C/li\\u003E\\n\\u003Cli\\u003E\\u003Cp\\u003ECategory - category object\\u003C/p\\u003E\\u003C/li\\u003E\\n\\u003C/ul\\u003E\",\"model\":{},\"headers\":{},\"parameters\":[{\"key\":\"task_id\",\"values\":[],\"example\":\"6F9619FF\",\"default\":\"\",\"required\":true,\"type\":\"\",\"description\":\"\\u003Cp\\u003E8B86-D011-B42D-00CF4FC964FF (required, GUID) -\\nID of the task in form of an guid.\\u003C/p\\u003E\\n\"}],\"uriTemplate\":\"/Services/Tasks/TaskService.svc/{task_id}\",\"actions\":[{\"name\":\"Retrieve the task\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"GET\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"name\":\"\"}],\"responses\":[{\"body\":\"{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : { \\\"Id\\\" : \\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CategoryName\\\" }\\n}\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"status\":\"200\"}]}]},{\"name\":\"Delete the Task\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"DELETE\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"name\":\"\"}],\"responses\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"status\":\"200\"}]}]},{\"name\":\"Create the Task\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"POST\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"{\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : {\\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CatedgoryName\\\"}\\n}\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"name\":\"\"}],\"responses\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"status\":\"200\"}]}]},{\"name\":\"Update the Task\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"PUT\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"{\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : {\\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CatedgoryName\\\"}\\n}\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"name\":\"\"}],\"responses\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"status\":\"200\"}]}]}],\"urls\":{\"mock\":\"http://private-8bfa5-restapi27.apiary-mock.com/Services/Tasks/TaskService.svc/{task_id}\",\"production\":\"http://simplerestapplication.azurewebsites.net/Services/Tasks/TaskService.svc/{task_id}\",\"proxy\":\"http://private-8bfa5-restapi27.apiary-proxy.com/Services/Tasks/TaskService.svc/{task_id}\"}},{\"name\":\"Retrieve all tasks\",\"description\":\"\\u003Cp\\u003EThis resource have one optional params which represents search query string.\\u003C/p\\u003E\",\"model\":{},\"headers\":{},\"parameters\":[{\"key\":\"searchparams\",\"values\":[],\"example\":\"Category:CategoryName;Status:1;Priority:0\",\"default\":\"\",\"required\":false,\"type\":\"string\",\"description\":\"\\u003Cp\\u003EKey value pairs in secific farmat.\\u003C/p\\u003E\\n\"}],\"uriTemplate\":\"/Services/Tasks/TaskService.svc/?searchparams=\",\"actions\":[{\"name\":\"Search the Tasks\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"GET\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"name\":\"\"}],\"responses\":[{\"body\":\"[{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : {\\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CatedgoryName\\\"}\\n},\\n{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : {\\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CatedgoryName\\\"}\\n},\\n{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : {\\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CatedgoryName\\\"}\\n}]\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"status\":\"200\"}]}]}],\"urls\":{\"mock\":\"http://private-8bfa5-restapi27.apiary-mock.com/Services/Tasks/TaskService.svc/?searchparams=\",\"production\":\"http://simplerestapplication.azurewebsites.net/Services/Tasks/TaskService.svc/?searchparams=\",\"proxy\":\"http://private-8bfa5-restapi27.apiary-proxy.com/Services/Tasks/TaskService.svc/?searchparams=\"}},{\"name\":\"Check the Task\",\"description\":\"\\u003Cp\\u003EThis resource have one param which represents task id. It&#39;s workflow to make task completed.\\u003C/p\\u003E\",\"model\":{},\"headers\":{},\"parameters\":[{\"key\":\"task_id\",\"values\":[],\"example\":\"6F9619FF\",\"default\":\"\",\"required\":true,\"type\":\"\",\"description\":\"\\u003Cp\\u003E8B86-D011-B42D-00CF4FC964FF (required, GUID) -\\nID of the task in form of an guid.\\u003C/p\\u003E\\n\"}],\"uriTemplate\":\"/Services/Tasks/TaskService.svc/check/{task_id}\",\"actions\":[{\"name\":\"Check the task\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"PUT\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"name\":\"\"}],\"responses\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"status\":\"200\"}]}]}],\"urls\":{\"mock\":\"http://private-8bfa5-restapi27.apiary-mock.com/Services/Tasks/TaskService.svc/check/{task_id}\",\"production\":\"http://simplerestapplication.azurewebsites.net/Services/Tasks/TaskService.svc/check/{task_id}\",\"proxy\":\"http://private-8bfa5-restapi27.apiary-proxy.com/Services/Tasks/TaskService.svc/check/{task_id}\"}},{\"name\":\"Bulk update the Tasks\",\"description\":\"\\u003Cp\\u003EThis resource does not have any params in url. Task objects array pass through request body.\\u003C/p\\u003E\",\"model\":{},\"headers\":{},\"uriTemplate\":\"/Services/Tasks/TaskService.svc/tasks/\",\"actions\":[{\"name\":\"Bulk update the Tasks\",\"relation\":\"\",\"uriTemplate\":\"\",\"description\":\"\",\"method\":\"PUT\",\"headers\":{},\"examples\":[{\"name\":\"\",\"description\":\"\",\"requests\":[{\"body\":\"[{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : {\\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CatedgoryName\\\"}\\n},\\n{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : {\\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CatedgoryName\\\"}\\n},\\n{\\n    \\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\",\\n    \\\"Description\\\":\\\"Description\\\",\\n    \\\"Deadline\\\" : \\\"\\\\/Date(1235764800000)\\\\/\\\",\\n    \\\"Priority\\\" : 0,\\n    \\\"Status\\\" : 0,\\n    \\\"Category\\\" : {\\\"Id\\\":\\\"6F9619FF-8B86-D011-B42D-00CF4FC964FF\\\", \\\"Name\\\" : \\\"CatedgoryName\\\"}\\n}]\",\"schema\":\"\",\"description\":\"\",\"headers\":{\"Content-Type\":\"application/json\"},\"name\":\"\"}],\"responses\":[{\"body\":\"\",\"schema\":\"\",\"description\":\"\",\"headers\":{},\"status\":\"200\"}]}]}],\"urls\":{\"mock\":\"http://private-8bfa5-restapi27.apiary-mock.com/Services/Tasks/TaskService.svc/tasks/\",\"production\":\"http://simplerestapplication.azurewebsites.net/Services/Tasks/TaskService.svc/tasks/\",\"proxy\":\"http://private-8bfa5-restapi27.apiary-proxy.com/Services/Tasks/TaskService.svc/tasks/\"}}]}]},\"rawBody\":\"\",\"headers\":{}}}","applicationName":"docs","features":{"3ColumnDocumentation":true},"circleCi":null,"domain":"apiary.io","embedded":false,"isPreview":false,"environment":"production","logLevel":"error","port":"51821","ssl":null,"sslPort":null,"staticHostPath":"https://apiary.a.ssl.fastly.net/assets","staticMap":null,"titleSeparator":"\u00B7","isAnonymousApi":false,"tracking":{"sentry":{"frontend":{"publicApiKey":"a43b418987a849c9bb8ed7833f7105d9","projectId":"11810"},"embed":{"publicApiKey":"b4fb7c164aee4bfb8491c0109a6fcb67","projectId":"12366"}},"intercom":{"url":"https://static.intercomcdn.com/intercom.v1.js","appId":"8dy7eohb"},"googleAnalytics":{"trackerName":"ApiaryTracker","trackingId":"18252923-1","url":"//www.google-analytics.com/analytics.js"}},"stripe":{"publicApiKey":"pk_live_7zX4IiC2CK9rwdTwfm9vhicS"}};
+  </script>
+  <!-- /Bootstrap -->
+
+  <!-- JavaScripts -->
+  <script src="./RestApi · Apiary_files/common-c40b35ae7a783d94c0ae.js"></script><script src="./RestApi · Apiary_files/docs-c40b35ae7a783d94c0ae.js"></script><script type="text/javascript" charset="utf-8" async="" src="./RestApi · Apiary_files/0-0-c40b35ae7a783d94c0ae.js"></script>  <!-- /JavaScripts -->
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://apiary.a.ssl.fastly.net/assets/docs-c40b35ae7a783d94c0ae.css">  <!-- /Styles -->
+
+<script type="text/javascript" charset="utf-8" async="" src="./RestApi · Apiary_files/19-19-c40b35ae7a783d94c0ae.js"></script></head>
+  <body id="application" data-peoplemanagerready="1" class="extraLargeWindow appBody themeDark" style="width: 1680px; height: 905px;">
+
+    <!-- Header -->
+    <div id="applicationHeaderContainer"><div id="applicationHeader" class="applicationHeader documentationApplicationHeader animate3 fadeIn shuttleSpeed">
+  <a href="" class="headerApiLogo"></a>
+
+  <!-- API Switch -->
+  <div class="headerApiSwitchContainer"><div class="headerApiSwitch noSelect disabled">
+
+  <div class="headerApiSwitchToggleLine">
+
+    <!-- Icon -->
+    <div class="headerApiSwitchIconContainer">
+          </div>
+    <!-- /Icon -->
+
+    <h3 class="row headerApiSwitchName">
+      RestApi    </h3>
+
+    <span class="row headerApiSwitchDescription">
+      <!-- Owner -->
+      <span class="headerApiSwitchOwner">AntonTsymuk </span>
+      <!-- Owner -->
+
+      •
+
+      <!-- Subdomain -->
+      <span class="headerApiSwitchSubdomain">restapi27</span>
+      <!-- /Subdomain -->
+    </span>
+
+          <span class="headerApiSwitchArrow down"></span>
+    
+  </div>
+  <!-- /toggleLine -->
+
+  <!-- List -->
+  <div class="headerApiSwitchList hidden">
+
+    <!-- CreateApiButton -->
+    <a href="http://docs.restapi27.apiary.io/create-api" class="headerCreateApiButton ajaxLink cacheable createApi">
+      <span class="headerCreateApiIcon"></span>
+      <span class="headerCreateApiText">Create New API</span>
+    </a>
+    <!-- /CreateApiButton -->
+
+  </div>
+  <!-- /List -->
+
+</div></div>
+  <!-- /API Switch -->
+
+  <!-- API Tools -->
+  <div class="headerApiToolsContainer"><div class="headerApiTools">
+  <ul class="headerApiToolsList">
+
+    <!-- Documentation -->
+        <li class="headerApiTool headerApiToolDocumentation">
+      <a class="headerApiToolLink" href="http://docs.restapi27.apiary.io/" id="docLink">
+        Documentation
+      </a>
+    </li>
+        <!-- /Documentation -->
+
+    <!-- Inspector -->
+          <li class="headerApiTool headerApiToolInspector">
+        <a class="headerApiToolLink" href="http://docs.restapi27.apiary.io/traffic" id="inspectorLink">
+          Inspector
+        </a>
+      </li>
+        <!-- /Inspector -->
+
+    <!-- Editor -->
+          <li class="headerApiTool headerApiToolEditor">
+        <a class="headerApiToolLink" href="https://app.apiary.io/restapi27/editor" id="editorLink">
+          Editor
+        </a>
+      </li>
+        <!-- /Editor -->
+
+    <!-- Tests -->
+        <!-- /Tests -->
+
+    <!-- /API Blueprint -->
+        <!-- /API Blueprint -->
+
+  </ul>
+</div></div>
+  <!-- /API Tools -->
+
+  <!-- API Menu -->
+  <div class="headerApiMenuContainer"><div class="headerApiMenu">
+  <ul class="headerApiMenuItems">
+
+    <!-- People -->
+          <li class="headerApiMenuItem people">
+        <a id="peopleLink" href="https://app.apiary.io/restapi27/settings/people" class="headerApiMenuLink ajaxLink mngPeople">
+          <span class="headerApiMenuIcon"></span>
+          <span class="tooltip headerApiMenuTooltip">People</span>
+        </a>
+      </li>
+        <!-- /People -->
+
+    <!-- Settings -->
+          <li class="headerApiMenuItem settings">
+        <a id="settingsLink" href="https://app.apiary.io/restapi27/settings" class="headerApiMenuLink">
+          <span class="headerApiMenuIcon"></span>
+          <span class="tooltip headerApiMenuTooltip">Settings</span>
+        </a>
+      </li>
+        <!-- /Settings -->
+
+  </ul>
+</div></div>
+  <!-- /API Menu -->
+
+  <!-- Help -->
+  <div class="headerHelpContainer"><div class="headerHelp">
+  <span class="headerHelpIcon"></span>
+  <span class="headerHelpTooltip tooltip">Help</span>
+</div></div>
+  <!-- /Help -->
+
+  <!-- Spacer -->
+  <div class="headerSpacer"></div>
+  <!-- /Spacer -->
+
+  <!-- Banner -->
+  <div class="headerBannerContainer"><a class="headerBanner" href="./RestApi · Apiary_files/RestApi · Apiary.html">
+  Try <em>‘Apiary for Teams’</em>
+</a></div>
+  <!-- /Banner -->
+
+  <!-- User -->
+  <div class="headerUserContainer"><div class="headerUser">
+      <div class="headerUserProfile noSelect">
+      <img class="headerUserProfileImage" src="./RestApi · Apiary_files/11298742" height="32" width="32">
+    </div>
+  </div></div>
+  <!-- /User -->
+
+</div></div>
+    <!-- /Header -->
+
+    <!-- Content -->
+    <div id="applicationContent" class="hybrid appBody" style="width: 1680px; height: 905px;"><div id="documentation">
+
+  <!-- TocColumn -->
+  <div id="documentationTocColumn" class="tocColumn customScrollbar customScrollbarLight" style="width: 200px; height: 825px; -webkit-transform: translateY(80px); transform: translateY(80px);"><div class="tocColumnContainer">
+
+  <!-- Content -->
+  <div class="tocColumnContent">
+  <div class="row tocColumnTools hidden">
+
+  <!-- GitHub -->
+    <!-- /GitHub -->
+
+</div><div class="tocColumnSection">
+
+  <!-- Title -->
+  <div class="tocColumnTitle noSelect">
+    <h3 class="tocColumnTitleText">Introduction</h3>
+  </div>
+  <!-- /Title -->
+
+  <!-- Items -->
+  <div class="tocColumnSectionItems"></div>
+  <!-- /Items -->
+
+</div><div class="tocColumnSection">
+
+  <!-- Title -->
+  <div class="tocColumnTitle noSelect">
+    <h3 class="tocColumnTitleText">Reference</h3>
+  </div>
+  <!-- /Title -->
+
+  <!-- Items -->
+  <div class="tocColumnSectionItems"><li class="tocColumnItem noSelect hasSubitems">
+
+  <!-- Container -->
+  <div class="tocColumnItemContainer">
+    <a class="tocColumnItemText" href="http://docs.restapi27.apiary.io/reference/category-api">
+      Category Api    </a>
+  </div>
+  <!-- /Container -->
+
+  <!-- Subitems -->
+  <ul class="tocColumnSubitems hidden"><li class="tocColumnSubitem noSelect">
+
+  <!-- Text -->
+  <a class="tocColumnSubitemText" href="http://docs.restapi27.apiary.io/reference/category-api/retrievedelete-the-category">
+    Retrieve/delete the category  </a>
+  <!-- /Text -->
+
+</li><li class="tocColumnSubitem noSelect">
+
+  <!-- Text -->
+  <a class="tocColumnSubitemText" href="http://docs.restapi27.apiary.io/reference/category-api/retrieve-all-categories">
+    Retrieve all Categories  </a>
+  <!-- /Text -->
+
+</li></ul>
+  <!-- /subitems -->
+
+</li><li class="tocColumnItem noSelect hasSubitems">
+
+  <!-- Container -->
+  <div class="tocColumnItemContainer">
+    <a class="tocColumnItemText" href="http://docs.restapi27.apiary.io/reference/task-api">
+      Task Api    </a>
+  </div>
+  <!-- /Container -->
+
+  <!-- Subitems -->
+  <ul class="tocColumnSubitems hidden"><li class="tocColumnSubitem noSelect">
+
+  <!-- Text -->
+  <a class="tocColumnSubitemText" href="http://docs.restapi27.apiary.io/reference/task-api/retrievedelete-the-task">
+    Retrieve/delete the task  </a>
+  <!-- /Text -->
+
+</li><li class="tocColumnSubitem noSelect">
+
+  <!-- Text -->
+  <a class="tocColumnSubitemText" href="http://docs.restapi27.apiary.io/reference/task-api/retrieve-all-tasks">
+    Retrieve all tasks  </a>
+  <!-- /Text -->
+
+</li><li class="tocColumnSubitem noSelect">
+
+  <!-- Text -->
+  <a class="tocColumnSubitemText" href="http://docs.restapi27.apiary.io/reference/task-api/check-the-task">
+    Check the Task  </a>
+  <!-- /Text -->
+
+</li><li class="tocColumnSubitem noSelect">
+
+  <!-- Text -->
+  <a class="tocColumnSubitemText" href="http://docs.restapi27.apiary.io/reference/task-api/bulk-update-the-tasks">
+    Bulk update the Tasks  </a>
+  <!-- /Text -->
+
+</li></ul>
+  <!-- /subitems -->
+
+</li></div>
+  <!-- /Items -->
+
+</div></div>
+  <!-- /Content -->
+
+</div>
+</div>
+  <!-- /TocColumn -->
+
+  <!-- HumanColumnHeader -->
+  <div id="documentationHumanColumnHeader" class="humanColumnHeader hidden" style="width: 740px; -webkit-transform: translateX(200px) translateY(80px); transform: translateX(200px) translateY(80px);"><div class="humanColumnHeaderContainer">
+
+  <!-- Button -->
+  <div class="humanColumnHeaderButton">
+    <span class="headerButtonIcon"></span>
+  </div>
+  <!-- /Button -->
+
+  <!-- Breadcrumb -->
+  <div class="humanColumnHeaderBreadcrumb">
+    <ul class="headerBreadcrumb">
+      <li class="headerBreadcrumbItem section">Introduction</li>
+      <li class="headerBreadcrumbItem item hidden"></li>
+      <li class="headerBreadcrumbItem subitem hidden"></li>
+    </ul>
+  </div>
+  <!-- /Breadcrumb -->
+
+</div>
+</div>
+  <!-- /HumanColumnHeader -->
+
+  <!-- HumanColumn -->
+  <div id="documentationHumanColumn" class="humanColumn customScrollbar customScrollbarLight" tabindex="1" style="width: 740px; height: 825px; -webkit-transform: translateX(200px) translateY(80px); transform: translateX(200px) translateY(80px);"><div class="humanColumnContents" style="width: 740px; padding-bottom: 949px;">
+
+  <!-- Name -->
+  <h1 class="humanColumnApiName">
+    RestApi  </h1>
+  <!-- /Name -->
+
+<div class="humanColumnSection humanColumnSectionIntroduction">
+
+  <!-- Title -->
+  <div class="humanColumnTitle">
+    <h3 class="humanColumnTitleText">Introduction</h3>
+  </div>
+  <!-- /Title -->
+
+  <!-- Description -->
+      <div class="humanColumnApiDescription markdown formalTheme">
+      <p>RestApi is a Rest API allowing consumers to manage tasks. 
+It consists of two main parts - category api and task api.</p>    </div>
+    <!-- /Description -->
+
+</div><div class="humanColumnSection humanColumnSectionReference">
+
+  <!-- Title -->
+  <div class="humanColumnTitle">
+    <h3 class="humanColumnTitleText">Reference</h3>
+  </div>
+  <!-- /Title -->
+
+<div class="resourceGroups">
+<div class="resourceGroup">
+
+  <!-- Name -->
+      <h1 class="resourceGroupName">
+      Category Api    </h1>
+    <!-- /Name -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+  <!-- Resources -->
+  <div class="resources"><div class="resource">
+
+  <!-- Name -->
+  <h2 class="resourceName">
+    Retrieve/delete the category  </h2>
+  <!-- /Name -->
+
+  <!-- Parameters -->
+  <div class="row resourceParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Attributes -->
+  <div class="row resourceAttributes hidden"></div>
+  <!-- /Attributes -->
+
+  <!-- Description -->
+      <div class="resourceDescription markdown formalTheme">
+      <p>This resource have one param which represents category id. To create and update category object pass through request body.</p>
+
+<p>A Category object has the following attributes:</p>
+
+<ul>
+<li><p>Id</p></li>
+<li><p>Name</p></li>
+</ul>    </div>
+    <!-- /Description -->
+
+  <!-- Actions -->
+  <div class="resourceActions"><div class="action get">
+
+  <!-- Invitation -->
+  <div class="actionInvitation get">
+          <a href="http://docs.restapi27.apiary.io/reference/category-api/retrievedelete-the-category/retrieve-the-category" class="actionInvitationRow">
+                  <div class="actionTag get"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Retrieve the category      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div><div class="action delete">
+
+  <!-- Invitation -->
+  <div class="actionInvitation delete">
+          <a href="http://docs.restapi27.apiary.io/reference/category-api/retrievedelete-the-category/delete-the-category" class="actionInvitationRow">
+                  <div class="actionTag delete"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Delete the category      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div><div class="action post">
+
+  <!-- Invitation -->
+  <div class="actionInvitation post">
+          <a href="http://docs.restapi27.apiary.io/reference/category-api/retrievedelete-the-category/create-the-category" class="actionInvitationRow">
+                  <div class="actionTag post"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Create the Category      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div><div class="action put">
+
+  <!-- Invitation -->
+  <div class="actionInvitation put">
+          <a href="http://docs.restapi27.apiary.io/reference/category-api/retrievedelete-the-category/update-the-category" class="actionInvitationRow">
+                  <div class="actionTag put"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Update the Category      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div></div>
+  <!-- /Actions -->
+
+</div><div class="resource">
+
+  <!-- Name -->
+  <h2 class="resourceName">
+    Retrieve all Categories  </h2>
+  <!-- /Name -->
+
+  <!-- Parameters -->
+  <div class="row resourceParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Attributes -->
+  <div class="row resourceAttributes hidden"></div>
+  <!-- /Attributes -->
+
+  <!-- Description -->
+      <div class="resourceDescription markdown formalTheme">
+      <p>This resource does not have any params in url.</p>    </div>
+    <!-- /Description -->
+
+  <!-- Actions -->
+  <div class="resourceActions"><div class="action get">
+
+  <!-- Invitation -->
+  <div class="actionInvitation get">
+          <a href="http://docs.restapi27.apiary.io/reference/category-api/retrieve-all-categories/retrieve-all-categories" class="actionInvitationRow">
+                  <div class="actionTag get"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Retrieve all categories      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div></div>
+  <!-- /Actions -->
+
+</div></div>
+  <!-- /Resources -->
+
+</div><div class="resourceGroup">
+
+  <!-- Name -->
+      <h1 class="resourceGroupName">
+      Task Api    </h1>
+    <!-- /Name -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+  <!-- Resources -->
+  <div class="resources"><div class="resource">
+
+  <!-- Name -->
+  <h2 class="resourceName">
+    Retrieve/delete the task  </h2>
+  <!-- /Name -->
+
+  <!-- Parameters -->
+  <div class="row resourceParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Attributes -->
+  <div class="row resourceAttributes hidden"></div>
+  <!-- /Attributes -->
+
+  <!-- Description -->
+      <div class="resourceDescription markdown formalTheme">
+      <p>This resource have one param which represents task id. To create and update task object pass through request body.</p>
+
+<p>A task object has the following attributes:</p>
+
+<ul>
+<li><p>Id</p></li>
+<li><p>Description</p></li>
+<li><p>Deadline</p></li>
+<li><p>Priority - integer param which represents task Priority(1 - Hi; 2 - Medium; 3 - Low)</p></li>
+<li><p>Status - integer param which represents task Status(1 - Normal; 2 - Completed; 3 - Overdue)</p></li>
+<li><p>Category - category object</p></li>
+</ul>    </div>
+    <!-- /Description -->
+
+  <!-- Actions -->
+  <div class="resourceActions"><div class="action get">
+
+  <!-- Invitation -->
+  <div class="actionInvitation get">
+          <a href="http://docs.restapi27.apiary.io/reference/task-api/retrievedelete-the-task/retrieve-the-task" class="actionInvitationRow">
+                  <div class="actionTag get"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Retrieve the task      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div><div class="action delete">
+
+  <!-- Invitation -->
+  <div class="actionInvitation delete">
+          <a href="http://docs.restapi27.apiary.io/reference/task-api/retrievedelete-the-task/delete-the-task" class="actionInvitationRow">
+                  <div class="actionTag delete"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Delete the Task      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div><div class="action post">
+
+  <!-- Invitation -->
+  <div class="actionInvitation post">
+          <a href="http://docs.restapi27.apiary.io/reference/task-api/retrievedelete-the-task/create-the-task" class="actionInvitationRow">
+                  <div class="actionTag post"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Create the Task      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div><div class="action put">
+
+  <!-- Invitation -->
+  <div class="actionInvitation put">
+          <a href="http://docs.restapi27.apiary.io/reference/task-api/retrievedelete-the-task/update-the-task" class="actionInvitationRow">
+                  <div class="actionTag put"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Update the Task      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div></div>
+  <!-- /Actions -->
+
+</div><div class="resource">
+
+  <!-- Name -->
+  <h2 class="resourceName">
+    Retrieve all tasks  </h2>
+  <!-- /Name -->
+
+  <!-- Parameters -->
+  <div class="row resourceParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Attributes -->
+  <div class="row resourceAttributes hidden"></div>
+  <!-- /Attributes -->
+
+  <!-- Description -->
+      <div class="resourceDescription markdown formalTheme">
+      <p>This resource have one optional params which represents search query string.</p>    </div>
+    <!-- /Description -->
+
+  <!-- Actions -->
+  <div class="resourceActions"><div class="action get">
+
+  <!-- Invitation -->
+  <div class="actionInvitation get">
+          <a href="http://docs.restapi27.apiary.io/reference/task-api/retrieve-all-tasks/search-the-tasks" class="actionInvitationRow">
+                  <div class="actionTag get"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Search the Tasks      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div></div>
+  <!-- /Actions -->
+
+</div><div class="resource">
+
+  <!-- Name -->
+  <h2 class="resourceName">
+    Check the Task  </h2>
+  <!-- /Name -->
+
+  <!-- Parameters -->
+  <div class="row resourceParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Attributes -->
+  <div class="row resourceAttributes hidden"></div>
+  <!-- /Attributes -->
+
+  <!-- Description -->
+      <div class="resourceDescription markdown formalTheme">
+      <p>This resource have one param which represents task id. It's workflow to make task completed.</p>    </div>
+    <!-- /Description -->
+
+  <!-- Actions -->
+  <div class="resourceActions"><div class="action put">
+
+  <!-- Invitation -->
+  <div class="actionInvitation put">
+          <a href="http://docs.restapi27.apiary.io/reference/task-api/check-the-task/check-the-task" class="actionInvitationRow">
+                  <div class="actionTag put"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Check the task      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div></div>
+  <!-- /Actions -->
+
+</div><div class="resource">
+
+  <!-- Name -->
+  <h2 class="resourceName">
+    Bulk update the Tasks  </h2>
+  <!-- /Name -->
+
+  <!-- Parameters -->
+  <div class="row resourceParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Attributes -->
+  <div class="row resourceAttributes hidden"></div>
+  <!-- /Attributes -->
+
+  <!-- Description -->
+      <div class="resourceDescription markdown formalTheme">
+      <p>This resource does not have any params in url. Task objects array pass through request body.</p>    </div>
+    <!-- /Description -->
+
+  <!-- Actions -->
+  <div class="resourceActions"><div class="action put">
+
+  <!-- Invitation -->
+  <div class="actionInvitation put">
+          <a href="http://docs.restapi27.apiary.io/reference/task-api/bulk-update-the-tasks/bulk-update-the-tasks" class="actionInvitationRow">
+                  <div class="actionTag put"></div>
+      
+      <!-- Name -->
+      <h4 class="actionName">
+        Bulk update the Tasks      </h4>
+      <!-- /Name -->
+
+      <!-- Icon -->
+      <div class="actionInvitationIcon"></div>
+      <!-- /Icon -->
+
+          </a>
+      </div>
+  <!-- Invitation -->
+
+  <!-- Parameters -->
+  <div class="row actionParameters hidden"></div>
+  <!-- /Parameters -->
+
+  <!-- Description -->
+    <!-- /Description -->
+
+</div></div>
+  <!-- /Actions -->
+
+</div></div>
+  <!-- /Resources -->
+
+</div></div></div></div></div>
+  <!-- /HumanColumn -->
+
+  <!-- MachineColumnHeader -->
+  <div id="documentationMachineColumnHeader" class="machineColumnHeader" style="width: 740px; -webkit-transform: translateX(940px) translateY(80px); transform: translateX(940px) translateY(80px);"><div class="row machineColumnHeaderContainer noSelect">
+
+  <!-- Back -->
+  <div class="columnHeaderButton columnHeaderBackButton">
+    <span class="icon backward"></span>
+  </div>
+  <!-- /Back -->
+
+  <!-- ConsoleButton -->
+  <div class="columnHeaderButton columnHeaderConsoleButton">
+
+    <!-- BlankSlate -->
+        <!-- /BlankSlate -->
+
+  <div class="button noSelect buttonDefault flat">
+  <div class="buttonRow">
+
+  <!-- Text -->
+  <div class="buttonColumn buttonTextColumn">
+    <span class="buttonText">Switch to Console</span>
+  </div>
+  <!-- /Text -->
+
+  </div>
+</div></div>
+  <!-- /ConsoleButton -->
+
+</div>
+</div>
+  <!-- /MachineColumnHeader -->
+
+  <!-- MachineColumn -->
+  <div id="documentationMachineColumn" class="machineColumn" style="width: 740px; height: 825px; -webkit-transform: translateX(940px) translateY(80px); transform: translateX(940px) translateY(80px);"><div class="row machineColumnContainer"><div class="row machineColumnContents customScrollbar customScrollbarMachineColumn" style="width: 740px; height: 745px;">
+
+  <!-- BlankSlate -->
+  <div class="machineColumnBlankSlate">
+    <h3 class="blankSlateTitle">No action selected</h3>
+
+    <p class="blankSlateText">You can try selecting ‘<span class="blankSlateActionExample">Retrieve the category</span>’ from the left column.</p>
+
+    <div class="blankSlateLink">
+      <a href="http://blog.apiary.io/2014/03/21/Re-API-Design-for-Humans/" class="blankSlateLinkText">Learn more about using the documentation.</a>
+    </div>
+
+  </div>
+  <!-- /BlankSlate -->
+
+</div><div class="row machineColumnConsoles customScrollbar customScrollbarConsole hidden" style="width: 740px; height: 755px;">
+
+  <!-- BlankSlate -->
+  <div class="machineColumnBlankSlate">
+    <h3 class="blankSlateTitle">No action selected</h3>
+
+    <p class="blankSlateText">To try out Console, please select an action. E.g. select ‘<span class="blankSlateActionExample">Retrieve the category</span>’ from the left column.</p>
+
+    <div class="blankSlateLink">
+      <a href="http://blog.apiary.io/2014/03/21/Re-API-Design-for-Humans/" class="blankSlateLinkText">Learn more about using the documentation.</a>
+    </div>
+
+  </div>
+  <!-- /BlankSlate -->
+
+</div></div>
+</div>
+  <!-- /MachineColumn -->
+
+</div></div>
+    <!-- /Content -->
+
+    <div class="applicationLoading hidden" style="left: 765px; top: 399.5px; opacity: 1;"></div>
+
+  
+
+<script async="" src="./RestApi · Apiary_files/analytics.js"></script><script async="" src="./RestApi · Apiary_files/intercom.v1.js"></script></body></html>
