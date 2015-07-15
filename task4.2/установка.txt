@@ -1,4 +1,5 @@
 http://bendetat.com/karma-and-mocha-for-angular-testing.html
+перейти в папку js и установить:
 npm install --save-dev karma
 npm install --save-dev karma-mocha
 npm install --save-dev karma-phantomjs-launcher
