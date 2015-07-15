@@ -1,4 +1,4 @@
-describe('Testing Angular', function() {
+describe('Angular test settings', function() {
 
   var scope = {};
   beforeEach(module('testModule'));
@@ -8,11 +8,11 @@ describe('Testing Angular', function() {
         $scope: scope
       });
 
-      sinon.stub({}, 'func').returns(true) // Sinon
+      sinon.stub(scope, 'func').returns(true);
   }));
 
-  it('testing TestController', function(){
+  it('testing scpe and fake Function', function(){
     assert.equal(scope.value, 'value');
-    assert.equal(scope.func(), false);
+    assert.equal(scope.func(), true);
   });
 });
