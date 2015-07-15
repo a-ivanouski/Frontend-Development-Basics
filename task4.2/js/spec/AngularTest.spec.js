@@ -1,22 +1,18 @@
- beforeEach(module('factories'));
+describe('Testing Angular', function() {
 
-  var chimp;
-  var $log;
+  var scope = {};
+  beforeEach(module('testModule'));
+  beforeEach(inject(function($controller){
+  
+      var myController = $controller('testController', {
+        $scope: scope
+      });
 
-  beforeEach(inject(function(_chimp_, _$log_) {
-    chimp = _chimp_;
-   
-    sinon.stub($log, 'warn', function() {});
+      sinon.stub({}, 'func').returns(true) // Sinon
   }));
 
-  describe('when invoked', function() {
-
-    beforeEach(function() {
-      chimp.ook();
-    });
-
-    it('should say Ook', function() {
-      expect($log.warn.callCount).to.equal(1);
-      expect($log.warn.args[0][0]).to.equal('Ook.');
-    });
+  it('testing TestController', function(){
+    assert.equal(scope.value, 'value');
+    assert.equal(scope.func(), false);
   });
+});
