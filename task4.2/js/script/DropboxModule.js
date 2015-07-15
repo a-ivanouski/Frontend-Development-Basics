@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('my', ['dropboxModule'])
-    .controller('contr', ['$scope', '$http', 'dropbox-service', function ($scope, $http, dropboxService) {
+    .controller('contr', ['$scope', '$http', 'dropboxService', function ($scope, $http, dropboxService) {
         console.log(1);
         $scope.token = '';
 

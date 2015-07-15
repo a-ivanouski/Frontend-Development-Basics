@@ -12,7 +12,8 @@ describe('Angular test settings', function() {
   }));
 
   it('testing scpe and fake Function', function(){
-    assert.equal(scope.value, 'value');
-    assert.equal(scope.func(), true);
+    expect(scope.value).to.deep.equal('value');
+    expect(scope.func()).to.be.true;
+ 
   });
 });
