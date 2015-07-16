@@ -2,7 +2,7 @@
 
 angular.module('my', ['dropboxModule'])
     .controller('contr', ['$scope', '$http', 'dropboxService', function ($scope, $http, dropboxService) {
-        console.log(1);
+
         $scope.token = '';
 
         $scope.hideContent = false;
