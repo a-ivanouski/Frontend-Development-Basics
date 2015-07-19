@@ -1,0 +1,30 @@
+Patterns used in jquery 2.1.4:
+
+1. loop for. Loops can execute a block of code a number of times.
+
+2. loop for in. The for..in statement iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
+
+3. enforcing new. jQuery.Event realese this pattern. Pattern preevent context issues.
+
+4. using literals. Literal notation is more simple and reliable
+
+5. returning functions. Opportunity to return a function
+
+6. currying. jQuery.proxy realese this pattern. applying
+ arguments witch always pass to function
+
+7. self executing functions. jquery wrapped in self executing function. apportunity to call funtion right after definition
+
+8. memoization. jquery Sizzle(part jquery for selectors) realese this pattern. avoid repeated computation
+
+9. namespace. jquery keep its functionality in window.jQuery = window.$ namespace. reduce the number of globals and avoid naming collisions
+
+10. module. jquery implemented like a module. encepsulation
+
+11. chaining. provide more simple working with framework
+
+12. extend. jquery.extend realese this pattern. merge objects properties into one complex object
+
+13. facade. provides a convenient higher-level interface to larger body of code, hiding its true underlying complexity
+
+14. proxy. jQuery.proxy realese this pattern. help to control the access and context behind an object
