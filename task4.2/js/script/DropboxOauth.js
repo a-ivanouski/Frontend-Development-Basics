@@ -33,12 +33,8 @@ angular.module('dropboxModule', [])
         }
 
         function downloadFile(path, token) {
-            sendRequest('GET', 'https://api.dropbox.com/1/media/auto', path, token)
-                .success(function (data, status, headers, config) {
-                    var a = document.createElement("a");
-                    a.setAttribute('href', data.url);
-                    a.click();
-                })
+           return sendRequest('GET', 'https://api.dropbox.com/1/media/auto', path, token);
+             
         }
 
         function getPromiseToken(secret, appKey, appSecret) {

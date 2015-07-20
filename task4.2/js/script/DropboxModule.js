@@ -42,7 +42,13 @@ angular.module('my', ['dropboxModule'])
                 .then(saveInfoFolder);
         }
 
-        $scope.downloadFile = dropboxService.downloadFile;
+        $scope.downloadFile =function(path,token){ 
+            dropboxService.downloadFile(path,token).then(function(info){
+                var a = document.createElement("a");
+                a.setAttribute('href', info.data.url);
+                a.click();
+            })
+        }
 
         $scope.GetContent = function (file) {
             if (file.isFolder) {
