@@ -1,30 +1,30 @@
 Patterns used in jquery 2.1.4:
 
-1. loop for. Loops can execute a block of code a number of times.
+1. loop for. Loops can execute a block of code a number of times. Used in many places. First time at jQuery.fn.extend function, line 204
 
-2. loop for in. The for..in statement iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
+2. loop for in. The for..in statement iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed. Used in many places. First time at jQuery.fn.extend function, line 208
 
-3. enforcing new. jQuery.Event realese this pattern. Pattern preevent context issues.
+3. enforcing new. jQuery.Event realese this pattern (line 4670) . Pattern preevent context issues.
 
-4. using literals. Literal notation is more simple and reliable
+4. using literals. Literal notation is more simple and reliable. Used over the all framework
 
-5. returning functions. Opportunity to return a function
+5. returning functions. Opportunity to return a function. Used in many places. First time at createInputPseudo function, line 956
 
-6. currying. jQuery.proxy realese this pattern. applying
+6. currying. jQuery.proxy realese this pattern (line 512). applying
  arguments witch always pass to function
 
-7. self executing functions. jquery wrapped in self executing function. apportunity to call funtion right after definition
+7. self executing functions. jquery wrapped in self executing function(line 15). apportunity to call funtion right after definition
 
-8. memoization. jquery Sizzle(part jquery for selectors) realese this pattern. avoid repeated computation
+8. memoization. jquery Sizzle(part jquery for selectors) realese this pattern(line 593 initialisation; line 864 realisation). avoid repeated computation
 
-9. namespace. jquery keep its functionality in window.jQuery = window.$ namespace. reduce the number of globals and avoid naming collisions
+9. namespace. jquery keep its functionality in window.jQuery = window.$ namespace (line 9202). reduce the number of globals and avoid naming collisions
 
-10. module. jquery implemented like a module. encepsulation
+10. module. jquery implemented like a module (line 15). encepsulation
 
-11. chaining. provide more simple working with framework
+11. chaining. provide more simple working with framework. function wich can return void return 'this' instead (line 3380). 
 
-12. extend. jquery.extend realese this pattern. merge objects properties into one complex object
+12. extend. jquery.extend realese this pattern (line 177). merge objects properties into one complex object
 
-13. facade. provides a convenient higher-level interface to larger body of code, hiding its true underlying complexity
+13. facade. provides a convenient higher-level interface to larger body of code, hiding its true underlying complexity. Sizzle realese facade (line 553). it's hiding its true underlying complexity in private methods.
 
-14. proxy. jQuery.proxy realese this pattern. help to control the access and context behind an object
+14. proxy. jQuery.proxy realese this pattern (line 494). help to control the access and context behind an object
