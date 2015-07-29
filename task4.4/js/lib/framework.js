@@ -5,7 +5,6 @@ function createSelfBehavior(){
 	return {
 		name: "",
 		self: {},
-		element: null,
 	}
 }
 
