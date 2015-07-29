@@ -1,12 +1,16 @@
-<<html>
+<html>
 <head>
 	<title>framework</title>
 	<script src="js/lib/framework.js"></script>
 	<script src="js/script/script.js"></script>
 </head>
 <body>
-	<div model="model" behavior="behavior">
-		<label framework-model="value"></label>
+	<div behavior="FirstBehavior" model="model">
+
+		<button framework-model="value1" framework-click="func(value2)"></button>
+		<label framework-model="value2"></label>
+		<label framework-model="value3"></label>
+
 	</div>
 </body>
 </html>
