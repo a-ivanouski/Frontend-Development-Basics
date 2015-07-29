@@ -9,5 +9,9 @@ createBehavior("FirstBehavior", function(self){
 		self.value2 = v2;
 		self.value3 = self.value2 + 1;
 	}
+	self.valueShow = false;
+	self.showDivFunc = function(){
+		self.valueShow = !self.valueShow;
+	}
 
 })

@@ -35,17 +35,28 @@ function updateClick(behavior,element,attribute,parent){
 	}
 }
 
+function updateShow(element,isShow){
+	isShow ? element.classList.remove("framework-hide-element") : element.classList.add("framework-hide-element");//
+}
+
 function updateFrameworkModel(behavior,element){
 	var innerElements = element.querySelectorAll('*');
 	for(var i =0; i< innerElements.length; i++){
 
 		var attrModel = getAttributeValue(innerElements[i],'framework-model');
 		var attrClick = getAttributeValue(innerElements[i],'framework-click');
-		if(behavior.self[attrModel]){
+		var attrShow = getAttributeValue(innerElements[i],'framework-show');
+
+		if(attrModel){
 			innerElements[i].innerHTML = behavior.self[attrModel];
 		}
+
 		if(attrClick){
 			updateClick(behavior,innerElements[i],attrClick,element)
+		}
+
+		if(attrShow){
+			updateShow(innerElements[i],behavior.self[attrShow]);
 		}
 	}
 }
