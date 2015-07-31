@@ -38,7 +38,7 @@ function updateShow(element,isShow){
 	isShow ? element.classList.remove("framework-hide-element") : element.classList.add("framework-hide-element");//
 }
 
-function updateFrameworkModel(behavior,element){
+function updateFrameworkModell(behavior,element){
 	var innerElements = element.querySelectorAll('*');
 	for(var i =0; i< innerElements.length; i++){
 
@@ -57,6 +57,34 @@ function updateFrameworkModel(behavior,element){
 		if(attrShow){
 			updateShow(innerElements[i],behavior.self[attrShow]);
 		}
+	}
+}
+
+function updateFrameworkModel(behavior,element){
+	var innerElements = element.children || [];
+	for(var i =0; i< innerElements.length; i++){
+
+		if(getAttributeValue(innerElements[i],'behavior')){
+			continue;
+		}
+
+		var attrModel = getAttributeValue(innerElements[i],'framework-model');
+		var attrClick = getAttributeValue(innerElements[i],'framework-click');
+		var attrShow = getAttributeValue(innerElements[i],'framework-show');
+
+		if(attrModel){
+			innerElements[i].innerHTML = behavior.self[attrModel];
+		}
+
+		if(attrClick){
+			updateClick(behavior,innerElements[i],attrClick,element)
+		}
+
+		if(attrShow){
+			updateShow(innerElements[i],behavior.self[attrShow]);
+		}
+
+		updateFrameworkModel(behavior,innerElements[i]);
 	}
 }
 
