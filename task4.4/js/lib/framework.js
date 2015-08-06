@@ -14,8 +14,11 @@ function createEmptyObj(){
 }
 
 function getAttributeValue(element,attributeName){
+	if(attributeName === 'framework-repeat'){
 
-	return element.attributes[attributeName] ? element.attributes[attributeName].nodeValue : null;
+	} else {
+		return element.attributes[attributeName] ? element.attributes[attributeName].nodeValue : null;
+	}
 }
 
 function updateClick(self,element,attribute,parent){
@@ -43,28 +46,6 @@ function updateShow(element,isShow){
 	isShow ? element.classList.remove("framework-hide-element") : element.classList.add("framework-hide-element");//
 }
 
-function updateFrameworkModell(self,element){
-	var innerElements = element.querySelectorAll('*');
-	for(var i =0; i< innerElements.length; i++){
-
-		var attrModel = getAttributeValue(innerElements[i],'framework-model');
-		var attrClick = getAttributeValue(innerElements[i],'framework-click');
-		var attrShow = getAttributeValue(innerElements[i],'framework-show');
-
-		if(attrModel){
-			innerElements[i].innerHTML = self[attrModel];
-		}
-
-		if(attrClick){
-			updateClick(self,innerElements[i],attrClick,element)
-		}
-
-		if(attrShow){
-			updateShow(innerElements[i],self[attrShow]);
-		}
-	}
-}
-
 function updateFrameworkModel(self,element){
 	var innerElements = element.children || [];
 	for(var i =0; i< innerElements.length; i++){
@@ -76,6 +57,7 @@ function updateFrameworkModel(self,element){
 		var attrModel = getAttributeValue(innerElements[i],'framework-model');
 		var attrClick = getAttributeValue(innerElements[i],'framework-click');
 		var attrShow = getAttributeValue(innerElements[i],'framework-show');
+		var attrRepeat = getAttributeValue(innerElements[i],'framework-repeat');
 
 		if(attrModel && self[attrModel]){
 
@@ -96,8 +78,8 @@ function updateFrameworkModel(self,element){
 
 function render(behavior,element){
 
-	//console.log("render " + behavior.name);
-	//console.log(behavior);
+	console.log("render " + behavior.name);
+
 	var newElement = createEmptyObj();
  
 	behavior.constructor.apply(null,[newElement]);
@@ -123,8 +105,4 @@ window.onload = function(e){
 			render(behaviors[nameBehavior],elements[i])
 		}
 	}
-	//console.log(array);
 }
-
-
-console.log()
