@@ -6,7 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div behavior="FirstBehavior" model="model">
+
+
+
+
+<div behavior="FirstBehavior" model="model">
 		<div>
 			<button framework-model="value1" framework-click="func(value2)"></button>
 			<label framework-model="value2"></label>
@@ -15,16 +19,15 @@
 		<button framework-click="showDivFunc()">show Div</button>
 		<label framework-model="valueShow"></label>
 		<div framework-show="valueShow" class="box abs1"></div>
+	</div>
 
-		<div behavior="secondBehavior" model="model">
+	<div behavior="FirstBehavior" model="model">
 			<button framework-model="value1" framework-click="func(value2)"></button>
 			<label framework-model="value2"></label>
 			<label framework-model="value3"></label>
 			<button framework-click="showDivFunc()">show Div</button>
 			<label framework-model="valueShow"></label>
 			<div framework-show="valueShow" class="box abs2"></div>
-		</div>
-
 	</div>
 </body>
 </html>
