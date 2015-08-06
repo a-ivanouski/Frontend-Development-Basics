@@ -59,8 +59,7 @@ function updateFrameworkModel(self,element){
 		var attrShow = getAttributeValue(innerElements[i],'framework-show');
 		var attrRepeat = getAttributeValue(innerElements[i],'framework-repeat');
 
-		if(attrModel && self[attrModel]){
-
+		if(attrModel && self[attrModel] !== null && self[attrModel] !== undefined){
 			innerElements[i].innerHTML = self[attrModel];
 		}
 
