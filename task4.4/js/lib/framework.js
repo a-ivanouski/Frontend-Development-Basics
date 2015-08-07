@@ -1,6 +1,5 @@
-var behaviors = {};
 
-var array = []
+//common function sections
 
 function createSelfBehavior(){
 	return {
@@ -13,12 +12,34 @@ function createEmptyObj(){
 	return {}
 }
 
-function getAttributeValue(element,attributeName){
-	if(attributeName === 'framework-repeat'){
 
-	} else {
+
+// ftramework sections
+
+var behaviors = {};
+
+var array = []
+
+function getValueByAttr(self,attrModel){
+	var result = self;
+	var arrayAttrModel = attrModel.split('.');
+
+	for (var i = 0; i < arrayAttrModel.length; i++) {
+
+		if(result[arrayAttrModel[i]] !== null && result[arrayAttrModel[i]] !== undefined){
+				result = result[arrayAttrModel[i]];
+		} else {
+			return ""
+			//throw "properties is not defined!";
+		}
+	};
+
+	return result;
+}
+
+
+function getAttributeValue(element,attributeName){
 		return element.attributes[attributeName] ? element.attributes[attributeName].nodeValue : null;
-	}
 }
 
 function updateClick(self,element,attribute,parent){
@@ -57,10 +78,10 @@ function updateFrameworkModel(self,element){
 		var attrModel = getAttributeValue(innerElements[i],'framework-model');
 		var attrClick = getAttributeValue(innerElements[i],'framework-click');
 		var attrShow = getAttributeValue(innerElements[i],'framework-show');
-		var attrRepeat = getAttributeValue(innerElements[i],'framework-repeat');
 
-		if(attrModel && self[attrModel] !== null && self[attrModel] !== undefined){
-			innerElements[i].innerHTML = self[attrModel];
+		if(attrModel){
+
+			innerElements[i].innerHTML = getValueByAttr(self,attrModel);
 		}
 
 		if(attrClick){
@@ -94,6 +115,24 @@ function createBehavior(name,constructor){
 		behaviors[name].constructor = constructor;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 window.onload = function(e){
 	var elements = document.querySelectorAll('[behavior]');

@@ -2,27 +2,30 @@
 	display: none !important;
 }
 
-.box {
 
-	width: 300px;
-	height: 300px;
 
-	margin-bottom: 10px;
+
+.container{
+	display: flex;
+
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+	justify-content: space-around;
+}
+
+.main-description{
 	display: inline-block;
+	background: tomato;
+	color: white;
+
 }
 
-.abs1{
-	position: absolute;
-	left: 400px;
-	top: 0px;
-		background-color: red;
+.element-beavior{
+	display: flex;
+	background: tomato;
+	width: 40%;
+	color: white;
+	font-weight: bold;
+
 }
-
-.abs2{
-	position: absolute;
-	left: 700px;
-	top: 0px;
-		background-color: black;
-}
-
-
