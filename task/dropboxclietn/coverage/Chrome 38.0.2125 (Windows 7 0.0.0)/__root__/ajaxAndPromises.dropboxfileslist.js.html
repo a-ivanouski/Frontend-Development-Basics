@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./ajaxAndPromises.dropboxfileslist.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">./ajaxAndPromises.dropboxfileslist.js</span></h1>
+    <h2>
+        Statements: <span class="metric">95.45% <small>(42 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">95% <small>(19 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">76.92% <small>(10 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">97.67% <small>(42 / 43)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">__root__/</a> &#187; ./ajaxAndPromises.dropboxfileslist.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">$.widget('ajaxAndPromises.dropboxfileslist', {
+&nbsp;
+    options: {
+        key: null,
+        formTemplate: '&lt;li class="list__item-uploadForm"&gt;&lt;form id="uploadform"&gt;&lt;div style="display: none;"&gt;Upload in progress&lt;/div&gt;&lt;input type="file"&gt;&lt;/input&gt;&lt;/form&gt;&lt;/li&gt;',
+        itemTemplate: '&lt;li class="list__item-${type}"&gt;&lt;figure&gt;&lt;img src="${type}.png"&gt;&lt;/img&gt;&lt;/figure&gt;&lt;span&gt;&lt;a href="${path}" target="_blank"&gt;${name}&lt;/a&gt;&lt;/span&gt;&lt;span&gt;{{if mime_type }}${mime_type}{{/if}}&lt;/span&gt;&lt;/li&gt;',
+        facade: null,
+        currentPath: null,
+        uploadFormId: 'uploadform',
+        uploadCount: 0
+    },
+&nbsp;
+    _create: function () {
+        $('.init-form').hide();
+&nbsp;
+        this.options.facade = this._initFacade();
+&nbsp;
+        $.template("itemTemplate", this.options.itemTemplate);
+&nbsp;
+        this.options.facade.metadata(this, '', this._renderList, <span class="fstat-no" title="function not covered" >function () {</span> });
+    },
+&nbsp;
+    _initFacade: function()
+    {
+        return ajaxAndPromises.dropboxapifacade(this.options.key);
+    },
+&nbsp;
+    _renderList: function (data) {
+        this.options.currentPath = data.path === '/' ? data.path : data.path + '/';
+&nbsp;
+        $.each(data.contents, function (i, v) {
+            v.type = v.mime_type ? 'file' : 'folder';
+&nbsp;
+            v.mime_type = v.mime_type || false;
+&nbsp;
+            v.name = v.path.substring(v.path.lastIndexOf('/') + 1, v.path.length);
+&nbsp;
+            v.path = v.mime_type ? v.downloadUrl + '?dl=1' : v.path;
+        });
+&nbsp;
+        if (data.path != '/') {
+            data.contents.unshift({ type: 'folder', path: data.path.substring(0, data.path.lastIndexOf('/')), name: '...', mime_type: false });
+        }
+&nbsp;
+        var itemsList = $.tmpl("itemTemplate", data.contents.sort(this._compare));
+&nbsp;
+        $(this.element).append(this.options.formTemplate);
+        $(this.element).append(itemsList);
+&nbsp;
+        this._bingEvents();
+    },
+&nbsp;
+    _appendFile: function(data)
+    {
+        data.type = 'file';
+&nbsp;
+        data.name = data.path.substring(data.path.lastIndexOf('/') + 1, data.path.length);
+&nbsp;
+        data.path = data.downloadUrl + '?dl=1';
+&nbsp;
+        var item = $.tmpl("itemTemplate", data);
+&nbsp;
+        $(this.element).append(item);
+    },
+&nbsp;
+    _bingEvents: function ()
+    {
+        var self = this;
+&nbsp;
+        $('.list__item-folder a').on('click', function (e) {
+            e.preventDefault();
+&nbsp;
+            $(self.element).html('');
+&nbsp;
+            self.options.facade.metadata(self, $(e.target).attr('href'), self._renderList, <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >console.log(arguments); </span>});
+        });
+&nbsp;
+        $('#uploadform input').on('change', function (e) {
+            self.options.uploadCount = self.options.uploadCount + 1;
+&nbsp;
+            var path = self.options.currentPath + e.target.files[0].name;
+&nbsp;
+            self.options.facade.upload(self, path, e.target.files[0], function (data) {
+                self._appendFile(data);
+                self.options.uploadCount = self.options.uploadCount - 1;
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (self.options.uploadCount == 0)
+                    $("#uploadform div").hide();
+            }, <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >console.log(arguments); </span>});
+&nbsp;
+            $(e.target).val('');
+&nbsp;
+            $("#uploadform div").show();
+        });
+    },
+&nbsp;
+    _compare: function (a, b) {
+        if (a.mime_type === false &amp;&amp; b.mime_type !== false)
+            return -1;
+        if (a.mime_type !== false &amp;&amp; b.mime_type === false)
+            return 1;
+    }
+});</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Aug 07 2015 17:14:20 GMT+0300 (Kaliningrad Standard Time)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -17,7 +17,7 @@ $.widget('ajaxAndPromises.dropboxfileslist', {
 
         $.template("itemTemplate", this.options.itemTemplate);
 
-        this.options.facade.metadata(this, '', this.renderList, function () { });
+        this.options.facade.metadata(this, '', this._renderList, function () { });
     },
 
     _initFacade: function()
@@ -25,7 +25,7 @@ $.widget('ajaxAndPromises.dropboxfileslist', {
         return ajaxAndPromises.dropboxapifacade(this.options.key);
     },
 
-    renderList: function (data) {
+    _renderList: function (data) {
         this.options.currentPath = data.path === '/' ? data.path : data.path + '/';
 
         $.each(data.contents, function (i, v) {
@@ -47,10 +47,10 @@ $.widget('ajaxAndPromises.dropboxfileslist', {
         $(this.element).append(this.options.formTemplate);
         $(this.element).append(itemsList);
 
-        this.bingEvents();
+        this._bingEvents();
     },
 
-    appendFile: function(data)
+    _appendFile: function(data)
     {
         data.type = 'file';
 
@@ -63,7 +63,7 @@ $.widget('ajaxAndPromises.dropboxfileslist', {
         $(this.element).append(item);
     },
 
-    bingEvents: function ()
+    _bingEvents: function ()
     {
         var self = this;
 
@@ -72,7 +72,7 @@ $.widget('ajaxAndPromises.dropboxfileslist', {
 
             $(self.element).html('');
 
-            self.options.facade.metadata(self, $(e.target).attr('href'), self.renderList, function () { console.log(arguments); });
+            self.options.facade.metadata(self, $(e.target).attr('href'), self._renderList, function () { console.log(arguments); });
         });
 
         $('#uploadform input').on('change', function (e) {
@@ -81,7 +81,7 @@ $.widget('ajaxAndPromises.dropboxfileslist', {
             var path = self.options.currentPath + e.target.files[0].name;
 
             self.options.facade.upload(self, path, e.target.files[0], function (data) {
-                self.appendFile(data);
+                self._appendFile(data);
                 self.options.uploadCount = self.options.uploadCount - 1;
                 if (self.options.uploadCount == 0)
                     $("#uploadform div").hide();
