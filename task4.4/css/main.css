@@ -2,30 +2,51 @@
 	display: none !important;
 }
 
-
+.accent{
+ 	color:	black;
+}
 
 
 .container{
-	display: flex;
-
-	text-align: center;
 	padding-left: 10%;
 	padding-right: 10%;
-	justify-content: space-around;
+	text-align: center;
+	background-color: lightgray;
+	color: white;
+
 }
+
+.flex-container{
+	display: flex;
+	justify-content: space-between;
+}
+
 
 .main-description{
 	display: inline-block;
+	width:100%;
 	background: tomato;
-	color: white;
+	margin-bottom: 20px;
 
 }
 
 .element-beavior{
 	display: flex;
 	background: tomato;
-	width: 40%;
-	color: white;
-	font-weight: bold;
+	width: 48%;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+.element-beavior article{
+	width: 100%;
+}
+
+.element-beavior h3,.element-beavior h2{
+	text-align: center;
+}
+
+.code{
+	text-align: left;
 
 }
