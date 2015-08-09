@@ -9,11 +9,12 @@
 <div class="container">
 	<div class="main-description">
 		<p>
-			My framework gives the opportunity to create MVC architecture.
+			My framework gives the opportunity to create MVC architecture. </br>
+			All you need is implement &#34;createBehavior&#34; function.
 		</p>
 	</div>
 	<div class="flex-container">
-		<div class="element-beavior" behavior="frameworkModelBehavior">
+		<div class="element-beavior normal-element" behavior="frameworkModelBehavior">
 			<article>
 				<h2>Framework &#34;Model&#34; Behavior</h2>
 				<section class="description">
@@ -29,7 +30,7 @@
 						})</br>
 
 						&#34;HTML&#34;</br>
-						&lt; <span class="span">label</span> <span class="accent">framework-model</span>=&#34;value&#34;&gt;&lt;/<span class="span">label</span>&gt;
+						&lt; label <span class="accent">framework-model</span>=&#34;value&#34;&gt;&lt;/label&gt;
 					</p>
 				</section>
 				<section class="example">
@@ -42,7 +43,7 @@
 
 		</div>
 	
-		<div class="element-beavior" behavior="frameworkModelObjectBehavior">
+		<div class="element-beavior normal-element" behavior="frameworkModelObjectBehavior">
 			<article>
 				<h2>Framework &#34;Model Object&#34; Behavior</h2>
 				<section class="description">
@@ -63,7 +64,7 @@
 						})</br>
 
 						&#34;HTML&#34;</br>
-						&lt; <span class="span">label</span> <span class="accent">framework-model</span>=&#34;obj.value.value&#34;&gt;&lt;/<span class="span">label</span>&gt;
+						&lt; label <span class="accent">framework-model</span>=&#34;obj.value.value&#34;&gt;&lt;/label&gt;
 					</p>
 				</section>
 				<section class="example">
@@ -77,35 +78,86 @@
 		</div>
 	</div>
 	<div class="flex-container">
-		<div class="element-beavior" behavior="frameworkClickBehavior">
+		<div class="element-beavior normal-element" behavior="frameworkClickBehavior">
 			<article>
 				<h3>Framework &#34;Click&#34; Behavior</h3>
 				<section class="description">
-					<p>My framework Click</p>
+					<p>Framework is understanding mouse click on element.</p>
 				</section>
 				<section class="code">
-					<p>code</p>
+					<h3>Code</h3>
+						&#34;js&#34; </br>
+
+						createBehavior(&#34;<span class="accent">frameworkClickBehavior&#34;</span>,&nbsp;function(self){</br>
+						&nbsp;var tmp = false;</br>
+						&nbsp;self.click=function(){</br>
+						&nbsp;&nbsp;tmp=!tmp;</br>
+						&nbsp;&nbsp;self.valueClick= tmp ? &#34;Click&#34; : &#34;Not click&#34;;</br>
+						&nbsp;}</br></br>
+						&nbsp;self.click();</br>
+						})</br>
+
+						&#34;HTML&#34;</br>
+					&lt;button class="click-button" <span class="accent">framework-click</span>=&#34;click()&#34; <span class="accent">framework-model</span>=&#34;valueClick&#34;&gt;&lt;/button&gt;
 				</section>
 				<section class="example">
-					<p>example</p>
+					<h3>Example</h3>
+					<button class="click-button" framework-click="click()" framework-model="valueClick"></button>
 				</section>
 
 			</article>
 		</div>
-		<div class="element-beavior" behavior="frameworkShowBehavior">
+		<div class="element-beavior big-element" behavior="frameworkShowBehavior">
 			<article>
 				<h3>Framework &#34;Show&#34; Behavior</h3>
 				<section class="description">
-					<p>My framework Show</p>
+					<p>Framework can hide or show wome element.</p>
 				</section>
 				<section class="code">
-					<p>code</p>
+					<h3>Code</h3>
+					<p>
+						&#34;js&#34; </br>
+
+						createBehavior(&#34;<span class="accent">frameworkShowBehavior</span>&#34;, function(self){</br>
+						&nbsp;self.showBlock = false;</br>
+						&nbsp;self.show = function(){</br>
+						&nbsp;&nbsp;self.showBlock = !self.showBlock;</br>
+						&nbsp;}</br>
+						})</br>
+						&#34;HTML&#34;</br>
+						&nbsp;&lt;div class="rel"&gt;</br>
+						&nbsp;&nbsp;&lt;button class="click-button" <span class="accent">framework-click="show()"</span>&gt;Show Block&lt;/button&gt;</br>
+						&nbsp;&nbsp;&lt;div class="block" <span class="accent">framework-show="showBlock"</span>&gt;&lt;/div&gt;</br>
+						&nbsp;&lt;/div&gt;</br>
+						&#34;CSS&#34; </br>
+						.click-button{</br>
+						&nbsp;padding: 10px 20px 10px 20px;</br>
+						&nbsp;border: none;</br>
+						&nbsp;background-color: lightgreen;</br>
+						}</br></br>
+						.rel{</br>
+						&nbsp;position: relative;</br>
+						}</br></br>
+						.block{</br>
+						&nbsp;display: inline-block;</br>
+						&nbsp;position: absolute;</br>
+						&nbsp;left: 135px;</br>
+						&nbsp;top: 0px;</br>
+						&nbsp;height: 35px;</br>
+						&nbsp;width: 100px;</br>
+						&nbsp;background-color: yellow;</br>
+						}</br>
+					</p>
 				</section>
 				<section class="example">
-					<p>example</p>
+					<h3>Example</h3>
+					<div class="rel">
+						<button class="click-button" framework-click="show()">Show Block</button>
+						<div class="block" framework-show="showBlock"></div>
+					</div>
 				</section>
-
-			</article>		</div>
+			</article>		
+		</div>
 	</div>
 </div>
 <!-- <div behavior="FirstBehavior" model="model">

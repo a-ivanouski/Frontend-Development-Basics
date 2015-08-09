@@ -37,7 +37,13 @@
 	padding-left: 10px;
 	margin-bottom: 20px;
 	text-align: left;
+	padding-bottom: 10px;
 }
+
+.normal-element{
+	height: 465px;
+}
+
 .element-beavior article{
 	width: 100%;
 }
@@ -49,4 +55,26 @@
 .code{
 	text-align: left;
 
+}
+
+
+.click-button{
+	padding: 10px 20px 10px 20px;
+	border: none;
+	background-color: lightgreen;
+
+}
+
+.rel{
+	position: relative;
+}
+
+.block{
+	display: inline-block;
+	position: absolute;
+	left: 135px;
+	top: 0px;
+	height: 35px;
+	width: 100px;
+	background-color: yellow;
 }

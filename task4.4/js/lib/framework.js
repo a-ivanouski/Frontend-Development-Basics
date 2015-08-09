@@ -18,16 +18,16 @@ function createEmptyObj(){
 
 var behaviors = {};
 
-var array = []
+var arraySelfs = []
 
 function getValueByAttr(self,attrModel){
 	var result = self;
-	var arrayAttrModel = attrModel.split('.');
+	var arraySelfsAttrModel = attrModel.split('.');
 
-	for (var i = 0; i < arrayAttrModel.length; i++) {
+	for (var i = 0; i < arraySelfsAttrModel.length; i++) {
 
-		if(result[arrayAttrModel[i]] !== null && result[arrayAttrModel[i]] !== undefined){
-				result = result[arrayAttrModel[i]];
+		if(result[arraySelfsAttrModel[i]] !== null && result[arraySelfsAttrModel[i]] !== undefined){
+				result = result[arraySelfsAttrModel[i]];
 		} else {
 			return ""
 			//throw "properties is not defined!";
@@ -103,8 +103,8 @@ function render(behavior,element){
 	var newElement = createEmptyObj();
  
 	behavior.constructor.apply(null,[newElement]);
-	array.push(newElement);
-	updateFrameworkModel(array[array.length-1],element);
+	arraySelfs.push(newElement);
+	updateFrameworkModel(arraySelfs[arraySelfs.length-1],element);
 }
 
 function createBehavior(name,constructor){
@@ -115,23 +115,6 @@ function createBehavior(name,constructor){
 		behaviors[name].constructor = constructor;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 window.onload = function(e){
