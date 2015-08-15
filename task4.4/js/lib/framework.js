@@ -126,10 +126,10 @@ var framework = {
 		return this;
 	},
 
-	initBehaviors: function(behaviors){
+	initBehaviors: function(behavior){
 		for(var nameBehavior in behaviors){
-			if(this._instance.hasOwnProperty.call(behaviors,nameBehavior))
-				this.createBehavior(nameBehavior,behaviors[nameBehavior]);
+			if(this._instance.hasOwnProperty.call(behavior,nameBehavior))
+				this.createBehavior(nameBehavior,behavior[nameBehavior]);
 		}
 		return this;
 	}
