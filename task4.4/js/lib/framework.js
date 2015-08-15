@@ -1,129 +1,147 @@
 
-//common function sections
+var framework = {
 
-function createSelfBehavior(){
-	return {
-		name: "",
-		constructor: null,
+	_instance:{
+
+		//common function sections
+
+		hasOwnProperty: Object.hasOwnProperty,
+
+		createSelfBehavior: function (){
+			return {
+				name: "",
+				constructor: null,
+			}
+		},
+
+		createEmptyObj: function (){
+
+			return {}
+		},
+
+		// ftramework sections
+
+		behaviors: {},
+
+		arraySelfs: [],
+
+		getValueByAttr: function (self,attrModel){
+			var result = self;
+			var arraySelfsAttrModel = attrModel.split('.');
+
+			for (var i = 0; i < arraySelfsAttrModel.length; i++) {
+
+				if(result[arraySelfsAttrModel[i]] !== null && result[arraySelfsAttrModel[i]] !== undefined){
+						result = result[arraySelfsAttrModel[i]];
+				} else {
+					return ""
+					//throw "properties is not defined!";
+				}
+			};
+
+			return result;
+		},
+
+		getAttributeValue: function (element,attributeName){
+
+				return element.attributes[attributeName] ? element.attributes[attributeName].nodeValue : null;
+		},
+
+		updateClick: function (self,element,attribute,parent){
+
+			attribute = attribute.replace( /\s/g, "").split(/['(',')']/);
+
+			if(self[attribute[0]]){
+				var funct = self[attribute[0]];
+				var paramsNames = attribute.splice(1);
+
+				var params = [];
+				for(var i=0; i < paramsNames.length; i++){
+					if(paramsNames[i] !== "")
+						params[i] = self[paramsNames[i]];
+				}
+
+				element.onclick = function(){
+					funct.apply(null,params);
+					framework._instance.updateFrameworkModel(self,parent);
+				};
+			}
+		},
+
+		updateShow: function (element,isShow){
+
+			isShow ? element.classList.remove("framework-hide-element") : element.classList.add("framework-hide-element");//
+		},
+
+		updateFrameworkModel: function (self,element){
+			var innerElements = element.children || [];
+			for(var i =0; i< innerElements.length; i++){
+
+				if(this.getAttributeValue(innerElements[i],'behavior')){
+					continue;
+				}
+
+				var attrModel = this.getAttributeValue(innerElements[i],'framework-model');
+				var attrClick = this.getAttributeValue(innerElements[i],'framework-click');
+				var attrShow = this.getAttributeValue(innerElements[i],'framework-show');
+
+				if(attrModel){
+
+					innerElements[i].innerHTML = this.getValueByAttr(self,attrModel);
+				}
+
+				if(attrClick){
+					this.updateClick(self,innerElements[i],attrClick,element)
+				}
+
+				if(attrShow){
+					this.updateShow(innerElements[i],self[attrShow]);
+				}
+
+				this.updateFrameworkModel(self,innerElements[i]);
+			}
+		}
+
+	},
+
+
+	render: function (behavior,element){
+
+		console.log("render " + behavior.name);
+
+		var newElement = this._instance.createEmptyObj();
+
+		behavior.constructor.apply(null,[newElement]);
+		this._instance.arraySelfs.push(newElement);
+		this._instance.updateFrameworkModel(this._instance.arraySelfs[this._instance.arraySelfs.length - 1],element);
+	},
+
+	createBehavior: function (name,constructor){
+
+		if(!this._instance.behaviors[name]){
+			this._instance.behaviors[name] = this._instance.createSelfBehavior();
+			this._instance.behaviors[name].name = name;
+			this._instance.behaviors[name].constructor = constructor;
+		}
+		return this;
+	},
+
+	initBehaviors: function(behaviors){
+		for(var nameBehavior in behaviors){
+			if(this._instance.hasOwnProperty.call(behaviors,nameBehavior))
+				this.createBehavior(nameBehavior,behaviors[nameBehavior]);
+		}
+		return this;
 	}
 }
-
-function createEmptyObj(){
-	return {}
-}
-
-
-
-// ftramework sections
-
-var behaviors = {};
-
-var arraySelfs = []
-
-function getValueByAttr(self,attrModel){
-	var result = self;
-	var arraySelfsAttrModel = attrModel.split('.');
-
-	for (var i = 0; i < arraySelfsAttrModel.length; i++) {
-
-		if(result[arraySelfsAttrModel[i]] !== null && result[arraySelfsAttrModel[i]] !== undefined){
-				result = result[arraySelfsAttrModel[i]];
-		} else {
-			return ""
-			//throw "properties is not defined!";
-		}
-	};
-
-	return result;
-}
-
-
-function getAttributeValue(element,attributeName){
-		return element.attributes[attributeName] ? element.attributes[attributeName].nodeValue : null;
-}
-
-function updateClick(self,element,attribute,parent){
-
-	attribute = attribute.replace( /\s/g, "").split(/['(',')']/);
-
-	if(self[attribute[0]]){
-		var funct = self[attribute[0]];
-		var paramsNames = attribute.splice(1);
-
-		var params = [];
-		for(var i=0;i<paramsNames.length;i++){
-			if(paramsNames[i] !== "")
-				params[i] = self[paramsNames[i]];
-		}
-
-		element.onclick = function(){
-			funct.apply(null,params);
-			updateFrameworkModel(self,parent);
-		};
-	}
-}
-
-function updateShow(element,isShow){
-	isShow ? element.classList.remove("framework-hide-element") : element.classList.add("framework-hide-element");//
-}
-
-function updateFrameworkModel(self,element){
-	var innerElements = element.children || [];
-	for(var i =0; i< innerElements.length; i++){
-
-		if(getAttributeValue(innerElements[i],'behavior')){
-			continue;
-		}
-
-		var attrModel = getAttributeValue(innerElements[i],'framework-model');
-		var attrClick = getAttributeValue(innerElements[i],'framework-click');
-		var attrShow = getAttributeValue(innerElements[i],'framework-show');
-
-		if(attrModel){
-
-			innerElements[i].innerHTML = getValueByAttr(self,attrModel);
-		}
-
-		if(attrClick){
-			updateClick(self,innerElements[i],attrClick,element)
-		}
-
-		if(attrShow){
-			updateShow(innerElements[i],self[attrShow]);
-		}
-
-		updateFrameworkModel(self,innerElements[i]);
-	}
-}
-
-function render(behavior,element){
-
-	console.log("render " + behavior.name);
-
-	var newElement = createEmptyObj();
- 
-	behavior.constructor.apply(null,[newElement]);
-	arraySelfs.push(newElement);
-	updateFrameworkModel(arraySelfs[arraySelfs.length-1],element);
-}
-
-function createBehavior(name,constructor){
-
-	if(!behaviors[name]){
-		behaviors[name] = createSelfBehavior();
-		behaviors[name].name = name;
-		behaviors[name].constructor = constructor;
-	}
-}
-
 
 window.onload = function(e){
 	var elements = document.querySelectorAll('[behavior]');
 	for(var i=0; i<elements.length; i++){
 
-		var nameBehavior =  getAttributeValue(elements[i],'behavior');
-		if(behaviors[nameBehavior]){
-			render(behaviors[nameBehavior],elements[i])
+		var nameBehavior = framework._instance.getAttributeValue(elements[i],'behavior');
+		if(framework._instance.behaviors[nameBehavior]){
+			framework.render(framework._instance.behaviors[nameBehavior],elements[i])
 		}
 	}
 }
