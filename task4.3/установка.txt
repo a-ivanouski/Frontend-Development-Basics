@@ -12,3 +12,13 @@ bower install --save angular
 bower install --save angular-mocks
 
 npm install karma-sinon --save-dev
+
+
+gulp
+
+npm install --save-dev gulp
+npm install --save-dev gulp-karma-runner
+
+npm install karma-jasmine --save-dev
+
+npm install --save-dev gulp-mocha

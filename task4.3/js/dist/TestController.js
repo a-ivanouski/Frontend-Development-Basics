@@ -1,0 +1,1 @@
+angular.module("testModule",[]).controller("testController",function(e){e.value="value",e.func=function(){return!1}});
