@@ -7,12 +7,12 @@ angular.module('dropboxModule', [])
 
             var headers = {
                 Authorization: 'Bearer ' + token,
-            }
+            };
 
             var req = {
                 method: method,
                 url: path ? baseUrl + path : baseUrl,
-            }
+            };
 
             if (token) {
                 req.headers = headers;
@@ -52,5 +52,5 @@ angular.module('dropboxModule', [])
             getProfileInfo: getProfileInfo,
             getFolderInfo: getFolderInfo,
             downloadFile: downloadFile,
-        }
-    })
+        };
+    });
