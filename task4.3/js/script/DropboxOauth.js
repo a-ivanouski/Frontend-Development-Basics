@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('dropboxModule', [])
-    .factory('dropboxService', function ($http) {
+    .factory('dropboxService', ['$http', function ($http) {
 
         function sendRequest(method, baseUrl, path, token) {
 
@@ -53,4 +53,4 @@ angular.module('dropboxModule', [])
             getFolderInfo: getFolderInfo,
             downloadFile: downloadFile,
         };
-    });
+    }]);
