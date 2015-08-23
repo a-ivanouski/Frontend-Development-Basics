@@ -1,0 +1,42 @@
+﻿.login-form {
+    text-align: center;
+}
+
+.user-bar {
+    float: left;
+}
+
+.user-bar h2 {
+    cursor: pointer;
+}
+
+.user-bar ul {
+    list-style: none;
+}
+
+.user-bar ul li {
+    border: solid 1px green;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.view {
+    display: inline-block;
+    padding-left: 30%;
+}
+
+.view ul {
+    list-style: none;
+}
+
+.view ul li {
+    border: solid 1px green;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+}
