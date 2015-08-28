@@ -19,9 +19,19 @@ var framework = {
 			return {}
 		},
 
+		findElementByAttr: function(nameAttr, name, elements){
+			console.log(elements);
+			return elements.filter(function(item){
+				console.log(element);
+				return true;
+			});
+		},
+
 		// ftramework sections
 
 		behaviors: {},
+
+		elements: [],
 
 		arraySelfs: [],
 
@@ -105,43 +115,58 @@ var framework = {
 	},
 
 
-	render: function (behavior,element){
+	render: function (behavior,elements){
 
 		console.log("render " + behavior.name);
 
-		var newElement = this._instance.createEmptyObj();
+		elements.foreEach(function(element){
 
-		behavior.constructor.apply(null,[newElement]);
-		this._instance.arraySelfs.push(newElement);
-		this._instance.updateFrameworkModel(this._instance.arraySelfs[this._instance.arraySelfs.length - 1],element);
+			var newElement = this._instance.createEmptyObj();
+
+			behavior.constructor.apply(null,[newElement]);
+			this._instance.arraySelfs.push(newElement);
+			this._instance.updateFrameworkModel(this._instance.arraySelfs[this._instance.arraySelfs.length - 1],element);
+
+		})
 	},
 
 	createBehavior: function (name,constructor){
+		if (this._instance.elements.length) {
+			this._instance.elements = document.querySelectorAll('[behavior]');
+		};
 
 		if(!this._instance.behaviors[name]){
 			this._instance.behaviors[name] = this._instance.createSelfBehavior();
 			this._instance.behaviors[name].name = name;
 			this._instance.behaviors[name].constructor = constructor;
+
+			console.log(this._instance.elements.filter);
+
+			this.render(this._instance.behaviors[name],this._instance.findElementByAttr('behavior',name,this._instance.elements))
 		}
 		return this;
 	},
 
-	initBehaviors: function(behavior){
+	initBehaviors: function(behaviors){
+		if (this._instance.elements.length) {
+			this._instance.elements = document.querySelectorAll('[behavior]');
+		};
+
 		for(var nameBehavior in behaviors){
-			if(this._instance.hasOwnProperty.call(behavior,nameBehavior))
-				this.createBehavior(nameBehavior,behavior[nameBehavior]);
+			if(this._instance.hasOwnProperty.call(behaviors,nameBehavior))
+				this.createBehavior(nameBehavior,behaviors[nameBehavior]);
 		}
 		return this;
 	}
 }
 
-window.onload = function(e){
-	var elements = document.querySelectorAll('[behavior]');
-	for(var i=0; i<elements.length; i++){
+// window.onload = function(e){
+// 	var elements = document.querySelectorAll('[behavior]');
+// 	for(var i=0; i<elements.length; i++){
 
-		var nameBehavior = framework._instance.getAttributeValue(elements[i],'behavior');
-		if(framework._instance.behaviors[nameBehavior]){
-			framework.render(framework._instance.behaviors[nameBehavior],elements[i])
-		}
-	}
-}
+// 		var nameBehavior = framework._instance.getAttributeValue(elements[i],'behavior');
+// 		if(framework._instance.behaviors[nameBehavior]){
+// 			framework.render(framework._instance.behaviors[nameBehavior],elements[i])
+// 		}
+// 	}
+// }
