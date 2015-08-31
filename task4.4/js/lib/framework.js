@@ -20,10 +20,9 @@ var framework = {
 		},
 
 		findElementByAttr: function(nameAttr, name, elements){
-			console.log(elements);
+			//var arrElements = Array.prototype.slice.call(elements,0);
 			return elements.filter(function(item){
-				console.log(element);
-				return true;
+				return item.attributes[nameAttr].value === name;
 			});
 		},
 
@@ -118,20 +117,21 @@ var framework = {
 	render: function (behavior,elements){
 
 		console.log("render " + behavior.name);
+		//console.log(elements);
+		console.log(elements);
+		elements.forEach(function(element){
 
-		elements.foreEach(function(element){
-
-			var newElement = this._instance.createEmptyObj();
+			var newElement = framework._instance.createEmptyObj();
 
 			behavior.constructor.apply(null,[newElement]);
-			this._instance.arraySelfs.push(newElement);
-			this._instance.updateFrameworkModel(this._instance.arraySelfs[this._instance.arraySelfs.length - 1],element);
+			framework._instance.arraySelfs.push(newElement);
+			framework._instance.updateFrameworkModel(framework._instance.arraySelfs[framework._instance.arraySelfs.length - 1],element);
 
 		})
 	},
 
 	createBehavior: function (name,constructor){
-		if (this._instance.elements.length) {
+		if (this._instance.elements.length === 0) {
 			this._instance.elements = document.querySelectorAll('[behavior]');
 		};
 
@@ -140,16 +140,17 @@ var framework = {
 			this._instance.behaviors[name].name = name;
 			this._instance.behaviors[name].constructor = constructor;
 
-			console.log(this._instance.elements.filter);
+			//console.log(this._instance.elements.filter);
 
-			this.render(this._instance.behaviors[name],this._instance.findElementByAttr('behavior',name,this._instance.elements))
+			this.render(this._instance.behaviors[name],
+									this._instance.findElementByAttr('behavior',name,this._instance.elements))
 		}
 		return this;
 	},
 
 	initBehaviors: function(behaviors){
-		if (this._instance.elements.length) {
-			this._instance.elements = document.querySelectorAll('[behavior]');
+		if (this._instance.elements.length === 0) {
+			this._instance.elements = Array.prototype.slice.call(document.querySelectorAll('[behavior]'),0);
 		};
 
 		for(var nameBehavior in behaviors){
