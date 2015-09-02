@@ -1,0 +1,42 @@
+.border{
+	border: 1px solid black;
+}
+
+main{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+header{
+	display: block;
+	width: 100%;
+	height: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background-color: lightyellow;
+}
+
+.log-in{
+	margin-left: 90%;
+}
+
+
+.main-content{
+	text-align: center;
+}
+
+.selected-items{
+	display: inline-block;
+	text-align: left;
+	padding-left: 5%;
+	width: 42%;
+}
+
+.menu-items{
+	display: inline-block;
+	text-align: left;
+	padding-left: 5%;
+	width: 42%;
+
+}
