@@ -1,3 +1,6 @@
 <section class="selected-items border">
-	selected-items
+	<span class="title-text">Selected Items:</span>
+	<div class="items" ng-repeat="item in selectedElements">
+		<selected-element value="item"></selected-element>
+	</div>
 </section>

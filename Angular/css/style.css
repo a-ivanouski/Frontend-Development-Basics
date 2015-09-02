@@ -29,14 +29,16 @@ header{
 .selected-items{
 	display: inline-block;
 	text-align: left;
-	padding-left: 5%;
-	width: 42%;
+	width: 45%;
+	vertical-align: top;
+
 }
 
 .menu-items{
 	display: inline-block;
 	text-align: left;
-	padding-left: 5%;
-	width: 42%;
+	width: 45%;
+	vertical-align: top;
+
 
 }
