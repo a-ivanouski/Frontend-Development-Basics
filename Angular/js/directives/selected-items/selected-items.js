@@ -7,6 +7,7 @@ angular.module('selected')
 				scope.selectedElements = [
 					'first',
 					'second',
+					'qwe'
 				]
 			}
 		}

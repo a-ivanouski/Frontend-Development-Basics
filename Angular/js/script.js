@@ -2,7 +2,7 @@ angular.module('header',[])
 angular.module('menu',[])
 angular.module('selected',[])
 angular.module('elements',[])
-
+angular.module('available-item',[])
 
 
 angular.module('store',[
@@ -10,4 +10,5 @@ angular.module('store',[
 		'menu',
 		'selected',
 		'elements',
+		'available-item',
 	])

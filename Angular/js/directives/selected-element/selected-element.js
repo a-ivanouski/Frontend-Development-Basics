@@ -1,7 +1,7 @@
 angular.module('elements')
 	.directive('selectedElement',function(){
 		return {
-			restrict: 'E',
+			restrict: 'A',
 			scope:{
 				value:'='
 			},

@@ -10,3 +10,5 @@ app.all('/*', function(req, res, next) {
 });
 
 app.listen(3000);
+
+console.log('localhost:3000/')
