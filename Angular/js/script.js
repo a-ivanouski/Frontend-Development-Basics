@@ -1,11 +1,10 @@
-angular.module('header',[])
-angular.module('menu',[])
-angular.module('selected',[])
-angular.module('elements',[])
-angular.module('available-item',[])
+angular.module('header', [])
+angular.module('menu', [])
+angular.module('selected', [])
+angular.module('elements', [])
+angular.module('available-item', [])
 
-
-angular.module('store',[
+angular.module('store', [
 		'header',
 		'menu',
 		'selected',
@@ -14,30 +13,35 @@ angular.module('store',[
 		'ui.router'
 	])
 
-
 angular.module('store')
-	.controller('test',['$scope','$state','$stateParams',function($scope,$state,$stateParams){
-		console.log(123);
-		$state.go('home/items',{value:1});
-	}])
-	.config(function($stateProvider,$urlRouterProvider){
-		$stateProvider
-			.state('home/items',{
-				url:'home/items',
-				resolve:{
-					initialData: function(){
-						console.log('home/items');
-					}
-				}
+	.controller('test', ['$scope', '$state', 'login', function ($scope, $state, login) {
+		login.LOGIN();
+		$state.go('home.selectedItems',{id:1})
+			.then(function(){
+				$state.go('home')
 			})
-			.state('home/items/selected',{
-				url:'home/items/selected',
-				resolve:{
-					initialData: function(){
-						console.log('home/items/selected');
 
+
+	}])
+	.config(function($stateProvider, $urlRouterProvider){
+		$stateProvider
+			.state('home', {
+				url: 'home/',
+				resolve: {
+					initialData: function() {
 					}
 				}
 			})
-		$urlRouterProvider.otherwise("/home/items");
+			.state('home.selectedItems', {
+				url: 'home/items/:id',
+				resolve: {
+					initialData: function() {
+					}
+				}
+			})
 	})
+	.service('login', ['$state', function($state) {
+		this.LOGIN = function() {
+
+		}
+	}])
