@@ -15,30 +15,31 @@ angular.module('store', [
 
 angular.module('store')
 	.controller('test', ['$scope', '$state', 'login', function ($scope, $state, login) {
-		login.LOGIN();
-		$state.go('home.selectedItems',{id:1})
-			.then(function(){
-				$state.go('home')
-			})
+		// login.LOGIN();
+		// 		$state.go('home')
 
 
 	}])
 	.config(function($stateProvider, $urlRouterProvider){
 		$stateProvider
 			.state('home', {
-				url: 'home/',
-				resolve: {
-					initialData: function() {
-					}
-				}
+				url: '/home',
+				templateUrl: 'views/home.html'
 			})
-			.state('home.selectedItems', {
-				url: 'home/items/:id',
-				resolve: {
-					initialData: function() {
-					}
-				}
-			})
+
+
+
+			// .state('home.selectedItems', {
+			// 	url: 'home/items/:id',
+			// 	resolve: {
+			// 		initialData: function() {
+			// 		}
+			// 	}
+			// })
+			// 
+			
+
+		$urlRouterProvider.otherwise('/home');
 	})
 	.service('login', ['$state', function($state) {
 		this.LOGIN = function() {
