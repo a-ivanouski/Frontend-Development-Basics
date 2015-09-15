@@ -63,7 +63,22 @@ header{
 	padding: 10px 20px 10px 20px;
 }
 
+.tabs{
+	width: 100%;
+	text-align: center;
+	display: table;
+	margin-bottom: 20px;
+}
 
+.tabs label{
+	display: table-cell;
+	background: lightblue;
+	border: 1px solid black;
+}
 
-
+.tabs label a{
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
 

@@ -9,7 +9,23 @@
 <body >
 	<main ng-app="store" ng-controller="test">
 		<store-header></store-header>
-		<div ui-view></div>
+		<div class="tabs">
+			<label>
+				<a href="#/home" ui-sref="home">Home</a>
+			</label>
+			<label>
+				<a href="#/cars" ui-sref="cars">Cars</a>
+			</label>
+			<label>
+				<a href="#/profile" ui-sref="profile">Profile</a>
+			</label>
+		</div>
+
+
+		<article class="main-content">
+			<div ui-view></div>
+		</article>
+
 	<main>
 
 	<script src="js/script.js"></script>

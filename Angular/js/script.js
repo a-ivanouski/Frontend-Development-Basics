@@ -26,23 +26,23 @@ angular.module('store')
 				url: '/home',
 				templateUrl: 'views/home.html'
 			})
-
-
-
-			// .state('home.selectedItems', {
-			// 	url: 'home/items/:id',
-			// 	resolve: {
-			// 		initialData: function() {
-			// 		}
-			// 	}
-			// })
-			// 
-			
+			.state('cars', {
+				url: '/cars',
+				templateUrl: 'views/cars.html'
+			})
+			.state('cars.id', {
+				url: 'cars/:id',
+				templateUrl: 'views/selectedCar.html',
+				resolve: {
+					initialData: function() {
+					}
+				}
+			})
+			.state('profile', {
+				url: '/profile',
+				templateUrl: 'views/profile.html'
+			})
 
 		$urlRouterProvider.otherwise('/home');
 	})
-	.service('login', ['$state', function($state) {
-		this.LOGIN = function() {
 
-		}
-	}])
