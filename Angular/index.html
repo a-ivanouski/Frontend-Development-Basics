@@ -9,8 +9,7 @@
 </head>
 <body >
 	<main ng-app="store" ng-controller="test">
-		<store-header></store-header>
-		<div class="tabs">
+<!-- 		<div class="tabs">
 			<label>
 				<a href="#/home" ui-sref="home">Home</a>
 			</label>
@@ -20,8 +19,7 @@
 			<label>
 				<a href="#/profile" ui-sref="profile">Profile</a>
 			</label>
-		</div>
-
+		</div> -->
 
 		<article class="main-content">
 			<div ui-view></div>
@@ -30,11 +28,13 @@
 	<main>
 
 	<script src="js/script.js"></script>
-	<script src="js/directives/store-header/store-header.js"></script>
-	<script src="js/directives/menu-items/menu-items.js"></script>
-	<script src="js/directives/selected-items/selected-items.js"></script>
-	<script src="js/directives/selected-element/selected-element.js"></script>
-	<script src="js/directives/available-item/available-item.js"></script>
+	<script src="js/services/selectedService.js"></script>
+	<script src="js/services/itemsService.js"></script>
+	<script src="js/directives/menu-items.directive.js"></script>
+	<script src="js/directives/selected-items.directive.js"></script>
+
+
+
 
 </body>
 </html>

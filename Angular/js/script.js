@@ -1,21 +1,15 @@
-angular.module('header', [])
-angular.module('menu', [])
-angular.module('selected', [])
-angular.module('elements', [])
-angular.module('available-item', [])
-
+angular.module('data', [])
+angular.module('elements', ['data'])
 angular.module('store', [
-		'header',
-		'menu',
-		'selected',
+ 
 		'elements',
-		'available-item',
 		'ui.router',
-		'ngStorage'
+		'ngStorage',
 	])
 
 angular.module('store')
-	.controller('test', ['$scope', '$state', 'login', function ($scope, $state, login) {
+	.controller('test', ['$scope', '$state', '$rootScope', '$timeout', function ($scope, $state, $rootScope, $timeout) {
+
 
 	}])
 	.config(function($stateProvider, $urlRouterProvider){
@@ -34,59 +28,42 @@ angular.module('store')
 					'noLogin': true
 				},
 			})
-			.state('cars.id', {
-				url: 'cars/:id',
-				templateUrl: 'views/selectedCar.html',
-				data: {
-					'noLogin': true
-				},
-				resolve: {
-					initialData: function() {
-					}
-				}
-			})
 			.state('profile', {
 				url: '/profile',
 				templateUrl: 'views/profile.html',
 
 			})
 
-		$urlRouterProvider.otherwise('/home');
+		$urlRouterProvider.otherwise('/profile');
 	})
-	.run(['$rootScope', '$state', '$stateParams', 'SessionService',	function ($rootScope, $state, $stateParams, SessionService) {
-			$rootScope.$state = $state;
-			$rootScope.$stateParams = $stateParams;
+	// .run(['$rootScope', 'SessionService', '$sessionStorage',	function ($rootScope, SessionService, $sessionStorage) {
 
-			$rootScope.user = null;
+	// 		$rootScope.user = $sessionStorage.user;
+	// 		$rootScope.$on('$stateChangeStart',	function (event, toState, toParams, fromState, fromParams) {
+	// 			SessionService.checkAccess(event, toState, toParams, fromState, fromParams);
+	// 		});
+	// 	}
+	// ])
+	// .service('SessionService', ['$injector', '$state', function($injector, $state) {
 
-			// Здесь мы будем проверять авторизацию
-			$rootScope.$on('$stateChangeStart',	function (event, toState, toParams, fromState, fromParams) {
-				SessionService.checkAccess(event, toState, toParams, fromState, fromParams);
-			});
-		}
-	])
-	.service('SessionService', ['$injector', function($injector) {
+	// 	this.checkAccess = function(event, toState, toParams, fromState, fromParams) {
+	// 		var $scope = $injector.get('$rootScope'),
+	// 		$sessionStorage = $injector.get('$sessionStorage');
 
-		this.checkAccess = function(event, toState, toParams, fromState, fromParams) {
-			var $scope = $injector.get('$rootScope'),
-			$sessionStorage = $injector.get('$sessionStorage');
+	// 		if (toState.data !== undefined) {
+	// 			if (toState.data.noLogin !== undefined && toState.data.noLogin) {
 
-			if (toState.data !== undefined) {
-				if (toState.data.noLogin !== undefined && toState.data.noLogin) {
-
-				}
-			} else {
-				// вход с авторизацией
-				if ($sessionStorage.user) {
-					$scope.$root.user = $sessionStorage.user;
-				} else {
-				// если пользователь не авторизован - отправляем на страницу авторизации
-				event.preventDefault();
-				alert('Please LOGIN');
-					$scope.$state.go('home');
-				}
-			}
-		};
-		}
-	]);
+	// 			}
+	// 		} else {
+	// 			if ($sessionStorage.user) {
+	// 				$scope.$root.user = $sessionStorage.user;
+	// 			} else {
+	// 				event.preventDefault();
+	// 				alert('Please LOGIN');
+	// 				$state.go('home');
+	// 			}
+	// 		}
+	// 	};
+	// 	}
+	// ]);
 
