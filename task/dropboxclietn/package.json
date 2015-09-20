@@ -1,0 +1,20 @@
+{
+  "name": "dropboxclient",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-jshint": "latest",
+    "karma": "latest",
+    "mocha": "latest",
+    "karma-chrome-launcher": "latest",
+    "karma-coverage": "latest",
+    "karma-firefox-launcher": "latest",
+    "karma-mocha": "latest",
+    "karma-requirejs": "latest",
+    "requirejs": "latest",
+    "grunt-karma": "latest"
+  }
+}
