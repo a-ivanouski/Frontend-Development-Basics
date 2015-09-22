@@ -5,11 +5,17 @@
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-ui-router.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body >
 	<main ng-app="store" ng-controller="test">
-<!-- 		<div class="tabs">
+
+		<header id="header" class="">
+			<button ng-click="login()">login</button>
+		</header><!-- /header -->
+
+		<div >
 			<label>
 				<a href="#/home" ui-sref="home">Home</a>
 			</label>
@@ -19,11 +25,8 @@
 			<label>
 				<a href="#/profile" ui-sref="profile">Profile</a>
 			</label>
-		</div> -->
+		</div>
 
-		<header id="header" class="">
-			<button ng-click="login()">login</button>
-		</header><!-- /header -->
 		<article class="main-content">
 			<div ui-view></div>
 		</article>
@@ -35,6 +38,8 @@
 	<script src="js/services/itemsService.js"></script>
 	<script src="js/directives/menu-items.directive.js"></script>
 	<script src="js/directives/selected-items.directive.js"></script>
+	<script src="js/directives/cars.directive.js"></script>
+	<script src="js/directives/element.directive.js"></script>
 
 
 
