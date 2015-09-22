@@ -3,6 +3,7 @@ angular.module('data')
 			var items = [];
 
 			this.addItems = function (item) {
+				item.isSelect = true;
 				items.push(item);
 			};
 			this.removeItems = function (index) {

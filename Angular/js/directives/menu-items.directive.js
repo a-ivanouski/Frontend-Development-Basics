@@ -2,6 +2,7 @@ angular.module('elements')
 	.directive('menuItems' , function () {
 		return {
 			restrict: 'E',
+			scope: {},
 			controller: 'menuController',
 			templateUrl: 'js/directives/menu-items.html',
 			link: function (scope,element, attr) {
@@ -15,6 +16,7 @@ angular.module('elements')
 			$scope.items = data;
 
 		});
+		$scope.selectedService = selectedService;
 
 
 	}])

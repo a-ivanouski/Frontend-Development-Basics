@@ -2,7 +2,7 @@
 	<div ng-repeat="item in items">
 		<div ng-hide="item.isSelect">
 			{{item.value}}
-			<button type="button">select</button>
+			<button type="button" ng-click="selectedService.addItems(item)">select</button>
 		</div>
 	</div>
 </div>
