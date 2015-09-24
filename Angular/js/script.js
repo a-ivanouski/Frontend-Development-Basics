@@ -35,7 +35,7 @@ angular.module('store')
 				templateUrl: 'views/profile.html',
 			})
 
-		$urlRouterProvider.otherwise('/profile');
+		$urlRouterProvider.otherwise('/home');
 	})
 	.run(['$rootScope', 'SessionService', '$sessionStorage', function ($rootScope, SessionService, $sessionStorage) {
 

@@ -1,5 +1,6 @@
 <div class="selected">
-	<div ng-repeat="item in items">
-			{{item.value}}
+	<div ng-repeat="item in items" class="item">
+			<img height="200px" width="250px" src="image/{{item.value}}.jpg" alt="image">
+			<button type="button" class="store-btn" ng-click="itemsService.removeItems($index)">delete</button>
 	</div>
 </div>

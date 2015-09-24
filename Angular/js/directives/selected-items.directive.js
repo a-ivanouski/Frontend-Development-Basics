@@ -10,8 +10,10 @@ angular.module('elements')
 			}
 		}
 	})
-	.controller('selectedController', ['$scope', 'selectedService', function ($scope, selectedService) {
-		$scope.selectedService = selectedService;
-		$scope.items = $scope.selectedService.getSelectedItems();
+	.controller('selectedController', ['$scope', 'itemsService', function ($scope, itemsService) {
+		$scope.items = itemsService.getSelectedItems();
+		$scope.itemsService = {
+			removeItems: itemsService.removeItems,
+		}
 
 	}])

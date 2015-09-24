@@ -4,18 +4,17 @@
 	<title>Angular</title>
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-ui-router.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+	<script src="js/ngStorage.min.js"></script>
 
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body >
 	<main ng-app="store" ng-controller="test">
 
-		<header id="header" class="">
+		<header id="header" class="header">
 			<button ng-click="login()">login</button>
-		</header><!-- /header -->
-
-		<div >
+		</header>
+		<div class="munu-pages">
 			<label>
 				<a href="#/home" ui-sref="home">Home</a>
 			</label>
@@ -34,7 +33,6 @@
 	<main>
 
 	<script src="js/script.js"></script>
-	<script src="js/services/selectedService.js"></script>
 	<script src="js/services/itemsService.js"></script>
 	<script src="js/directives/menu-items.directive.js"></script>
 	<script src="js/directives/selected-items.directive.js"></script>

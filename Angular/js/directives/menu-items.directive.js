@@ -9,14 +9,13 @@ angular.module('elements')
 			}
 		}
 	})
-	.controller('menuController', ['$scope', 'itemsService','selectedService', function ($scope, itemsService, selectedService) {
-		$scope.items = [];
-		itemsService.getItems().then(function (data) {
+	.controller('menuController', ['$scope', 'itemsService', function ($scope, itemsService) {
+		itemsService.getItems().then(function (items) {
+			$scope.items = items;
+		})
 
-			$scope.items = data;
-
-		});
-		$scope.selectedService = selectedService;
-
+		$scope.itemsService = {
+			addItems: itemsService.addItems,
+		}
 
 	}])

@@ -1,8 +1,8 @@
 <div class="mune">
-	<div ng-repeat="item in items">
+	<div ng-repeat="item in items" class="item">
 		<div ng-hide="item.isSelect">
-			{{item.value}}
-			<button type="button" ng-click="selectedService.addItems(item)">select</button>
+			<img height="200px" width="250px" src="image/{{item.value}}.jpg" alt="image">
+			<button type="button" class="store-btn" ng-click="itemsService.addItems($index)">select</button>
 		</div>
 	</div>
 </div>
