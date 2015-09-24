@@ -1,0 +1,68 @@
+﻿.init-form
+{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.init-form__secret-input,
+.init-form__secret-input input,
+.init-form__init-link,
+.init-form__dropbox-link,
+.list__item-uploadForm
+{
+    width: 100%;
+}
+
+.list__item-uploadForm
+{
+    margin-top: 100px;
+}
+
+.init-form__init-link,
+.init-form__dropbox-link,
+.list__item-uploadForm
+{
+    text-align: center;
+}
+
+.list 
+{
+    width: 400px;
+    list-style-type: none;
+    margin: auto;
+}
+
+.list-files {
+    width: 400px;
+    list-style-type: none;
+    margin: auto;
+}
+
+.list__item-file,
+.list__item-folder 
+{
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.list__item-file span,
+.list__item-folder span 
+{
+    display: inline-block;
+    width: 46%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list__item-file figure,
+.list__item-folder figure
+{
+    margin: 0px 10px 0px 0px;
+    display: inline-block;
+}
+
+.list__item-file img,
+.list__item-folder img
+{
+    width: 10px;
+}

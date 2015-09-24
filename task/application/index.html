@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="myframework.css" rel="stylesheet" type="text/css" />
+</head>
+<body my-framework>
+    <div class="init-form">
+        <div class="init-form__secret-input" my-show="showSubmitForm">
+            <input type="text" placeholder="Enter your secret code" my-model="secretKey" />
+            <div class="init-form__init-link">
+                <a href="javascript:void(0)" my-click="initialiseWidget()">Submit</a>
+            </div>
+        </div>
+        <div  class="init-form__dropbox-link" my-show="showDropboxLink">
+            <a href="https://www.dropbox.com/1/oauth2/authorize?response_type=code&client_id=xedc2581vk0j4fb" target="_blank" my-click="enableSubmitForm()">Get dropbox secret key</a>
+        </div>
+    </div>
+    <div class="list__item-uploadForm" my-show="showUploadForm">
+        <form id="uploadform">
+            <div my-show="uploadCount > 0">Upload in progress</div>
+            <input type="file" my-change="uploadFile(event)">
+        </form>
+    </div>
+    <ul class="list">
+        <li class="list__item-folder" my-repeat="folders">
+            <figure>
+                <img src="folder.png">
+            </figure>
+            <span>
+                <a my-href="path" target="_blank" my-click="openFolder(event)">{{name}}</a>
+            </span>
+            <span>
+                {{mime_type}}
+            </span>
+        </li>
+    </ul>
+    <ul class="list-files">
+        <li class="list__item-file" my-repeat="files">
+            <figure>
+                <img src="file.png">
+            </figure>
+            <span>
+                <a my-href="path" target="_blank">{{name}}</a>
+            </span>
+            <span>
+                {{mime_type}}
+            </span>
+        </li>
+    </ul>
+</body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+<script src="myframework.js" type="text/javascript"></script>
+<script src="ajaxAndPromises.dropboxfileslist.js" type="text/javascript"></script>
+<script src="dropboxapifacade.js" type="text/javascript"></script>
