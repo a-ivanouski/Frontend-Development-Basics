@@ -1,101 +1,80 @@
 ﻿angular.module('mymodule')
-    .factory('userService', function () {
-        var user = {};
+    .factory('userService', ['userSession', function (userSession) {
+        var user = userSession.getUserSession();
 
-        var checkLoginUser = function () {
+        function _checkLoginUser () {
             return user.authorised;
         };
 
-        var logon = function (name) {
+        function _logon (name) {
             user = {
                 name: name,
-                cart: [],
-                authorised: true
+                cars: [],
+                authorised: true,
             };
+
+            userSession.updateUserSession(user);
         };
 
-        var logout = function () {
+        function _logout () {
             user.authorised = false;
+            userSession.clearUserSession();
         };
 
-        var getUserName = function () {
+        function _getUserName () {
             return user.name;
         };
 
-        var addShop = function (shop) {
-            user.cart.push({
-                id: shop.id,
-                name: shop.name,
-                items: []
-            });
-        };
+        function _addCar (car){
+            user.cars.push(car);
 
-        var getShops = function () {
-            return user.cart;
-        };
-
-        var addShopProduct = function (shopId, item) {
-            var shop = getUserShopById(shopId);
-            shop.items.push(item);
-        };
-
-        var getUserShopById = function (id) {
-            var shop;
-            for (var i = 0, len = user.cart.length; i < len; i++) {
-                if (user.cart[i].id === id) {
-                    shop = user.cart[i];
-                }
-            }
-            return shop;
-        };
-
-        var getShopItem = function (shopid, id) {
-            var shop = getUserShopById(shopid);
-
-            for (var i = 0, len = shop.items.length; i < len; i++) {
-                if (shop.items[i].id == id) {
-                    return true;
-                }
-            }
-            return false;
-        };
-
-        var removeShop = function (id) {
-            var shop;
-            for (var i = 0, len = user.cart.length; i < len; i++) {
-                if (user.cart[i].id === id) {
-                    shop = user.cart[i];
-
-                    user.cart.splice(user.cart.indexOf(shop), 1);
-                    break;
-                }
-            }
+            userSession.updateUserSession(user);
         }
 
-        var removeShopProduct = function (shopid, id)
-        {
-            var shop = getUserShopById(shopid);
-            for (var i = 0, len = shop.items.length; i < len; i++) {
-                if (shop.items[i].id === id) {
-                    item = shop.items[i];
+        function _getUserCars () {
+            return user.cars;
+        }
 
-                    shop.items.splice(shop.items.indexOf(item), 1);
-                    break;
-                }
-            }
+        function _hasCar(id) {
+            return !!user.cars.filter(function (c) {
+                return c.id === id;
+            })[0];
         }
 
         return {
-            logon: logon,
-            logout: logout,
-            checkLogin: checkLoginUser,
-            getUserName: getUserName,
-            addShop: addShop,
-            getShops: getShops,
-            addShopProduct: addShopProduct,
-            getUserShopById: getUserShopById,
-            getShopItem: getShopItem,
-            removeShop: removeShop,
-            removeShopProduct: removeShopProduct
+            logon: _logon,
+            logout: _logout,
+            checkLogin: _checkLoginUser,
+            getUserName: _getUserName,
+            addCar: _addCar,
+            getUserCars: _getUserCars,
+            hasCar: _hasCar
         };
-    })
+    }])
+    .constant('userSessionDataKey', 'app.usersession')
+    .factory('userSession', ['userSessionDataKey', '$window', function (userSessionDataKey, $window) {
+        function _getUserSession() {
+            return angular.fromJson($window.localStorage.getItem(userSessionDataKey)) || {};
+        }
+
+        function _updateUserSession(user) {
+            $window.localStorage.setItem(userSessionDataKey, angular.toJson(user));
+        }
+
+        function _clearUserSession() {
+            $window.localStorage.removeItem(userSessionDataKey);
+        }
+
+        return {
+            getUserSession: _getUserSession,
+            updateUserSession: _updateUserSession,
+            clearUserSession: _clearUserSession
+        };
+    }]).run(['$state', 'userService', '$rootScope', function ($state, userService, $rootScope) {
+        $rootScope.$on('$stateChangeStart', function (event, toState) {
+            if (toState.authRequired && !userService.checkLogin()) {
+                event.preventDefault();
+                $state.go('login', {}, { reload: true, location: 'replace' });
+            }
+        })
+    }]);

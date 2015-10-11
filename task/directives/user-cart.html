@@ -1,8 +1,0 @@
-﻿<div ng-show="isLogin" class="user-bar">
-    <div ng-repeat="shop in shops">
-        <h2 ng-click="removeShop(shop)">{{shop.name}}</h2><a href="#/shop/{{shop.id}}">Get To Shop</a>
-        <ul>
-            <li ng-repeat="item in shop.items" ng-click="removeShopProduct(item)">{{item.name}}</li>
-        </ul>
-    </div>
-</div>

@@ -1,42 +1,126 @@
-﻿.login-form {
-    text-align: center;
+﻿.navbar-inner {
+    text-align: left;
+    width: 50%;
+    margin: 0 25%;
+    background-color: gray;
+    border-radius: 5px;
 }
 
-.user-bar {
-    float: left;
+.brand {
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 0 50px;
+    color: black;
 }
 
-.user-bar h2 {
-    cursor: pointer;
-}
-
-.user-bar ul {
-    list-style: none;
-}
-
-.user-bar ul li {
-    border: solid 1px green;
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    padding-top: 20px;
-    cursor: pointer;
-}
-
-.view {
+.nav {
     display: inline-block;
-    padding-left: 30%;
+    padding-left: 20px;
+    font-size: 1.2rem;
 }
 
-.view ul {
-    list-style: none;
+.nav li {
+    display: inline-block;
+    padding: 10px;
 }
 
-.view ul li {
-    border: solid 1px green;
-    width: 200px;
-    height: 40px;
+.nav li a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main-content {
+    margin: 50px 25% 0;
+    text-align: left;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.login-form__input {
+    margin: 10px;
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
     text-align: center;
-    padding-top: 20px;
+    font-size: 2rem;
+}
+
+.login-form__button {
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-form__lable {
+    padding: 10px;
+    display: block;
+    font-size: 2rem;
+}
+
+.home-titme {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 2rem;
+}
+
+.car-item__image {
+    padding: 20px 30px 30px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.car-item__name {
+    margin-top: -28px;
+}
+
+.car-item-description__name {
+    margin-top: -45px;
+}
+
+.car-item-description__name p:first-child {
+    text-transform: uppercase;
+}
+
+.car-item-description__name p:last-child {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.car-item {
+    text-align: center;
+}
+
+.car-list {
+    padding-bottom: 10px;
+}
+
+.car-item__name a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.cars-title {
+    text-align: center;
+    padding: 20px 10px 0px;
+    font-size: 2rem;
+    margin: 0px;
+}
+
+.buy-btn {
+    display: inline-block;
+    padding: 10px 20px 10px;
+    margin: 0 10px 50px;
+    border: 1px solid white;
+    border-radius: 5px;
     cursor: pointer;
 }

@@ -1,0 +1,10 @@
+﻿<div class="car-item">
+    <p class="cars-title">Car Details</p>
+    <figure ng-show="carItem">
+        <div><img class="car-item__image" ng-src="{{carItem.url}}" /></div>
+        <figcaption>
+            <div class="car-item-description__name"><p>{{carItem.name}}</p><p>{{carItem.description}}</p></div>
+            <button ng-show="canBuy" class="buy-btn" ng-click="buyCar()">Buy this car now</button>
+        </figcaption>
+    </figure>
+</div>

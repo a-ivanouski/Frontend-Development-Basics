@@ -1,10 +1,11 @@
 ﻿<div class="login-form">
-    <span ng-if="!isAuthorised">
-        <input type="text" ng-model="name" />
-        <button ng-click="login(name)">Log in</button>
-    </span>
-    <span ng-if="isAuthorised">
-        <label>Hello, {{name}}!</label>
-        <button ng-click="logout()">Log out</button>
-    </span>
+    <div ng-if="!isAuthorised">
+        <div><label class="login-form__lable">Enter your name!</label></div>
+        <div><input class="login-form__input" type="text" ng-model="name" /></div>
+        <div><button class="login-form__button" ng-click="login(name)">Log in</button></div>
+    </div>
+    <div ng-if="isAuthorised">
+        <div><label class="login-form__lable">Hello, {{name}}!</label></div>
+        <div><button ng-click="logout()" class="login-form__button">Log out</button></div>
+    </div>
 </div>

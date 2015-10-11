@@ -1,15 +1,31 @@
-﻿angular.module('mymodule', ['ngRoute'])
-    .config(function ($routeProvider, $locationProvider) {
-        $routeProvider.
-          when('/', {
-              templateUrl: 'views/shop-list.html',
-              controller: 'shopsListController'
-          }).
-          when('/shop/:shopid', {
-              templateUrl: 'views/shop-products.html',
-              controller: 'shopProductsController'
-          }).
-          otherwise({
-              redirectTo: '/'
-          });
-    });
+﻿angular.module('mymodule', ['ui.router', 'ngRoute'])
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/")
+
+        $stateProvider
+          .state('home', {
+              url: "/",
+              templateUrl: "views/home.html",
+              authRequired: false
+          })
+          .state('cars', {
+              url: "/cars",
+              templateUrl: "views/cars.html",
+              authRequired: true
+          })
+          .state('carDetails', {
+              url: "/cars/:carId",
+              templateUrl: "views/car-details.html",
+              authRequired: true
+          })
+          .state('profile', {
+              url: "/profile",
+              templateUrl: "views/profile.html",
+              authRequired: true
+          })
+          .state('login', {
+              url: "/login",
+              templateUrl: "views/login.html",
+              authRequired: false
+          })
+    }]);

@@ -1,0 +1,15 @@
+﻿<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" ui-sref="home">App</a>
+        <ul class="nav" ng-show="!isAuthorised">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="login">Log in</a></li>
+        </ul>
+        <ul class="nav" ng-show="isAuthorised">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="cars">Cars</a></li>
+            <li><a ui-sref="profile">Profile</a></li>
+            <li><a ng-click="logout()" ui-sref-opts="{reload: true}">Log out</a></li>
+        </ul>
+    </div>
+</div>
