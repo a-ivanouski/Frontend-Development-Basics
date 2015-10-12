@@ -8,3 +8,15 @@
 .inputs input {
 	margin-right: 10px;
 }
+
+.inner-elements {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.test-box {
+	display: block;
+/*	height: 500px;*/
+	width: 500px;
+	border: 1px solid black;
+}
