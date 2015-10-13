@@ -112,3 +112,94 @@ textarea.fr-input{
 }
 
 //grid
+
+.fr-row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.fr-col-1, .fr-col-2, .fr-col-3, .fr-col-4, .fr-col-5, .fr-col-6 {
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	float: left;
+}
+
+.fr-col-6 {
+	width: 100%;
+}
+
+
+
+.fr-col-5 {
+	width: 83.33333333%;
+}
+.fr-col-pull-5 {
+	left: 83.33333333%;
+}
+
+
+.fr-col-4 {
+	width: 66.66666666%;
+}
+.fr-col-pull-4 {
+	left: 66.66666666%;
+}
+
+
+.fr-col-3 {
+	width: 50%;
+}
+.fr-col-pull-3 {
+	left: 50%;
+}
+
+
+.fr-col-2 {
+	width: 33.33333333%;
+}
+.fr-col-pull-2 {
+	left: 33.33333333%;
+}
+
+
+.fr-col-1 {
+	width: 16.66666666%;
+}
+.fr-col-pull-1 {
+	left: 16.66666666%;
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 650px) {
+
+}
+
+
+.fr-row:before,
+.fr-row:after {
+	content: " ";
+	display: table;
+}
+
+.fr-row:after {
+	clear: both;
+}
+
+.fr-pull-right {
+	float: right !important;
+}
+.fr-pull-left {
+	float: left !important;
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
