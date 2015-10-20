@@ -1,0 +1,16 @@
+body {
+  background-color: #f00;
+  padding: 20px;
+}
+.lato.loaded {
+  font-family: 'Lato', sans-serif;
+}
+.cardo.loaded {
+  font-family: 'Cardo', sans-serif;
+}
+.roboto.loaded {
+  font-family: 'Roboto', sans-serif;
+}
+.merriweather.loaded {
+  font-family: 'Merriweather', sans-serif;
+}
