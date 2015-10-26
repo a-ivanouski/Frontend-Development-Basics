@@ -1,3 +1,27 @@
+//Typography
+p {
+
+}
+
+h6 {
+	font-size: 1.7em;
+}
+h5 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.3em;
+}
+h1 {
+	font-size: 1.2em;
+}
+
 // buttons
 .fr-button {
 	padding: 10px 20px 10px 20px;
@@ -41,7 +65,7 @@
 
 	&[type="radio"] + label:before,
 	&[type="radio"]:checked + label:before {
-		transition:background-color 0.4s linear;
+		transition: background-color 0.4s linear;
 	}
 
 	&[type="checkbox"] {
@@ -54,7 +78,7 @@
 
 	&[type="checkbox"]:before {
 		content: "";
-		border: 5px solid $black;
+		border: 2px solid $black;
 		background-color: $orange;
 
 		display: inline-block;
@@ -93,15 +117,15 @@ textarea.fr-input{
 	}
 
 	.fr-box-small {
-		width: 15%;
+		width: 150px;
 	}
 
 	.fr-box-medium {
-		width: 25%;
+		width: 300px;
 	}
 
 	.fr-box-large {
-		width: 40%;
+		width: 550px;
 	}
 
 	&:after {
@@ -114,15 +138,17 @@ textarea.fr-input{
 //grid
 
 .fr-row {
-	margin-left: -15px;
-	margin-right: -15px;
+
 }
 
 .fr-col-1, .fr-col-2, .fr-col-3, .fr-col-4, .fr-col-5, .fr-col-6 {
+	display: block;
 	position: relative;
 	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	float: left;
 }
 
@@ -171,14 +197,119 @@ textarea.fr-input{
 	left: 16.66666666%;
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1500px) {
+	.fr-col-5 {
+		width: 100%;
+	}
+	.fr-col-pull-5 {
+		left: 80%;
+	}
+
+
+	.fr-col-4 {
+		width: 80%;
+	}
+	.fr-col-pull-4 {
+		left: 60%;
+	}
+
+
+	.fr-col-3 {
+		width: 60%;
+	}
+	.fr-col-pull-3 {
+		left: 40%;
+	}
+
+
+	.fr-col-2 {
+		width: 40%;
+	}
+	.fr-col-pull-2 {
+		left: 20%;
+	}
+
+
+	.fr-col-1 {
+		width: 20%;
+	}
+	.fr-col-pull-1 {
+		left: 0;
+	}
 
 }
 
-@media (min-width: 650px) {
+@media (max-width: 1100px) {
 
+	.fr-col-pull-5 {
+		left: 75%;
+	}
+
+	.fr-col-4 {
+		width: 100%;
+	}
+	.fr-col-pull-4 {
+		left: 50%;
+	}
+
+
+	.fr-col-3 {
+		width: 75%;
+	}
+	.fr-col-pull-3 {
+		left: 25%;
+	}
+
+
+	.fr-col-2 {
+		width: 50%;
+	}
+	.fr-col-pull-2 {
+		left: 0;
+	}
+
+
+	.fr-col-1 {
+		width: 25%;
+	}
+	.fr-col-pull-1 {
+		left: 0;
+	}
 }
 
+@media (max-width: 700px) {
+
+	.fr-col-pull-5 {
+		left: 0%;
+	}
+
+	.fr-col-pull-4 {
+		left: 0%;
+	}
+
+	.fr-col-3 {
+		width: 100%;
+	}
+	.fr-col-pull-3 {
+		left: 0%;
+	}
+
+
+	.fr-col-2 {
+		width: 100%;
+	}
+	.fr-col-pull-2 {
+		left: 0%;
+	}
+
+
+	.fr-col-1 {
+		width: 100%;
+	}
+	.fr-col-pull-1 {
+		left: 0%;
+	}
+}
 
 .fr-row:before,
 .fr-row:after {

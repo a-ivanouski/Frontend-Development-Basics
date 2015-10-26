@@ -1,6 +1,9 @@
+body {
+	text-align: center;
+}
+
 .elements {
-	margin-left: 20px;
-	margin-top: 20px;
+	margin: 50px;
 }
 .buttons button {
 	margin-right: 10px;
@@ -15,18 +18,25 @@
 }
 
 .test-box {
-	display: block;
-/*	height: 500px;*/
-	width: 500px;
+	display: inline-block;
+
+}
+
+.test-box div {
+	padding: 20px 10 20px 10px;
+	margin-top: 20px;
 }
 
 .test-grid {
-	display: block;
-	width: 500px;
-	
+	display: inline-block;
+	width: 100%;
 	text-align: center;
 }
 
+.test-tabs {
+	display: inline-block;
+	width: 1000px;
+}
 
 /*/////////*/
 .border {

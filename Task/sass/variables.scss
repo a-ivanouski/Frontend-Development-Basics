@@ -4,31 +4,44 @@ $red: #FF3333;
 $pink: #FF3399;
 $purple: #AC3BD4;
 $black: #1f0f04;
+$aqua: #00FFFF;
 
 // colours classes
 .orange{
-	background-color: #FF7400;
+	background-color: $orange;
 }
 .red{
-	background-color: #FF3333;
+	background-color: $red;
 }
 .pink{
-	background-color: #FF3399;
+	background-color: $pink;
 }
 .purple{
-	background-color: #AC3BD4;
+	background-color: $purple;
+}
+.black{
+	background-color: $black;
+}
+.aqua{
+	background-color: $aqua;
 }
 
 .text-orange{
-	background-color: #FF7400;
+	color: $orange;
 }
 .text-red{
-	background-color: #FF3333;
+	color: $red;
 }
 .text-pink{
-	background-color: #FF3399;
+	color: $pink;
 }
 .text-purple{
-	background-color: #AC3BD4;
+	color: $purple;
+}
+.text-black{
+	color: $black;
+}
+.text-aqua{
+	color: $aqua;
 }
 
