@@ -1,0 +1,338 @@
+.orange {
+  background-color: #FF7400; }
+
+.red {
+  background-color: #FF3333; }
+
+.pink {
+  background-color: #FF3399; }
+
+.purple {
+  background-color: #AC3BD4; }
+
+.black {
+  background-color: #1f0f04; }
+
+.aqua {
+  background-color: #00FFFF; }
+
+.text-orange {
+  color: #FF7400; }
+
+.text-red {
+  color: #FF3333; }
+
+.text-pink {
+  color: #FF3399; }
+
+.text-purple {
+  color: #AC3BD4; }
+
+.text-black {
+  color: #1f0f04; }
+
+.text-aqua {
+  color: #00FFFF; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+img {
+  border: 0; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+input {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+
+h6 {
+  font-size: 1.7em; }
+
+h5 {
+  font-size: 1.6em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h2 {
+  font-size: 1.3em; }
+
+h1 {
+  font-size: 1.2em; }
+
+.fr-button {
+  padding: 10px 20px 10px 20px; }
+
+.fr-input[type='text'] {
+  padding: 6px;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) inset, 0 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  outline: none;
+  color: #333; }
+
+.fr-input[type="radio"] {
+  display: none; }
+
+.fr-input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+.fr-input[type="radio"] + label:before {
+  background-color: #1f0f04; }
+
+.fr-input[type="radio"]:checked + label:before {
+  background-color: #FF3333; }
+
+.fr-input[type="radio"] + label:before,
+.fr-input[type="radio"]:checked + label:before {
+  transition: background-color 0.4s linear; }
+
+.fr-input[type="checkbox"]:before {
+  transition: background-color 0.4s linear; }
+
+.fr-input[type="checkbox"]:before {
+  content: "";
+  border: 2px solid #1f0f04;
+  background-color: #FF7400;
+  display: inline-block;
+  width: 15px;
+  height: 15px; }
+
+.fr-input[type="checkbox"]:checked:before {
+  background-color: #FF3333; }
+
+textarea.fr-input {
+  padding: 6px;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) inset, 0 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  outline: none;
+  color: #333; }
+
+.fr-boxes-container {
+  width: 100%;
+  text-align: justify; }
+  .fr-boxes-container .fr-box-small,
+  .fr-boxes-container .fr-box-medium,
+  .fr-boxes-container .fr-box-large {
+    display: inline-block;
+    border: 1px solid black;
+    vertical-align: top; }
+  .fr-boxes-container .fr-box-small {
+    width: 150px; }
+  .fr-boxes-container .fr-box-medium {
+    width: 300px; }
+  .fr-boxes-container .fr-box-large {
+    width: 550px; }
+  .fr-boxes-container:after {
+    content: "";
+    display: inline-block;
+    width: 100%; }
+
+.fr-col-1, .fr-col-2, .fr-col-3, .fr-col-4, .fr-col-5, .fr-col-6 {
+  display: block;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  float: left; }
+
+.fr-col-6 {
+  width: 100%; }
+
+.fr-col-5 {
+  width: 83.33333333%; }
+
+.fr-col-pull-5 {
+  left: 83.33333333%; }
+
+.fr-col-4 {
+  width: 66.66666666%; }
+
+.fr-col-pull-4 {
+  left: 66.66666666%; }
+
+.fr-col-3 {
+  width: 50%; }
+
+.fr-col-pull-3 {
+  left: 50%; }
+
+.fr-col-2 {
+  width: 33.33333333%; }
+
+.fr-col-pull-2 {
+  left: 33.33333333%; }
+
+.fr-col-1 {
+  width: 16.66666666%; }
+
+.fr-col-pull-1 {
+  left: 16.66666666%; }
+
+@media (max-width: 1500px) {
+  .fr-col-5 {
+    width: 100%; }
+  .fr-col-pull-5 {
+    left: 80%; }
+  .fr-col-4 {
+    width: 80%; }
+  .fr-col-pull-4 {
+    left: 60%; }
+  .fr-col-3 {
+    width: 60%; }
+  .fr-col-pull-3 {
+    left: 40%; }
+  .fr-col-2 {
+    width: 40%; }
+  .fr-col-pull-2 {
+    left: 20%; }
+  .fr-col-1 {
+    width: 20%; }
+  .fr-col-pull-1 {
+    left: 0; } }
+
+@media (max-width: 1100px) {
+  .fr-col-pull-5 {
+    left: 75%; }
+  .fr-col-4 {
+    width: 100%; }
+  .fr-col-pull-4 {
+    left: 50%; }
+  .fr-col-3 {
+    width: 75%; }
+  .fr-col-pull-3 {
+    left: 25%; }
+  .fr-col-2 {
+    width: 50%; }
+  .fr-col-pull-2 {
+    left: 0; }
+  .fr-col-1 {
+    width: 25%; }
+  .fr-col-pull-1 {
+    left: 0; } }
+
+@media (max-width: 700px) {
+  .fr-col-pull-5 {
+    left: 0%; }
+  .fr-col-pull-4 {
+    left: 0%; }
+  .fr-col-3 {
+    width: 100%; }
+  .fr-col-pull-3 {
+    left: 0%; }
+  .fr-col-2 {
+    width: 100%; }
+  .fr-col-pull-2 {
+    left: 0%; }
+  .fr-col-1 {
+    width: 100%; }
+  .fr-col-pull-1 {
+    left: 0%; } }
+
+.fr-row:before,
+.fr-row:after {
+  content: " ";
+  display: table; }
+
+.fr-row:after {
+  clear: both; }
+
+.fr-pull-right {
+  float: right !important; }
+
+.fr-pull-left {
+  float: left !important; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.fr-tabs {
+  text-align: left; }
+  .fr-tabs .fr-tab {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    padding: 20px 30px 20px 30px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    background: #cf8fe6;
+    cursor: pointer;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-bottom: none; }
+  .fr-tabs .fr-tab.fr-tab-selected {
+    border-bottom: 3px solid #cf8fe6; }
+    .fr-tabs .fr-tab.fr-tab-selected:hover {
+      background: #cf8fe6;
+      cursor: default; }
+  .fr-tabs .fr-tab:hover {
+    background: #b550d9; }
+  .fr-tabs .fr-tab-content {
+    display: block;
+    background: #cf8fe6;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border: 3px solid rgba(255, 255, 255, 0.5); }
