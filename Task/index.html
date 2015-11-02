@@ -1,135 +1,54 @@
 <html>
 <head>
-	<title>fr</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/myCss.css">
+	<title>NodeJs Task Tasks</title>
+	<script src="js/angular.min.js"></script>
 </head>
-<body>
-	<article class="elements">
-
-		<h1 class="text-orange">Typography</h1>
-		<h2 class="text-red">Typography</h2>
-		<h3 class="text-pink">Typography</h3>
-		<h4 class="text-purple">Typography</h4>
-		<h5 class="text-aqua">Typography</h5>
-		<h6 class="text-black">Typography</h6>
-	</article>
-	<article class="elements">
-		<h1>Buttons</h1>
-		<div class="buttons">
-			<button class="fr-button orange">click</button>
-			<button class="fr-button red">click</button>
-			<button class="fr-button pink">click</button>
-			<button class="fr-button purple">click</button>
-		</div>
-	</article>
-	<article class="elements">
-		<h1>Inputs</h1>
-		<div class="inputs">
-			<div class="inner-elements">
-			<input class="fr-input" type="text">
-			</div>
-			<div class="inner-elements">
-				<input class="fr-input" id="radio1" type="radio" name="radioTest" checked>
-				<label for="radio1"></label>
-				<input class="fr-input" id="radio2" type="radio" name="radioTest">
-				<label for="radio2"></label>
-			</div class="inner-elements">
-			<div class="inner-elements">
-				<input class="fr-input" for="Checkbox" type="checkbox">
-				<label for="Checkbox"></label>
-			</div>
-		</div>
-	</article>
-	<article class="elements">
-	<h1>Textarea</h1>
-		<textarea class="fr-input" name="textarea"></textarea>
-	</div>
-</article>
-	<article class="elements">
-		<h1>Boxes</h1>
-		<div class="inner-elements">
-			<div class="test-box fr-boxes-container">
-				<div class="fr-box-small">fr-box-small</div>
-				<div class="fr-box-medium">fr-box-medium</div>
-				<div class="fr-box-large">fr-box-large</div>
-				<div class="fr-box-small">fr-box-small</div>
-				<div class="fr-box-medium">fr-box-medium</div>
-				<div class="fr-box-large">fr-box-large</div>
-				<div class="fr-box-small">fr-box-small</div>
-				<div class="fr-box-medium">fr-box-medium</div>
-				<div class="fr-box-large">fr-box-large</div>
-				<div class="fr-box-small">fr-box-small</div>
-				<div class="fr-box-medium">fr-box-medium</div>
-				<div class="fr-box-large">fr-box-large</div>
-				<div class="fr-box-small">fr-box-small</div>
-				<div class="fr-box-medium">fr-box-medium</div>
-			</div>
-		</div>
-	</article>
-
-	<article class="elements">
-		<h1>Grid</h1>
+<body ng-app="myModule">
+	<article ng-controller="contr">
+		<h1>This is Home page for task</h1>
 		<section>
-			<h3>Grid fr-col-*</h1>
-			<div class="test-grid">
-				<div class="fr-row ">
-					<div class="fr-col-6 border">fr-col-6</div>
-					<div class="fr-col-5 border">fr-col-5</div>
-					<div class="fr-col-1 border">fr-col-1</div>
-					<div class="fr-col-4 border">fr-col-4</div>
-					<div class="fr-col-2 border">fr-col-2</div>
-					<div class="fr-col-3 border">fr-col-3</div>
-					<div class="fr-col-2 border">fr-col-2</div>
-					<div class="fr-col-1 border">fr-col-1</div>
-				</div>
-			</div>
+			<h4></h4>
 		</section>
-		<section>
-			<h3>Grid fr-col-pull-*</h1>
-			<div class="test-grid">
-				<div class="fr-row ">
-					<div class="fr-col-5 fr-col-pull-1 border">fr-col-5 + fr-col-pull-1</div>
-				</div>
-			</div>
-			<div class="test-grid">
-				<div class="fr-row">
-					<div class="fr-col-4 fr-col-pull-2 border">fr-col-4 + fr-col-pull-2</div>
-				</div>
-			</div>
-			<div class="test-grid">
-				<div class="fr-row">
-					<div class="fr-col-3 fr-col-pull-3 border">fr-col-3 + fr-col-pull-3</div>
-				</div>
-			</div>
-			<div class="test-grid">
-				<div class="fr-row">
-					<div class="fr-col-2 fr-col-pull-4 border">fr-col-2 + fr-col-pull-4</div>
-				</div>
-			</div>
-			<div class="test-grid">
-				<div class="fr-row">
-					<div class="fr-col-1 fr-col-pull-5 border">fr-col-1 + fr-col-pull-5</div>
-				</div>
-			</div>
-
-		</section>
-
-	</article>
-	<article class="elements">
-		<h1>Tabs</h1>
-		<div class="test-tabs">
-			<div class="fr-tabs">
-				<div class="fr-tab">Tab1</div>
-				<div class="fr-tab fr-tab-selected">Tab2</div>
-				<div class="fr-tab">Tab3</div>
-				<div class="fr-tab">Tab4</div>
-				<div class="fr-tab-content">content <br><br><br><br> content </div>
-
-			</div>
-		</div>
 	</article>
 
 
+	<script>
+		angular.module('myModule', [])
+			.factory('dataService', function ($http) {
+				$http.get('/task/1')
+					.then(function (resp) {
+						console.log(resp.data);
+					});
+				$http.put('/task')
+					.then(function (resp) {
+						console.log(resp.data);
+					});
+				$http.delete('/task/1')
+					.then(function (resp) {
+						console.log(resp.data);
+					});
+				$http.post('/task/1')
+					.then(function (resp) {
+						console.log(resp.data);
+					});
+
+
+
+				$http.get('/tasks')
+					.then(function (resp) {
+						console.log(resp.data);
+					});
+				$http.get('/tasks/qqqqqqqqq')
+					.then(function (resp) {
+						console.log(resp.data);
+					});
+				return {
+
+				}
+			})
+			.controller('contr', function ($scope, dataService) {
+				console.log('controller init');
+			});
+	</script>
 </body>
 </html>
