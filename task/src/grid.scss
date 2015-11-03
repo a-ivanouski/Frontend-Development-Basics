@@ -1,0 +1,49 @@
+﻿$class-column: column !default;
+$grid-columns: 12 !default;
+$phone-coef: 4 !default;
+$tablet-coef: 2 !default;
+$information-phone: "only screen and (max-width : 600px)";
+$information-tablet: "only screen and (min-width : 601px) and (max-width : 900px)";
+$information-desk: "only screen and (min-width : 901px)";
+
+@media #{$information-phone} {
+  @for $i from 1 through $grid-columns {
+    .#{$class-column}-#{$i} {
+        width: (100% / 12) * $i * $phone-coef;
+        max-width: 100%;
+        display: inline-block;
+    }
+  }
+
+  .hide-phone {
+      display : none;
+  }
+}
+
+@media #{$information-tablet} {
+  @for $i from 1 through $grid-columns {
+    .#{$class-column}-#{$i} {
+        width: (100% / 12) * $i * $tablet-coef;
+        max-width: 100%;
+        display: inline-block;
+    }
+  }
+
+  .hide-tablet {
+      display : none;
+  }
+}
+
+@media #{$information-desk} {
+  @for $i from 1 through $grid-columns {
+    .#{$class-column}-#{$i} {
+        width: (100% / 12) * $i;
+        max-width: 100%;
+        display: inline-block;
+    }
+  }
+
+  .hide-desk {
+      display : none;
+  }
+}

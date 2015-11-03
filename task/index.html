@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./build/TaskSASSFramework.css" />
+    
+    <style>
+        .source-line {
+            display: block;
+            margin: 10px;
+            color: white;
+        }
+        .code-block {
+            margin: 20px 50px;
+            width: 50%;
+            background-color: black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="font-size-large-3 text-center" style="margin-bottom: 100px">Task SASS Framework</div>
+
+    <div class="font-size-large-1 text-center" style="margin-bottom: 100px">This frame work use Eric Meyer’s “Reset CSS” 2.0 for css reset. This is most for base css reset. You can get it from here <a href="http://cssreset.com/">http://cssreset.com/</a>.</div>
+  <!--   -->
+
+    <div class="font-size-large-1 text-center" style="margin-bottom: 100px">The framewrok use http://fonts.googleapis.com/css?family=Lato font. It also provide next clases for font size: font-size-large-3, font-size-large-2, font-size-large-1, font-size-medium, font-size-normal, font-size-small.</div>
+
+    <div class="font-size-large-1 text-left">Example:
+        <div class="code-block">
+            <span class="source-line font-size-medium">
+                &lt;h1 class="font-size-large-3">&lt;/h1>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;h2 class="font-size-large-2">&lt;/h2>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;h3 class="font-size-large-1">&lt;/h3>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;h4 class="font-size-medium">&lt;/h4>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;h5 class="font-size-normal">&lt;/h5>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;h6 class="font-size-small">&lt;/h6>
+            </span>
+        </div>
+    </div>
+
+    <h1 class="font-size-large-3">font-size-large-3: Lorem ipsum dolor sit amet, pri id suas soluta verear</h1>
+    <h2 class="font-size-large-2">font-size-large-2: Lorem ipsum dolor sit amet, pri id suas soluta verear</h2>
+    <h3 class="font-size-large-1">font-size-large-1: Lorem ipsum dolor sit amet, pri id suas soluta verear</h3>
+    <h4 class="font-size-medium">font-size-medium: Lorem ipsum dolor sit amet, pri id suas soluta verear</h4>
+    <h5 class="font-size-normal">font-size-normal: Lorem ipsum dolor sit amet, pri id suas soluta verear</h5>
+    <h6 class="font-size-small">font-size-small: Lorem ipsum dolor sit amet, pri id suas soluta verear</h6>
+
+    <div class="font-size-large-1 text-center" style="margin: 100px 0">The framework provides base classes for form elements.</div>
+
+    <div class="font-size-large-1 text-left">
+        Example:
+        <div class="code-block">
+            <span class="source-line font-size-medium">
+                &lt;input class="btn info" type="button" value="button" />
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;textarea class="input">&lt;/textarea>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;button class="btn ok">&lt;/button>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;select class="select">
+                &lt;option>&lt;/option>
+                &lt;option>open&lt;/option>
+                &lt;option>closed&lt;/option>
+                &lt;/select>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;input type="radio" id="radio" name="radio1" class="radio" />
+                &lt;label for="radio">&lt;span>&lt;/span>&lt;/label>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;input type="checkbox" name="checkbox" id="checkbox" />
+                &lt;label for="checkbox">&lt;span>&lt;/span>&lt;/label>
+            </span>
+        </div>
+    </div>
+
+    <div style="margin-left: 100px">
+        <textarea class="input" style="height: 100px; width: 200px;"></textarea>
+    </div>
+    <div style="margin-left: 100px">
+        <input class="btn info" type="button" value="button" />
+        <input class="input" />
+        <button class="btn ok">button</button>
+
+        <div class="column-2">
+            <select class="select">
+                <option>Property Closing*</option>
+                <option>open</option>
+                <option>closed</option>
+            </select>
+        </div>
+    </div>
+    <div class="column-2" style="margin-left: 100px">
+        <div style="padding: 10px">
+            <input type="radio" id="radio" name="radio1" class="radio"/>
+            <label for="radio"><span></span>Radio1</label>
+        </div>
+        <div style="padding: 10px">
+            <input type="radio" id="radio1" name="radio1" class="radio"/>
+            <label for="radio1"><span></span>Radio2</label>
+        </div>
+    </div>
+    <div class="column-2">
+        <div style="padding: 10px">
+            <input type="checkbox" name="checkbox" id="checkbox"/>
+            <label for="checkbox"><span></span>Checkbox1</label>
+        </div>
+        <div style="padding: 10px">
+            <input type="checkbox" name="checkbox1" id="checkbox1"/>
+            <label for="checkbox1"><span></span>Checkbox2</label>
+        </div>
+    </div>
+
+    <div class="font-size-large-1 text-center" style="margin: 100px 0">The framework has grid system based on full screen and provides classe wich allow to issert elements 1/12 to 1 of the screen. Also it supports 3 screen resolution ratio betwen them is 1/2 and 1/4 for mobile.</div>
+
+    <div class="font-size-large-1 text-left">
+        Example:
+        <div class="code-block">
+            <span class="source-line font-size-medium">
+                &lt;div class="column-6">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="column-5">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="column-4">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="column-3">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="column-2">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="column-1">&lt;/div>
+            </span>
+        </div>
+    </div>
+
+    <div class="column-2" style="background-color: gold; height:100px;">
+    </div><div class="column-2" style="background-color: red; height:100px;">
+    </div><div class="column-1" style="background-color: green; height:100px;">
+    </div><div class="column-1" style="background-color: blue; height:100px;">
+    </div><div class="column-1" style="background-color: black; height:100px;">
+    </div><div class="column-1" style="background-color: antiquewhite; height:100px;">
+    </div><div class="column-4" style="background-color: brown; height:100px;">
+    </div>
+
+    <div style="margin-top: 30px">
+        <div class="column-8" style="background-color: gold; height:100px;">
+        </div><div class="column-1" style="background-color: red; height:100px;">
+        </div><div class="column-1" style="background-color: green; height:100px;">
+        </div><div class="column-1" style="background-color: blue; height:100px;">
+        </div><div class="column-1" style="background-color: black; height:100px;">
+        </div>
+    </div>
+    <div style="margin-top: 30px">
+        <div class="column-3" style="background-color: gold; height:100px;">
+        </div><div class="column-3" style="background-color: red; height:100px;">
+        </div><div class="column-3" style="background-color: green; height:100px;">
+        </div><div class="column-3" style="background-color: blue; height:100px;">
+        </div>
+    </div>
+
+    <div class="font-size-large-1 text-center" style="margin: 100px 0">The framework has classes wich helps hide elements for differen devices.</div>
+
+    <div class="font-size-large-1 text-left">
+        Example:
+        <div class="code-block">
+            <span class="source-line font-size-medium">
+                &lt;div class="hide-tablet">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="hide-phone">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="hide-desk">&lt;/div>
+            </span>
+        </div>
+    </div>
+
+    <div class="column-12 text-center font-size-medium hide-phone hide-tablet" style="margin-top: 100px; background-color: white; height:100px; color: black; border:1px solid black;">Desk Screen Resolution</div>
+    <div class="column-12 text-center font-size-medium hide-tablet hide-desk" style="margin-top: 100px; background-color: white; height:100px; color: black; border:1px solid black;">Mobile Screen Resolution</div>
+    <div class="column-12 text-center font-size-medium hide-desk hide-phone" style="margin-top: 100px; background-color: white; height:100px; color: black; border:1px solid black;">Tablet Screen Resolution</div>
+
+    <div class="font-size-large-1 text-center" style="margin: 100px 0">The framework provides solution for a few components: tabs, accordion, popup.</div>
+
+    <div class="font-size-large-1 text-left">
+        Example:
+        <div class="code-block">
+            <span class="source-line font-size-medium">
+                &lt;div class="popup font-size-normal">
+                &lt;div class="close">&lt;/div>
+                &lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;ul class="accordion">
+                &lt;li class="row">
+                &lt;input type="radio" id="radio" name="radio1" />
+                &lt;label for="radio">&lt;span class="toggler">&lt;/span>&lt;span class="content">&lt;/span>&lt;/label>
+                &lt;/li>
+                &lt;/ul>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;ul class="tabs column-4">
+                &lt;li>
+                &lt;input type="radio" name="tab" id="tab1" checked />
+                &lt;label for="tab1">&lt;/label>
+                &lt;div id="tab-content1" class="content">
+                &lt;/div>
+                &lt;/li>
+            </span>
+        </div>
+    </div>
+        <script type="text/javascript">
+            function togglePopup(){
+                var e = document.getElementById('popup');
+
+                if(e.style.display === 'none'){
+                    e.style.display = 'block';
+                } else {
+                    e.style.display = 'none';
+                }
+            }
+        </script>
+    <div class="column-12 text-center">
+        <button class="btn info" onclick="togglePopup()">Toggle Popup</button>
+    </div>
+        <div id="popup" class="popup font-size-normal" style="top: 200px; left: 500px; display:none;"><div class="close"></div>Lorem ipsum dolor sit amet, in pro erat constituam. Vix ullum facer alterum at, mundi utinam facilis quo cu. Reque nominati rationibus nam te, nusquam sapientem tincidunt cu vix. Tation minimum explicari ei pro, vix id iusto qualisque, ea mel enim placerat partiendo. Integre assueverit inciderint nam eu.
+        </div>
+
+        <div class="column-4" style="height: 100px;"></div>
+        <ul class="accordion column-4">
+            <li class="row">
+                <input type="radio" id="radio3" name="radio3" />
+                <label for="radio3"><span class="toggler">+</span><span class="content">Lorem ipsum dolor sit amet, in pro erat constituam. Vix ullum facer alterum at, mundi utinam facilis quo cu. Reque nominati rationibus nam te, nusquam sapientem tincidunt cu vix. Tation minimum explicari ei pro, vix id iusto qualisque, ea mel enim placerat partiendo. Integre assueverit inciderint nam eu.</span></label>
+            </li>
+            <li class="row">
+                <input type="radio" id="radio4" name="radio3" />
+                <label for="radio4"><span class="toggler">+</span><span class="content">Lorem ipsum dolor sit amet, in pro erat constituam. Vix ullum facer alterum at, mundi utinam facilis quo cu. Reque nominati rationibus nam te, nusquam sapientem tincidunt cu vix. Tation minimum explicari ei pro, vix id iusto qualisque, ea mel enim placerat partiendo. Integre assueverit inciderint nam eu.</span></label>
+            </li>
+            <li class="row">
+                <input type="radio" id="radio5" name="radio3" />
+                <label for="radio5"><span class="toggler">+</span><span class="content">Lorem ipsum dolor sit amet, in pro erat constituam. Vix ullum facer alterum at, mundi utinam facilis quo cu. Reque nominati rationibus nam te, nusquam sapientem tincidunt cu vix. Tation minimum explicari ei pro, vix id iusto qualisque, ea mel enim placerat partiendo. Integre assueverit inciderint nam eu.</span></label>
+            </li>
+        </ul>
+    <div class="column-3" style="height: 100px;"></div>
+    <div class="column-4" style="height: 100px;"></div>
+        <ul class="tabs column-4">
+            <li>
+                <input type="radio" name="tab" id="tab1" checked/>
+                <label for="tab1">Tab 1</label>
+                <div id="tab-content1" class="content">
+                    Tab1 Lorem ipsum dolor sit amet, in pro erat constituam. Vix ullum facer alterum at, mundi utinam facilis quo cu. Reque nominati rationibus nam te, nusquam sapientem tincidunt cu vix. Tation minimum explicari ei pro, vix id iusto qualisque, ea mel enim placerat partiendo. Integre assueverit inciderint nam eu.
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tab" id="tab2" />
+                <label for="tab2">Tab 2</label>
+                <div id="tab-content2" class="content">
+                    Tab2 Lorem ipsum dolor sit amet, in pro erat constituam. Vix ullum facer alterum at, mundi utinam facilis quo cu. Reque nominati rationibus nam te, nusquam sapientem tincidunt cu vix. Tation minimum explicari ei pro, vix id iusto qualisque, ea mel enim placerat partiendo. Integre assueverit inciderint nam eu.
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tab" id="tab3" />
+                <label for="tab3">Tab 3</label>
+                <div id="tab-content2" class="content">
+                    Tab3 Lorem ipsum dolor sit amet, in pro erat constituam. Vix ullum facer alterum at, mundi utinam facilis quo cu. Reque nominati rationibus nam te, nusquam sapientem tincidunt cu vix. Tation minimum explicari ei pro, vix id iusto qualisque, ea mel enim placerat partiendo. Integre assueverit inciderint nam eu.
+                </div>
+            </li>
+        </ul>
+    <div class="column-3" style="height: 100px;"></div>
+
+    <div class="font-size-large-1 text-center" style="margin: 170px 0 100px">The framework provides different css helpers classes.</div>
+    <div class="font-size-large-1 text-left">
+        Example:
+        <div class="code-block">
+            <span class="source-line font-size-medium">
+                &lt;div class="text-right left">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="text-left right">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="text-center">&lt;/div>
+            </span>
+            <span class="source-line font-size-medium">
+                &lt;div class="text-bold text-italic">&lt;/div>
+            </span>
+        </div>
+    </div>
+
+    <div class="column-3 text-right left font-size-medium">Float left with right text</div>
+    <div class="column-3 text-left right font-size-medium">Float right with left text</div>
+    <div class="column-12 text-center font-size-medium">Center text</div>
+    <div class="column-3 text-bold text-italic font-size-medium" style="margin-bottom: 100px;">Italic, bold text</div>
+</body>
+</html>

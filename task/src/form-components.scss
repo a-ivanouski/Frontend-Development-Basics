@@ -1,0 +1,136 @@
+﻿$buttonOkColor: #13b228;
+$buttonInfoColor: #1f43b6;
+$buttonDangerColor: #ff0000;
+$buttonWarningColor: #ff6a00;
+$buttonDefaultColor: #b2b2b2;
+
+$select-background: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAOtJREFUeJzt0bFNQwEMRdGXsZiLFsgbgMWYCgoamkhRlB+L+BzJve2bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwuNP0Ahe8JHmdXuKOvpN8JvmaXuQ/aX4f9wzzdt/X7NHMxxN/WDMfUfxhzXxM8Yc181HFH9bMxxV/WDMf+dK8H3c2fzXzscUf1sxHF39YI/56jfjrNeKv14i/XnN8/I9HHcNtGvHXa8RfrxF/vUb89Rrx12vEX6+5Pv55ZkWO1oi/XiP+eo346zXir9eIDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPNgPwESkVWmaAb8AAAAASUVORK5CYII=';
+
+$checkbox-background: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3ODkwNzY1QzM1QUVFMDExOUI0MDg3MzJEODFDNjBGNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5RkQzQUQ5NEI2RkQxMUUwQThEQkRGODVEMjUyRDgzMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5RkQzQUQ5M0I2RkQxMUUwQThEQkRGODVEMjUyRDgzMyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2RjgzN0JERjVGQjNFMDExQTZCQ0JDNUUxM0I0M0YxNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3ODkwNzY1QzM1QUVFMDExOUI0MDg3MzJEODFDNjBGNyIvPiA8L3JkZjpEZXNjcmlwdGlv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';
+
+$radioUnckekedColor: #000000;
+$radioCheckedColor: #4cff00;
+$checkboxColor: #000000;
+
+@mixin traslate($value){
+  -webkit-transition:$value;
+  -o-transition:$value;
+  -moz-transition:$value;
+  transition:$value;
+}
+
+@mixin btn-color($btn-color) {
+  border-color: darken($btn-color, 20%);
+  background-color: $btn-color;
+  &:hover {
+      background-color: darken($btn-color, 5%);
+      box-shadow: 0 .1em rgba(white,.4), inset 0 .06em rgba(white,.4), inset 0 -.1em lighten($btn-color, 5%);
+  }
+  &:active {
+      box-shadow: 0 .05em rgba(white,.4), inset 0 0 1.01em darken($btn-color, 40%), inset 0 .05em darken($btn-color, 20%),inset 0 -0.15em darken($btn-color, 20%); 
+  }
+}
+
+.select {
+  border: 1px solid black;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  background-image: url(#{$select-background});
+  background-position: right 0 top 50%;
+  background-repeat: no-repeat;
+  background-size: 10%;
+
+  &::-ms-expand {
+      display: none;
+  }
+}
+
+.radio {
+  display:none;
+
+  &+label span {
+      display:inline-block;
+      position:relative;
+      top:5px;
+      right:5px;
+      width:20px;
+      height:20px;
+      cursor:pointer;
+      -moz-border-radius:  100%;
+      border-radius:  100%;
+      box-sizing: border-box;
+      background-color:$radioUnckekedColor;
+      border: 4px solid $radioUnckekedColor;
+      @include traslate(background-color 0.5s linear);
+  }
+  &:checked + label span {
+      background-color:$radioCheckedColor;
+  }
+}
+
+input[type="checkbox"] {
+  display:none;
+
+  &+label span {
+      display:inline-block;
+      position:relative;
+      top:5px;
+      right:5px;
+      width:20px;
+      height:20px;
+      cursor:pointer;
+      border: 2px solid $checkboxColor;
+  }
+  &:checked + label span {
+      background: url(#{$checkbox-background}) no-repeat center;
+      background-size: 100%;
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin: 5px; 
+  padding: 10px 15px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 .3em .313em -.3em rgba($buttonDefaultColor,.8), inset 0 .06em rgba(white,.4), inset 0 -.15em rgba($buttonDefaultColor,.15);
+  cursor:pointer;
+  color:white;
+  @include traslate(0.2s ease-in-out); 
+  text: {
+      transform: uppercase;
+      decoration: none;
+      shadow: 0 .05em rgba($buttonDefaultColor,.3);
+  }
+
+  @include btn-color(#000000);
+
+  &.danger {
+      @include btn-color($buttonDangerColor);
+  }
+  &.info {
+       @include btn-color($buttonInfoColor);
+  }
+  &.ok {
+      @include btn-color($buttonOkColor);
+  }
+  &.warn {
+      @include btn-color($buttonWarningColor);
+  }
+}
+
+.input {
+  display: inline-block;
+  margin: 5px; 
+  padding: 10px 15px;
+  border: 1px solid;
+  border-radius: 10px;
+  resize: none;
+}

@@ -1,0 +1,131 @@
+﻿$information-phone: "only screen and (max-width : 600px)";
+$information-tablet: "only screen and (min-width : 601px) and (max-width : 900px)";
+$information-desk: "only screen and (min-width : 901px)";
+
+$acContentBackground: #FFF;
+$acContentColor: #000000;
+$acTogglerBackground: #ffd800;
+$acTogglerBackgroundExp: #00ff21;
+
+
+$contentColor: #FFF;
+$tabColor: #808080;
+
+.popup {
+  position: fixed;
+  background: #FFF;
+  padding: 25px;
+  width: auto;
+  margin: 0 auto;
+  border: 1px solid black;
+  z-index: 10;
+  .close {
+      float: right;
+      &:before {
+        content: 'x';
+        position: absolute;
+        top: 5px;
+        left: 97%;
+        text-align: right;
+      }
+  }
+
+  
+}
+
+@media #{$information-phone} {
+  .popup {
+      max-width: 400px;
+  }
+}
+
+@media #{$information-tablet} {
+  .popup {
+      max-width: 600px;
+  }
+}
+
+@media #{$information-desk} {
+  .popup {
+      max-width: 800px;
+  }
+}
+
+.accordion {
+  .row {
+      margin: 20px 0;
+      input {
+        display:none;
+        &+label {
+            display:inline-block;
+            width:100%;
+        }
+        &+label .toggler {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            cursor:pointer;
+            background-color: $acTogglerBackground;
+            color: $acContentColor;
+            margin-bottom: 20px;
+            display:inline-block;
+            border-radius: 10px;
+            border: darken($acTogglerBackground, 10%) solid 1px;
+        }
+        &+label .content{
+            width: 100%;
+            background-color: $acContentBackground;
+            padding: 10px 20px;
+            color:$acContentColor;
+            display: none;
+            box-sizing:border-box;
+            border: 1px solid black;
+        }
+        &:checked + label .content{
+            display: inline-block;
+        }
+        &:checked + label .toggler{
+            background-color: $acTogglerBackgroundExp
+        }
+      }
+  }
+}
+
+.tabs {
+  position: relative;
+  li {
+      float: left;
+      display: block;
+  }
+  input[type="radio"] {
+      display:none;
+  }
+  label {
+      display: block;
+      padding: 15px 20px;
+      text-transform: uppercase;
+      background: $tabColor;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+  }
+  .content {
+      display: none;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px 20px;
+      position: absolute;
+      top: 46px;
+      left: 0; 
+      background: $contentColor;
+      border: 1px solid $tabColor;
+  }
+  [type="radio"]:checked + label { 
+      background: $contentColor; 
+      border: 1px solid $tabColor;
+      border-bottom: none
+  }
+  [type="radio"]:checked + label + .content {
+      display: block;
+  }
+}
