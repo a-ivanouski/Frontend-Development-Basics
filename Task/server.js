@@ -1,6 +1,16 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+
+var database = require('./database').openDatabase('name');
+
+
 
 app.use('/js', express.static(__dirname + '/js'));
 
@@ -8,9 +18,10 @@ app.get('/', function (req, res) {
   fs.readFile('index.html', function (err, data){
         if (err) {
             res.end("File wasn't found");
+        } else {
+          res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+          res.end(data);
         }
-        res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-        res.end(data);
     });
 });
 
@@ -33,12 +44,13 @@ app.get('/tasks/:categorie', function (req, res) {
   res.send(JSON.stringify(result));
 });
 
-app.get('/task/:id', function (req, res) {
+app.get('/task/:name', function (req, res) {
   res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify('get task/:id'));
 });
 
 app.put('/task', function (req, res) {
+  console.log(req.body)
   res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify('put task'));
 });
@@ -49,6 +61,7 @@ app.delete('/task/:id', function (req, res) {
 });
 
 app.post('/task/:id', function (req, res) {
+  console.log(req.body.data); 
   res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify('update(post) task/:id'));
 });
