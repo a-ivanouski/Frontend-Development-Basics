@@ -1,0 +1,3 @@
+GC starts every time when page takes new memory heap. 
+When page stops it's activity it takes from 10 to 20 seconds to start GC clear the rest of unused memory.  
+Almost all memory is freed.

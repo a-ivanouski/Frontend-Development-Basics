@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<button id="begin" onclick="begin()">Begin memory test</button>
+
+<button id="finish" onclick="stop()" style="display:none">Finish memory test</button>
+<script>
+    var interval = null;
+    var beginBtn = document.getElementById('begin');
+    var finishBtn = document.getElementById('finish');
+
+    function createChunks() {
+        var div, foo, i, str;
+        for (i = 0; i < 20; i++) {
+            div = document.createElement('div');
+            str = new Array(1000000).join('x');
+            foo = {
+                str: str,
+                div: div
+            };
+            div.foo = foo;
+        }
+    }
+
+    function begin() {
+        beginBtn.style.display = 'none';
+
+        finishBtn.style.display = 'block';
+
+        interval = setInterval(createChunks, 1000);
+    }
+
+    function stop() {
+        beginBtn.style.display = 'block';
+
+        finishBtn.style.display = 'none';
+
+        if (interval) {
+            clearInterval(interval);
+        }
+
+        interval = null;
+    }
+</script>
