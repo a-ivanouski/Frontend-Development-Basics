@@ -15,31 +15,59 @@
 	<script>
 		angular.module('myModule', [])
 			.factory('dataService', function ($http) {
-				$http.get('/task/1')
-					.then(function (resp) {
-						console.log(resp.data);
-					});
-				$http.put('/task',{data: 'data'})
-					.then(function (resp) {
-						console.log(resp.data);
-					});
-				$http.delete('/task/1')
-					.then(function (resp) {
-						console.log(resp.data);
-					});
-				$http.post('/task/1',{data: 'data'}) // update task
-					.then(function (resp) {
-						
-					});
 
-				$http.get('/tasks')
+				function createTask (name, description, deadline, priority, category, status) {
+					return {
+						name: name,
+						description: description,
+						deadline: deadline,
+						priority: priority,
+						category: category,
+						status: status,
+					};
+				}
+
+				var task = createTask('1', '1', '1', '1', '1', '1');
+				$http.put('/task',task)
 					.then(function (resp) {
 						console.log(resp.data);
-					});
-				$http.get('/tasks/qqqqqqqqq') // by category
-					.then(function (resp) {
-						console.log(resp.data);
-					});
+					}).then(function () {
+						// $http.get('/tasks') //app.get('/tasks'
+						// 	.then(function (resp) {
+						// 		console.log(resp.data);
+						// 	});
+
+							// $http.get('/tasks/1') // by category
+							// .then(function (resp) {
+							// 	console.log(resp.data);
+							// });
+						$http.get('/task/1')
+							.then(function (resp) {
+								console.log(resp.data);
+							});
+					})
+
+
+
+
+
+
+				// $http.get('/task/1')
+				// 	.then(function (resp) {
+				// 		console.log(resp.data);
+				// 	});
+
+				// $http.delete('/task/1')
+				// 	.then(function (resp) {
+				// 		console.log(resp.data);
+				// 	});
+				// $http.post('/task/1',{data: 'data'}) // update task
+				// 	.then(function (resp) {
+						
+				// 	});
+
+
+
 				return {
 
 				}

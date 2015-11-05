@@ -8,7 +8,34 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-var database = require('./database').openDatabase('name');
+var database = require('./database').openDatabase('DataBase name');
+
+function createRespObj(status, data) {
+  return {
+    status: status,
+    data: data
+  }
+}
+
+var setKeysOfTask = [
+    'name',
+    'description',
+    'deadline',
+    'priority',
+    'category',
+    'status',
+]
+
+
+function checkRespTask (task) {
+  var count = 0;
+  for(var key in task) {
+      if(task.hasOwnProperty(key) && (setKeysOfTask.indexOf(key)) !== -1) {
+        count++;
+      }
+  }
+  return count === setKeysOfTask.length  ? true : false;
+}
 
 
 
@@ -26,34 +53,49 @@ app.get('/', function (req, res) {
 });
 
 app.get('/tasks', function (req, res) {
-  var result = {
-    tasks: [1,2,3,4,5]
-  }
+  var result = database.getTasks();
 
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(result));
 });
 
 app.get('/tasks/:categorie', function (req, res) {
-  var result = {
-    categorie: req.params.categorie,
-    tasks: [1,2,3,4,5]
+  res.setHeader('Content-Type', 'application/json');
+
+  if(req.params.categorie){
+    var data = database.getTasksByCategory(req.params.categorie);
+
+    var result = createRespObj('success', data);
+
+    res.end(JSON.stringify(result));
+  } else {
+    res.end(JSON.stringify(createRespObj('error')))
   }
 
-  res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify(result));
-});
-
-app.get('/task/:name', function (req, res) {
-  res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify('get task/:id'));
 });
 
 app.put('/task', function (req, res) {
-  console.log(req.body)
   res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify('put task'));
+  if(checkRespTask(req.body)) {
+    database.addTask(req.body);
+    res.end(JSON.stringify(createRespObj('success')))
+  } else {
+    res.end(JSON.stringify(createRespObj('error')))
+  }
 });
+
+app.get('/task/:name', function (req, res) {
+    res.setHeader('Content-Type', 'application/json');
+
+  if(req.params.name) {
+    var result = database.getTaskByName(req.params.name);
+    res.end(JSON.stringify(createRespObj('success',result)));
+  } else {
+    res.end(JSON.stringify(createRespObj('error')))
+  }
+});
+
+
 
 app.delete('/task/:id', function (req, res) {
   res.setHeader('Content-Type', 'application/json');
