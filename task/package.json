@@ -1,0 +1,9 @@
+{
+  "name": "RestApp",
+  "version": "0.1.0",
+  "devDependencies": {
+    "jsonschema": "latest",
+    "express": "latest",
+    "body-parser": "latest"
+  }
+}
