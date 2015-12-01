@@ -1,0 +1,51 @@
+{
+  "name": "perfschool",
+  "version": "1.0.3",
+  "description": "Find your way through the performance optimization maze in this NodeSchool workshopper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bevacqua/perfschool.git"
+  },
+  "author": "Nicolas Bevacqua <nicolasbevacqua@gmail.com> (http://bevacqua.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bevacqua/perfschool/issues"
+  },
+  "homepage": "https://github.com/bevacqua/perfschool",
+  "main": "perfschool.js",
+  "bin": "./perfschool.js",
+  "preferGlobal": true,
+  "dependencies": {
+    "browser-unpack": "1.0.1",
+    "cave": "2.0.0",
+    "chalk": "1.0.0",
+    "cheerio": "0.19.0",
+    "concat-stream": "1.4.8",
+    "contra": "1.8.1",
+    "css": "2.2.0",
+    "express": "4.12.3",
+    "glob": "5.0.5",
+    "gm": "1.17.0",
+    "image-diff-2": "1.0.0",
+    "jquery": "2.1.4",
+    "jsdom": "3.1.2",
+    "localtunnel": "1.5.0",
+    "lodash": "3.8.0",
+    "mkdirp": "0.5.0",
+    "penthouse": "0.3.2",
+    "picture-tube": "0.0.4",
+    "pretty-bytes": "1.0.4",
+    "proxyquire": "1.4.0",
+    "psi": "1.0.6",
+    "repack-rows": "1.0.0",
+    "request": "2.55.0",
+    "serve-static": "1.9.2",
+    "sinon": "1.14.1",
+    "through2-concat": "1.0.1",
+    "tmp": "0.0.26",
+    "webpagetest": "0.3.3",
+    "webshot": "0.16.0",
+    "workshopper": "2.5.0",
+    "workshopper-wat": "3.0.1"
+  }
+}
