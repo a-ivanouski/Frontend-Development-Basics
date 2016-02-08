@@ -22,7 +22,10 @@
   },
   "preferGlobal": true,
   "dependencies": {
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
     "express": "4.12.3",
+    "fontfaceonload": "^0.1.7",
     "serve-static": "1.9.2"
   },
   "gitHead": "8282c5bee9f70e3907159bbf94aeb589bb0e433b",

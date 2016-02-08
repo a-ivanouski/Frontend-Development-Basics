@@ -2,6 +2,12 @@ body {
   background-color: #f00;
   padding: 20px;
 }
+body {
+ font-family: sans-serif;
+}
+.loaded-lato .lato {
+ font-family: 'Lato', sans-serif;
+}
 .lato {
   font-family: 'Lato', sans-serif;
 }

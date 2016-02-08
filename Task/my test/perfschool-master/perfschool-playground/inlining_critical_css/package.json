@@ -1,0 +1,14 @@
+{
+	  "scripts": {
+		"build": "browserify main.js -o index.js"
+	  },
+	  "browser": {
+		"fontfaceonload": "./node_modules/fontfaceonload/dist/fontfaceonload.js"
+	  },
+	  "browserify-shim": {
+		"fontfaceonload": "FontFaceOnload"
+	  },
+	  "browserify": {
+		"transform": ["browserify-shim"]
+	  }
+	}
